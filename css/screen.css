@@ -1,0 +1,157 @@
+/* BACKGROUND SIZE */
+/* ROTATE*/
+/* TRANSITION */
+/* HOW TO USE SPRITES, see _base.scss*/
+/* line 4, ../sass/common.scss */
+.whatever {
+  background: url('../img/icons-s4235427e90.png') 0 -144px no-repeat;
+  width: 72px;
+  height: 72px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* line 4, ../sass/common.scss */
+  .whatever {
+    background: url('../img/icons-s4235427e90.png') 0 0 no-repeat;
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* ------------------------------------- Reset css -------------------------------------------- */
+/* line 18, ../sass/common.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
+h6, p, blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
+embed, figure, figcaption, footer, header, hgroup, menu, nav,
+output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 26, ../sass/common.scss */
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 29, ../sass/common.scss */
+body, html {
+  height: 100%;
+}
+
+/* line 32, ../sass/common.scss */
+img, fieldset {
+  border: none;
+}
+
+/* line 35, ../sass/common.scss */
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* line 38, ../sass/common.scss */
+textarea {
+  overflow: auto;
+}
+
+/* line 41, ../sass/common.scss */
+input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 47, ../sass/common.scss */
+input, textarea, select,
+h1, h2, h3, h4, h5, h6, a, span, a:focus {
+  outline: none;
+}
+
+/* line 50, ../sass/common.scss */
+ul, ol {
+  list-style-type: none;
+}
+
+/* line 54, ../sass/common.scss */
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 58, ../sass/common.scss */
+input[type='submit']::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* line 62, ../sass/common.scss */
+* {
+  -webkit-text-size-adjust: none;
+}
+
+/* ------------------------------------- //END Reset css --------------------------------------- */
+/* line 66, ../sass/common.scss */
+body {
+  font-family: Arial,sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+/* line 74, ../sass/common.scss */
+a {
+  color: #00919e;
+}
+/* line 76, ../sass/common.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 80, ../sass/common.scss */
+.l-wrapper {
+  position: relative;
+  margin-bottom: -50px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+}
+
+/* line 87, ../sass/common.scss */
+.push {
+  clear: both;
+  height: 50px;
+}
+
+/* BACKGROUND SIZE */
+/* ROTATE*/
+/* TRANSITION */
+/* default layout */
+/* line 4, ../sass/layouts.scss */
+.l {
+  width: 100%;
+  display: inline-block;
+}
+/* line 8, ../sass/layouts.scss */
+.l .l-col1 {
+  float: left;
+  width: 20%;
+}
+/* line 13, ../sass/layouts.scss */
+.l .l-col2 {
+  float: right;
+  width: 70%;
+}
+
+/* BACKGROUND SIZE */
+/* ROTATE*/
+/* TRANSITION */
+/* line 2, ../sass/ie.scss */
+.lteie8 body {
+  background: red;
+}
