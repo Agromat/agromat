@@ -4,14 +4,22 @@
 $icons: sprite-map("icons/*.png");
 
 // responsive
-$break-small: 500px;
-$break-large: 1180px;
+$break-1: 320px;
+$break-2: 768px;
+$break-3: 1024px;
+$break-4: 1280px;
 @mixin respond-to($media) {
-  @if $media == pda {
-    @media only screen and (max-width: $break-small) { @content; }
+  @if $media == mob {
+    @media only screen and (max-width: $break-1) { @content; }
+  }
+  @else if $media == pda {
+    @media only screen and (max-width: $break-2) { @content; }
+  }
+  @else if $media == med {
+    @media only screen and (max-width: $break-3) { @content; }
   }
   @else if $media == wide {
-    @media only screen and (min-width: $break-large) { @content; }
+    @media only screen and (max-width: $break-4) { @content; }
   }
 }
 
@@ -56,18 +64,20 @@ $break-large: 1180px;
 }
 // image replacement
 @mixin hide-text{
-    font: 0/0 a;
+    font: 0/0 a; 
     text-shadow: none;
     color: transparent;
 }
 @mixin clr{
-  &:after{
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  &:after,
+  &:before {
+    content: " ";
+    display: table;
     }
+  &:after {
+    clear: both;
+  }
+  *zoom: 1;
 }
 @mixin image-size($path){
   width: image-width($path);
@@ -76,4 +86,20 @@ $break-large: 1180px;
 @mixin sized-sprite($map, $sprite){
   background: sprite($map, $sprite) no-repeat;
   @include image-size(sprite-file($map, $sprite));
+}
+@mixin pfd_m{
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+}
+@mixin pfd_b{
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+}
+@mixin hel_n{
+    font-weight: normal;
+    font-family: 'helveticaneuecyrroman', sans-serif;
+}
+@mixin hel_b{
+    font-weight: normal;
+    font-family: 'helveticaneuecyrbold', sans-serif;
 }

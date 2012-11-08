@@ -1,12 +1,46 @@
 @import "base";
 /* HOW TO USE SPRITES, see _base.scss*/
+@font-face {
+    font-family: 'helveticaneuecyrroman';
+    src: url('../fonts/helveticaneuecyr-roman-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-roman-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-roman-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 
-.whatever{
-	@include sized-sprite($icons, badge_hit);
-	@include retina{
-		@include sized-sprite($icons, badge_new);
-	}
 }
+@font-face {
+    font-family: 'helveticaneuecyrbold';
+    src: url('../fonts/helveticaneuecyr-bold-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-bold-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_din_text_comp_probold';
+    src: url('../fonts/pfdintextcomppro-bold-webfont.eot');
+    src: url('../fonts/pfdintextcomppro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdintextcomppro-bold-webfont.woff') format('woff'),
+         url('../fonts/pfdintextcomppro-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'pf_din_text_comp_pro_mediumRg';
+    src: url('../fonts/pfdintextcomppro-medium-webfont.eot');
+    src: url('../fonts/pfdintextcomppro-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdintextcomppro-medium-webfont.woff') format('woff'),
+         url('../fonts/pfdintextcomppro-medium-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
 h6, p, blockquote, pre,a, abbr, acronym, address, big,
@@ -64,12 +98,7 @@ input[type='submit']::-moz-focus-inner{
 }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 body{
-	font: {
-	    family: Arial,sans-serif;
-	    weight: normal;
-	    size: 12px;
-	  	}
-	line-height:1.2;
+	font: normal 12px 'helveticaneuecyrroman', Arial, sans-serif;
 }
 a{
 	color:#00919e;
@@ -78,14 +107,419 @@ a{
 	}
 }
 .l-wrapper {
+    max-width: 1260px;
+    padding: 0 10px;
+    margin: 0 auto -525px;
 	position: relative;
-	margin-bottom: -50px;
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
 }
 .push {
 	clear: both;
-	height: 50px;
+	height: 525px;
+}
+.l-container {
+
+}
+/* ------------------------------------- //Begin Header ---------------------------------------- */
+.header {
+    
+}
+.header-top {
+    -webkit-transition: 0.2s;
+    overflow: hidden;
+    padding: 62px 0 13px;
+    line-height: 17px;
+    font-size: 11px;
+    @include respond-to(med) { 
+        padding: 36px 0 13px;
+    }
+    @include respond-to(pda) { 
+        padding: 0;
+        height: 34px;
+        line-height: 34px;
+        background: #efefef;
+        border-bottom: 1px solid #d7d7d7;
+    }
+}
+.header__links {
+    -webkit-transition: 0.2s;
+    overflow: hidden;
+    float: left;
+    @include respond-to(pda) { 
+        float: none;
+    }
+    li {
+        -webkit-transition: 0.2s;
+        float: left;
+        @include respond-to(med) {
+            float: none;
+        }
+        @include respond-to(pda) { 
+            float: left;
+            width: 33.3%;
+            text-align: center;
+        }
+    }
+    a {
+        color: #717171;
+        margin-right: 26px;
+        text-decoration: none;
+    }
 }
 
+.header__soc {
+    float: right;
+    color: #717171;
+    * {
+        vertical-align: middle;
+    }
+    img {
+        margin-left: 6px;
+    }
+    @include respond-to(med) {
+        padding-top: 33px;
+    }
+}
+.header__logo {
+    position: relative;
+    height: 3px;
+    background: #000;
+    @include respond-to(pda) { 
+        margin-top: 83px;
+    }
+    a {
+        position: absolute;
+        top: -47px;
+        left: 50%;
+        margin-left: -209px;
+        width: 417px;
+        height: 91px;
+        color: #818181;
+        font-size: 12px;
+        @include pfd_m;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        background: url(../img/logo.png) 0 0 no-repeat;
+        @include respond-to(pda) { 
+            top: -33px;
+            margin-left: -109px;
+            width: 217px;
+            height: 64px;
+            letter-spacing: 0;
+            @include background-size(217px, 64px);
+        }
+        strong {
+            position: absolute;
+            bottom: 13px;
+            left: 0;
+            font-weight: normal;
+            @include respond-to(pda) {
+                top: -30px;
+            }
+        }
+        span {
+            padding-right: 100px;
+            @include respond-to(pda) { 
+                padding: 0;
+            }
+        }
+        /*@include respond-to(mob) {
+            wid
+        }*/
+    }
+}
+.menu {
+    margin-top: 51px;
+    ul {
+        overflow: hidden;
+    }
+    li {
+        float: left;
+        padding-bottom: 11px;
+        text-align: center;
+        border-bottom: 1px solid #000;
+        @include respond-to(pda) { 
+            float: none;
+            padding: 0;
+            width: 100%;
+            height: 32px;
+            line-height: 32px;
+            border-bottom: 1px solid #d7d7d7;
+        }
+        &:before {
+            content: "";
+            float: right;
+            margin-top: 8px;
+            @include sized-sprite($icons, rhomb-s);
+            @include retina {
+                @include sized-sprite($icons, rhomb-s);
+            }
+             @include respond-to(pda) { 
+               display: none;
+            }
+    }
+    a {
+        position: relative;
+        color: #000;
+        @include pfd_m;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include respond-to(med) { 
+            font-size: 19px;
+        }
+    }
+    }
+    .menu__active,
+    li:hover {
+        padding-bottom: 9px;
+        border-bottom: 3px solid #2c8db7;
+        a {
+            color: #2c8db7;
+            @include respond-to(pda) { 
+                padding: 0 10px;
+            } 
+            &:before,
+            &:after {
+                content: "";
+                 @include respond-to(pda) { 
+                    position: absolute;
+                    top: 9px;
+                    right: 0;
+                    @include sized-sprite($icons, rhomb-s);
+                    @include retina {
+                        @include sized-sprite($icons, rhomb-s);
+                    }
+                }
+            }
+            &:before {
+                content: "";
+                @include respond-to(pda) { 
+                    left: 0;
+                }
+            }
+        }
+        @include respond-to(pda) { 
+            border-bottom: 1px solid #d7d7d7;
+            padding: 0;
+        }
+    }
+}
+.menu .menu__item1 {
+    text-align: left;
+    width: 12%;
+    @include respond-to(med) { 
+        width: 13%;
+    }
+    @include respond-to(pda) { 
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #d7d7d7;
+    }
+}
+.menu__item2 {
+    width: 15%;
+    @include respond-to(med) { 
+        width: 12%;
+    }
+}
+.menu__item3 {
+    width: 18%;
+}
+.menu__item4 {
+    width: 18%;
+    @include respond-to(med) { 
+        width: 16%;
+    }
+}
+.menu__item5 {
+    width: 19%;
+    @include respond-to(med) { 
+        width: 18%;
+    }
+}
+.menu .menu__item6 {
+    text-align: right; 
+    width: 18%;
+    @include respond-to(med) { 
+        width: 23%;
+    }
+    @include respond-to(pda) { 
+        width: 100%;
+        text-align: center;
+    }
+    &:before {
+        content: "";
+        display: none;
+    }
+}
+/* --------------------------------------- //END Header ---------------------------------------- */
+
+/* --------------------------------------- BEGIN Footer ---------------------------------------- */
+.footer {
+    position: relative;
+    margin: 10px auto 0;
+    padding: 0 10px;
+    max-width: 1260px;
+}
+.separator-big {
+    height: 3px;
+    background: #000;
+    @include respond-to(pda) { 
+        @include pfd_m();
+        color: #000;
+        text-align: center;
+        font-size: 16px;
+        font-weight: normal;
+        text-transform: uppercase;
+    }
+    span {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+    i {
+        position: absolute;
+        top: -5px;
+        left: 10px;
+        @include sized-sprite($icons, rhomb-big-b);
+        @include retina {
+            @include sized-sprite($icons, rhomb-big-b);
+        }
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+    strong {
+        &:before, 
+        &:after {
+            content: "";
+            position: absolute;
+            top: 7px;
+            right: 12px;
+            @include sized-sprite($icons, rhomb-s);
+            @include retina {
+                @include sized-sprite($icons, rhomb-s);
+            }
+        }
+        &:after {
+            left: 12px;
+        }
+        @include respond-to(pda) {
+            display: inline;
+            position: absolute;
+            left: 50%;
+            top: -8px;
+            margin-left: -70px;
+            background: #fff;
+            padding: 0 25px;
+            letter-spacing: 2px;
+        }
+        font-weight: normal;
+        display: none; 
+    }
+}
+.footer-wrap {
+    overflow: hidden;
+    padding: 40px 0 34px;
+}
+.footer-wrap_1 {
+    @include respond-to(pda) {
+        float: left;
+        width: 50%;
+    }  
+}
+.footer-wrap_2 {
+    @include respond-to(pda) {
+        float: right;
+        width: 50%;
+    }  
+}
+.footer-col {
+    float: left;
+    width: 20%;
+     @include respond-to(med) { 
+        width: 25%;
+    }
+    @include respond-to(pda) {
+        float: none;
+        width: auto;
+        padding-left: 9%;
+    }
+}
+.footer-col_4 {
+    @include respond-to(med) { 
+        display: none;
+    }
+}
+.footer-col_1 .footer-nav {
+    padding-left: 2%;
+    border-left: 0;
+}
+.footer-nav {
+    width: 80%;
+    padding-left: 20%;
+    border-left: 1px solid #d4d4d4;
+    @include respond-to(pda) {
+        border: 0;
+        padding: 0;
+    }
+    ul {
+        margin-bottom: 26px;
+    }
+    strong {
+        font-size: 11px;
+        @include hel_b();
+    }
+    li:hover a:before {
+        content: "";
+        position: absolute;
+        left: -11px;
+        top: 5px;
+        @include sized-sprite($icons, rhomb-s2);
+        @include retina {
+            @include sized-sprite($icons, rhomb-s2);
+        }
+    }
+    a {
+        position: relative;
+        color: #606060;
+        font-size: 11px;
+        text-decoration: none;
+        &:hover {
+            color: #2d8db4;
+        }
+    }
+}
+.separator-small {
+    @include hide-text();
+    height: 1px;
+    background: #96c6d9;
+    span {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        width: 27px;
+        height: 1px;
+        background: #fff;
+    }
+    i {
+        position: absolute;
+        top: -3px;
+        left: 10px;
+        @include sized-sprite($icons, rhomb-m);
+        @include retina {
+            @include sized-sprite($icons, rhomb-m);
+        }
+    }
+}
+/* --------------------------------------- //END Footer ---------------------------------------- */
