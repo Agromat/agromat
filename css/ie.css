@@ -7,3 +7,8 @@
   width: 1280px;
   margin: 0 auto;
 }
+
+/* line 13, ../sass/ie.scss */
+* + html .footer-wrap_2 {
+  clear: none;
+}

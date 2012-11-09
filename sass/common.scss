@@ -40,7 +40,15 @@
     font-style: normal;
 
 }
-
+@font-face {
+    font-family: 'pf_din_text_comp_proregular';
+    src: url('../fonts/pfdintextcomppro-regular-webfont.eot');
+    src: url('../fonts/pfdintextcomppro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdintextcomppro-regular-webfont.woff') format('woff'),
+         url('../fonts/pfdintextcomppro-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* ------------------------------------- Reset css -------------------------------------------- */
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5,
 h6, p, blockquote, pre,a, abbr, acronym, address, big,
@@ -219,6 +227,7 @@ a{
             width: 217px;
             height: 64px;
             letter-spacing: 0;
+            font-size: 11px;
             @include background-size(217px, 64px);
         }
         strong {
@@ -243,19 +252,18 @@ a{
 }
 .menu {
     margin-top: 51px;
-    @include respond-to(pda) {
+    @include respond-to(pda) { 
         padding: 0 10px;
     }
     ul {
         overflow: hidden;
-        padding-bottom: 1px;
     }
     li {
         float: left;
         padding-bottom: 13px;
         text-align: center;
         border-bottom: 1px solid #000;
-        @include respond-to(pda) { 
+        @include respond-to(mob-lan) { 
             float: none;
             padding: 0;
             width: 100%;
@@ -271,7 +279,7 @@ a{
             @include retina {
                 @include sized-sprite($icons, rhomb-s);
             }
-             @include respond-to(pda) { 
+             @include respond-to(mob-lan) { 
                display: none;
             }
     }
@@ -290,34 +298,43 @@ a{
     .menu__active,
     li:hover {
         a {
+            display: block;
             position: relative;
-            padding-bottom: 11px;
-            border-bottom: 3px solid;
-            color: #2c8db7;
-            @include respond-to(pda) { 
-                padding: 0 10px;
-            } 
-            &:before,
-            &:after {
-                content: "";
-                 @include respond-to(pda) { 
-                    position: absolute;
-                    top: 9px;
-                    right: 0;
-                    @include sized-sprite($icons, rhomb-s);
-                    @include retina {
+            span {
+                padding-bottom: 11px;
+                border-bottom: 3px solid;
+                @include respond-to(mob-lan) {
+                    position: relative;
+                    padding: 0 10px;
+                    border-bottom: 0;
+                }
+                &:before,
+                &:after {
+                    content: "";
+                     @include respond-to(mob-lan) { 
+                        position: absolute;
+                        top: 9px;
+                        right: 0;
                         @include sized-sprite($icons, rhomb-s);
+                        @include retina {
+                            @include sized-sprite($icons, rhomb-s);
+                        }
+                    }
+                }
+                &:before {
+                    content: "";
+                    @include respond-to(mob-lan) { 
+                        left: 0;
                     }
                 }
             }
-            &:before {
-                content: "";
-                @include respond-to(pda) { 
-                    left: 0;
-                }
-            }
+            color: #2c8db7;
+            @include respond-to(mob-lan) { 
+                padding: 0 10px;
+                border-bottom: 0;
+            } 
         }
-        @include respond-to(pda) { 
+        @include respond-to(mob-lan) { 
             border-bottom: 1px solid #d7d7d7;
             padding: 0;
         }
@@ -330,6 +347,9 @@ a{
         width: 13%;
     }
     @include respond-to(pda) { 
+        width: 26%;
+    }
+    @include respond-to(mob-lan) { 
         width: 100%;
         text-align: center;
         border-top: 1px solid #d7d7d7;
@@ -340,20 +360,47 @@ a{
     @include respond-to(med) { 
         width: 12%;
     }
+    @include respond-to(pda) { 
+        width: 33.3%;
+    }
 }
-.menu__item3 {
+.menu .menu__item3 {
     width: 18%;
+    @include respond-to(pda) { 
+        width: 40%;
+    }
+    &:before {
+        content: "";
+        @include respond-to(pda) { 
+            background: none;
+        }
+    }
+    @include respond-to(mob-lan) { 
+        width: 100%;
+        text-align: center;
+    }
 }
-.menu__item4 {
+.menu .menu__item4 {
     width: 18%;
     @include respond-to(med) { 
         width: 16%;
+    }
+    @include respond-to(pda) { 
+        width: 29%;
+        text-align: left;
+    }
+    @include respond-to(mob-lan) { 
+        width: 100%;
+        text-align: center;
     }
 }
 .menu__item5 {
     width: 19%;
     @include respond-to(med) { 
         width: 18%;
+    }
+    @include respond-to(pda) { 
+        width: 33%;
     }
 }
 .menu .menu__item6 {
@@ -363,6 +410,9 @@ a{
         width: 23%;
     }
     @include respond-to(pda) { 
+        width: 38%;
+    }
+    @include respond-to(mob-lan) { 
         width: 100%;
         text-align: center;
     }
@@ -378,6 +428,10 @@ a{
     position: relative;
     margin: 10px auto 0;
     max-width: 1280px;
+    @include respond-to(mob) {
+        width: 320px;
+        padding: 0;
+    }
 }
 .footer__main {
     padding: 0 10px;
@@ -446,8 +500,8 @@ a{
     }
 }
 .footer-wrap {
-    overflow: hidden;
     padding: 40px 0 33px;
+    @include clr();
 }
 .footer-wrap_1 {
     @include respond-to(pda) {
@@ -497,7 +551,7 @@ a{
         font-size: 11px;
         @include hel_b();
     }
-    li:hover a:before {
+    a:hover:before {
         content: "";
         position: absolute;
         left: -11px;
@@ -517,8 +571,7 @@ a{
         }
     }
 }
-.separator-small {
-    @include hide-text();
+.separator-blue {
     height: 1px;
     background: #96c6d9;
     text-align: center;
@@ -535,8 +588,9 @@ a{
     }
     i {
         position: absolute;
+        left: 50%;
         top: -3px;
-        left: 10px;
+        margin-left: -4px;
         @include sized-sprite($icons, rhomb-m);
         @include retina {
             @include sized-sprite($icons, rhomb-m);
@@ -546,28 +600,29 @@ a{
         }
     }
     strong {
+        display: none;
+        position: relative;
+        top: -6px;
+        padding: 0 7px;
+        background: #fff;
+        text-transform: uppercase;
+        color: #2d8db5;
+        font-size: 11px;
+       @include pfd_m();
         @include respond-to(pda) {
            display: inline;
-           padding: 0 7px;
-           background: #fff;
-           text-transform: uppercase;
-           color: #2d8db5;
-           font-size: 11px;
-           @include pfd_m();
         }
     }
 }
 .footer__logos {
     overflow: hidden;
-    margin-bottom: 8px;
+    padding: 23px 0 31px;
     @include respond-to(pda) {
        display: none;
     }
     li {
         float: left;
         width: 14%;
-        height: 100px;
-        line-height: 100px;
         text-align: center;
         &:first-child {
             width: 14%;
@@ -577,6 +632,11 @@ a{
             text-align: right;
             width: 16%;
         }
+    }
+    a {
+        display: block;
+        height: 54px;
+        line-height: 54px;
     }
     img {
         vertical-align: middle;

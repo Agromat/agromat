@@ -1,0 +1,197 @@
+@import "base";
+ .main {
+    padding: 30px 0 0;
+    @include respond-to(pda) {
+        padding: 30px 10px 0;
+    }
+}
+.slider-wrap {
+    position: relative;
+    float: left;
+    width: 74.5%;
+    @include respond-to(med) {
+        width: 100%;
+        float: none;
+    }
+    @include respond-to(pda) {
+        display:none;
+    }
+}
+.slider-inner {
+    width: 100%;
+    overflow: hidden;
+}
+.slider-nav {
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    z-index: 100;
+    @include clr(); 
+    @include respond-to(med) {
+        display:none;
+    }
+    a {
+        float: left;
+        margin-right: 5px;
+        @include hide-text();
+        @include sized-sprite($icons, rhomb-big-white);
+        @include retina {
+            @include sized-sprite($icons, rhomb-big-white);
+        }
+    }
+    .activeSlide {
+        @include sized-sprite($icons, rhomb-big-blue);
+        @include retina {
+            @include sized-sprite($icons, rhomb-big-blue);
+        }
+    }
+}
+.slider__item {
+    width: 100%;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+.slider__item-wrap {
+    overflow: hidden;
+    height: 410px;
+     @include respond-to(pda) {
+        height: 320px;
+    }
+}
+.slider__capt {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 95px;
+    line-height: 95px;
+    @include respond-to(pda) {
+        line-height: 22px;
+        height: 70px;
+        padding-top: 25px;
+    }
+    @include pfd_r();
+    @include background-image(linear-gradient(left, rgba(0,0,0,0.9), rgba(0,0,0,0)));
+    div {
+        padding-left: 33px;
+    }
+    strong {
+        padding-right: 20px;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #fff;
+        font-weight: normal;
+    }
+    span {
+        color: #afafaf;
+        font-size: 19px;
+        @include respond-to(pda) {
+            display: block;
+        }
+    }
+}
+.stamp {
+    position: absolute;
+    top: 10px;
+    left: -6px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 20px;
+    @include pfd_m();
+    color: #fff;
+    text-transform: uppercase;
+    background: #2d8db4;
+    z-index: 100;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: -6px;
+        left: 0;
+        height: 0;
+        border-color: #000 #000 transparent transparent;
+        border-width: 3px;
+        border-style: solid;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -9px;
+        @include sized-sprite($icons, stamp);
+        @include retina {
+            @include sized-sprite($icons, stamp); 
+        }
+    }
+}
+.banners {
+    float: right;
+    width: 24.4%;
+}
+.banner {
+    height: 134px;
+    margin-bottom: 10px;
+    padding: 30px 23px;
+    border: 2px solid #000;
+    .separator-blue {
+        width: 40%;
+        margin: 0 auto 10px;
+        span {
+            display: none;
+        }
+        strong {
+            display: inline;
+            font-size: 13px;
+            color: #000;
+        }
+    }
+    .separator-blue_bot {
+        span {
+            display: block;
+        }
+        strong {
+            display: none;
+        }
+    }
+}
+.banner__shop {
+    height: 100%;
+    padding-top: 12px;
+    a {
+        display: block;
+        margin: 12px auto;
+        line-height: 19px;
+        width: 44px;
+        height: 17px;
+        text-align: center;
+        @include pfd_m();
+        font-size: 12px;
+        color: #fff;
+        background: #000;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+.banner__name {
+    display: block;
+    width: 46%; 
+    margin: 0 auto 4px;
+    @include pfd_b();
+    font-size: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000;
+}
+.banner_action {
+    background: url(../img/hot-girl.jpg) 0 0 no-repeat;
+
+}
+.banner__action {
+    padding: 10px 0 23px;
+    background: #fff;
+    strong {
+        
+    }
+}

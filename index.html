@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Index</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
+    <script src="js/jquery.tools.min.js"></script>
+    <script src="js/jquery.cycle.all.js"></script>
+    <script src="js/common.js"></script> 
     <!--[if lt IE 9]> 
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
-        <link rel="stylesheet" href="css/main-ie.css" media="screen" />
     <![endif]-->
 </head>
 <body>
@@ -36,16 +38,86 @@
         <!-- main menu -->
         <nav class="menu">
             <ul>
-                <li class="menu__item1"><a href="#">О компании</a></li>
-                <li class="menu__item2"><a href="#">Магазины</a></li>
-                <li class="menu__item3"><a href="#">Новости и пресса</a></li>
-                <li class="menu__item4"><a href="#">Торговые марки</a></li>
-                <li  class="menu__item5 menu__active"><a href="#">Оптовые продажи</a></li>
-                <li class="menu__item6"><a href="#">Дополнительные услуги</a></li>
+                <li class="menu__item1"><a href="#"><span>О компании</span></a></li>
+                <li class="menu__item2"><a href="#"><span>Магазины</span></a></li>
+                <li class="menu__item3"><a href="#"><span>Новости и пресса</span></a></li>
+                <li class="menu__item4"><a href="#"><span>Торговые марки</span></a></li>
+                <li  class="menu__item5 menu__active"><a href="#"><span>Оптовые продажи</span></a></li>
+                <li class="menu__item6"><a href="#"><span>Дополнительные услуги</span></a></li>
             </ul>                                                               
         </nav>
     </header>
     <!-- END header -->
+    <!-- BEGIN main -->
+    <div class="main">
+        <div class="slider-wrap">
+            <div class="slider-inner">
+                <div class="js-slider">
+                    <div class="slider__item">
+                        <div class="slider__item-wrap">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__capt">
+                                <div>
+                                    <strong>Diadema от Lineatre</strong>
+                                    <span>Царское украшение для ванной</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__item-wrap">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__capt">
+                                <div>
+                                    <strong>Diadema от Lineatre</strong>
+                                    <span>Царское украшение для ванной</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__item">
+                        <div class="slider__item-wrap">
+                            <img src="img/slide.jpg" alt="">
+                            <div class="slider__capt">
+                                <div>
+                                    <strong>Diadema от Lineatre</strong>
+                                    <span>Царское украшение для ванной</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav"></div>
+            </div>
+            <div class="stamp">акция</div>
+        </div>
+        <div class="banners">
+            <div class="banner">
+                <div class="banner__shop">
+                    <div class="separator-blue">
+                        <strong>наш</strong>
+                        <span><i></i></span>
+                    </div>
+                    <div class="banner__name">интернет магазин</div>
+                    <div class="separator-blue separator-blue_bot">
+                        <strong>наш</strong>
+                        <span><i></i></span>
+                    </div>
+                    <a href="#">перейти</a>
+                </div>
+            </div>
+            <div class="banner banner_action">
+                <div class="banner__action">
+                    <div class="banner__name">наши акции</div>
+                    <div class="separator-blue">
+                        <strong>И скидки</strong>
+                        <span><i></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END main -->
     <div class="push"></div>
 </div>
 <!-- BEGIN .footer -->
@@ -177,7 +249,7 @@
                 </div>
             </div>
         </div>
-        <div class="separator-small">
+        <div class="separator-blue">
             <strong>свернуть</strong>
             <span><i></i></span>
         </div>
