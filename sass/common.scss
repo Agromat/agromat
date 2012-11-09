@@ -114,6 +114,13 @@ a{
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
+    @include respond-to(mob) {
+        width: 320px;
+        padding: 0;
+    }
+    @include respond-to(pda) {
+        padding: 0;
+    } 
 }
 .push {
 	clear: both;
@@ -169,7 +176,7 @@ a{
     }
 }
 
-.header__soc {
+.fb {
     float: right;
     color: #717171;
     * {
@@ -184,10 +191,15 @@ a{
 }
 .header__logo {
     position: relative;
-    height: 3px;
-    background: #000;
+    h1 {
+        height: 3px;
+        background: #000;
+        @include respond-to(pda) { 
+            margin-top: 83px;
+        }
+    }
     @include respond-to(pda) { 
-        margin-top: 83px;
+        padding: 0 10px;
     }
     a {
         position: absolute;
@@ -233,6 +245,9 @@ a{
 }
 .menu {
     margin-top: 51px;
+    @include respond-to(pda) {
+        padding: 0 10px;
+    }
     ul {
         overflow: hidden;
     }
@@ -362,8 +377,10 @@ a{
 .footer {
     position: relative;
     margin: 10px auto 0;
+    max-width: 1280px;
+}
+.footer__main {
     padding: 0 10px;
-    max-width: 1260px;
 }
 .separator-big {
     height: 3px;
@@ -430,7 +447,7 @@ a{
 }
 .footer-wrap {
     overflow: hidden;
-    padding: 40px 0 34px;
+    padding: 40px 0 7px;
 }
 .footer-wrap_1 {
     @include respond-to(pda) {
@@ -504,6 +521,7 @@ a{
     @include hide-text();
     height: 1px;
     background: #96c6d9;
+    text-align: center;
     span {
         position: relative;
         display: block;
@@ -511,6 +529,9 @@ a{
         width: 27px;
         height: 1px;
         background: #fff;
+        @include respond-to(pda) {
+           display: none;
+        }
     }
     i {
         position: absolute;
@@ -520,6 +541,99 @@ a{
         @include retina {
             @include sized-sprite($icons, rhomb-m);
         }
+        @include respond-to(pda) {
+           display: none;
+        }
+    }
+    strong {
+        @include respond-to(pda) {
+           display: inline;
+           padding: 0 7px;
+           background: #fff;
+           text-transform: uppercase;
+           color: #2d8db5;
+           font-size: 11px;
+           @include pfd_m();
+        }
+    }
+}
+.footer__logos {
+    overflow: hidden;
+    margin-bottom: 5px;
+    @include respond-to(pda) {
+       display: none;
+    }
+    li {
+        float: left;
+        width: 14%;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        &:first-child {
+            width: 15%;
+            text-align: left;
+        }
+        &:last-child {
+            text-align: right;
+            width: 15%;
+        }
+    }
+    img {
+        vertical-align: middle;
+    }
+}
+.footer__copy {
+    float: left;
+    color: #c2c2c2;
+    @include hel_n();
+    font-size: 10px;
+    line-height: 12px;
+    div {
+        margin-top: 13px;
+    }
+    @include respond-to(med) {
+       float: none;
+       text-align: center;
+    }
+    p {
+        @include respond-to(med) {
+           display: inline;
+        }
+    }
+}
+.footer__contacts {
+    float: right;
+    color: #c2c2c2;
+    @include hel_n();
+    font-size: 10px;
+    text-align: right;
+    line-height: 12px;
+    strong {
+        font-weight: normal;
+        color: #000;
+    }
+    @include respond-to(med) {
+       float: none;
+       margin-bottom: 12px;
+       text-align: center;
+    }
+    @include respond-to(pda) {
+        margin-top: 30px;
+    }
+}
+.fb_footer {
+    display: none;
+    clear: both;
+    @include respond-to(pda) {
+       display: block;
+       margin-top: 24px;
+       padding: 0;
+       width: 100%;
+       height: 43px;
+       line-height: 43px;
+       text-align: center;
+       background: #efefef;
+       border-top: 1px solid #d7d7d7;
     }
 }
 /* --------------------------------------- //END Footer ---------------------------------------- */
