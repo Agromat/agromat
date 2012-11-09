@@ -529,7 +529,7 @@ a{
         width: 27px;
         height: 1px;
         background: #fff;
-        @include respond-to(pda) {
+        @include respond-to(pda) { 
            display: none;
         }
     }
