@@ -1,4 +1,9 @@
-/* line 2, ../sass/ie.scss */
-.lteie8 body {
-  background: #ccc;
+/* line 5, ../sass/ie.scss */
+.lteie8 .l-wrapper {
+  width: 1280px;
+}
+/* line 8, ../sass/ie.scss */
+.lteie8 .footer {
+  width: 1280px;
+  margin: 0 auto;
 }
