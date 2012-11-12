@@ -8,10 +8,11 @@
 .slider-wrap {
     position: relative;
     float: left;
-    width: 74.5%;
+    width: 75%;
     @include respond-to(med) {
         width: 100%;
         float: none;
+        margin-bottom: 20px;
     }
     @include respond-to(pda) {
         display:none;
@@ -128,23 +129,44 @@
 }
 .banners {
     float: right;
-    width: 24.4%;
+    width: 24.2%;
+    @include respond-to(med) {
+        float: none;
+        width: 100%;
+    }
 }
 .banner {
     height: 134px;
     margin-bottom: 10px;
-    padding: 30px 23px;
+    padding: 30px 23px 34px;
     border: 2px solid #000;
+    @include respond-to(med) {
+        float: left;
+        width: 48.6%;
+        padding: 0;
+        height: 92px;
+    }
+    @include respond-to(pda) {
+        height: 115px;
+        width: 47%;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+    }
     .separator-blue {
         width: 40%;
-        margin: 0 auto 10px;
+        margin: 0 auto 15px;
         span {
-            display: none;
+            display: none;  
         }
         strong {
             display: inline;
             font-size: 13px;
             color: #000;
+        }
+        @include respond-to(pda) {
+            width: 100%;
         }
     }
     .separator-blue_bot {
@@ -154,44 +176,212 @@
         strong {
             display: none;
         }
+        @include respond-to(med) {
+            display: none;
+        }
     }
 }
 .banner__shop {
     height: 100%;
-    padding-top: 12px;
-    a {
-        display: block;
-        margin: 12px auto;
-        line-height: 19px;
-        width: 44px;
-        height: 17px;
-        text-align: center;
-        @include pfd_m();
-        font-size: 12px;
-        color: #fff;
-        background: #000;
-        text-transform: uppercase;
-        text-decoration: none;
+    padding-top: 10px;
+    @include respond-to(med) {
+        padding-top: 20px;
+    }
+}
+.banner .banner__link {
+    display: block;
+    margin: 22px auto;
+    line-height: 19px;
+    width: 44px;
+    height: 17px;
+    text-align: center;
+    @include pfd_m();
+    font-size: 12px;
+    color: #fff;
+    background: #000;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include respond-to(med) {
+        display: none;
     }
 }
 .banner__name {
-    display: block;
+    zoom: 1;
     width: 46%; 
-    margin: 0 auto 4px;
+    margin: 0 auto 6px;
     @include pfd_b();
     font-size: 35px;
+    line-height: 35px;
     text-align: center;
     text-transform: uppercase;
     color: #000;
+    @include respond-to(med) {
+        width: 100%;
+        a {
+            position: relative;
+            @include respond-to(med) {
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    right: -27px;
+                    top: 40%;
+                    @include sized-sprite($icons, rhomb-m);
+                    @include retina {
+                        @include sized-sprite($icons, rhomb-m); 
+                    }
+                }
+                &:before {
+                    left: -27px;
+                }
+            }
+            @include respond-to(pda) {
+                &:before,
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    @include respond-to(pda) {
+        width: 100%;
+        font-size: 25px;
+    }
 }
 .banner_action {
     background: url(../img/hot-girl.jpg) 0 0 no-repeat;
-
+    margin-bottom: 0;
+    border: 0;
+    @include respond-to(med) {
+        float: right;
+        width: 42.5%;
+        padding: 10px 25px;
+        background: #000 url(../img/hot-girl.jpg) 50% 0 no-repeat;
+        height: 76px;
+    }
+    @include respond-to(pda) {
+        width: 31.5%;
+        height: 97px;
+    }
 }
 .banner__action {
-    padding: 10px 0 23px;
+    padding: 14px 0 0;
+    width: 259px;
+    height: 126px;
+    margin: 0 auto;
     background: #fff;
-    strong {
-        
+    .banner__name {
+        position: relative;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 15px;
+            @include sized-sprite($icons, rhomb-m);
+            @include retina {
+                @include sized-sprite($icons, rhomb-m); 
+            }
+            @include respond-to(med) {
+                display: none;
+            }
+        }
+        &:before {
+            left: 0;
+        }
+    }
+    @include respond-to(med) {
+        height: 62px;
+    }
+    @include respond-to(pda) {
+        width: auto;
+        padding: 0;
+    }
+}
+.wrap_news-item {
+    margin-bottom: 58px;
+}
+.item-row_last .item:first-child {
+    @include respond-to(med) {
+        display: none;
+    }
+    @include respond-to(pda) {
+        display: block;
+        padding: 0;
+    }
+}
+.item-row:first-child .item:first-child {
+    padding-left: 0;
+}
+.item {
+    float: left;
+    padding-left: 0.72%;
+    width: 24.45%;
+    overflow: hidden;
+    @include respond-to(med) {
+        width: 32.4%;
+        padding-left: 1.4%;
+    }
+    @include respond-to(pda) {
+        width: 48.3%;
+        padding-left: 3.3%;
+        margin-bottom: 19px;
+    }
+    &:first-child {
+        @include respond-to(pda) {
+            display: block;
+        }
+    }
+    img {
+        display: block;
+        margin-bottom: -25px;
+        width: 100%;
+        @include respond-to(pda) {
+            margin-bottom: -17px;
+        }
+    }
+}
+.item__main {
+    position: relative;
+}
+.item__date {
+    display: inline-block;
+    padding: 2px 9px 1px 6px;
+    color: #818181;
+    @include pfd_m();
+    font-size: 12px;
+    background: #fff;
+    text-transform: uppercase;
+}
+.item__title {
+    width: 80%;
+    @include pfd_b();
+    font-size: 22px;
+    text-transform: uppercase;
+    @include respond-to(pda) {
+        font-size: 18px;
+    }
+    a {
+        color: #000;
+        background: #fff;
+        text-decoration: none;
+    }
+}
+
+.item__descr {
+    margin-top: 37px;
+    padding-left: 5px;
+    @include hel_r();
+    font-size: 12px;
+    color: #727272;
+    @include respond-to(pda) {
+        display: none;
+    }
+}
+.item_shop {
+    width: 19.2%;
+    .item__main {
+        margin: 15% auto;
+        width: 75.3%;
     }
 }

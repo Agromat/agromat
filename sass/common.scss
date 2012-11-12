@@ -134,8 +134,39 @@ a{
 	clear: both;
 	height: 525px;
 }
-.l-container {
-
+.wrap {
+    @include clr();
+}
+.title-l-2 {
+    @include pfd_m();
+    font-size: 16px;
+    height: 1px;
+    margin: 30px 0;
+    background: #000;
+    text-align: center;
+    span {
+        position: relative;
+        top: -10px;
+        display: inline-block;
+        padding: 0 23px;
+        background: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            right: 9%;
+            top: 7px;
+            @include sized-sprite($icons, rhomb-s);
+            @include retina {
+                @include sized-sprite($icons, rhomb-s);
+            }
+        }
+        &:before {
+            left: 9%;
+        }
+    }
 }
 /* ------------------------------------- //Begin Header ---------------------------------------- */
 .header {
@@ -201,7 +232,7 @@ a{
         height: 3px;
         background: #000;
         @include respond-to(pda) { 
-            margin-top: 83px;
+            margin: 83px 0 -14px;
         }
     }
     @include respond-to(pda) { 
@@ -211,8 +242,8 @@ a{
         position: absolute;
         top: -47px;
         left: 50%;
-        margin-left: -182px;
-        width: 417px;
+        margin-left: -203px;
+        width: 406px;
         height: 91px;
         color: #818181;
         font-size: 12px;
@@ -223,12 +254,12 @@ a{
         background: url(../img/logo.png) 0 0 no-repeat;
         @include respond-to(pda) { 
             top: -33px;
-            margin-left: -109px;
-            width: 217px;
+            margin-left: -133px;
+            width: 300px;
             height: 64px;
             letter-spacing: 0;
             font-size: 11px;
-            @include background-size(217px, 64px);
+            @include background-size(300px, auto);
         }
         strong {
             position: absolute;
@@ -237,6 +268,8 @@ a{
             font-weight: normal;
             @include respond-to(pda) {
                 top: -30px;
+                left: 50%;
+                margin-left: -115px;
             }
         }
         span {
@@ -645,7 +678,7 @@ a{
 .footer__copy {
     float: left;
     color: #c2c2c2;
-    @include hel_n();
+    @include hel_r();
     font-size: 10px;
     line-height: 12px;
     div {
@@ -664,7 +697,7 @@ a{
 .footer__contacts {
     float: right;
     color: #c2c2c2;
-    @include hel_n();
+    @include hel_r();
     font-size: 10px;
     text-align: right;
     line-height: 12px;
@@ -698,12 +731,12 @@ a{
 }
 .test {
     position:absolute;
-    width: 1293px;
-    height: 542px;
-    top: 178px;
+    width: 1374px;
+    height: 1028px; 
+    top: 0;
     left: 50%;
-    margin-left: -649px;
+    margin-left: -632px;
     opacity: 0.7;
-    background: url(../img/1.jpg) 0 0 no-repeat;
+    background: url(../img/test.jpg) 0 0 no-repeat;
 }
 /* --------------------------------------- //END Footer ---------------------------------------- */
