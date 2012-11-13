@@ -3,12 +3,21 @@
   width: 1280px;
 }
 /* line 8, ../sass/ie.scss */
+.lteie8 .wrap_news-shop .item-row {
+  padding-bottom: 0;
+  height: 200px;
+}
+/* line 12, ../sass/ie.scss */
+.lteie8 .item_shop {
+  display: inline;
+}
+/* line 15, ../sass/ie.scss */
 .lteie8 .footer {
   width: 1280px;
   margin: 0 auto;
 }
 
-/* line 13, ../sass/ie.scss */
+/* line 20, ../sass/ie.scss */
 * + html .footer-wrap_2 {
   clear: none;
 }

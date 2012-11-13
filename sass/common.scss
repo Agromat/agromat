@@ -106,6 +106,7 @@ input[type='submit']::-moz-focus-inner{
 }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 body{
+    min-width: 320px;
 	font: normal 12px 'helveticaneuecyrroman', Arial, sans-serif;
 }
 a{
@@ -242,8 +243,8 @@ a{
         position: absolute;
         top: -47px;
         left: 50%;
-        margin-left: -203px;
-        width: 406px;
+        margin-left: -183px;
+        width: 410px;
         height: 91px;
         color: #818181;
         font-size: 12px;
@@ -254,9 +255,9 @@ a{
         background: url(../img/logo.png) 0 0 no-repeat;
         @include respond-to(pda) { 
             top: -33px;
-            margin-left: -133px;
-            width: 300px;
-            height: 64px;
+            margin-left: -128px;
+            width: 240px;
+            height: 65px;
             letter-spacing: 0;
             font-size: 11px;
             @include background-size(300px, auto);
@@ -269,7 +270,7 @@ a{
             @include respond-to(pda) {
                 top: -30px;
                 left: 50%;
-                margin-left: -115px;
+                margin-left: -86px;
             }
         }
         span {
@@ -459,10 +460,15 @@ a{
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */
 .footer {
     position: relative;
-    margin: 10px auto 0;
+    margin: 0 auto;
     max-width: 1280px;
+    padding: 0 0 24px; 
+    @include clr(); 
+    @include respond-to(pda) {
+        padding: 0;
+    }
     @include respond-to(mob) {
-        width: 320px;
+        width: 320px; 
         padding: 0;
     }
 }
@@ -735,7 +741,7 @@ a{
     height: 1028px; 
     top: 0;
     left: 50%;
-    margin-left: -632px;
+    margin-left: -679px;
     opacity: 0.7;
     background: url(../img/test.jpg) 0 0 no-repeat;
 }

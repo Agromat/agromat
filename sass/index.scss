@@ -1,6 +1,6 @@
 @import "base";
  .main {
-    padding: 30px 0 0;
+    padding: 30px 0 47px;
     @include respond-to(pda) {
         padding: 30px 10px 0;
     }
@@ -18,8 +18,12 @@
         display:none;
     }
 }
+.js-slider {
+    width: 100% !important;
+}
 .slider-inner {
     width: 100%;
+    height: 410px;
     overflow: hidden;
 }
 .slider-nav {
@@ -48,10 +52,11 @@
     }
 }
 .slider__item {
-    width: 100%;
+    width: 100% !important;
     img {
         display: block;
-        width: 100%;
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 .slider__item-wrap {
@@ -130,15 +135,16 @@
 .banners {
     float: right;
     width: 24.2%;
+    overflow: hidden;
     @include respond-to(med) {
         float: none;
         width: 100%;
     }
 }
 .banner {
-    height: 134px;
+    position: relative;
+    height: 196px;
     margin-bottom: 10px;
-    padding: 30px 23px 34px;
     border: 2px solid #000;
     @include respond-to(med) {
         float: left;
@@ -156,7 +162,7 @@
     }
     .separator-blue {
         width: 40%;
-        margin: 0 auto 15px;
+        margin: 12px auto -15px;
         span {
             display: none;  
         }
@@ -179,18 +185,38 @@
         @include respond-to(med) {
             display: none;
         }
+        @include respond-to(pda) {
+            display: block;
+            margin-top: 9px;
+            i {
+                display: block;
+            }
+        }
     }
 }
-.banner__shop {
-    height: 100%;
-    padding-top: 10px;
+.banner__wrap {
+    position: absolute;
+    top: 15%;
+    right: 8.4%;
+    bottom: 15%;
+    left: 8.4%;
+    background: #fff;
     @include respond-to(med) {
-        padding-top: 20px;
+        top: 10%;
+        right: 4%;
+        bottom: 10%;
+        left: 4%;
+    }
+    @include respond-to(pda) {
+        top: 12.8%;
+        right: 11.8%;
+        bottom: 12.8%;
+        left: 11.8%;
     }
 }
 .banner .banner__link {
     display: block;
-    margin: 22px auto;
+    margin: 37px auto 0;
     line-height: 19px;
     width: 44px;
     height: 17px;
@@ -208,7 +234,7 @@
 .banner__name {
     zoom: 1;
     width: 46%; 
-    margin: 0 auto 6px;
+    margin: 29px auto -5px;
     @include pfd_b();
     font-size: 35px;
     line-height: 35px;
@@ -246,6 +272,8 @@
     @include respond-to(pda) {
         width: 100%;
         font-size: 25px;
+        margin-top: 27px;
+        line-height: 26px;
     }
 }
 .banner_action {
@@ -254,30 +282,29 @@
     border: 0;
     @include respond-to(med) {
         float: right;
-        width: 42.5%;
-        padding: 10px 25px;
         background: #000 url(../img/hot-girl.jpg) 50% 0 no-repeat;
-        height: 76px;
+        height: 96px;
     }
     @include respond-to(pda) {
-        width: 31.5%;
-        height: 97px;
+        height: 117px;
     }
-}
-.banner__action {
-    padding: 14px 0 0;
-    width: 259px;
-    height: 126px;
-    margin: 0 auto;
-    background: #fff;
+    .separator-blue {
+        @include respond-to(pda) {
+            width: 80%;
+        }
+    }
     .banner__name {
         position: relative;
+        @include respond-to(med) {
+            margin-top: 15px;
+        }
         &:before,
         &:after {
             content: "";
+            display: block !important;
             position: absolute;
-            right: 0;
-            top: 15px;
+            right: 12%;
+            top: 8px;
             @include sized-sprite($icons, rhomb-m);
             @include retina {
                 @include sized-sprite($icons, rhomb-m); 
@@ -287,19 +314,15 @@
             }
         }
         &:before {
-            left: 0;
+            left: 12%;
         }
-    }
-    @include respond-to(med) {
-        height: 62px;
-    }
-    @include respond-to(pda) {
-        width: auto;
-        padding: 0;
     }
 }
 .wrap_news-item {
     margin-bottom: 58px;
+    @include respond-to(pda) {
+        margin-bottom: 0;
+    }
 }
 .item-row_last .item:first-child {
     @include respond-to(med) {
@@ -378,10 +401,251 @@
         display: none;
     }
 }
-.item_shop {
-    width: 19.2%;
-    .item__main {
-        margin: 15% auto;
-        width: 75.3%;
+.wrap_news-shop {
+    position: relative;
+    height: 200px;
+    @include respond-to(med) {
+        padding-bottom: 75px;
+        overflow: hidden;
     }
+    @include respond-to(pda) {
+        height: auto;
+        padding-bottom: 0;
+    }
+    .item-row {
+        position: absolute;
+        width: 2000em;
+        height: 200px;
+        text-align: center;
+        @include respond-to(pda) {
+            position: static;
+            margin-right: -7%;
+            height: auto;
+            width: 100%; 
+        }
+    }
+}
+.js-scroll-shop {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    @include respond-to(med) {
+        padding-bottom: 75px;
+    }
+    @include respond-to(pda) {
+        height: auto;
+        margin-right: -8%;
+        padding-bottom: 0;
+    }
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    margin-top: -6px;
+    right: -10px;
+    cursor: pointer;
+    @include respond-to(med) {
+        display: none;
+    }
+}
+.prev {
+    left: -10px;
+    @include sized-sprite($icons, prev);
+    @include retina {
+        @include sized-sprite($icons, prev);
+    }
+} 
+.next {
+    @include sized-sprite($icons, next);
+    @include retina {
+        @include sized-sprite($icons, next);
+    }
+} 
+.item_shop {
+    position: relative;
+    width: 243px;
+    height: 200px;
+    padding: 0;
+    margin: 0 0.02%;
+    a {
+        display: block;
+    }
+    &:hover .item__main {
+        -o-transition:all .5s ease-in-out;
+        -o-transform:scale(0);
+        -moz-transition:all .5s ease-in-out;
+        -moz-transform:scale(0);
+        -webkit-transition:all .5s ease-in-out;
+        -webkit-transform:scale(0);
+        transition:all .5s ease-in-out;
+        transform:scale(0);
+        opacity: 0;
+    }
+    @include respond-to(med) {
+        padding-bottom: 75px;
+       &:hover .item__main {
+            opacity: 1;
+            -o-transform:scale(1);
+            -moz-transform:scale(1);
+            -webkit-transform:scale(1);
+            transform:scale(1);
+        }
+    }
+    @include respond-to(pda) {
+        margin: 0 1.8% 2% 0;
+        padding: 0;
+        width: 45.4%;
+        height: auto;
+        display: inline-block;
+    }
+    .item__main {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        background: #fff;
+        @include respond-to(med) {
+            top: 180px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: none;
+        }
+        @include respond-to(pda) {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: auto;
+            width: auto;
+            border: 2px solid;
+            background: #fff;
+        }
+    }
+    img {
+        margin-bottom: 0;
+    }
+    .item__title {
+        width: 140px;
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 30px;
+        a {
+            background: none;
+        }
+        @include respond-to(med) {
+            width: 100%;
+        }
+        @include respond-to(pda) {
+            font-size: 18px;
+            padding-top: 27%;
+        }
+        span {
+            display: block;
+            @include respond-to(med) {
+                display: inline;
+            }
+            @include respond-to(pda) {
+                display: block;
+            }
+        }
+        
+    }
+}
+.item__adr {
+    color: #727272;
+    font-size: 12px;
+    @include hel_r();
+    text-align: center;
+    margin-top: 11px;
+    @include respond-to(med) {
+        margin-top: 2px;
+    }
+}
+
+.about-comp {
+    position: relative;
+    float: left;
+    width: 50%;
+    @include hel_r();
+    @include respond-to(pda) {
+        float: none;
+        width: 100%;
+        margin-bottom: 47px;
+    }
+    font-size: 14px;
+    h3 {
+        @include pfd_m();
+        font-size: 31px;
+        padding: 6px 0 19px;
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+    p {
+        margin-bottom: 18px;
+    }
+}
+.about-comp__col {
+    float: left;
+    width: 43%;
+    padding-right: 7%;
+    @include respond-to(med) {
+        float: none;
+        width: 95%;
+        padding-right: 5%;
+    }       
+}
+.about-comp__col_last {
+    @include respond-to(med) {
+        display: none;
+    }
+}
+.about-comp_slider {
+    text-align: right;
+    @include respond-to(pda) {
+        display: none;
+    }
+}
+.js-slider-comp {
+    width: 100%;
+    height: 367px;
+    overflow: hidden;
+    img {
+        display: block;
+        width: 626px !important;
+        height: 367px !important;
+    }
+}
+
+.banners, .slider-wrap, .about-comp {
+    -o-transition:all .3s ease-in-out;
+    -moz-transition:all .3s ease-in-out;
+    -webkit-transition:all .3s ease-in-out;
+    transition:all .3s ease-in-out;
+}
+.item {
+    -o-transition:all .8s ease-in-out;
+    -moz-transition:all .8s ease-in-out;
+    -webkit-transition:all .8s ease-in-out;
+    transition:all .8s ease-in-out;
+}
+.item_shop {
+    -o-transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
+    .item__main {
+        -o-transition:  background .8s ease-in-out;
+        -moz-transition:  background .8s ease-in-out;
+        -webkit-transition:  background .8s ease-in-out;
+        transition:  background .8s ease-in-out;
+    }
+}
+.header-top {
+    -o-transition: background .6s ease-in-out;
+    -moz-transition: background .6s ease-in-out;
+    -webkit-transition: background .6s ease-in-out;
+    transition: background .6s ease-in-out;
 }
