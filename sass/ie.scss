@@ -1,7 +1,4 @@
 .lteie8 {
-	body{
-		// background: #ccc; 
-	}
     .l-wrapper {
         width: 1280px;
     }
@@ -19,4 +16,10 @@
 }
 *+html .footer-wrap_2 {
     clear: none;
+}
+*+html .part-logo li {
+    width: 14%;
+}
+*+html .fb a {
+    display: block;
 }

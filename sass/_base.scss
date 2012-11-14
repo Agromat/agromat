@@ -2,6 +2,7 @@
 
 // sprites
 $icons: sprite-map("icons/*.png");
+$logos: sprite-map("logos/*.png");
 
 // responsive
 $break-1: 320px;
@@ -77,7 +78,7 @@ $break-5: 1280px;
   &:before {
     content: " ";
     display: table;
-    }
+  }
   &:after {
     clear: both;
   }

@@ -43,6 +43,16 @@
         @include retina {
             @include sized-sprite($icons, rhomb-big-white);
         }
+        &:hover {
+            position: relative;
+            left: -1px;
+            margin-left: 2px;
+            top: 1px;
+            @include sized-sprite($icons, rhomb-hover);
+            @include retina {
+                @include sized-sprite($icons, rhomb-hover);
+            }
+        }
     }
     .activeSlide {
         @include sized-sprite($icons, rhomb-big-blue);
@@ -148,15 +158,18 @@
     height: 196px;
     margin-bottom: 10px;
     border: 2px solid #000;
+    padding: 1px;
     @include respond-to(med) {
         float: left;
         width: 48.6%;
-        padding: 0;
         height: 92px;
     }
     @include respond-to(pda) {
         height: 115px;
         width: 47%;
+    }
+    &:first-child:hover {
+        @include box-shadow(inset 0px 0px 0 1px #000 );
     }
     a {
         text-decoration: none;
@@ -290,6 +303,34 @@
     @include respond-to(pda) {
         height: 117px;
     }
+    &:hover {
+        .banner__wrap {
+            top: 10%;
+            right: 8.3%;
+            bottom: 10%;
+            left: 8.3%;
+            .banner__name {
+                margin-top: 39px;
+                &:before,
+                &:after {
+                    right: 1px;
+                    @include respond-to(pda) {
+                        right: -15%;
+                    }
+                }
+                @include respond-to(pda) {
+                    width: 42%;
+                    margin: 8px auto 0;
+                }
+            }
+            @include respond-to(pda) {
+                top: 12.8%;
+                right: 11.8%;
+                bottom: 12.8%;
+                left: 11.8%;
+            }
+        }
+    }
     .separator-blue {
         @include respond-to(pda) {
             width: 80%;
@@ -401,6 +442,9 @@
         color: #000;
         background: #fff;
         text-decoration: none;
+        &:hover {
+            color: #2d8db4;
+        }
     }
 }
 
@@ -467,11 +511,23 @@
     @include retina {
         @include sized-sprite($icons, prev);
     }
+    &:hover {
+        @include sized-sprite($icons, prev-hover);
+        @include retina {
+            @include sized-sprite($icons, prev-hover);
+        }     
+    }
 } 
 .next {
     @include sized-sprite($icons, next);
     @include retina {
         @include sized-sprite($icons, next);
+    }
+    &:hover {
+        @include sized-sprite($icons, next-hover);
+        @include retina {
+            @include sized-sprite($icons, next-hover);
+        }
     }
 } 
 .item_shop {
@@ -484,15 +540,7 @@
         display: block;
     }
     &:hover .item__main {
-        /*-o-transition:all .5s ease-in-out;
-        -o-transform:scale(2);
-        -moz-transition:all .5s ease-in-out;
-        -moz-transform:scale(2);
-        -webkit-transition:all .5s ease-in-out;
-        -webkit-transform:scale(2);
-        transition:all .5s ease-in-out;
-        transform:scale(2);*/
-        opacity: 0;
+        display: none;
     }
     @include respond-to(med) {
         padding-bottom: 75px;
