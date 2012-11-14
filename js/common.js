@@ -2,13 +2,13 @@ $(document).ready(function() {
     $('.js-slider').cycle({ 
         fx:     'fade',
         timeout: 2000,
-        speed: 2000,
+        speed: 1000,
         pager:  '.js-main-nav'
     });
     $('.js-slider-comp').cycle({ 
         fx:     'fade',
         timeout: 2000,
-        speed: 2000,
+        speed: 1000,
         pager:  '.js-our-comp-nav'
     });
     $('.js-scroll-shop').scrollable({

@@ -80,8 +80,10 @@
     }
     @include pfd_r();
     @include background-image(linear-gradient(left, rgba(0,0,0,0.9), rgba(0,0,0,0)));
-    div {
+    a {
+        display: block;
         padding-left: 33px;
+        text-decoration: none;
     }
     strong {
         padding-right: 20px;
@@ -403,7 +405,7 @@
 }
 
 .item__descr {
-    margin-top: 37px;
+    margin-top: 12px;
     padding-left: 5px;
     @include hel_r();
     font-size: 12px;
@@ -482,14 +484,14 @@
         display: block;
     }
     &:hover .item__main {
-        -o-transition:all .5s ease-in-out;
-        -o-transform:scale(0);
+        /*-o-transition:all .5s ease-in-out;
+        -o-transform:scale(2);
         -moz-transition:all .5s ease-in-out;
-        -moz-transform:scale(0);
+        -moz-transform:scale(2);
         -webkit-transition:all .5s ease-in-out;
-        -webkit-transform:scale(0);
+        -webkit-transform:scale(2);
         transition:all .5s ease-in-out;
-        transform:scale(0);
+        transform:scale(2);*/
         opacity: 0;
     }
     @include respond-to(med) {
@@ -586,22 +588,23 @@
         margin-bottom: 47px;
     }
     font-size: 14px;
-    h3 {
-        @include pfd_m();
-        font-size: 31px;
-        padding: 6px 0 19px;
-        @include respond-to(pda) {
-            display: none;
-        }
-    }
     p {
         margin-bottom: 18px;
     }
 }
+.about-comp__title {
+    @include pfd_m();
+    font-size: 31px;
+    padding: 6px 0 19px;
+    @include respond-to(pda) {
+        display: none;
+    }
+    }
 .about-comp__col {
     float: left;
     width: 43%;
     padding-right: 7%;
+    line-height: 1.4;
     @include respond-to(med) {
         float: none;
         width: 95%;
@@ -636,12 +639,12 @@
     -webkit-transition:all .3s ease-in-out;
     transition:all .3s ease-in-out;
 }
-.item {
+/*.item {
     -o-transition:all .8s ease-in-out;
     -moz-transition:all .8s ease-in-out;
     -webkit-transition:all .8s ease-in-out;
     transition:all .8s ease-in-out;
-}
+}*/
 .item_shop {
     -o-transition: none;
     -moz-transition: none;

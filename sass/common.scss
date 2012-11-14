@@ -106,8 +106,12 @@ input[type='submit']::-moz-focus-inner{
 }
 /* ------------------------------------- //END Reset css --------------------------------------- */
 body{
+    padding: 0 10px;
     min-width: 320px;
 	font: normal 12px 'helveticaneuecyrroman', Arial, sans-serif;
+    @include respond-to(pda) {
+        padding: 0;
+    } 
 }
 a{
 	color:#00919e;
@@ -229,7 +233,7 @@ a{
 }
 .header__logo {
     position: relative;
-    h1 {
+    .header__logo-main {
         height: 3px;
         background: #000;
         @include respond-to(pda) { 
