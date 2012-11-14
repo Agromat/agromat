@@ -298,12 +298,16 @@
         @include respond-to(med) {
             margin-top: 15px;
         }
+        @include respond-to(pda) {
+            width: 42%;
+            margin: 8px auto 0;
+        }
         &:before,
         &:after {
             content: "";
-            display: block !important;
+            display: block;
             position: absolute;
-            right: 12%;
+            right: 0;
             top: 8px;
             @include sized-sprite($icons, rhomb-m);
             @include retina {
@@ -312,9 +316,16 @@
             @include respond-to(med) {
                 display: none;
             }
+            @include respond-to(pda) {
+                display: block;
+                right: -15%;
+            }
         }
         &:before {
-            left: 12%;
+            left: 0;
+            @include respond-to(pda) {
+                left: -15%;
+            }
         }
     }
 }
