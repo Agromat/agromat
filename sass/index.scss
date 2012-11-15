@@ -318,10 +318,20 @@
                         right: -15%;
                     }
                 }
+                @include respond-to(med) {
+                    margin-top: 15px;
+                }
                 @include respond-to(pda) {
                     width: 42%;
                     margin: 8px auto 0;
                 }
+            }
+            @include respond-to(med) {
+                top: 10%;
+                right: 4%;
+                bottom: 10%;
+                left: 4%;
+                @include box-shadow(0 0 0 3px #fff);
             }
             @include respond-to(pda) {
                 top: 12.8%;
