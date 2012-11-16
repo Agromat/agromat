@@ -5,19 +5,7 @@
         padding: 30px 10px 0;
     }
 }
-.slider-wrap {
-    position: relative;
-    float: left;
-    width: 75%;
-    @include respond-to(med) {
-        width: 100%;
-        float: none;
-        margin-bottom: 20px;
-    }
-    @include respond-to(pda) {
-        display:none;
-    }
-}
+
 .js-slider {
     width: 100% !important;
 }
@@ -130,15 +118,6 @@
         top: 0;
         right: -9px;
         @include sized-sprite($icons, stamp);
-    }
-}
-.banners {
-    float: right;
-    width: 24.2%;
-    overflow: hidden;
-    @include respond-to(med) {
-        float: none;
-        width: 100%;
     }
 }
 .banner {

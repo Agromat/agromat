@@ -324,6 +324,7 @@ a{
             }
         }
         a {
+            display: block;
             position: relative;
             color: #000;
             @include pfd_m;
@@ -339,45 +340,48 @@ a{
             }
         }
     }
-    .menu__active {
-        a {
-            display: block;
+}
+.active-menu-link {
+    a {
+        display: block;
+        position: relative;
+        span {
             position: relative;
-            span {
-                padding-bottom: 11px;
-                border-bottom: 3px solid;
-                @include respond-to(mob-lan) {
-                    position: relative;
-                    padding: 0 10px;
-                    border-bottom: 0;
-                }
-                &:before,
-                &:after {
-                    content: "";
-                     @include respond-to(mob-lan) { 
-                        position: absolute;
-                        top: 9px;
-                        right: 0;
-                        @include sized-sprite($icons, rhomb-s);
-                    }
-                }
-                &:before {
-                    content: "";
-                    @include respond-to(mob-lan) { 
-                        left: 0;
-                    }
-                }
-            }
+            z-index: 2;
             color: #2c8db7;
-            @include respond-to(mob-lan) { 
+            padding-bottom: 11px;
+            border-bottom: 3px solid #2c8db7;;
+            @include respond-to(mob-lan) {
+                position: relative;
                 padding: 0 10px;
                 border-bottom: 0;
             }
+            &:before,
+            &:after {
+                content: "";
+                 @include respond-to(mob-lan) { 
+                    position: absolute;
+                    top: 9px;
+                    right: 0;
+                    @include sized-sprite($icons, rhomb-s);
+                }
+            }
+            &:before {
+                content: "";
+                @include respond-to(mob-lan) { 
+                    left: 0;
+                }
+            }
         }
+        color: #2c8db7;
         @include respond-to(mob-lan) { 
-            border-bottom: 1px solid #d7d7d7;
-            padding: 0;
+            padding: 0 10px;
+            border-bottom: 0;
         }
+    }
+    @include respond-to(mob-lan) { 
+        border-bottom: 1px solid #d7d7d7;
+        padding: 0;
     }
 }
 .menu .menu__item1 {
@@ -461,6 +465,37 @@ a{
     }
 }
 /* --------------------------------------- //END Header ---------------------------------------- */
+
+/* --------------------------------------- //END layout ---------------------------------------- */
+.main-col {
+    position: relative;
+    float: left;
+    width: 75%;
+    @include respond-to(med) {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    @include respond-to(pda) {
+        display:none;
+    }
+}
+.main-col_r {
+    float: right;
+}
+.sidebar {
+    float: right;
+    width: 24.2%;
+    overflow: hidden;
+    @include respond-to(med) {
+        float: none;
+        width: 100%;
+    }
+}
+.sidebar_l {
+    float: left;
+}
+/* --------------------------------------- //END layout ---------------------------------------- */
 
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */
 .footer {

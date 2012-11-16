@@ -303,6 +303,7 @@ a {
         .menu li:before {
           display: none; } }
     .menu li a {
+      display: block;
       position: relative;
       color: #000;
       font-weight: normal;
@@ -316,41 +317,45 @@ a {
           font-size: 18px; } }
       .menu li a:hover {
         color: #2c8db7; }
-  .menu .menu__active a {
-    display: block;
+
+.active-menu-link a {
+  display: block;
+  position: relative;
+  color: #2c8db7; }
+  .active-menu-link a span {
     position: relative;
-    color: #2c8db7; }
-    .menu .menu__active a span {
-      padding-bottom: 11px;
-      border-bottom: 3px solid; }
-      @media only screen and (max-width: 480px) {
-        .menu .menu__active a span {
-          position: relative;
-          padding: 0 10px;
-          border-bottom: 0; } }
-      .menu .menu__active a span:before, .menu .menu__active a span:after {
-        content: ""; }
-        @media only screen and (max-width: 480px) {
-          .menu .menu__active a span:before, .menu .menu__active a span:after {
-            position: absolute;
-            top: 9px;
-            right: 0;
-            background: url('../img/icons-s107a554111.png') 0 -266px no-repeat;
-            width: 5px;
-            height: 5px; } }
-      .menu .menu__active a span:before {
-        content: ""; }
-        @media only screen and (max-width: 480px) {
-          .menu .menu__active a span:before {
-            left: 0; } }
+    z-index: 2;
+    color: #2c8db7;
+    padding-bottom: 11px;
+    border-bottom: 3px solid #2c8db7; }
     @media only screen and (max-width: 480px) {
-      .menu .menu__active a {
+      .active-menu-link a span {
+        position: relative;
         padding: 0 10px;
         border-bottom: 0; } }
+    .active-menu-link a span:before, .active-menu-link a span:after {
+      content: ""; }
+      @media only screen and (max-width: 480px) {
+        .active-menu-link a span:before, .active-menu-link a span:after {
+          position: absolute;
+          top: 9px;
+          right: 0;
+          background: url('../img/icons-s107a554111.png') 0 -266px no-repeat;
+          width: 5px;
+          height: 5px; } }
+    .active-menu-link a span:before {
+      content: ""; }
+      @media only screen and (max-width: 480px) {
+        .active-menu-link a span:before {
+          left: 0; } }
   @media only screen and (max-width: 480px) {
-    .menu .menu__active {
-      border-bottom: 1px solid #d7d7d7;
-      padding: 0; } }
+    .active-menu-link a {
+      padding: 0 10px;
+      border-bottom: 0; } }
+@media only screen and (max-width: 480px) {
+  .active-menu-link {
+    border-bottom: 1px solid #d7d7d7;
+    padding: 0; } }
 
 .menu .menu__item1 {
   text-align: left;
@@ -431,6 +436,36 @@ a {
     display: none; }
 
 /* --------------------------------------- //END Header ---------------------------------------- */
+/* --------------------------------------- //END layout ---------------------------------------- */
+.main-col {
+  position: relative;
+  float: left;
+  width: 75%; }
+  @media only screen and (max-width: 1024px) {
+    .main-col {
+      width: 100%;
+      float: none;
+      margin-bottom: 20px; } }
+  @media only screen and (max-width: 768px) {
+    .main-col {
+      display: none; } }
+
+.main-col_r {
+  float: right; }
+
+.sidebar {
+  float: right;
+  width: 24.2%;
+  overflow: hidden; }
+  @media only screen and (max-width: 1024px) {
+    .sidebar {
+      float: none;
+      width: 100%; } }
+
+.sidebar_l {
+  float: left; }
+
+/* --------------------------------------- //END layout ---------------------------------------- */
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */
 .footer {
   position: relative;
