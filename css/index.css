@@ -53,12 +53,12 @@
   z-index: 100;
   *zoom: 1;
 }
-/* line 77, ../sass/_base.scss */
+/* line 76, ../sass/_base.scss */
 .slider-nav:after, .slider-nav:before {
   content: " ";
   display: table;
 }
-/* line 81, ../sass/_base.scss */
+/* line 80, ../sass/_base.scss */
 .slider-nav:after {
   clear: both;
 }
