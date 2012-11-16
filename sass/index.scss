@@ -40,25 +40,16 @@
         margin-right: 5px;
         @include hide-text();
         @include sized-sprite($icons, rhomb-big-white);
-        @include retina {
-            @include sized-sprite($icons, rhomb-big-white);
-        }
         &:hover {
             position: relative;
             left: -1px;
             margin-left: 2px;
             top: 1px;
             @include sized-sprite($icons, rhomb-hover);
-            @include retina {
-                @include sized-sprite($icons, rhomb-hover);
-            }
         }
     }
     .activeSlide {
         @include sized-sprite($icons, rhomb-big-blue);
-        @include retina {
-            @include sized-sprite($icons, rhomb-big-blue);
-        }
     }
 }
 .slider__item {
@@ -139,9 +130,6 @@
         top: 0;
         right: -9px;
         @include sized-sprite($icons, stamp);
-        @include retina {
-            @include sized-sprite($icons, stamp); 
-        }
     }
 }
 .banners {
@@ -268,9 +256,6 @@
                     right: -27px;
                     top: 40%;
                     @include sized-sprite($icons, rhomb-m);
-                    @include retina {
-                        @include sized-sprite($icons, rhomb-m); 
-                    }
                 }
                 &:before {
                     left: -27px;
@@ -363,9 +348,6 @@
             right: 0;
             top: 8px;
             @include sized-sprite($icons, rhomb-m);
-            @include retina {
-                @include sized-sprite($icons, rhomb-m); 
-            }
             @include respond-to(med) {
                 display: none;
             }
@@ -520,46 +502,37 @@
 .prev {
     left: -10px;
     @include sized-sprite($icons, prev);
-    @include retina {
-        @include sized-sprite($icons, prev);
-    }
     &:hover {
-        @include sized-sprite($icons, prev-hover);
-        @include retina {
-            @include sized-sprite($icons, prev-hover);
-        }     
+        @include sized-sprite($icons, prev-hover);   
     }
 } 
 .next {
     @include sized-sprite($icons, next);
-    @include retina {
-        @include sized-sprite($icons, next);
-    }
     &:hover {
         @include sized-sprite($icons, next-hover);
-        @include retina {
-            @include sized-sprite($icons, next-hover);
-        }
     }
 } 
-.item_shop {
+.shop {
+    float: left;
     position: relative;
     width: 243px;
     height: 200px;
-    padding: 0;
     margin: 0 0.02%;
     a {
         display: block;
     }
-    &:hover .item__main {
-        -o-animation: to_left 0.5s 1 forwards;
-        -moz-animation: to_left 0.5s 1 forwards;
-        -webkit-animation: to_left 0.5s 1 forwards;
-        animation: to_left 0.5s 1 forwards;
+    img {
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+    &:hover .shop__main {
+        opacity: 0.5;
+        @include transition(opacity, .8s, ease-in-out);
     }
     @include respond-to(med) {
         padding-bottom: 75px;
-       &:hover .item__main {
+       &:hover .shop__main {
             opacity: 1;
             -o-transform:scale(1);
             -moz-transform:scale(1);
@@ -571,21 +544,15 @@
         margin: 0 1.8% 2% 0;
         padding: 0;
         width: 45.4%;
-        height: auto;
         display: inline-block;
     }
-    .item__main {
+    .shop__main {
         position: absolute;
         top: 30px;
         left: 30px;
         right: 30px;
         bottom: 30px;
         background: #fff;
-        -o-animation: to_right 0.1s 1 forwards;
-        -moz-animation: to_right 0.1s 1 forwards;
-        -webkit-animation: to_right 0.1s 1 forwards;
-        animation: to_right 0.5s 1 forwards;
-        @include animation(to_right, 1s, ease-in-out, 1, forward);
         @include respond-to(med) {
             top: 180px;
             left: 0;
@@ -604,16 +571,21 @@
             background: #fff;
         }
     }
-    img {
-        margin-bottom: 0;
-    }
-    .item__title {
+    .shop__title {
         width: 140px;
         margin: 0 auto;
         text-align: center;
         padding-top: 30px;
+        @include pfd_b();
+        font-size: 22px;
+        text-transform: uppercase;
         a {
+            color: #000;
+            text-decoration: none;
             background: none;
+            &:hover {
+                color: #2d8db4;
+            }
         }
         @include respond-to(med) {
             width: 100%;
@@ -635,144 +607,7 @@
     }
 }
 
-
-@-o-keyframes to_left {
-    0% {
-        left:30px;
-        right:30px;
-    }
-    50% {
-        left:300px;
-        right:-270px;
-    }
-    51% {
-        opacity: 0;
-        display: none;
-        top: -100px;
-    }
-    100% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-        opacity: 0;
-        display: none;
-    }
-}
-@-moz-keyframes to_left {
-    0% {
-        left:30px;
-        right:30px;
-    }
-    50% {
-        left:300px;
-        right:-270px;
-    }
-    51% {
-        opacity: 0;
-        display: none;
-        top: -100px;
-    }
-    100% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-        opacity: 0;
-        display: none;
-    }
-}
-@-webkit-keyframes to_left {
-    0% {
-        left:30px;
-        right:30px;
-    }
-    50% {
-        left:300px;
-        right:-270px;
-    }
-    51% {
-        opacity: 0;
-        display: none;
-        top: -100px;
-    }
-    100% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-        opacity: 0;
-        display: none;
-    }
-}
-@keyframes to_left {
-    0% {
-        left:30px;
-        right:30px;
-    }
-    50% {
-        left:300px;
-        right:-270px;
-    }
-    51% {
-        opacity: 0;
-        display: none;
-        top: -100px;
-    }
-    100% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-        opacity: 0;
-        display: none;
-    }
-}
-@-o-keyframes to_right {
-    0% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-    }
-    100% {
-        left: 30px;
-        right: 30px;
-        z-index: 2;
-    }
-}
-@-moz-keyframes to_right {
-    0% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-    }
-    100% {
-        left: 30px;
-        right: 30px;
-        z-index: 2;
-    }
-}
-@-webkit-keyframes to_right {
-    0% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-    }
-    100% {
-        left: 30px;
-        right: 30px;
-        z-index: 2;
-    }
-}
-@keyframes to_right {
-    0% {
-        left:-300px;
-        right:270px;
-        z-index: -1;
-    }
-    100% {
-        left: 30px;
-        right: 30px;
-        z-index: 2;
-    }
-}
-.item__adr {
+.shop__adr {
     color: #727272;
     font-size: 12px;
     @include hel_r();
@@ -840,32 +675,14 @@
 }
 
 .banners, .slider-wrap, .about-comp {
-    -o-transition:all .3s ease-in-out;
-    -moz-transition:all .3s ease-in-out;
-    -webkit-transition:all .3s ease-in-out;
-    transition:all .3s ease-in-out;
+    @include transition(all, .3s, ease-in-out);
 }
-/*.item {
-    -o-transition:all .8s ease-in-out;
-    -moz-transition:all .8s ease-in-out;
-    -webkit-transition:all .8s ease-in-out;
-    transition:all .8s ease-in-out;
-}*/
 .item_shop {
-    -o-transition: none;
-    -moz-transition: none;
-    -webkit-transition: none;
-    transition: none;
+    @include transition(none);
     .item__main {
-        -o-transition:  background .8s ease-in-out;
-        -moz-transition:  background .8s ease-in-out;
-        -webkit-transition:  background .8s ease-in-out;
-        transition:  background .8s ease-in-out;
+        @include transition(background, .8s, ease-in-out);
     }
 }
 .header-top {
-    -o-transition: background .6s ease-in-out;
-    -moz-transition: background .6s ease-in-out;
-    -webkit-transition: background .6s ease-in-out;
-    transition: background .6s ease-in-out;
+    @include transition(background, .6s, ease-in-out);
 }

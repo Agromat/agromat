@@ -161,9 +161,6 @@ a{
             right: 9%;
             top: 7px;
             @include sized-sprite($icons, rhomb-s);
-            @include retina {
-                @include sized-sprite($icons, rhomb-s);
-            }
         }
         &:before {
             left: 9%;
@@ -229,14 +226,8 @@ a{
         display: inline-block;
         margin-left: 6px;
         @include sized-sprite($logos, fb);
-        @include retina {
-            @include sized-sprite($logos, fb);
-        }
         &:hover {
             @include sized-sprite($logos, fb_hover);
-            @include retina {
-                @include sized-sprite($logos, fb_hover); 
-            }
         }
     }
     @include respond-to(med) {
@@ -295,9 +286,6 @@ a{
                 padding: 0;
             }
         }
-        /*@include respond-to(mob) {
-            wid
-        }*/
     }
 }
 .menu {
@@ -331,9 +319,6 @@ a{
             float: right;
             margin-top: 8px;
             @include sized-sprite($icons, rhomb-s);
-            @include retina {
-                @include sized-sprite($icons, rhomb-s);
-            }
             @include respond-to(mob-lan) { 
                display: none;
             }
@@ -374,9 +359,6 @@ a{
                         top: 9px;
                         right: 0;
                         @include sized-sprite($icons, rhomb-s);
-                        @include retina {
-                            @include sized-sprite($icons, rhomb-s);
-                        }
                     }
                 }
                 &:before {
@@ -525,9 +507,6 @@ a{
         top: -5px;
         left: 10px;
         @include sized-sprite($icons, rhomb-big-b);
-        @include retina {
-            @include sized-sprite($icons, rhomb-big-b);
-        }
         @include respond-to(pda) {
             display: none;
         }
@@ -540,9 +519,6 @@ a{
             top: 7px;
             right: 12px;
             @include sized-sprite($icons, rhomb-s);
-            @include retina {
-                @include sized-sprite($icons, rhomb-s);
-            }
         }
         &:after {
             left: 12px;
@@ -619,9 +595,6 @@ a{
         left: -11px;
         top: 5px;
         @include sized-sprite($icons, rhomb-s2);
-        @include retina {
-            @include sized-sprite($icons, rhomb-s2);
-        }
     }
     a {
         position: relative;
@@ -654,9 +627,6 @@ a{
         top: -3px;
         margin-left: -4px;
         @include sized-sprite($icons, rhomb-m);
-        @include retina {
-            @include sized-sprite($icons, rhomb-m);
-        }
         @include respond-to(pda) {
            display: none;
         }
@@ -724,86 +694,44 @@ a{
 }
 .part-logo__1 {
     @include sized-sprite($logos, logo1);
-    @include retina {
-        @include sized-sprite($logos, logo1);
-    }
     &:hover {
     @include sized-sprite($logos, logo1_h);
-        @include retina {
-            @include sized-sprite($logos, logo1_h);
-        }
     }
 } 
 .part-logo__2 {
     @include sized-sprite($logos, logo2);
-    @include retina {
-        @include sized-sprite($logos, logo2);
-    }
     &:hover {
-       @include sized-sprite($logos, logo2_h);
-        @include retina {
-            @include sized-sprite($logos, logo2_h);
-        }    
+       @include sized-sprite($logos, logo2_h);    
     }
 }
 .part-logo__3 {
     @include sized-sprite($logos, logo3);
-    @include retina {
-        @include sized-sprite($logos, logo3);
-    }
     &:hover {
-        @include sized-sprite($logos, logo3_h);
-        @include retina {
-            @include sized-sprite($logos, logo3_h);
-        }      
+        @include sized-sprite($logos, logo3_h);      
     }
 }
 .part-logo__4 {
     @include sized-sprite($logos, logo4);
-    @include retina {
-        @include sized-sprite($logos, logo4);
-    }
     &:hover {
         @include sized-sprite($logos, logo4_h);
-        @include retina {
-            @include sized-sprite($logos, logo4_h);
-        }
     }
 } 
 .part-logo__5 {
     @include sized-sprite($logos, logo5);
-    @include retina {
-        @include sized-sprite($logos, logo5);
-    }
     &:hover {
         @include sized-sprite($logos, logo5_h);
-        @include retina {
-            @include sized-sprite($logos, logo5_h);
-        }
     }
 }
 .part-logo__6 {
     @include sized-sprite($logos, logo6);
-    @include retina {
-        @include sized-sprite($logos, logo6);
-    }
     &:hover {
         @include sized-sprite($logos, logo6_h);
-        @include retina {
-            @include sized-sprite($logos, logo6_h);
-        }
     }
 }
 .part-logo__7 {
     @include sized-sprite($logos, logo7);
-    @include retina {
-        @include sized-sprite($logos, logo7);
-    }
     &:hover {
         @include sized-sprite($logos, logo7_h);
-        @include retina {
-            @include sized-sprite($logos, logo7_h);
-        }
     } 
 }
 .footer__copy {
@@ -857,7 +785,7 @@ a{
        line-height: 43px;
        text-align: center;
        background: #efefef;
-       border-top: 1px solid #d7d7d7;
+       border-top: 1px solid #d7d7d7; 
     }
 }
 
