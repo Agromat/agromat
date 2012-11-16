@@ -402,6 +402,9 @@
         }
     }
     img {
+         &:hover {
+            opacity: 0.8;
+        }
         display: block;
         margin-bottom: -25px;
         width: 100%;
@@ -414,6 +417,7 @@
     position: relative;
 }
 .item__date {
+    position: relative;
     display: inline-block;
     padding: 2px 9px 10px 6px;
     color: #818181;
@@ -423,6 +427,8 @@
     text-transform: uppercase;
 }
 .item__title {
+    position: relative;
+    z-index: 2;
     width: 80%;
     margin-top: -9px;
     padding-left: 6px;
@@ -526,10 +532,6 @@
             display: none;
         }
     }
-    &:hover .shop__main {
-        opacity: 0.5;
-        @include transition(opacity, .8s, ease-in-out);
-    }
     @include respond-to(med) {
         padding-bottom: 75px;
        &:hover .shop__main {
@@ -546,67 +548,77 @@
         width: 45.4%;
         display: inline-block;
     }
-    .shop__main {
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        right: 30px;
-        bottom: 30px;
-        background: #fff;
-        @include respond-to(med) {
-            top: 180px;
-            left: 0;
-            width: 100%;
-            height: 50px;
-            background: none;
-        }
-        @include respond-to(pda) {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: auto;
-            width: auto;
-            border: 2px solid;
-            background: #fff;
-        }
+}
+.shop__main {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    bottom: 30px;
+    background: #fff;
+    @include respond-to(med) {
+        top: 180px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: none;
     }
-    .shop__title {
-        width: 140px;
-        margin: 0 auto;
-        text-align: center;
-        padding-top: 30px;
-        @include pfd_b();
-        font-size: 22px;
-        text-transform: uppercase;
-        a {
-            color: #000;
-            text-decoration: none;
-            background: none;
-            &:hover {
-                color: #2d8db4;
-            }
+    @include respond-to(pda) {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: auto;
+        border: 2px solid;
+        background: #fff;
+    }
+    &:hover {
+        top: 35px;
+        left: 35px;
+        right: 35px;
+        bottom: 35px;
+        opacity: 0.5;
+        @include transition(all, .2s, ease-in-out);
+        .shop__title {
+            margin-top: 25px;
+            @include transition(all, .2s, ease-in-out);
         }
-        @include respond-to(med) {
-            width: 100%;
-        }
-        @include respond-to(pda) {
-            font-size: 18px;
-            padding-top: 27%;
-        }
-        span {
-            display: block;
-            @include respond-to(med) {
-                display: inline;
-            }
-            @include respond-to(pda) {
-                display: block;
-            }
-        }
-        
     }
 }
-
+.shop__title {
+    width: 140px;
+    margin: 30px auto 0;
+    text-align: center;
+    @include pfd_b();
+    font-size: 22px;
+    text-transform: uppercase;
+    a {
+        color: #000;
+        text-decoration: none;
+        background: none;
+        &:hover {
+            color: #2d8db4;
+        }
+    }
+    @include respond-to(med) {
+        width: 100%;
+    }
+    @include respond-to(pda) {
+        font-size: 18px;
+        padding-top: 27%;
+    }
+    span {
+        display: block;
+        @include respond-to(med) {
+            display: inline;
+        }
+        @include respond-to(pda) {
+            display: block;
+        }
+    }
+    
+}
 .shop__adr {
     color: #727272;
     font-size: 12px;
