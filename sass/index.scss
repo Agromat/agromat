@@ -550,7 +550,10 @@
         display: block;
     }
     &:hover .item__main {
-        display: none;
+        -o-animation: to_left 0.5s 1 forwards;
+        -moz-animation: to_left 0.5s 1 forwards;
+        -webkit-animation: to_left 0.5s 1 forwards;
+        animation: to_left 0.5s 1 forwards;
     }
     @include respond-to(med) {
         padding-bottom: 75px;
@@ -576,6 +579,11 @@
         right: 30px;
         bottom: 30px;
         background: #fff;
+        -o-animation: to_right 0.1s 1 forwards;
+        -moz-animation: to_right 0.1s 1 forwards;
+        -webkit-animation: to_right 0.1s 1 forwards;
+        animation: to_right 0.5s 1 forwards;
+        @include animation(to_right, 1s, ease-in-out, 1, forward);
         @include respond-to(med) {
             top: 180px;
             left: 0;
@@ -622,6 +630,116 @@
             }
         }
         
+    }
+}
+
+
+@-o-keyframes to_left {
+    0% {
+        left:30px;
+        right:30px;
+    }
+    50% {
+        left:300px;
+        right:-270px;
+    }
+    100% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+}
+@-moz-keyframes to_left {
+    0% {
+        left:30px;
+        right:30px;
+    }
+    50% {
+        left:300px;
+        right:-270px;
+    }
+    100% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+}
+@-webkit-keyframes to_left {
+    0% {
+        left:30px;
+        right:30px;
+    }
+    50% {
+        left:300px;
+        right:-270px;
+    }
+    100% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+}
+@keyframes to_left {
+    0% {
+        left:30px;
+        right:30px;
+    }
+    50% {
+        left:300px;
+        right:-270px;
+    }
+    100% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+}
+@-o-keyframes to_right {
+    0% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+    100% {
+        left: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+}
+@-moz-keyframes to_right {
+    0% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+    100% {
+        left: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+}
+@-webkit-keyframes to_right {
+    0% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+    100% {
+        left: 30px;
+        right: 30px;
+        z-index: 2;
+    }
+}
+@keyframes to_right {
+    0% {
+        left:-300px;
+        right:270px;
+        z-index: -1;
+    }
+    100% {
+        left: 30px;
+        right: 30px;
+        z-index: 2;
     }
 }
 .item__adr {
