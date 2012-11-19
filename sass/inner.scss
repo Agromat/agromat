@@ -257,3 +257,141 @@
 .quant__all {
     color: #989898;
 }
+
+/* aricles */
+.wrap_article {
+    overflow: hidden;
+    margin-right: -20%;
+    @include respond-to(mob-lan) { 
+       margin: 0;
+    }
+}
+.article {
+    display: inline-block;
+    width: 27.2%;
+    margin: 0 0.9% 45px 0;
+    font-size: 12px;
+    color: #727272;
+    @include respond-to(med) { 
+       width: 41.3%;
+    }
+    @include respond-to(mob-lan) { 
+       width: 100%;
+       margin: 0 auto 25px;
+    }
+}
+.article__preview {
+    float: left;
+    margin: 0 13px 15px 0;
+    img {
+        display: block;
+        width: 100%;
+    }
+    @include respond-to(pda) { 
+       float: none;
+       display: block;
+       width: 75%;
+       margin: 0 auto 10px;
+    }
+    @include respond-to(mob-lan) { 
+       width: 100%;
+    }
+}
+.article__main {
+    overflow: hidden;
+    @include respond-to(pda) { 
+      text-align: center;
+    }
+}
+.article__header {
+    overflow: hidden;
+    text-transform: uppercase;
+    @include pfd_m();
+} 
+.article__categ {
+    color: #818181;
+    font-weight: normal;
+}
+.article__title {
+    padding-top: 10px;
+    font-size: 20px;
+    line-height: 24px;
+    a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: #2d8db4;
+        }
+    }
+    @include respond-to(pda) { 
+       font-size: 17px;
+    }
+}
+.article__excerpt {
+    line-height: 17px;
+    @include hel_r();
+}
+.pagin {
+    margin: 0 auto;
+    height: 1px;
+    background: #96c6d9;
+    width: 55%;
+    text-align: center;
+    @include respond-to(med) { 
+       width: 52%;
+    }
+    @include respond-to(pda) { 
+       width: 85%;
+    }
+    @include respond-to(mob-lan) { 
+       width: 100%;
+    }
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: #000;
+        font-size: 17px;
+        @include pfd_m();
+        border: 2px solid transparent;
+        text-decoration: none;
+        @include respond-to(med) { 
+           height: 16px;
+           width: 16px;
+           line-height: 16px;
+        }
+    }
+}
+.pagin__wrap {
+    position: relative;
+    top: -11px;
+    margin: 0 auto;
+    width: 67%;
+    background: #fff;
+}
+.pagin__title {
+    padding: 0 6% 0 0;
+    color: #9f9f9f;
+    font-size: 15px;
+    @include pfd_m();
+    text-transform: uppercase;
+}
+.pagin__first {
+    cursor: pointer;
+    @include sized-sprite($icons, prev-s); 
+}
+.pagin__last {
+    cursor: pointer;
+    @include sized-sprite($icons, next-s); 
+}
+.pagin__range {
+
+}
+.pagin .pagin__active {
+    border: 2px solid #000;
+}

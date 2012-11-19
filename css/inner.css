@@ -44,7 +44,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      background: url('../img/icons-sa946b17596.png') 0 -111px no-repeat;
+      background: url('../img/icons-s232dde3109.png') 0 -111px no-repeat;
       width: 13px;
       height: 14px; }
 
@@ -76,7 +76,7 @@
       top: 50%;
       left: 11px;
       margin-top: -5px;
-      background: url('../img/icons-sa946b17596.png') 0 -353px no-repeat;
+      background: url('../img/icons-s232dde3109.png') 0 -387px no-repeat;
       width: 5px;
       height: 5px; }
     .submenu li:first-child {
@@ -101,7 +101,7 @@
     top: 50%;
     height: auto;
     margin-top: -7px;
-    background: url('../img/icons-sa946b17596.png') 0 -185px no-repeat;
+    background: url('../img/icons-s232dde3109.png') 0 -185px no-repeat;
     width: 9px;
     height: 15px; }
   .submenu .submenu__active a {
@@ -113,7 +113,7 @@
   left: 7px;
   border: 0;
   cursor: pointer;
-  background: url('../img/icons-sa946b17596.png') 0 0 no-repeat;
+  background: url('../img/icons-s232dde3109.png') 0 0 no-repeat;
   width: 15px;
   height: 9px;
   display: none; }
@@ -246,3 +246,140 @@
 
 .quant__all {
   color: #989898; }
+
+/* aricles */
+.wrap_article {
+  overflow: hidden;
+  margin-right: -20%; }
+  @media only screen and (max-width: 480px) {
+    .wrap_article {
+      margin: 0; } }
+
+.article {
+  display: inline-block;
+  width: 27.2%;
+  margin: 0 0.9% 45px 0;
+  font-size: 12px;
+  color: #727272; }
+  @media only screen and (max-width: 1024px) {
+    .article {
+      width: 41.3%; } }
+  @media only screen and (max-width: 480px) {
+    .article {
+      width: 100%;
+      margin: 0 auto 25px; } }
+
+.article__preview {
+  float: left;
+  margin: 0 13px 15px 0; }
+  .article__preview img {
+    display: block;
+    width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .article__preview {
+      float: none;
+      display: block;
+      width: 75%;
+      margin: 0 auto 10px; } }
+  @media only screen and (max-width: 480px) {
+    .article__preview {
+      width: 100%; } }
+
+.article__main {
+  overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    .article__main {
+      text-align: center; } }
+
+.article__header {
+  overflow: hidden;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif; }
+
+.article__categ {
+  color: #818181;
+  font-weight: normal; }
+
+.article__title {
+  padding-top: 10px;
+  font-size: 20px;
+  line-height: 24px; }
+  .article__title a {
+    color: #000;
+    text-decoration: none; }
+    .article__title a:hover {
+      color: #2d8db4; }
+  @media only screen and (max-width: 768px) {
+    .article__title {
+      font-size: 17px; } }
+
+.article__excerpt {
+  line-height: 17px;
+  font-weight: normal;
+  font-family: 'helveticaneuecyrroman', sans-serif; }
+
+.pagin {
+  margin: 0 auto;
+  height: 1px;
+  background: #96c6d9;
+  width: 55%;
+  text-align: center; }
+  @media only screen and (max-width: 1024px) {
+    .pagin {
+      width: 52%; } }
+  @media only screen and (max-width: 768px) {
+    .pagin {
+      width: 85%; } }
+  @media only screen and (max-width: 480px) {
+    .pagin {
+      width: 100%; } }
+  .pagin * {
+    display: inline-block;
+    vertical-align: middle; }
+  .pagin a {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    color: #000;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    border: 2px solid transparent;
+    text-decoration: none; }
+    @media only screen and (max-width: 1024px) {
+      .pagin a {
+        height: 16px;
+        width: 16px;
+        line-height: 16px; } }
+
+.pagin__wrap {
+  position: relative;
+  top: -11px;
+  margin: 0 auto;
+  width: 67%;
+  background: #fff; }
+
+.pagin__title {
+  padding: 0 6% 0 0;
+  color: #9f9f9f;
+  font-size: 15px;
+  font-weight: normal;
+  font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+  text-transform: uppercase; }
+
+.pagin__first {
+  cursor: pointer;
+  background: url('../img/icons-s232dde3109.png') 0 -290px no-repeat;
+  width: 4px;
+  height: 7px; }
+
+.pagin__last {
+  cursor: pointer;
+  background: url('../img/icons-s232dde3109.png') 0 -273px no-repeat;
+  width: 4px;
+  height: 7px; }
+
+.pagin .pagin__active {
+  border: 2px solid #000; }
