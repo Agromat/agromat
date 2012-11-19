@@ -21,6 +21,26 @@
 
 }
 @font-face {
+    font-family: 'helveticaneuecyrbold_italic';
+    src: url('../fonts/helveticaneuecyr-bolditalic-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'helveticaneuecyritalic';
+    src: url('../fonts/helveticaneuecyr-italic-webfont.eot');
+    src: url('../fonts/helveticaneuecyr-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helveticaneuecyr-italic-webfont.woff') format('woff'),
+         url('../fonts/helveticaneuecyr-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
     font-family: 'pf_din_text_comp_probold';
     src: url('../fonts/pfdintextcomppro-bold-webfont.eot');
     src: url('../fonts/pfdintextcomppro-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -39,6 +59,15 @@
     font-weight: normal;
     font-style: normal;
 
+}
+@font-face {
+    font-family: 'pf_din_text_comp_pro_mediumIt';
+    src: url('../fonts/pfdintextcomppro-medital-webfont.eot');
+    src: url('../fonts/pfdintextcomppro-medital-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/pfdintextcomppro-medital-webfont.woff') format('woff'),
+         url('../fonts/pfdintextcomppro-medital-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
     font-family: 'pf_din_text_comp_proregular';
@@ -139,9 +168,10 @@ a{
 .wrap {
     @include clr();
 }
-.title-l-2 {
+.title-l-1 {
     @include pfd_m();
-    font-size: 16px;
+    font-size: 24px;
+    line-height: 24px;
     height: 1px;
     margin: 30px 0;
     background: #000;
@@ -150,22 +180,44 @@ a{
         position: relative;
         top: -10px;
         display: inline-block;
-        padding: 0 23px;
+        padding: 0 29px;
         background: #fff;
         text-transform: uppercase;
-        letter-spacing: 3px;
+        letter-spacing: 5px;
         &:before,
         &:after {
             content: "";
             position: absolute;
-            right: 9%;
+            right: 5%;
             top: 7px;
             @include sized-sprite($icons, rhomb-s);
         }
         &:before {
-            left: 9%;
+            left: 5%;
         }
     }
+}
+.title-l-1_index {
+    font-size: 16px;
+    line-height: 16px;
+    span {
+        padding: 0 23px;
+        letter-spacing: 3px;
+    }
+}
+.title-l-2 {
+    margin-bottom: 15px;
+    @include pfd_m();
+    font-size: 31px;
+    text-transform: uppercase;
+    line-height: 38px;
+}
+.title-l-3 {
+    margin-bottom: 15px;
+    @include pfd_m();
+    font-size: 24px;
+    text-transform: uppercase;
+    line-height: 38px;
 }
 /* ------------------------------------- //Begin Header ---------------------------------------- */
 .header {
@@ -214,6 +266,9 @@ a{
             text-decoration: underline;
         }
     }
+}
+.header__links-act a {
+    color: #000;
 }
 
 .fb {
@@ -341,7 +396,7 @@ a{
         }
     }
 }
-.active-menu-link {
+.menu__active {
     a {
         display: block;
         position: relative;
@@ -398,6 +453,7 @@ a{
     @include respond-to(mob-lan) { 
         width: 100%;
         border-top: 1px solid #d7d7d7;
+        margin-bottom: 0;
     }
 }
 .menu__item2 {
@@ -448,7 +504,7 @@ a{
 }
 .menu .menu__item6 {
     text-align: right; 
-    width: 18%;
+    width: 19%;
     @include respond-to(med) { 
         width: 23%;
     }
@@ -480,13 +536,9 @@ a{
         display:none;
     }
 }
-.main-col_r {
-    float: right;
-}
 .sidebar {
     float: right;
     width: 24.2%;
-    overflow: hidden;
     @include respond-to(med) {
         float: none;
         width: 100%;
@@ -494,6 +546,11 @@ a{
 }
 .sidebar_l {
     float: left;
+    .banner, .quote {
+        @include respond-to(med) {
+           display: none;
+        }
+    }
 }
 /* --------------------------------------- //END layout ---------------------------------------- */
 
@@ -681,6 +738,14 @@ a{
         }
     }
 }
+.separator-blue_mod {
+    background: #000;
+    margin: 46px 0 38px;
+    i {
+        margin-left: -5px; 
+        @include sized-sprite($icons, rhomb-b); 
+    }
+}
 .part-logo {
     overflow: hidden;
     padding: 23px 0 31px;
@@ -823,5 +888,15 @@ a{
        border-top: 1px solid #d7d7d7; 
     }
 }
+.test {
+    position: absolute;
+    left: 50%;
+    margin-left: -678px; 
+    top: 0;
+    width: 1362px;
+    height: 2500px;
+    background: url(../img/test.png) 0 0 no-repeat;
+    opacity: 0.5;
 
+}
 /* --------------------------------------- //END Footer ---------------------------------------- */

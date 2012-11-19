@@ -37,6 +37,11 @@ $break-5: 1280px;
     font-weight: normal;
     font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
 }
+@mixin pfd_mi{
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
+}
 @mixin pfd_b{
     font-weight: normal;
     font-family: 'pf_din_text_comp_probold', sans-serif;
@@ -49,5 +54,12 @@ $break-5: 1280px;
     font-weight: normal;
     font-family: 'helveticaneuecyrbold', sans-serif;
 }
-
+@mixin hel_i{
+    font-weight: normal;
+    font-family: 'helveticaneuecyritalic', sans-serif;
+}
+@mixin hel_bi{
+    font-weight: normal;
+    font-family: 'helveticaneuecyrbold_italic', sans-serif;
+}
 //animations example

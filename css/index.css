@@ -7,10 +7,19 @@
 .js-slider {
   width: 100% !important; }
 
-.slider-inner {
+.slider {
+  position: relative;
   width: 100%;
-  height: 410px;
   overflow: hidden; }
+
+.slider_cont {
+  height: 200px; }
+  @media only screen and (max-width: 768px) {
+    .slider_cont {
+      display: none; } }
+  .slider_cont .slider__item-wrap {
+    overflow: hidden;
+    height: 200px; }
 
 .slider-nav {
   position: absolute;
@@ -32,7 +41,7 @@
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
-    background: url('../img/icons-s107a554111.png') 0 -92px no-repeat;
+    background: url('../img/icons-sa946b17596.png') 0 -135px no-repeat;
     width: 17px;
     height: 17px; }
     .slider-nav a:hover {
@@ -40,11 +49,11 @@
       left: -1px;
       margin-left: 2px;
       top: 1px;
-      background: url('../img/icons-s107a554111.png') 0 0 no-repeat;
+      background: url('../img/icons-sa946b17596.png') 0 -19px no-repeat;
       width: 15px;
       height: 15px; }
   .slider-nav .activeSlide {
-    background: url('../img/icons-s107a554111.png') 0 -65px no-repeat;
+    background: url('../img/icons-sa946b17596.png') 0 -84px no-repeat;
     width: 17px;
     height: 17px; }
 
@@ -127,7 +136,7 @@
     position: absolute;
     top: 0;
     right: -9px;
-    background: url('../img/icons-s107a554111.png') 0 -25px no-repeat;
+    background: url('../img/icons-sa946b17596.png') 0 -44px no-repeat;
     width: 9px;
     height: 30px; }
 
@@ -219,7 +228,7 @@
 
 .banner__name {
   zoom: 1;
-  width: 46%;
+  width: 59%;
   margin: 29px auto -5px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_probold', sans-serif;
@@ -239,7 +248,7 @@
           position: absolute;
           right: -27px;
           top: 40%;
-          background: url('../img/icons-s107a554111.png') 0 -165px no-repeat;
+          background: url('../img/icons-sa946b17596.png') 0 -233px no-repeat;
           width: 7px;
           height: 7px; }
         .banner__name span:before {
@@ -318,7 +327,7 @@
       position: absolute;
       right: 0;
       top: 8px;
-      background: url('../img/icons-s107a554111.png') 0 -165px no-repeat;
+      background: url('../img/icons-sa946b17596.png') 0 -233px no-repeat;
       width: 7px;
       height: 7px; }
       @media only screen and (max-width: 1024px) {
@@ -471,20 +480,20 @@
 
 .prev {
   left: -10px;
-  background: url('../img/icons-s107a554111.png') 0 -243px no-repeat;
+  background: url('../img/icons-sa946b17596.png') 0 -330px no-repeat;
   width: 7px;
   height: 13px; }
   .prev:hover {
-    background: url('../img/icons-s107a554111.png') 0 -182px no-repeat;
+    background: url('../img/icons-sa946b17596.png') 0 -250px no-repeat;
     width: 7px;
     height: 13px; }
 
 .next {
-  background: url('../img/icons-s107a554111.png') 0 -220px no-repeat;
+  background: url('../img/icons-sa946b17596.png') 0 -307px no-repeat;
   width: 7px;
   height: 13px; }
   .next:hover {
-    background: url('../img/icons-s107a554111.png') 0 -142px no-repeat;
+    background: url('../img/icons-sa946b17596.png') 0 -210px no-repeat;
     width: 7px;
     height: 13px; }
 
