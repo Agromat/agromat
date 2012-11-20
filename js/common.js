@@ -15,6 +15,10 @@ $(document).ready(function() {
       next:'.next_shop',
       prev:'.prev_shop'
   });
+  $('.js-actions-slide').scrollable({
+      next:'.next_action',
+      prev:'.prev_action'
+  });
   $('.js-slider-cont').cycle({ 
       fx:     'fade',
       timeout: 2000,

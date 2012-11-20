@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Articles</title>
+	<title>News</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
@@ -21,7 +21,7 @@
             <!-- top navigation -->
             <ul class="header__links">
                 <li><a href="#">Вопросы и ответы</a></li>
-                <li class="header__links-act"><a href="#">Это интересно</a></li>
+                <li><a href="#">Это интересно</a></li>
                 <li><a href="#">Контакты</a></li>                
             </ul>
             <!-- facebook -->
@@ -38,9 +38,9 @@
         <!-- main menu -->
         <nav class="menu">
             <ul>
-                <li class="menu__item1 menu__active"><a href="#"><span>О компании</span></a></li>
+                <li class="menu__item1"><a href="#"><span>О компании</span></a></li>
                 <li class="menu__item2"><a href="#"><span>Магазины</span></a></li>
-                <li class="menu__item3"><a href="#"><span>Новости и акции</span></a></li>
+                <li class="menu__item3 menu__active"><a href="#"><span>Новости и акции</span></a></li>
                 <li class="menu__item4"><a href="#"><span>Торговые марки</span></a></li>
                 <li  class="menu__item5"><a href="#"><span>Оптовые продажи</span></a></li>
                 <li class="menu__item6"><a href="#"><span>Дополнительные услуги</span></a></li>
@@ -51,7 +51,7 @@
     <!-- BEGIN main -->
     <div class="main">
         <div class="wrap">
-            <aside class="sidebar sidebar_l">
+            <div class="action-slider-wrap">
                 <div class="banner">
                     <div class="banner__wrap">
                         <div class="separator-blue">
@@ -66,95 +66,75 @@
                         <a href="#" class="banner__link">перейти</a>
                     </div>
                 </div>
-                <nav class="submenu">
-                    <ul>
-                        <li><a href="#">Керамическая плитка</a></li>
-                        <li><a href="#">Мозаика</a></li>
-                        <li class="submenu__active"><a href="#">Сантехника</a></li>
-                        <li><a href="#">Декоративные покрытия</a></li>
-                        <li><a href="#">Керамический гранит</a></li>
-                        <li><a href="#">Мини-бассейны</a></li>
-                        <li><a href="#">Ремонт</a></li>
-                        <li><a href="#">Красота и здоровье</a></li>
-                    </ul>
-                    <button class="submenu-key"></button>
-                </nav>
-                <div class="banner banner_action">
-                    <a href="#" class="banner__wrap">
-                        <div class="banner__name"><span>наши акции</span></div>
-                        <div class="separator-blue">
-                            <strong>И скидки</strong>
-                            <span><i></i></span>
-                        </div>
-                    </a>
-                </div>
-                <blockquote class="quote">
-                    <p>Мудрость - знать, в чем дело жизни и как исполнять его...</p>
-                    <i>Лев Толстой</i>
-                </blockquote>
-            </aside>
-            <div class="content">
-                <div class="slider slider_cont">
-                    <div class="js-slider-cont">
+                <div class="slider-action">
+                    <div class="slider slider_actions js-actions-slide">
                         <div class="slider__item">
                             <div class="slider__item-wrap">
-                                <a href="#"><img src="img/slide-s.jpg" alt=""></a>
+                                <a href="#"><img src="img/slide-action.jpg" alt=""></a>
                                 <div class="slider__capt">
                                     <a href="#">
                                         <strong>декоративные покрытия</strong>
                                     </a>
                                 </div>
+                                <div class="stamp">акция</div>
                             </div>
-                        </div>
-                        <div class="slider__item">
                             <div class="slider__item-wrap">
-                                <a href="#"><img src="img/banner.jpg" alt=""></a>
+                                <a href="#"><img src="img/slide-action.jpg" alt=""></a>
                                 <div class="slider__capt">
                                     <a href="#">
                                         <strong>декоративные покрытия</strong>
                                     </a>
                                 </div>
+                                <div class="stamp">акция</div>
                             </div>
-                        </div>
-                        <div class="slider__item">
                             <div class="slider__item-wrap">
-                                <a href="#"><img src="img/slide-s.jpg" alt=""></a>
+                                <a href="#"><img src="img/slide-action.jpg" alt=""></a>
                                 <div class="slider__capt">
                                     <a href="#">
                                         <strong>декоративные покрытия</strong>
                                     </a>
                                 </div>
+                                <div class="stamp">акция</div>
                             </div>
-                        </div>
-                        <div class="slider__item">
                             <div class="slider__item-wrap">
-                                <a href="#"><img src="img/banner.jpg" alt=""></a>
+                                <a href="#"><img src="img/slide-action.jpg" alt=""></a>
                                 <div class="slider__capt">
                                     <a href="#">
                                         <strong>декоративные покрытия</strong>
                                     </a>
                                 </div>
+                                <div class="stamp">акция</div>
                             </div>
                         </div>
                     </div>
-                    <div class="slider-nav js-main-nav"></div>
+                    <span class="prev prev_action"></span>
+                    <span class="next next_action"></span>
                 </div>
-                <h1 class="title-l-1"><span>Это интересно</span></h1>
+            </div>
+            <div class="content content_width">
+                <h1 class="title-l-1"><span>новости и акции</span></h1>
                 <div class="main-cont">
-                    <p>Сегодняшнее лидерство компании на рынке керамики и сантехники Украины - это результат умной и четко алгоритмизированной работы. Не столько льстящий самолюбию статус, сколько повод еще серьезнее, еще ответственнее относиться к тому, что делаешь. Но одной из своих самых ценных, заслуженных наград за годы работы руководство Компании считает проверенный временем и трудностями коллектив единомышленников, людей, умеющих работать, творить, мечтать и воплощать мечты в реальность и определять тенденции развития рынка керамики и сантехники в Украине.</p>
-                    <div class="wrap wrap_article">
+                    <div class="filter">
+                        <a href="#">2012</a>
+                        <a href="#">2011</a>
+                        <a href="#">2010</a>
+                        <a href="#">2009</a>
+                        <a href="#" class="filter__active">2008</a>
+                        <a href="#">2007</a>
+                    </div>
+                    <div class="wrap wrap_news">
                         <article class="article">
-                            <header class="article__header">
-                                <a href="#" class="article__preview">
-                                    <img src="img/article-img.jpg" alt="">
-                                </a>
-                                <div class="article__main">
-                                    <strong class="categ-name">декоративные покрытия</strong>
-                                    <h2 class="article__title"><a href="#">ФРУКТОВАЯ ФАНТАЗИЯ OXFORD ОТ LUCENA CERAMICAS</a></h2>
+                                <header class="article__header">
+                                    <a href="#" class="article__preview">
+                                        <img src="img/article-img.jpg" alt="">
+                                    </a>
+                                    <div class="article__main">
+                                        <strong class="categ-name">декоративные покрытия</strong>
+                                        <h2 class="article__title"><a href="#">ФРУКТОВАЯ ФАНТАЗИЯ OXFORD ОТ LUCENA CERAMICAS</a></h2>
+                                    </div>
+                                </header>
+                                <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити» и на сайте интернет-магазина компании «Агромат». С недавних пор там появилась и коллекция напольной керамической плитки Striato производства испанской фирмы <a href="#">Absolut Keramika...</a>
                                 </div>
-                            </header>
-                            <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити» и на сайте интернет-магазина компании «Агромат». С недавних пор там появилась и коллекция напольной керамической плитки Striato производства испанской фирмы <a href="#">Absolut Keramika...</a>
-                            </div>
                         </article>
                         <article class="article">
                             <header class="article__header">
@@ -179,7 +159,7 @@
                                     <h2 class="article__title"><a href="#">ФРУКТОВАЯ ФАНТАЗИЯ OXFORD ОТ LUCENA CERAMICAS</a></h2>
                                 </div>
                             </header>
-                            <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити» и на сайте интернет-магазина компании «Агромат». С недавних пор там появилась и коллекция напольной керамической плитки Striato производства испанской фирмы <a href="#">Absolut Keramika...</a>
+                            <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити»...</a>
                             </div>
                         </article>
                         <article class="article">
@@ -193,6 +173,32 @@
                                 </div>
                             </header>
                             <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити» и на сайте интернет-магазина компании «Агромат». С недавних пор там появилась и коллекция напольной керамической плитки Striato производства испанской фирмы <a href="#">Absolut Keramika...</a>
+                            </div>
+                        </article>
+                        <article class="article">
+                                <header class="article__header">
+                                    <a href="#" class="article__preview">
+                                        <img src="img/article-img.jpg" alt="">
+                                    </a>
+                                    <div class="article__main">
+                                        <strong class="categ-name">декоративные покрытия</strong>
+                                        <h2 class="article__title"><a href="#">ФРУКТОВАЯ ФАНТАЗИЯ OXFORD ОТ LUCENA CERAMICAS</a></h2>
+                                    </div>
+                                </header>
+                                <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине - их можно приобрести в магазине «Керамик Сити» и на сайте интернет-магазина компании «Агромат». С недавних пор там появилась и коллекция напольной керамической плитки Striato производства испанской фирмы <a href="#">Absolut Keramika...</a>
+                                </div>
+                        </article>
+                        <article class="article">
+                            <header class="article__header">
+                                <a href="#" class="article__preview">
+                                    <img src="img/article-img.jpg" alt="">
+                                </a>
+                                <div class="article__main">
+                                    <strong class="categ-name">декоративные покрытия</strong>
+                                    <h2 class="article__title"><a href="#">ФРУКТОВАЯ ФАНТАЗИЯ OXFORD ОТ LUCENA CERAMICAS</a></h2>
+                                </div>
+                            </header>
+                            <div class="article__excerpt">Самые свежие новинки от мировых керамических брендов становятся доступными в Украине...</a>
                             </div>
                         </article>
                         <article class="article">

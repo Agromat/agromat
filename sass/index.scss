@@ -56,10 +56,11 @@
     img {
         display: block;
         width: 100% !important;
-        height: 100% !important;
+        height: 100%;
     }
 }
 .slider__item-wrap {
+    position: relative;
     overflow: hidden;
     height: 410px;
      @include respond-to(pda) {
@@ -129,6 +130,17 @@
         top: 0;
         right: -9px;
         @include sized-sprite($icons, stamp);
+    }
+}
+.stamp_s {
+    top: 5px;
+    height: 22px;
+    line-height: 22px;
+    padding: 0 10px;
+    font-size: 14px;
+    &:after {
+        right: -6px;
+        @include sized-sprite($icons, stamp-s); 
     }
 }
 .banner {
@@ -494,6 +506,10 @@
     @include respond-to(med) {
         display: none;
     }
+}
+.prev.disabled,
+.next.disabled {
+    display: none;
 }
 .prev {
     left: -10px;

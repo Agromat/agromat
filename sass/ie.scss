@@ -9,6 +9,9 @@
     .item_shop {
         display: inline;
     }
+    .article__preview {
+        img {width:auto;}
+    }
     .footer {
         width: 1280px;
         margin: 0 auto;
@@ -20,6 +23,8 @@
 *+html .part-logo li {
     width: 14%;
 }
-*+html .fb a {
-    display: block;
+
+*+html .filter a,
+*+html .pagin * {
+    display: inline;
 }

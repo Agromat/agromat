@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Index</title>
+	<title>History</title>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
     <script src="js/jquery.tools.min.js"></script>
     <script src="js/jquery.cycle.all.js"></script>
@@ -38,11 +38,11 @@
         <!-- main menu -->
         <nav class="menu">
             <ul>
-                <li class="menu__item1"><a href="#"><span>О компании</span></a></li>
+                <li class="menu__item1 menu__active"><a href="#"><span>О компании</span></a></li>
                 <li class="menu__item2"><a href="#"><span>Магазины</span></a></li>
                 <li class="menu__item3"><a href="#"><span>Новости и акции</span></a></li>
                 <li class="menu__item4"><a href="#"><span>Торговые марки</span></a></li>
-                <li class="menu__item5 active-menu-link"><a href="#"><span>Оптовые продажи</span></a></li>
+                <li  class="menu__item5"><a href="#"><span>Оптовые продажи</span></a></li>
                 <li class="menu__item6"><a href="#"><span>Дополнительные услуги</span></a></li>
             </ul>                                                               
         </nav>
@@ -51,48 +51,7 @@
     <!-- BEGIN main -->
     <div class="main">
         <div class="wrap">
-            <div class="main-col">
-                <div class="slider">
-                    <div class="js-slider">
-                        <div class="slider__item">
-                            <div class="slider__item-wrap">
-                                <a href="#"><img src="img/slide.jpg" alt=""></a>
-                                <div class="slider__capt">
-                                    <a href="#">
-                                        <strong>Diadema от Lineatre</strong>
-                                        <span>Царское украшение для ванной</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-wrap">
-                                <a href="#"><img src="img/slide.jpg" alt=""></a>
-                                <div class="slider__capt">
-                                    <a href="#">
-                                        <strong>Diadema от Lineatre</strong>
-                                        <span>Царское украшение для ванной</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slider__item">
-                            <div class="slider__item-wrap">
-                                <a href="#"><img src="img/slide.jpg" alt=""></a>
-                                <div class="slider__capt">
-                                    <a href="#">
-                                        <strong>Diadema от Lineatre</strong>
-                                        <span>Царское украшение для ванной</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slider-nav js-main-nav"></div>
-                </div>
-                <div class="stamp">акция</div>
-            </div>
-            <aside class="sidebar">
+            <aside class="sidebar sidebar_l">
                 <div class="banner">
                     <div class="banner__wrap">
                         <div class="separator-blue">
@@ -107,129 +66,64 @@
                         <a href="#" class="banner__link">перейти</a>
                     </div>
                 </div>
-                <div class="banner banner_action">
-                    <a href="#" class="banner__wrap">
-                        <div class="banner__name"><span>наши акции</span></div>
-                        <div class="separator-blue">
-                            <strong>И скидки</strong>
-                            <span><i></i></span>
-                        </div>
-                    </a>
+                <nav class="submenu">
+                    <ul>
+                        <li class="submenu__active"><a href="#">История</a></li>
+                        <li><a href="#">Отчетность компании</a></li>
+                        <li><a href="#">Вакансии</a></li>
+                        <li><a href="#">кадровая политика</a></li>
+                        <li><a href="#">Наша реклама</a></li>
+                    </ul>
+                    <button class="submenu-key"></button>
+                </nav>
+                <div class="question">
+                    <strong class="categ-name">керамическая плитка</strong>
+                    <div class="question__body">текст какого-то супер важного вопроса по конкретной теме?</div>
+                    <div class="question__answer">
+                        <a href="#">Ответ</a>
+                    </div>
                 </div>
+                <div class="question question_small">
+                    <strong class="categ-name">ремонт</strong>
+                    <div class="question__body">очень короткий вопрос по конкретной теме?</div>
+                    <div class="question__answer">
+                        <a href="#">Ответ</a>
+                    </div>
+                </div>
+                <blockquote class="quote quote_mod">
+                    <p>Мудрость - знать, в чем дело жизни и как исполнять его...</p>
+                    <i>Лев Толстой</i>
+                </blockquote>
             </aside>
-        </div>
-        <h1 class="title-l-1 title-l-1_index"><span>Новости</span></h1>
-        <div class="wrap wrap_news-item">
-            <div class="item-row">
-                <div class="item">
-                    <div class="item__main">
-                        <a href="#"><img src="img/item-img.jpg" alt=""></a>
-                        <span class="item__date">17 октября</span>
-                        <h3 class="item__title"><a href="#">Стильная имитация Nantes от Venis</a></h3>
+            <div class="content">
+                <img class="banner-img" src="img/banner.jpg" alt="">
+                <h1 class="title-l-1"><span>история</span></h1>
+                <div class="main-cont">
+                    <div class="filter">
+                        <a href="#">2012</a>
+                        <a href="#">2011</a>
+                        <a href="#">2010</a>
+                        <a href="#">2009</a>
+                        <a href="#" class="filter__active">2008</a>
+                        <a href="#">2007</a>
                     </div>
-                    <div class="item__descr">Мастера испанской фабрики Dual  сделали невероятное - воссоздали фактуру твидовой ткани поверхности своей керамической плитки... Коллекция получила</div>
+                    <p>Утро Независимости Украины - 1993 год. Первые годы становления государственности, первые шаги к формированию рынка. Сотни новых компаний, на волне иллюзии абсолютной свободы стремящихся мгновенно завоевать статус, деньги, влияние. И лишь считанные единицы - точно знающие, что единственный путь разумного развития - это эволюция. Путем постепенного обретения опыта пошла и производственно-техническая компания «Агромат». Вначале спрогнозировать результат всех трудов и робких надежд было непросто. Но команда основателей компании - Сергей Войтенко, Ольга Башота, Надежда Рушелюк, Владимир Рева и Анатолий Тадай - с первых шагов были далеки от того, чтобы относиться к своему Делу как к азартной игре. Это было детище, которое они растили и воспитывали, обучали и вместе радовались успехам.</p>
+                    <a href="#" class="cont-img">
+                        <img src="img/gallery/1-s.jpg" alt="">
+                        <span>Центральный офис "Агромат"</span>
+                    </a>
+                    <p>Первые шаги - контракты со словацкой фабрикой «KERKO» и чешским производителем сантехнической керамики «ZNOJMO». Постепенное освоение не только богатого киевского рынка, но и регионов страны, развитие дилерской сети и организация складов. Внимательный анализ тенденций и путей развития западных рынков, освоение новых для нас методик, первые контакты с зарубежными партнерами. Освоение позиции крупнейшего поставщика керамики и сантехники иностранных производителей...</p>
+                    <p>И, не останавливаясь на этом заманчивом этапе, открытие собственного производства, внедрение новых линий, позволяющих расширять ассортимент и адаптировать его к нуждам и запросам украинских потребителей. Огромное пространство центра поделено на различные по тематике залы - отдельно выделен комплекс залов керамики, сантехники, спа, экономзал и стоковый магазин. Большое место в магазине уделено инсталляционным системам, многочисленные шоу-румы демонстрируют последние разработки дизайнеров.</p>
+                    <p>Почти 17 лет <a href="#">компания «Агромат»</a> обеспечивает Украину лучшей керамической плиткой и сантехникой со всего мира. Темпы развития компании и экономические результаты, достигнутые за этот отрезок времени, поистине впечатляют. Специалистам очевидна определяющая роль компании в становлении и развитии отечественного рынка керамики, а для украинского потребителя название «Агромат» давно уже стало синонимом слов «керамика и сантехника».</p>
+                    <div class="separator-blue separator-blue_mod"> 
+                        <strong>свернуть</strong>
+                        <span><i></i></span>
+                    </div>
+                    <p>Торговый центр «Світ кераміки» - без сомнения, символ и гордость компании «Агромат». Открытие в мае 2002 года этого масштабного торгового комплекса, который и сегодня является крупнейшим в Европе, явилось одним из главных событий в истории развития компании. В ТЦ «Світ кераміки» (Киев, ул. Булаховского, 2/1) представлен широчайший ассортимент товаров для оборудования и декорирования помещений. Огромное пространство центра поделено на различные по тематике залы - отдельно выделен комплекс залов керамики, сантехники, спа, экономзал и стоковый магазин. Большое место в магазине уделено инсталляционным системам, многочисленные шоу-румы демонстрируют последние разработки дизайнеров. В поясе магазинов-спутников широко представлены также сопутствующие товары для ремонта и строительства - краски, лаки, клеи.
+                    Открытие в декабре 2007 года салона элитной керамики «Агромат-центр» стало ярким воплощением одной из главных идей компании «Агромат» - знакомство своих клиентов с последними разработками ведущих производителей керамики и сантехники. В салоне собраны лучшие модели современной керамики элит-класса, представлен весь спектр направлений и стилей: классика и арт-деко, античные мотивы и инновации хай-тека.
+                    В мае 2009 года открылся салон элитной керамической плитки и сантехники «Ceramic Fashion», расположенный в центре стиля «Домосфера». В начале 2010 года произошел ребрендинг магазина «Агромат-центр». Сегодня элитное направление керамики и сантехники под брендом Ceramic Fashion представляет два салона - в центре стиля Домосфера (Столичное шоссе, 101) и по ул. Шота Руставели, 44.</p>
+                    <p>В 2009 году сеть магазинов компании Агромат пополнилась магазинами «Агромат-Сервис» (Киев, ул. Большая Окружная, 110) и «Агромат-Интерьер» (Киевская обл., с. Петропавловская Борщаговка, ул. Петропавловская, 6, ТЦ "4ROOM"). В магазинах представлен широчайший спектр товаров: керамическая плитка, керамогранит, мозаика, любая сантехника - от смесителя до мини-бассейна, осветительные приборы и мебель, лакокрасочные материалы.</p>
                 </div>
-                <div class="item">
-                    <div class="item__main">
-                        <a href="#"><img src="img/item-img.jpg" alt=""></a>
-                        <span class="item__date">17 октября</span>
-                        <h3 class="item__title"><a href="#">Стильная имитация Nantes от Venis, LOFT PERONDA, DUAL GRES</a></h3>
-                    </div>
-                    <div class="item__descr">Мастера испанской фабрики Dual  сделали невероятное - воссоздали фактуру твидовой ткани поверхности своей керамической плитки... Коллекция получила</div>
-                </div>
-            </div>
-            <div class="item-row item-row_last">
-                <div class="item">
-                    <div class="item__main">
-                        <a href="#"><img src="img/item-img.jpg" alt=""></a>
-                        <span class="item__date">17 октября</span>
-                        <h3 class="item__title"><a href="#">Стильная имитация Nantes от Venis, LOFT PERONDA, DUAL GRES</a></h3>
-                    </div>
-                    <div class="item__descr">Мастера испанской фабрики Dual  сделали невероятное - воссоздали фактуру твидовой ткани поверхности своей керамической плитки... Коллекция получила</div>
-                </div>
-                <div class="item">
-                    <div class="item__main">
-                        <a href="#"><img src="img/item-img.jpg" alt=""></a>
-                        <span class="item__date">17 октября</span>
-                        <h3 class="item__title"><a href="#">Стильная имитация Nantes от Venis, LOFT PERONDA, DUAL GRES</a></h3>
-                    </div>
-                    <div class="item__descr">Мастера испанской фабрики Dual  сделали невероятное - воссоздали фактуру твидовой ткани поверхности своей керамической плитки... Коллекция получила</div>
-                </div>
-            </div>
-        </div>
-        <h1 class="title-l-1 title-l-1_index"><span>магазины</span></h1>
-        <div class="wrap wrap_news-shop">
-            <div class="js-scroll-shop">
-                <div class="item-row">
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                    <div class="shop">
-                        <a href="#"><img src="img/item-shop.jpg" alt=""></a>
-                        <div class="shop__main">
-                            <h3 class="shop__title"><a href="#">Агромат <span>г. Черновцы</span></a></h3>
-                            <div class="shop__adr">ул. Хотинская, 43</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <span class="prev prev_shop"></span>
-            <span class="next next_shop"></span>
-        </div>
-        <h1 class="title-l-1 title-l-1_index"><span>о компании</span></h1>
-        <div class="wrap">
-            <div class="about-comp">
-                <h3 class="about-comp__title">Компания «Агромат»</h3>
-                <div class="about-comp__col">
-                    <p>Компания <a href="#">«Агромат»</a> импортирует в Украину напольную и облицовочную плитку таких широко известных брендов, как Aparici, Rocersa, Impronta, Porcelanite Dos и многих других. <a href="#">Керамическая плитка</a>, <a href="#">мозаика</a> и <a href="#">керамогранит</a>, представленные в магазинах «Агромат», позволят удачно обыграть преимущества любого помещения.</p>
-                    <p>Помимо этого, у нас вы найдете и широкий ассортимент <a href="#">сантехники</a> для ванной комнаты. <a href="#">Смесители</a></p>
-                </div>
-                <div class="about-comp__col about-comp__col_last">
-                    <p>душевые кабины, гидромассажные, акриловые и чугунные <a href="#">ванны</a>, <a href="#">раковины</a> от производителей с мировым именем, таких как: Althea, Axor, Devit, Laufen, Jacuzzi, Villeroy&Boch ждут своих покупателей.</p>
-                    <p>Огромный выбор сантехники, плитки, <a href="#">мебели для ванной</a>, освещения, строительной химии и профессиональный подход к каждому клиенту сделают Ваши покупки в магазинах компании просто незабываемыми.</p>
-                </div>
-            </div>
-            <div class="about-comp about-comp_slider">
-                <div class="js-slider-comp">
-                    <img src="img/1.jpg" alt="">
-                    <img src="img/2.jpg" alt="">
-                    <img src="img/1.jpg" alt="">
-                    <img src="img/2.jpg" alt="">
-                    <img src="img/1.jpg" alt="">
-                </div>
-                <div class="slider-nav js-our-comp-nav"></div>
             </div>
         </div>
     </div>
@@ -407,6 +301,7 @@
     <!-- facebook -->
     <div class="fb fb_footer">Мы на<a href="#"></a></div>
 </footer>
+<!-- <div class="test"></div> -->
 <!-- END .footer -->
 </body>
 </html>

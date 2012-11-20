@@ -141,6 +141,9 @@ body{
     @include respond-to(pda) {
         padding: 0;
     } 
+    @include respond-to(mob) {
+        min-width: 320px;
+    }
 }
 a{
 	color:#2d8db4;

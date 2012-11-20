@@ -117,6 +117,9 @@ body {
   @media only screen and (max-width: 768px) {
     body {
       padding: 0; } }
+  @media only screen and (max-width: 320px) {
+    body {
+      min-width: 320px; } }
 
 a {
   color: #2d8db4; }
@@ -170,7 +173,7 @@ a {
       position: absolute;
       right: 5%;
       top: 7px;
-      background: url('../img/icons-sa946b17596.png') 0 -353px no-repeat;
+      background: url('../img/icons-s0230c45867.png') 0 -412px no-repeat;
       width: 5px;
       height: 5px; }
     .title-l-1 span:before {
@@ -344,7 +347,7 @@ a {
       content: "";
       float: right;
       margin-top: 8px;
-      background: url('../img/icons-sa946b17596.png') 0 -353px no-repeat;
+      background: url('../img/icons-s0230c45867.png') 0 -412px no-repeat;
       width: 5px;
       height: 5px; }
       @media only screen and (max-width: 480px) {
@@ -388,7 +391,7 @@ a {
           position: absolute;
           top: 9px;
           right: 0;
-          background: url('../img/icons-sa946b17596.png') 0 -353px no-repeat;
+          background: url('../img/icons-s0230c45867.png') 0 -412px no-repeat;
           width: 5px;
           height: 5px; } }
     .menu__active a span:before {
@@ -563,7 +566,7 @@ a {
     position: absolute;
     top: -5px;
     left: 10px;
-    background: url('../img/icons-sa946b17596.png') 0 -162px no-repeat;
+    background: url('../img/icons-s0230c45867.png') 0 -187px no-repeat;
     width: 13px;
     height: 13px; }
     @media only screen and (max-width: 768px) {
@@ -577,7 +580,7 @@ a {
       position: absolute;
       top: 7px;
       right: 12px;
-      background: url('../img/icons-sa946b17596.png') 0 -353px no-repeat;
+      background: url('../img/icons-s0230c45867.png') 0 -412px no-repeat;
       width: 5px;
       height: 5px; }
     .separator-big strong:after {
@@ -651,7 +654,7 @@ a {
     position: absolute;
     left: -11px;
     top: 5px;
-    background: url('../img/icons-sa946b17596.png') 0 -273px no-repeat;
+    background: url('../img/icons-s0230c45867.png') 0 -332px no-repeat;
     width: 5px;
     height: 5px; }
   .footer-nav a {
@@ -681,7 +684,7 @@ a {
     left: 50%;
     top: -3px;
     margin-left: -4px;
-    background: url('../img/icons-sa946b17596.png') 0 -233px no-repeat;
+    background: url('../img/icons-s0230c45867.png') 0 -258px no-repeat;
     width: 7px;
     height: 7px; }
     @media only screen and (max-width: 768px) {
@@ -707,7 +710,7 @@ a {
   margin: 46px 0 38px; }
   .separator-blue_mod i {
     margin-left: -5px;
-    background: url('../img/icons-sa946b17596.png') 0 -288px no-repeat;
+    background: url('../img/icons-s0230c45867.png') 0 -347px no-repeat;
     width: 9px;
     height: 9px; }
 
