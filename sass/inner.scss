@@ -584,10 +584,11 @@
 }
 .bloc__header {
     overflow: hidden;
+    margin-bottom: 15px;
 }
 .block__preview {
     float: left;
-    margin: 0 4.2% 15px 0;
+    margin: 0 4.2% 0 0;
     img {
         display: block;
         width: 100%;
@@ -673,9 +674,12 @@
     }
 }
 .person-policy {
+    overflow: hidden;
+    margin-bottom: 29px;
     p {
         float: left;
         width: 70%;
+        margin-bottom: 0;
         @include respond-to(pda) {
             width: 100%;
         }
@@ -703,5 +707,80 @@
             margin-top: -7px;
             @include sized-sprite($icons, arrow-r);
         }
+    }
+}
+.wrap_vacancy {
+    margin-right: -10%;
+    @include respond-to(pda) {
+        margin-right: 0;
+    }
+}
+.vacancy-col {
+    float: left;
+    margin: 0 1.5% 26px 0;
+    width: 44%;
+    @include respond-to(pda) {
+        float: none;
+        width: 100%;
+    }
+}
+.vacancy {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 23px 10% 5px 5.5%;
+    border: 1px solid #d4d4d4;
+    &:hover {
+        border: 1px solid #000; 
+        @include box-shadow(inset 0 0 0 1px #000);
+        .send-cv {
+            display: block;
+        }
+    }
+    ul {
+        margin-top: 6px;
+    }
+    li {
+        position: relative;
+        padding-left: 13px;
+        margin-bottom: 2px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 0;
+            @include sized-sprite($icons, rhomb-s);
+        }
+    }   
+}
+.vacancy__item {
+    margin-bottom: 30px;
+}
+.vacancy__title {
+    padding-bottom: 20px;
+    font-size: 24px;
+    @include pfd_m();
+    text-transform: uppercase;
+}
+.send-cv {
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 43px;
+    top: 19px;
+    right: 17px;
+    text-decoration: none;
+    @include respond-to(pda) {
+        right: 10px;
+        top: 55px;
+    }
+    i {
+        display: block;
+        margin-bottom: 4px;
+        @include sized-sprite($icons, latter);
+    }
+    span {
+        @include pfd_m();
+        line-height: 12px;
+        text-transform: uppercase;
     }
 }

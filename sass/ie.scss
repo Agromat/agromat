@@ -9,8 +9,9 @@
     .item_shop {
         display: inline;
     }
-    .article__preview {
-        img {width:auto;}
+    .article__preview img,
+    .block__preview img {
+        width:auto;
     }
     .footer {
         width: 1280px;
