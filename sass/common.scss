@@ -541,7 +541,7 @@ a{
 }
 .sidebar {
     float: right;
-    width: 24.2%;
+    width: 24.4%;
     @include respond-to(med) {
         float: none;
         width: 100%;
@@ -894,11 +894,11 @@ a{
 .test {
     position: absolute;
     left: 50%;
-    margin-left: -678px; 
+    margin-left: -631px; 
     top: 0;
     width: 1362px;
     height: 2500px;
-    background: url(../img/test.png) 0 0 no-repeat;
+    background: url(../img/test.jpg) 0 0 no-repeat;
     opacity: 0.5;
 
 }
