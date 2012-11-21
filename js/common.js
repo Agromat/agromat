@@ -73,21 +73,19 @@ $(document).ready(function() {
    $(".submenu-key").click(function(){
      if ($(".submenu-key").hasClass("submenu-key_act")) {
           $(this).removeClass("submenu-key_act");
-          $(".submenu ul").slideUp("fast");
+          $(".submenu ul").hide();
+          $(".submenu").removeClass("submenu_act");
       }
      else {
           $(this).addClass("submenu-key_act");
-          $(".submenu ul").slideDown("fast");
+          $(".submenu ul").show();
+          $(".submenu").addClass("submenu_act");
       }
    });
   
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
-  if (width_test == 0) {
-      $(".fancy-gallery a").click(function(){
-        return false;
-      });
-  }
+  if (width_test == 0) {}
   else {
     $('.fancy-gallery a').fancybox({
           openEffect  : 'none',

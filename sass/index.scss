@@ -695,12 +695,12 @@
 .banners, .slider-wrap, .about-comp {
     @include transition(all, .3s, ease-in-out);
 }
-.item_shop {
-    @include transition(none);
-    .item__main {
-        @include transition(background, .8s, ease-in-out);
-    }
-}
-.header-top {
-    @include transition(background, .6s, ease-in-out);
-}
+// .item_shop {
+//     @include transition(none);
+//     .item__main {
+//         @include transition(background, .8s, ease-in-out);
+//     }
+// }
+// .header-top {
+//     @include transition(background, .6s, ease-in-out);
+// }

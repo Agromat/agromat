@@ -22,11 +22,15 @@
         padding-left: 0;
     }
 }
+.border {
+    
+}
 .main-cont {
     padding: 19px 0 15px 3.4%;
     overflow: hidden;
     @include respond-to(pda) {
       padding: 15px 0 30px; 
+      left: 100%;
     }
 }
 .fancy-gallery {
@@ -37,8 +41,11 @@
     background: #fff;
     border: 1px solid #d6d6d6;
     @include respond-to(mob-lan) {
-        padding: 7px;
-        margin: 3px 15px 10px 0;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: none;
+        padding: 7px 7px 16px;
+        width: 100%;
     }
     a {
         display: none;
@@ -50,9 +57,6 @@
             display: block;
             width: 100%;
             margin-bottom: 16px;
-            @include respond-to(mob-lan) {
-               margin-bottom: 0;
-            }
         }
         span {
             position: relative;
@@ -63,9 +67,6 @@
             font-size: 12px;
             @include respond-to(med) {
                font-size: 11px;
-            }
-            @include respond-to(mob-lan) {
-               display: none;
             }
             &:before {
                 content: "";
@@ -88,36 +89,29 @@
     @include respond-to(med) {
        position: fixed;
        top: -6px;
-       left: 16%;
+       right: 4px;
        margin: 0;
+       text-align: right;
         ul {
             display: none;
             a {
-                height: 40px;
+                height: 33px;
                 padding-right: 20px;
-                line-height: 40px;
-                font-size: 16px;
+                line-height: 33px;
+                font-size: 20px;
             }
         }
     }
     li {
         position:relative;
         border-top: 1px solid #d4d4d4;
-        &:before {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 11px;
-            margin-top: -5px;
-            @include sized-sprite($icons, rhomb-s);
-        }
         &:first-child {
             border-top: 0;
         }
     }
     a {
         display: block;
-        padding-left: 36px;
+        padding-left: 22px;
         height: 47px;
         line-height: 47px;
         color: #000;
@@ -130,54 +124,51 @@
         }
     }
     .submenu__active {
-        &:after {
+        &:before {
             content: "";
             position: absolute;
-            right: -10px;
             top: 50%;
-            height: auto; 
-            margin-top: -7px;
-            @include sized-sprite($icons, arrow-l);
-            @include respond-to(med) { 
-                display: none; 
-            }
+            right: 9px;
+            margin-top: -5px;
+            @include sized-sprite($icons, rhomb-s);
         }
-          
         a {
             color: #2c8db7;
         } 
     }
 }
+.submenu_act {
+    @include respond-to(med) {
+        top: 26px;
+        @include box-shadow(-2px 2px 0 rgba(0,0,0,.24));
+    }
+}
 .submenu-key {
     position: absolute;
-    bottom: -21px;
-    left: 7px;
-    padding: 4px 10px;
-    border: 2px solid #2C8DB7;
+    bottom: -34px;
+    right: -2px;
     cursor: pointer;
     background: #fff;
-    @include border-radius(0 0 2px 2px);
+    border: 0;
     display: none;
+    @include sized-sprite($icons, submenu-key); 
     @include respond-to(med) { 
         display: block; 
     }
-    i {
-        display: block;
-        @include sized-sprite($icons, arr-b); 
-    }
 }
 .submenu-key_act {
-    padding: 3px 10px 5px;
-    border: 2px solid #000;
-    i {
-        display: block;
-        @include sized-sprite($icons, arr-t);
-    }
+    top: -23px;
+    right: -2px;
+    @include sized-sprite($icons, submenu-key2);
+    @include box-shadow(-2px 0 0 rgba(0,0,0,.24));
 }
 .banner-img {
     display: block;
     width: 100%;
     margin-bottom: 40px;
+    @include respond-to(mob-lan) { 
+       display: none;
+    }
 }
 .quote {
     position: relative;
