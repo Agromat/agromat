@@ -555,7 +555,8 @@
 
 .slider-action {
   position: relative;
-  width: 74.6%;
+  width: 73.8%;
+  padding-left: 10px;
   float: right;
   height: 200px; }
   @media only screen and (max-width: 1024px) {
@@ -573,7 +574,7 @@
     overflow: hidden; }
   .slider_actions .slider__item-wrap {
     float: left;
-    margin-right: 20px;
+    margin-right: 15px;
     padding-left: 6px;
     height: 200px;
     width: 615px;
@@ -585,18 +586,16 @@
     left: 0; }
 
 .prev_action {
-  left: -5px; }
+  left: -3px; }
   @media only screen and (max-width: 1024px) {
     .prev_action {
-      display: block;
-      left: 0; } }
+      display: block; } }
 
 .next_action {
-  right: -11px; }
+  right: -13px; }
   @media only screen and (max-width: 1024px) {
     .next_action {
-      display: block;
-      right: -7px; } }
+      display: block; } }
 
 .bloc {
   position: relative;
