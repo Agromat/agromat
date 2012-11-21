@@ -49,10 +49,72 @@ $(document).ready(function() {
        }
      });
    }
+   // play video
    $(".video__play").click(function(){
       $(this).prev().hide();
       $(this).next().show();
       $(this).hide();
    });
+  // resize window more 1024px - subnav display:block;
+  $(window).resize(function(){
+    var width = $(window).width();
+    med_width = 1024;
+    if ($(window).width() >= med_width) {
+      $(".submenu ul").css({"display": "block"});
+      $(".submenu-key").css({"display": "none"});
+    }
+    else {
+      $(".submenu ul").css({"display": "none"});
+      $(".submenu-key").css({"display": "block"});
+      $(".submenu-key").removeClass("submenu-key_act");
+    }
+  });
+   // // show-hide subnav
+   $(".submenu-key").click(function(){
+     if ($(".submenu-key").hasClass("submenu-key_act")) {
+          $(this).removeClass("submenu-key_act");
+          $(".submenu ul").slideUp("fast");
+      }
+     else {
+          $(this).addClass("submenu-key_act");
+          $(".submenu ul").slideDown("fast");
+      }
+   });
+  
+  // fancybox gallery
+  var width_test = $(".fancybox-test").width();
+  if (width_test == 0) {
+      $(".fancy-gallery a").click(function(){
+        return false;
+      });
+  }
+  else {
+    $('.fancy-gallery a').fancybox({
+          openEffect  : 'none',
+          closeEffect : 'none',
+          prevEffect : 'none',
+          nextEffect : 'none',
+
+          closeBtn  : true,
+          padding: [30,40,30,40],
+          helpers : {
+            title : {
+              type : 'inside'
+            },
+            buttons : {}
+          },
+
+          afterLoad : function() {
+            this.title = '<span class="fancy-counter">' + '<b>' + (this.index + 1) + '</b>' + ' / ' + '<span>' + this.group.length + '</span>' + '</span>' + (this.title ? '' + '<strong>' + this.title : '' + '</strong>');
+          }
+    });
+  }
+  // get title
+  $(".fancy-gallery img").each(function(){
+    var title = $(this).parent().attr("title") || $(this).attr("title");
+    $(this).next().text(title);
+  });
+  var img_caption = $(".fancy-gallery a:first").attr("title");
+  $(".fancy-gallery span:first").text(img_caption);
 
 });

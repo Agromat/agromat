@@ -23,36 +23,50 @@
     .main-cont {
       padding: 15px 0 30px; } }
 
-.cont-img {
+.fancy-gallery {
   float: left;
   width: 32.7%;
   margin: 3px 22px 30px 0;
   padding: 7px 7px 16px;
   background: #fff;
-  border: 1px solid #d6d6d6;
-  text-decoration: none; }
-  .cont-img img {
-    display: block;
-    width: 100%;
-    margin-bottom: 16px; }
-  .cont-img span {
-    position: relative;
-    display: block;
-    margin-left: 8px;
-    padding-left: 27px;
-    color: #737373;
-    font-size: 12px; }
-    @media only screen and (max-width: 1024px) {
-      .cont-img span {
-        font-size: 11px; } }
-    .cont-img span:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      background: url('../img/icons-s5d1a99c765.png') 0 -176px no-repeat;
-      width: 13px;
-      height: 14px; }
+  border: 1px solid #d6d6d6; }
+  @media only screen and (max-width: 480px) {
+    .fancy-gallery {
+      padding: 7px;
+      margin: 3px 15px 10px 0; } }
+  .fancy-gallery a {
+    display: none;
+    text-decoration: none; }
+    .fancy-gallery a:first-child {
+      display: block; }
+    .fancy-gallery a img {
+      display: block;
+      width: 100%;
+      margin-bottom: 16px; }
+      @media only screen and (max-width: 480px) {
+        .fancy-gallery a img {
+          margin-bottom: 0; } }
+    .fancy-gallery a span {
+      position: relative;
+      display: block;
+      margin-left: 8px;
+      padding-left: 27px;
+      color: #737373;
+      font-size: 12px; }
+      @media only screen and (max-width: 1024px) {
+        .fancy-gallery a span {
+          font-size: 11px; } }
+      @media only screen and (max-width: 480px) {
+        .fancy-gallery a span {
+          display: none; } }
+      .fancy-gallery a span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url('../img/icons-s09e7afe5c7.png') 0 -176px no-repeat;
+        width: 13px;
+        height: 14px; }
 
 .submenu {
   position: relative;
@@ -63,16 +77,17 @@
   z-index: 100; }
   @media only screen and (max-width: 1024px) {
     .submenu {
-      display: none;
       position: fixed;
-      top: -2px;
+      top: -6px;
       left: 16%;
       margin: 0; }
-      .submenu ul a {
-        height: 40px;
-        padding-right: 20px;
-        line-height: 40px;
-        font-size: 16px; } }
+      .submenu ul {
+        display: none; }
+        .submenu ul a {
+          height: 40px;
+          padding-right: 20px;
+          line-height: 40px;
+          font-size: 16px; } }
   .submenu li {
     position: relative;
     border-top: 1px solid #d4d4d4; }
@@ -82,7 +97,7 @@
       top: 50%;
       left: 11px;
       margin-top: -5px;
-      background: url('../img/icons-s5d1a99c765.png') 0 -534px no-repeat;
+      background: url('../img/icons-s09e7afe5c7.png') 0 -568px no-repeat;
       width: 5px;
       height: 5px; }
     .submenu li:first-child {
@@ -107,25 +122,46 @@
     top: 50%;
     height: auto;
     margin-top: -7px;
-    background: url('../img/icons-s5d1a99c765.png') 0 -307px no-repeat;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -307px no-repeat;
     width: 9px;
     height: 15px; }
+    @media only screen and (max-width: 1024px) {
+      .submenu .submenu__active:after {
+        display: none; } }
   .submenu .submenu__active a {
     color: #2c8db7; }
 
 .submenu-key {
   position: absolute;
-  bottom: -9px;
+  bottom: -21px;
   left: 7px;
-  border: 0;
+  padding: 4px 10px;
+  border: 2px solid #2C8DB7;
   cursor: pointer;
-  background: url('../img/icons-s5d1a99c765.png') 0 0 no-repeat;
-  width: 15px;
-  height: 9px;
+  background: #fff;
+  -webkit-border-radius: 0 0 2px 2px;
+  -moz-border-radius: 0 0 2px 2px;
+  -ms-border-radius: 0 0 2px 2px;
+  -o-border-radius: 0 0 2px 2px;
+  border-radius: 0 0 2px 2px;
   display: none; }
   @media only screen and (max-width: 1024px) {
     .submenu-key {
       display: block; } }
+  .submenu-key i {
+    display: block;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -534px no-repeat;
+    width: 13px;
+    height: 7px; }
+
+.submenu-key_act {
+  padding: 3px 10px 5px;
+  border: 2px solid #000; }
+  .submenu-key_act i {
+    display: block;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -551px no-repeat;
+    width: 13px;
+    height: 7px; }
 
 .banner-img {
   display: block;
@@ -387,13 +423,13 @@
 
 .pagin__first {
   cursor: pointer;
-  background: url('../img/icons-s5d1a99c765.png') 0 -412px no-repeat;
+  background: url('../img/icons-s09e7afe5c7.png') 0 -412px no-repeat;
   width: 4px;
   height: 7px; }
 
 .pagin__last {
   cursor: pointer;
-  background: url('../img/icons-s5d1a99c765.png') 0 -395px no-repeat;
+  background: url('../img/icons-s09e7afe5c7.png') 0 -395px no-repeat;
   width: 4px;
   height: 7px; }
 
@@ -416,7 +452,7 @@
     position: absolute;
     bottom: -14px;
     left: 15px;
-    background: url('../img/icons-s5d1a99c765.png') 0 -259px no-repeat;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -259px no-repeat;
     width: 13px;
     height: 15px; }
   .question .categ-name {
@@ -480,7 +516,7 @@
       left: 50%;
       bottom: -9px;
       margin-left: -7px;
-      background: url('../img/icons-s5d1a99c765.png') 0 0 no-repeat;
+      background: url('../img/icons-s09e7afe5c7.png') 0 0 no-repeat;
       width: 15px;
       height: 9px; }
 
@@ -650,7 +686,7 @@
   .report__download i {
     display: inline-block;
     vertical-align: middle;
-    background: url('../img/icons-s5d1a99c765.png') 0 -143px no-repeat;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -143px no-repeat;
     width: 28px;
     height: 23px; }
   .report__download span {
@@ -691,7 +727,7 @@
       top: 50%;
       left: -9px;
       margin-top: -7px;
-      background: url('../img/icons-s5d1a99c765.png') 0 -463px no-repeat;
+      background: url('../img/icons-s09e7afe5c7.png') 0 -463px no-repeat;
       width: 9px;
       height: 15px; }
 
@@ -733,7 +769,7 @@
       position: absolute;
       top: 4px;
       left: 0;
-      background: url('../img/icons-s5d1a99c765.png') 0 -534px no-repeat;
+      background: url('../img/icons-s09e7afe5c7.png') 0 -568px no-repeat;
       width: 5px;
       height: 5px; }
 
@@ -762,7 +798,7 @@
   .send-cv i {
     display: block;
     margin-bottom: 4px;
-    background: url('../img/icons-s5d1a99c765.png') 0 -19px no-repeat;
+    background: url('../img/icons-s09e7afe5c7.png') 0 -19px no-repeat;
     width: 29px;
     height: 22px; }
   .send-cv span {

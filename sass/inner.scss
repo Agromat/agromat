@@ -29,38 +29,55 @@
       padding: 15px 0 30px; 
     }
 }
-.cont-img {
+.fancy-gallery {
     float: left;
     width: 32.7%;
     margin: 3px 22px 30px 0;
     padding: 7px 7px 16px;
     background: #fff;
     border: 1px solid #d6d6d6;
-    text-decoration: none;
-    img {
-        display: block;
-        width: 100%;
-        margin-bottom: 16px;
+    @include respond-to(mob-lan) {
+        padding: 7px;
+        margin: 3px 15px 10px 0;
     }
-    span {
-        position: relative;
-        display: block;
-        margin-left: 8px;
-        padding-left: 27px;
-        color: #737373;
-        font-size: 12px;
-        @include respond-to(med) {
-           font-size: 11px;
+    a {
+        display: none;
+        text-decoration: none;
+        &:first-child {
+            display: block;
         }
-        &:before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            @include sized-sprite($icons, glass);
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 16px;
+            @include respond-to(mob-lan) {
+               margin-bottom: 0;
+            }
+        }
+        span {
+            position: relative;
+            display: block;
+            margin-left: 8px;
+            padding-left: 27px;
+            color: #737373;
+            font-size: 12px;
+            @include respond-to(med) {
+               font-size: 11px;
+            }
+            @include respond-to(mob-lan) {
+               display: none;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                @include sized-sprite($icons, glass);
+            }
         }
     }
 }
+
 .submenu {
     position: relative;
     margin: 40px 0 20px;
@@ -69,13 +86,12 @@
     background: #fff;
     z-index: 100;
     @include respond-to(med) {
-       display: none;
        position: fixed;
-       top: -2px;
+       top: -6px;
        left: 16%;
        margin: 0;
         ul {
-            
+            display: none;
             a {
                 height: 40px;
                 padding-right: 20px;
@@ -122,6 +138,9 @@
             height: auto; 
             margin-top: -7px;
             @include sized-sprite($icons, arrow-l);
+            @include respond-to(med) { 
+                display: none; 
+            }
         }
           
         a {
@@ -131,14 +150,28 @@
 }
 .submenu-key {
     position: absolute;
-    bottom: -9px;
+    bottom: -21px;
     left: 7px;
-    border: 0;
+    padding: 4px 10px;
+    border: 2px solid #2C8DB7;
     cursor: pointer;
-    @include sized-sprite($icons, arrow-b); 
+    background: #fff;
+    @include border-radius(0 0 2px 2px);
     display: none;
     @include respond-to(med) { 
         display: block; 
+    }
+    i {
+        display: block;
+        @include sized-sprite($icons, arr-b); 
+    }
+}
+.submenu-key_act {
+    padding: 3px 10px 5px;
+    border: 2px solid #000;
+    i {
+        display: block;
+        @include sized-sprite($icons, arr-t);
     }
 }
 .banner-img {
