@@ -55,20 +55,20 @@ $(document).ready(function() {
       $(this).next().show();
       $(this).hide();
    });
-  // resize window more 1024px - subnav display:block;
-  $(window).resize(function(){
-    var width = $(window).width();
-    med_width = 1024;
-    if ($(window).width() >= med_width) {
-      $(".submenu ul").css({"display": "block"});
-      $(".submenu-key").css({"display": "none"});
-    }
-    else {
-      $(".submenu ul").css({"display": "none"});
-      $(".submenu-key").css({"display": "block"});
-      $(".submenu-key").removeClass("submenu-key_act");
-    }
-  });
+  // // resize window more 1024px - subnav display:block;
+  // $(window).resize(function(){
+  //   var width = $(window).width();
+  //   med_width = 1024;
+  //   if ($(window).width() >= med_width) {
+  //     $(".submenu ul").css({"display": "block"});
+  //     $(".submenu-key").css({"display": "none"});
+  //   }
+  //   else {
+  //     $(".submenu ul").css({"display": "none"});
+  //     $(".submenu-key").css({"display": "block"});
+  //     $(".submenu-key").removeClass("submenu-key_act");
+  //   }
+  // });
    // // show-hide subnav
    $(".submenu-key").click(function(){
      if ($(".submenu-key").hasClass("submenu-key_act")) {

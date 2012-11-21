@@ -731,7 +731,8 @@
       height: 15px; }
 
 .wrap_vacancy {
-  margin-right: -10%; }
+  margin-right: -20%;
+  overflow: hidden; }
   @media only screen and (max-width: 768px) {
     .wrap_vacancy {
       margin-right: 0; } }
@@ -739,7 +740,7 @@
 .vacancy-col {
   float: left;
   margin: 0 1.5% 26px 0;
-  width: 44%; }
+  width: 40.9%; }
   @media only screen and (max-width: 768px) {
     .vacancy-col {
       float: none;

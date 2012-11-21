@@ -742,7 +742,8 @@
     }
 }
 .wrap_vacancy {
-    margin-right: -10%;
+    margin-right: -20%;
+    overflow: hidden;
     @include respond-to(pda) {
         margin-right: 0;
     }
@@ -750,7 +751,7 @@
 .vacancy-col {
     float: left;
     margin: 0 1.5% 26px 0;
-    width: 44%;
+    width: 40.9%;
     @include respond-to(pda) {
         float: none;
         width: 100%;
