@@ -852,6 +852,12 @@
     td {
         border: 2px solid #d4d4d4;
         padding: 3% 5%;
+        &:first-child {
+            border-right: 1px solid #d4d4d4;
+        }
+        &:last-child {
+            border-left: 1px solid #d4d4d4;
+        }
     }
     th {
         padding: 1.4% 0;

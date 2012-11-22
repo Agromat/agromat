@@ -832,6 +832,10 @@
   .auto-service td {
     border: 2px solid #d4d4d4;
     padding: 3% 5%; }
+    .auto-service td:first-child {
+      border-right: 1px solid #d4d4d4; }
+    .auto-service td:last-child {
+      border-left: 1px solid #d4d4d4; }
   .auto-service th {
     padding: 1.4% 0; }
     .auto-service th strong {
