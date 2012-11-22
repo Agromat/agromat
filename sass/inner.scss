@@ -744,22 +744,7 @@
         .send-cv {
             display: block;
         }
-    }
-    ul {
-        margin-top: 6px;
-    }
-    li {
-        position: relative;
-        padding-left: 13px;
-        margin-bottom: 2px;
-        &:before {
-            content: "";
-            position: absolute;
-            top: 4px;
-            left: 0;
-            @include sized-sprite($icons, rhomb-s);
-        }
-    }   
+    } 
 }
 .vacancy__item {
     margin-bottom: 30px;
@@ -793,7 +778,21 @@
         text-transform: uppercase;
     }
 }
-
+.list {
+    margin-top: 6px;
+    li {
+        position: relative;
+        padding-left: 13px;
+        margin-bottom: 2px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 0;
+            @include sized-sprite($icons, rhomb-s);
+        }
+    }
+}  
 /* Add service */
 .galleries-wrap {
     overflow: hidden;
@@ -802,20 +801,14 @@
         margin: 13px 0 37px;
     }
 }
-.wrap_short-gal {
-    padding-left: 3.4%;
-    overflow: hidden;
-}
 .short-gallery {
-    overflow: hidden;
+    padding-left: 3.4%;
+    @include clr;
     float: left;
     margin-bottom: 53px;
-    padding: 2px 0 2px 2px;
-    height: 81px;
-    width: 85%;
     a {
         float: left;
-        margin-right: 6px;
+        margin: 0 6px 6px 0;
         border: 2px solid #fff;
         &:hover {
             @include box-shadow(0 0 0 2px #000);
@@ -824,24 +817,88 @@
             display: block;
         }
     }
+    .more-photos {
+        margin-top: 3px;
+        width: 100px;
+        height: 75px;
+        line-height: 75px;
+        border: 1px solid #d4d4d4;
+        font-size: 12px;
+        @include pfd_m;
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include respond-to(pda) {
+            font-size: 10px;
+        }
+        @include respond-to(mob-lan) {
+            font-size: 8px;
+        }
+    }
 }
-.more-photos {
-    float: left;
-    margin-top: 3px;
-    width: 10.7%;
-    height: 75px;
-    line-height: 75px;
-    border: 1px solid #d4d4d4;
-    font-size: 12px;
-    @include pfd_m;
-    color: #000;
+.auto-service {
+    margin: 40px 0 30px;
+    width: 100%;
+    .list {
+        li {
+            font-size: 14px;
+            margin-bottom: 5px;
+        } 
+    }
+    p {
+        margin-bottom: 0;
+    }
+    td {
+        border: 2px solid #d4d4d4;
+        padding: 3% 5%;
+    }
+    th {
+        padding: 1.4% 0;
+        strong {
+            position: relative;
+            font-size: 24px;
+            @include pfd_m;
+            text-align: center;
+            text-transform: uppercase;
+            @include respond-to(mob-lan) {
+                font-size: 16px;
+            }
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -65px;
+                height: 1px;
+                width: 56px;
+                background: #2d8db4;
+            }
+            &:before {
+                left: -65px;
+            }
+        }
+    }
+    thead th {
+        border: 2px solid #000;
+        &:first-child {
+            border-right: 0;
+        }
+        &:last-child {
+            border-left: 0;
+        }
+    }
+    tfoot {
+        th {
+            border: 2px solid #d4d4d4;
+            border-top: 0;
+            border-bottom: 0;
+            strong {
+                color: #2d8db4;
+            }
+        }
+    }
+}
+.align-center {
     text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    @include respond-to(pda) {
-        font-size: 10px;
-    }
-    @include respond-to(mob-lan) {
-        font-size: 8px;
-    }
 }

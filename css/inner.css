@@ -724,20 +724,6 @@
     box-shadow: inset 0 0 0 1px black; }
     .vacancy:hover .send-cv {
       display: block; }
-  .vacancy ul {
-    margin-top: 6px; }
-  .vacancy li {
-    position: relative;
-    padding-left: 13px;
-    margin-bottom: 2px; }
-    .vacancy li:before {
-      content: "";
-      position: absolute;
-      top: 4px;
-      left: 0;
-      background: url('../img/icons-s40d610677b.png') 0 -638px no-repeat;
-      width: 5px;
-      height: 5px; }
 
 .vacancy__item {
   margin-bottom: 30px; }
@@ -773,6 +759,21 @@
     line-height: 12px;
     text-transform: uppercase; }
 
+.list {
+  margin-top: 6px; }
+  .list li {
+    position: relative;
+    padding-left: 13px;
+    margin-bottom: 2px; }
+    .list li:before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 0;
+      background: url('../img/icons-s40d610677b.png') 0 -638px no-repeat;
+      width: 5px;
+      height: 5px; }
+
 /* Add service */
 .galleries-wrap {
   overflow: hidden;
@@ -780,20 +781,19 @@
   .galleries-wrap .title-media {
     margin: 13px 0 37px; }
 
-.wrap_short-gal {
-  padding-left: 3.4%;
-  overflow: hidden; }
-
 .short-gallery {
-  overflow: hidden;
+  padding-left: 3.4%;
   float: left;
-  margin-bottom: 53px;
-  padding: 2px 0 2px 2px;
-  height: 81px;
-  width: 85%; }
+  margin-bottom: 53px; }
+  .short-gallery:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
   .short-gallery a {
     float: left;
-    margin-right: 6px;
+    margin: 0 6px 6px 0;
     border: 2px solid #fff; }
     .short-gallery a:hover {
       -webkit-box-shadow: 0 0 0 2px black;
@@ -801,24 +801,71 @@
       box-shadow: 0 0 0 2px black; }
     .short-gallery a img {
       display: block; }
+  .short-gallery .more-photos {
+    margin-top: 3px;
+    width: 100px;
+    height: 75px;
+    line-height: 75px;
+    border: 1px solid #d4d4d4;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 768px) {
+      .short-gallery .more-photos {
+        font-size: 10px; } }
+    @media only screen and (max-width: 480px) {
+      .short-gallery .more-photos {
+        font-size: 8px; } }
 
-.more-photos {
-  float: left;
-  margin-top: 3px;
-  width: 10.7%;
-  height: 75px;
-  line-height: 75px;
-  border: 1px solid #d4d4d4;
-  font-size: 12px;
-  font-weight: normal;
-  font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
-  color: #000;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 768px) {
-    .more-photos {
-      font-size: 10px; } }
-  @media only screen and (max-width: 480px) {
-    .more-photos {
-      font-size: 8px; } }
+.auto-service {
+  margin: 40px 0 30px;
+  width: 100%; }
+  .auto-service .list li {
+    font-size: 14px;
+    margin-bottom: 5px; }
+  .auto-service p {
+    margin-bottom: 0; }
+  .auto-service td {
+    border: 2px solid #d4d4d4;
+    padding: 3% 5%; }
+  .auto-service th {
+    padding: 1.4% 0; }
+    .auto-service th strong {
+      position: relative;
+      font-size: 24px;
+      font-weight: normal;
+      font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+      text-align: center;
+      text-transform: uppercase; }
+      @media only screen and (max-width: 480px) {
+        .auto-service th strong {
+          font-size: 16px; } }
+      .auto-service th strong:before, .auto-service th strong:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -65px;
+        height: 1px;
+        width: 56px;
+        background: #2d8db4; }
+      .auto-service th strong:before {
+        left: -65px; }
+  .auto-service thead th {
+    border: 2px solid #000; }
+    .auto-service thead th:first-child {
+      border-right: 0; }
+    .auto-service thead th:last-child {
+      border-left: 0; }
+  .auto-service tfoot th {
+    border: 2px solid #d4d4d4;
+    border-top: 0;
+    border-bottom: 0; }
+    .auto-service tfoot th strong {
+      color: #2d8db4; }
+
+.align-center {
+  text-align: center; }

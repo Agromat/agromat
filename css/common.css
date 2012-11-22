@@ -216,12 +216,6 @@ a {
   .title-media span {
     letter-spacing: 3px;
     padding: 0 23px; }
-    .title-media span:before {
-      content: "";
-      left: 4%; }
-    .title-media span:after {
-      content: "";
-      right: 3%; }
 
 /* ------------------------------------- //Begin Header ---------------------------------------- */
 .header-top {

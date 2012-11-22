@@ -236,14 +236,6 @@ a{
     span {
         letter-spacing: 3px;
         padding: 0 23px;
-        &:before {
-            content: "";
-            left: 4%;
-        }
-        &:after {
-            content: "";
-            right: 3%;
-        }
     } 
 }
 /* ------------------------------------- //Begin Header ---------------------------------------- */
