@@ -108,10 +108,21 @@
         &:first-child {
             border-top: 0;
         }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            margin-top: -5px;
+            @include sized-sprite($icons, rhomb-s);
+            @include respond-to(med) {
+                display: none;
+            }
+        }
     }
     a {
         display: block;
-        padding-left: 22px;
+        padding-left: 37px;
         height: 47px;
         line-height: 47px;
         color: #000;
@@ -122,15 +133,28 @@
         &:hover {
             color: #2c8db7;
         }
+        @include respond-to(med) {
+            padding-left: 22px;
+        }
     }
     .submenu__active {
-        &:before {
+        &:after {
             content: "";
             position: absolute;
             top: 50%;
-            right: 9px;
+            right: -10px;
             margin-top: -5px;
-            @include sized-sprite($icons, rhomb-s);
+            @include sized-sprite($icons, arrow-l);
+        }
+        @include respond-to(med) {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 9px;
+                margin-top: -5px;
+                @include sized-sprite($icons, rhomb-s);
+            }
         }
         a {
             color: #2c8db7;
