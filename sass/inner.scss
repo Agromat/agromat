@@ -33,7 +33,7 @@
       left: 100%;
     }
 }
-.fancy-gallery {
+.cont-gallery {
     float: left;
     width: 32.7%;
     margin: 3px 22px 30px 0;
@@ -86,22 +86,6 @@
     border: 2px solid #000;
     background: #fff;
     z-index: 100;
-    @include respond-to(med) {
-       position: fixed;
-       top: -6px;
-       right: 4px;
-       margin: 0;
-       text-align: right;
-        ul {
-            display: none;
-            a {
-                height: 33px;
-                padding-right: 20px;
-                line-height: 33px;
-                font-size: 20px;
-            }
-        }
-    }
     li {
         position:relative;
         border-top: 1px solid #d4d4d4;
@@ -111,12 +95,25 @@
         &:before {
             content: "";
             position: absolute;
-            top: 50%;
+            top: 19px;
             left: 12px;
-            margin-top: -5px;
             @include sized-sprite($icons, rhomb-s);
-            @include respond-to(med) {
+        }
+        ul {
+            padding: 12px 0;
+            border-top: 1px solid #d4d4d4;
+        }
+        li {
+            border: 0;
+            &:before {
+                content: "";
                 display: none;
+            }
+            a {
+                height: 23px;
+                color: #898989;
+                font-size: 16px;
+                line-height: 23px;
             }
         }
     }
@@ -133,9 +130,6 @@
         &:hover {
             color: #2c8db7;
         }
-        @include respond-to(med) {
-            padding-left: 22px;
-        }
     }
     .submenu__active {
         &:after {
@@ -146,45 +140,10 @@
             margin-top: -5px;
             @include sized-sprite($icons, arrow-l);
         }
-        @include respond-to(med) {
-            &:after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: 9px;
-                margin-top: -5px;
-                @include sized-sprite($icons, rhomb-s);
-            }
-        }
         a {
             color: #2c8db7;
         } 
     }
-}
-.submenu_act {
-    @include respond-to(med) {
-        top: 26px;
-        @include box-shadow(-2px 2px 0 rgba(0,0,0,.24));
-    }
-}
-.submenu-key {
-    position: absolute;
-    bottom: -34px;
-    right: -2px;
-    cursor: pointer;
-    background: #fff;
-    border: 0;
-    display: none;
-    @include sized-sprite($icons, submenu-key); 
-    @include respond-to(med) { 
-        display: block; 
-    }
-}
-.submenu-key_act {
-    top: -23px;
-    right: -2px;
-    @include sized-sprite($icons, submenu-key2);
-    @include box-shadow(-2px 0 0 rgba(0,0,0,.24));
 }
 .banner-img {
     display: block;
@@ -660,6 +619,7 @@
 .bloc__body {
     color: #727272
 }
+/* Report */
 .report-item {
     margin-bottom: 64px;
     @include respond-to(pda) {
@@ -720,6 +680,7 @@
         vertical-align: middle;
     }
 }
+/* Vacancy */
 .person-policy {
     overflow: hidden;
     margin-bottom: 29px;
@@ -830,5 +791,57 @@
         @include pfd_m();
         line-height: 12px;
         text-transform: uppercase;
+    }
+}
+
+/* Add service */
+.galleries-wrap {
+    overflow: hidden;
+    margin-bottom: -10px;
+    .title-media {
+        margin: 13px 0 37px;
+    }
+}
+.wrap_short-gal {
+    padding-left: 3.4%;
+    overflow: hidden;
+}
+.short-gallery {
+    overflow: hidden;
+    float: left;
+    margin-bottom: 53px;
+    padding: 2px 0 2px 2px;
+    height: 81px;
+    width: 85%;
+    a {
+        float: left;
+        margin-right: 6px;
+        border: 2px solid #fff;
+        &:hover {
+            @include box-shadow(0 0 0 2px #000);
+        }
+        img {
+            display: block;
+        }
+    }
+}
+.more-photos {
+    float: left;
+    margin-top: 3px;
+    width: 10.7%;
+    height: 75px;
+    line-height: 75px;
+    border: 1px solid #d4d4d4;
+    font-size: 12px;
+    @include pfd_m;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include respond-to(pda) {
+        font-size: 10px;
+    }
+    @include respond-to(mob-lan) {
+        font-size: 8px;
     }
 }

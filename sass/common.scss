@@ -230,6 +230,22 @@ a{
         line-height: 24px;
     }
 }
+.title-media {
+    font-size: 16px;
+    line-height: 20px;
+    span {
+        letter-spacing: 3px;
+        padding: 0 23px;
+        &:before {
+            content: "";
+            left: 4%;
+        }
+        &:after {
+            content: "";
+            right: 3%;
+        }
+    } 
+}
 /* ------------------------------------- //Begin Header ---------------------------------------- */
 .header {
     
@@ -355,15 +371,35 @@ a{
     }
 }
 .menu {
+    position: relative;
     margin-top: 51px;
     @include respond-to(pda) { 
         padding: 0 10px;
     }
+    @include respond-to(mob-lan) { 
+           position: fixed;
+           z-index: 1000;
+           top: 26px;
+           right: -6px;
+           margin: 0;
+           text-align: right;
+            ul {
+                display: none;
+                a {
+                    height: 33px;
+                    padding-right: 20px;
+                    line-height: 33px;
+                    font-size: 20px;
+                }
+            }
+    }
     ul {
         position: relative;
         overflow: hidden;
+        background: #fff;
         @include respond-to(mob-lan) { 
-            overflow: visible;
+            display: none;
+            padding: 0 1px;
             border: 2px solid #000;
             &:after {
                 content: "";
@@ -388,10 +424,11 @@ a{
         @include respond-to(mob-lan) { 
             display: block;
             padding: 0;
-            width: 100%;
+            margin: 0;
+            width: auto !important;
             height: 47px;
             line-height: 47px;
-            text-align: left; 
+            text-align: right; 
             border-bottom: 0;
             border-top: 1px solid #d7d7d7;
         }
@@ -417,7 +454,8 @@ a{
                 font-size: 18px;
             }
             @include respond-to(mob-lan) { 
-                padding-left: 37px;
+                padding: 0 21px;
+                line-height: 47px;
             }
             &:hover {
                 color: #2c8db7;
@@ -430,17 +468,13 @@ a{
                     position: relative;
                     border-bottom: 0;
                 }
-                &:before {
-                    content: "";
-                     @include respond-to(mob-lan) { 
-                        position: absolute;
-                        top: 9px;
-                        left: -20px;
-                        @include sized-sprite($icons, rhomb-s);
-                    }
-                }
             }
         }
+    }
+}
+.menu_act ul {
+    @include respond-to(med) {
+        @include box-shadow(-2px 2px 0 rgba(0,0,0,.24));
     }
 }
 .menu__active {
@@ -449,8 +483,7 @@ a{
         position: relative;
         color: #2c8db7;
         @include respond-to(mob-lan) { 
-            border-bottom: 0;
-            text-align: left;
+            border-bottom: 0;  
         }
     span {
             color: #2c8db7;
@@ -458,11 +491,17 @@ a{
             border-bottom: 3px solid #2c8db7;
         }
     }
-    @include respond-to(mob-lan) { 
-        border-bottom: 1px solid #d7d7d7;
-        padding: 0;
-    }
 }
+.menu .menu__active {
+    &:before {
+        content: "";
+        @include respond-to(mob-lan) {
+            padding: 0;
+            margin: 21px 8px 0 0;
+            display: block !important;
+        }   
+    }
+} 
 .menu .menu__item1 {
     text-align: left;
     width: 11%;
@@ -477,8 +516,8 @@ a{
     @include respond-to(mob-lan) { 
         width: 100%;
         border-top: 0;
-        text-align: left;
         margin-bottom: 0;
+        text-align: right;
     }
 }
 .menu__item2 {
@@ -498,7 +537,7 @@ a{
     &:before {
         content: "";
         @include respond-to(pda) { 
-            background: none;
+            display: none;
         }
     }
     @include respond-to(mob-lan) { 
@@ -538,12 +577,31 @@ a{
     }
     @include respond-to(mob-lan) { 
         width: 100%;
-        text-align: left
+        text-align: right;
     }
     &:before {
         content: "";
         display: none;
     }
+}
+.menu-key {
+    position: absolute;
+    bottom: -6px;
+    right: 10px;
+    cursor: pointer;
+    background: #fff;
+    border: 0;
+    display: none;
+    @include sized-sprite($icons, submenu-key); 
+    @include respond-to(mob-lan) { 
+        display: block; 
+    }
+}
+.menu-key_act {
+    top: -21px;
+    right: 10;
+    @include sized-sprite($icons, submenu-key2);
+    @include box-shadow(-2px 0 0 rgba(0,0,0,.24));
 }
 /* --------------------------------------- //END Header ---------------------------------------- */
 
@@ -929,8 +987,8 @@ a{
 .test {
     position: absolute;
     left: 50%;
-    margin-left: -631px; 
-    top: 0;
+    margin-left: -628px;
+top: 25px;
     width: 1362px;
     height: 2500px;
     background: url(../img/test.jpg) 0 0 no-repeat;

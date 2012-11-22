@@ -1,4 +1,60 @@
 @import "base";
+.index-page {
+    @include respond-to(mob-lan) {
+        .menu {
+            position: static;
+            margin-top: 53px;
+            ul {
+                display: block;
+                border: 0;
+                background: none;
+                overflow: visible;
+                li {
+                    margin-bottom: -1px;
+                    height: 33px;
+                    line-height: 33px;
+                    text-align: center;
+                    border-top: 1px solid #d7d7d7;
+                    border-bottom: 1px solid #d7d7d7;
+                }
+                a {
+                    font-size: 20px;
+                    line-height: 33px;
+                }
+                &:after {
+                    content: "";
+                    display: none;
+                }
+            }
+            .menu__active {
+                &:before {
+                    content: "";
+                    display: none !important;
+                } 
+                span {
+                    padding: 0;
+                    &:after,
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        right: -10px;
+                        top: 50%;
+                        margin-top: -3px;
+
+                        @include sized-sprite($icons, rhomb-s);
+                    }
+                    &:before {
+                        content: "";
+                        left: -10px;
+                    }
+                }
+            }
+            .menu-key {
+                display: none;
+            }
+        }
+    }
+} 
  .main {
     padding: 30px 0 47px;
     @include respond-to(pda) {

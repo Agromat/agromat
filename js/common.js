@@ -55,31 +55,18 @@ $(document).ready(function() {
       $(this).next().show();
       $(this).hide();
    });
-  // // resize window more 1024px - subnav display:block;
-  // $(window).resize(function(){
-  //   var width = $(window).width();
-  //   med_width = 1024;
-  //   if ($(window).width() >= med_width) {
-  //     $(".submenu ul").css({"display": "block"});
-  //     $(".submenu-key").css({"display": "none"});
-  //   }
-  //   else {
-  //     $(".submenu ul").css({"display": "none"});
-  //     $(".submenu-key").css({"display": "block"});
-  //     $(".submenu-key").removeClass("submenu-key_act");
-  //   }
-  // });
-   // // show-hide subnav
-   $(".submenu-key").click(function(){
-     if ($(".submenu-key").hasClass("submenu-key_act")) {
-          $(this).removeClass("submenu-key_act");
-          $(".submenu ul").hide();
-          $(".submenu").removeClass("submenu_act");
+
+   // show-hide subnav
+   $(".menu-key").click(function(){
+     if ($(".menu-key").hasClass("menu-key_act")) {
+          $(this).removeClass("menu-key_act");
+          $(".menu ul").hide();
+          $(".menu").removeClass("menu_act");
       }
      else {
-          $(this).addClass("submenu-key_act");
-          $(".submenu ul").show();
-          $(".submenu").addClass("submenu_act");
+          $(this).addClass("menu-key_act");
+          $(".menu ul").show();
+          $(".menu").addClass("menu_act");
       }
    });
   
@@ -87,7 +74,7 @@ $(document).ready(function() {
   var width_test = $(".fancybox-test").width();
   if (width_test == 0) {}
   else {
-    $('.fancy-gallery a').fancybox({
+    $('.js-fancy a').fancybox({
           openEffect  : 'none',
           closeEffect : 'none',
           prevEffect : 'none',
@@ -108,11 +95,11 @@ $(document).ready(function() {
     });
   }
   // get title
-  $(".fancy-gallery img").each(function(){
+  $(".cont-gallery img").each(function(){
     var title = $(this).parent().attr("title") || $(this).attr("title");
     $(this).next().text(title);
   });
-  var img_caption = $(".fancy-gallery a:first").attr("title");
-  $(".fancy-gallery span:first").text(img_caption);
+  var img_caption = $(".cont-gallery a:first").attr("title");
+  $(".cont-gallery span:first").text(img_caption);
 
 });
