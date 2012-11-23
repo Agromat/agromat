@@ -866,19 +866,27 @@
 }
 .auto-service {
     margin: 40px 0 30px;
-    width: 100%;
+    width: 95.6%;
+    margin-left: 3px;
     .list {
         li {
             font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            @include respond-to(mob-lan) {
+                font-size: 12px;
+            }
         } 
     }
     p {
         margin-bottom: 0;
+        @include respond-to(mob-lan) {
+            font-size: 12px;
+        }
     }
     td {
+        padding: 2.2% 5.4% 2.9%;
+        width: 50%;
         border: 2px solid #d4d4d4;
-        padding: 3% 5%;
         &:first-child {
             border-right: 1px solid #d4d4d4;
         }
@@ -887,7 +895,8 @@
         }
     }
     th {
-        padding: 1.4% 0;
+        width: 50%;
+        padding: 1.1% 0 1.7%;
         strong {
             position: relative;
             font-size: 24px;
@@ -929,6 +938,9 @@
             strong {
                 color: #2d8db4;
             }
+        }
+        td {
+            padding: 2.8% 5.4% 3.6%;
         }
     }
 }

@@ -945,8 +945,8 @@ a {
 .test {
   position: absolute;
   left: 50%;
-  margin-left: -628px;
-  top: 25px;
+  margin-left: -624px;
+  top: 0;
   width: 1362px;
   height: 2500px;
   background: url(../img/test.jpg) 0 0 no-repeat;

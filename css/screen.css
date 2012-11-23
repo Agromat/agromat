@@ -945,8 +945,8 @@ a {
 .test {
   position: absolute;
   left: 50%;
-  margin-left: -628px;
-  top: 25px;
+  margin-left: -624px;
+  top: 0;
   width: 1362px;
   height: 2500px;
   background: url(../img/test.jpg) 0 0 no-repeat;
@@ -2540,21 +2540,30 @@ a {
 
 .auto-service {
   margin: 40px 0 30px;
-  width: 100%; }
+  width: 95.6%;
+  margin-left: 3px; }
   .auto-service .list li {
     font-size: 14px;
-    margin-bottom: 5px; }
+    margin-bottom: 8px; }
+    @media only screen and (max-width: 480px) {
+      .auto-service .list li {
+        font-size: 12px; } }
   .auto-service p {
     margin-bottom: 0; }
+    @media only screen and (max-width: 480px) {
+      .auto-service p {
+        font-size: 12px; } }
   .auto-service td {
-    border: 2px solid #d4d4d4;
-    padding: 3% 5%; }
+    padding: 2.2% 5.4% 2.9%;
+    width: 50%;
+    border: 2px solid #d4d4d4; }
     .auto-service td:first-child {
       border-right: 1px solid #d4d4d4; }
     .auto-service td:last-child {
       border-left: 1px solid #d4d4d4; }
   .auto-service th {
-    padding: 1.4% 0; }
+    width: 50%;
+    padding: 1.1% 0 1.7%; }
     .auto-service th strong {
       position: relative;
       font-size: 24px;
@@ -2587,6 +2596,8 @@ a {
     border-bottom: 0; }
     .auto-service tfoot th strong {
       color: #2d8db4; }
+  .auto-service tfoot td {
+    padding: 2.8% 5.4% 3.6%; }
 
 .align-center {
   text-align: center; }
