@@ -958,14 +958,14 @@
 
 /* Add restaurant */
 .wrap_img-link {
-    margin: 0 -20% 34px 0;
+    margin: 0 -20px 34px 0;
     overflow: hidden;
 }
 .img-link {
     float: left;
-    margin-right: 0.9%;
+    margin: 0 11px 11px 0;
     padding: 1% 0.5%;
-    width: 19%;
+    width: 208px;
     background: #fff;
     text-align: center;
     border: 1px solid #d4d4d4;
@@ -975,6 +975,10 @@
         border: 1px solid #000;
         @include box-shadow(inset 0 0 0 1px #000);   
     } 
+    img {
+        display: block;
+        width: 100%;
+    }
     div {
         margin: 0 auto;
         width: 45%;
@@ -1003,5 +1007,22 @@
             content: "";
             left: -35%;
         }
+    }
+}
+.img-link_mod {
+    position: relative;
+    padding: 2.7% 0.5%;
+    overflow: visible;
+}
+.img-link-active {
+    border: 1px solid #000;
+    @include box-shadow(inset 0 0 0 1px #000);  
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        margin-left: -7px;
+        @include sized-sprite($icons, arrow-b);
     }
 }
