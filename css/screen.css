@@ -204,7 +204,8 @@ a {
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
   font-size: 24px;
   text-transform: uppercase;
-  line-height: 38px; }
+  line-height: 38px;
+  clear: both; }
   @media only screen and (max-width: 480px) {
     .title-l-3 {
       font-size: 18px;
@@ -1814,6 +1815,10 @@ a {
     height: 15px; }
   .submenu .submenu__active a {
     color: #2c8db7; }
+  .submenu .submenu__active li a {
+    color: #898989; }
+  .submenu .submenu__active2 a {
+    color: #2c8db7 !important; }
 
 .banner-img {
   display: block;

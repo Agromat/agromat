@@ -123,6 +123,10 @@
     height: 15px; }
   .submenu .submenu__active a {
     color: #2c8db7; }
+  .submenu .submenu__active li a {
+    color: #898989; }
+  .submenu .submenu__active2 a {
+    color: #2c8db7 !important; }
 
 .banner-img {
   display: block;
