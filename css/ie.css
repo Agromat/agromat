@@ -8,6 +8,9 @@
 .lteie8 .article__preview img,
 .lteie8 .block__preview img {
   width: auto; }
+.lteie8 .label__text:before, .lteie8 .label__text:after {
+  content: "";
+  display: none; }
 .lteie8 .footer {
   width: 1280px;
   margin: 0 auto; }

@@ -13,6 +13,13 @@
     .block__preview img {
         width:auto;
     }
+    .label__text {
+        &:before,
+        &:after {
+            content: "";
+            display: none;
+        }
+    }
     .footer {
         width: 1280px;
         margin: 0 auto;

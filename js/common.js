@@ -69,7 +69,11 @@ $(document).ready(function() {
           $(".menu").addClass("menu_act");
       }
    });
-  
+  // select
+  $(".select select").change(function(){
+     var select_val = $(this).val();
+     $(this).prev().html(select_val);
+  });
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
   if (width_test == 0) {}
