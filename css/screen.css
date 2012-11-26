@@ -186,6 +186,9 @@ a {
     padding: 0 23px;
     letter-spacing: 3px; }
 
+.title-l-1_mod {
+  margin-top: 0; }
+
 .title-l-2 {
   margin-bottom: 15px;
   font-weight: normal;
@@ -1543,7 +1546,12 @@ a {
       margin: 0 1.8% 2% 0;
       padding: 0;
       width: 45.4%;
-      display: inline-block; } }
+      display: inline-block; }
+      .shop:hover .shop__main {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; } }
 
 .shop__main {
   position: absolute;
@@ -1587,6 +1595,16 @@ a {
       -webkit-transition: all 0.2s ease-in-out;
       -ms-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
+      @media only screen and (max-width: 1024px) {
+        .shop__main:hover .shop__title {
+          margin-top: 30px; } }
+      @media only screen and (max-width: 768px) {
+        .shop__main:hover .shop__title {
+          margin-top: 67px; } }
+    @media only screen and (max-width: 1024px) {
+      .shop__main:hover {
+        top: 180px;
+        left: 0; } }
 
 .shop__title {
   width: 140px;
@@ -1608,7 +1626,7 @@ a {
   @media only screen and (max-width: 768px) {
     .shop__title {
       font-size: 18px;
-      padding-top: 27%; } }
+      margin-top: 67px; } }
   .shop__title span {
     display: block; }
     @media only screen and (max-width: 1024px) {
@@ -3144,6 +3162,37 @@ a {
     background: url('../img/icons-s1aa40bf27f.png') 0 -143px no-repeat;
     width: 28px;
     height: 23px; }
+
+/* Shopes */
+.wrap_shopes {
+  margin: 0 -20% 0 -16px; }
+
+.shop_big {
+  margin: 0 1% 30px 0;
+  width: 26.8%;
+  height: 246px;
+  overflow: hidden; }
+  @media only screen and (max-width: 1024px) {
+    .shop_big {
+      padding: 0; } }
+  .shop_big .shop__main {
+    top: 21%;
+    right: 20%;
+    bottom: 22%;
+    left: 20%; }
+    @media only screen and (max-width: 1024px) {
+      .shop_big .shop__main {
+        width: auto;
+        height: auto;
+        background: #fff; } }
+    .shop_big .shop__main:hover {
+      top: 24%;
+      right: 23%;
+      bottom: 25%;
+      left: 23%;
+      opacity: 0.5; }
+  .shop_big img {
+    width: 298px; }
 
 .lteie8 .l-wrapper {
   width: 1280px; }

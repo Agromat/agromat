@@ -609,6 +609,13 @@
         padding: 0;
         width: 45.4%;
         display: inline-block;
+         &:hover .shop__main {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
     }
 }
 .shop__main {
@@ -645,6 +652,16 @@
         .shop__title {
             margin-top: 25px;
             @include transition(all, .2s, ease-in-out);
+            @include respond-to(med) {
+                margin-top: 30px;
+            }
+            @include respond-to(pda) {
+                margin-top: 67px;
+            }
+        }
+        @include respond-to(med) {
+            top: 180px;
+            left: 0;
         }
     }
 }
@@ -668,7 +685,7 @@
     }
     @include respond-to(pda) {
         font-size: 18px;
-        padding-top: 27%;
+        margin-top: 67px;
     }
     span {
         display: block;

@@ -1487,3 +1487,38 @@
         @include sized-sprite($icons, pdf);
     }
 }
+
+/* Shopes */
+.wrap_shopes {
+    margin: 0 -20% 0 -16px;
+}
+.shop_big {
+    margin: 0 1% 30px 0;
+    width: 26.8%;
+    height: 246px;
+    overflow: hidden;
+    @include respond-to(med) {
+        padding: 0;
+    }
+    .shop__main {
+        top: 21%;
+        right: 20%;
+        bottom: 22%;
+        left: 20%;
+        @include respond-to(med) {
+            width: auto;
+            height: auto;
+            background: #fff;
+        }
+        &:hover {
+            top: 24%;
+            right: 23%;
+            bottom: 25%;
+            left: 23%;
+            opacity: 0.5;
+        }
+    }
+    img {
+        width: 298px;
+    }
+}

@@ -208,6 +208,9 @@ a{
         letter-spacing: 3px;
     }
 }
+.title-l-1_mod {
+    margin-top: 0;
+}
 .title-l-2 {
     margin-bottom: 15px;
     @include pfd_m();
