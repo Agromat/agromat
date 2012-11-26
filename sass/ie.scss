@@ -24,7 +24,34 @@
         width: 1280px;
         margin: 0 auto;
     }
+    .wrap_shop-addr {
+        overflow: hidden;
+    }
+    .input-col {
+        width: 287px;
+    }
+    .input {
+        height: 30px;
+        line-height: 25px;
+        width: 287px;
+    }
+    .select {
+        height: 20px;
+        select {
+            height: auto;
+        }
+        span {
+            display: none;
+        }
+    }
+    .submit {
+        margin-top: -32px;
+    }
 }
+*+html .wrap_input {
+    overflow: hidden;
+}
+
 *+html .footer-wrap_2 {
     clear: none;
 }

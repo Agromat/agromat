@@ -1434,3 +1434,56 @@
     text-transform: uppercase;
     @include sized-sprite($logos, submit);
 }
+
+/* Newspaper */
+.wrap_newspaper {
+    margin-bottom: 45px;
+}
+.newspaper {
+    float: left;
+    width: 181px;
+    margin: 0 4.4% 4% 0;
+    img {
+        display: block; 
+        margin-bottom: 15px;
+        border: 1px solid #d4d4d4;
+        opacity: 0.7;
+        -o-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        &:hover {
+            opacity: 1;
+            border: 1px solid #000;
+            @include box-shadow(0 0 0 1px #000);
+            -o-filter: grayscale(0);
+            -moz-filter: grayscale(0);
+            -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+        }
+    }
+}
+.newspaper__title {
+    @include pfd_b;
+    font-size: 18px;
+    line-height: 18px;
+    color: #000;
+    text-transform: uppercase;
+}
+.newspaper__dwnld {
+    display: inline-block;
+    margin-top: -3px;
+    color: #898989;
+    font-size: 14px;
+    line-height: 14px;
+    @include pfd_b;
+    text-transform: uppercase;
+    text-decoration: none;
+    i {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+        margin-left: 11px;
+        @include sized-sprite($icons, pdf);
+    }
+}
