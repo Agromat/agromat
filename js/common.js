@@ -69,11 +69,25 @@ $(document).ready(function() {
           $(".menu").addClass("menu_act");
       }
    });
+
   // select
   $(".select select").change(function(){
      var select_val = $(this).val();
      $(this).prev().html(select_val);
   });
+
+  // tabs
+  $(".tab-cont").hide();
+  $(".tab1").show();
+  $(".tab ul li:first").addClass("tab__active");
+  $(".tab li").click(function(){
+    $(".tab li").removeClass("tab__active");
+    $(this).addClass("tab__active");
+    var act_tab = $(this).attr("data-tab");
+    $(".tab-cont").hide();
+    $(act_tab).show();
+  });
+
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
   if (width_test == 0) {}

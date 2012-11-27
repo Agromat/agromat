@@ -654,6 +654,9 @@
         border-bottom: 1px solid #d4d4d4;
         &:hover {
             border: 1px solid #000;
+            margin-bottom: -1px;
+            position: relative;
+            height: 53px;
         }
         @include respond-to(pda) {
             line-height: 30px;
@@ -700,6 +703,7 @@
 }
 .report__download {
     float: right;
+    margin-top: 15px;
     color: #898989;
     @include pfd_b();
     font-size: 12px;
@@ -1520,6 +1524,21 @@
     @include respond-to(pda) {
         width: 40.8%;
     }
+    &:hover {
+        .shop-item__main {
+            opacity: .5;
+            top: 23%;
+            right: 22%;
+            bottom: 24%;
+            left: 22%;
+            @include respond-to(pda) {
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+        }
+    }
     img {
         width: 298px;
         @include respond-to(pda) {
@@ -1579,19 +1598,6 @@
         bottom: 0;
         left: 0;
         border: 2px solid #000;
-    }
-    &:hover {
-        opacity: .5;
-        top: 23%;
-        right: 22%;
-        bottom: 24%;
-        left: 22%;
-        @include respond-to(pda) {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
     }
 }
 .shop-item__title {
@@ -1663,29 +1669,166 @@
 
 .plan {
     position: relative;
-    margin-bottom: 58px;
+    padding-bottom: 58px;
+    overflow: hidden;
     img {
         border: 1px solid #d4d4d4;
         display: block;
         width: 872px;
         margin: 0 auto;
     }
+    .link-box {
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        margin-left: -80px;
+        font-size: 16px;
+    }
 }
-.plan__link {
-    position: absolute;
-    bottom: -24px;
-    left: 50%;
-    margin-left: -80px;
-    display: block;
-    width: 160px;
+.link-box {
+    display: inline-block;
+    padding: 0 35px;
     height: 48px;
     line-height: 48px;
     color: #000;
-    font-size: 16px;
+    font-size: 20px;
     @include pfd_m();
     text-align: center;
     border: 2px solid;
     background: #fff;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+/* wholesale */
+.link-box_order {
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    &:before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 50%;
+        margin-top: -7px;
+        @include sized-sprite($icons, arrow-r);
+    }
+}
+.wrap_item-cont {
+    margin: 0 -15% 50px 0;
+}
+.item-cont {
+    float: left;
+    margin-right: 1.1%;
+    width: 39%;
+    padding: 1.2% 1.5% 1.2% 2%; 
+    border: 2px solid #d4d4d4;
+    @include respond-to(med) {
+        width: 38%;
+        margin-right: 2%;
+    }
+}
+.item-cont__main {
+    float: left;
+    width: 55%;
+    @include respond-to(med) {
+        width: 50%;
+    }
+    @include respond-to(mob-lan) {
+        float: none;
+        width: 100%;
+    }
+}
+.item-cont__title {
+    margin-bottom: 21px;
+    @include pfd_b();
+    font-size: 18px;
+    text-transform: uppercase;
+    @include respond-to(med) {
+        font-size: 16px;
+    }
+    @include respond-to(mob-lan) {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
+.item-cont__img {
+    float: right;
+    width: 40%;
+    overflow: hidden;
+    @include respond-to(mob-lan) {
+        display: none;
+    }
+}
+
+.tab {
+    position: relative;
+    font-size: 18px;
+    @include pfd_m();
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    overflow: hidden;
+    @include respond-to(mob-lan) {
+        font-size: 15px;
+    }
+    ul {
+        padding-left: 163px;
+        height: 45px;
+        @include clr();
+        border-bottom: 2px solid;
+        color: #000;
+        @include respond-to(mob-lan) {
+            padding-left: 100px;
+            height: 37px;
+        }
+    }
+    li {
+        float: left;
+        padding: 0 17px;
+        margin-right: -2px;
+        height: 43px;
+        line-height: 43px;
+        color: #a0a0a0;
+        border: 2px solid #d4d4d4;
+        border-bottom: 0;
+        cursor: pointer;
+        background: #fff;
+        @include respond-to(mob-lan) {
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+    .tab__active {
+        position: relative;
+        height: 45px;
+        color: #000;
+        border-color: #000;
+        @include respond-to(mob-lan) {
+            height: 37px;
+        }
+    }
+}
+
+.tab__title {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 22px;
+    font-weight: normal;
+    @include respond-to(mob-lan) {
+        font-size: 15px;
+    }
+}
+.tab-cont {
+    margin-top: 32px; 
+    .text-rows {
+        padding: 0;
+        li {
+            border: 1px solid transparent;
+            border-top: 1px solid #d4d4d4; 
+            &:hover {
+                border: 1px solid #000; 
+            }
+        }
+    }
 }
