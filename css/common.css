@@ -59,7 +59,7 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5,
 h6, p, blockquote, pre, a, abbr, acronym, address, big,
 cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small,
-strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt,
+strike, strong, sub, sup, tt, var, b, u, i, dl, dt,
 dd, ol, ul, li, fieldset, form, label, legend, table, caption,
 tbody, tfoot, thead, tr, th, td, article, aside, canvas, details,
 embed, figure, figcaption, footer, header, hgroup, menu, nav,
@@ -151,6 +151,9 @@ a {
   clear: both;
   visibility: hidden; }
 
+.wrap_main {
+  overflow: hidden; }
+
 .title-l-1 {
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
@@ -173,7 +176,7 @@ a {
       position: absolute;
       right: 5%;
       top: 7px;
-      background: url('../img/icons-s1aa40bf27f.png') 0 -786px no-repeat;
+      background: url('../img/icons-s84383a3abc.png') 0 -805px no-repeat;
       width: 5px;
       height: 5px; }
     .title-l-1 span:before {
@@ -376,7 +379,7 @@ a {
           bottom: -9px;
           left: 50%;
           margin-left: -7px;
-          background: url('../img/icons-s1aa40bf27f.png') 0 0 no-repeat;
+          background: url('../img/icons-s84383a3abc.png') 0 0 no-repeat;
           width: 15px;
           height: 9px; } }
   .menu li {
@@ -404,7 +407,7 @@ a {
       content: "";
       float: right;
       margin-top: 8px;
-      background: url('../img/icons-s1aa40bf27f.png') 0 -786px no-repeat;
+      background: url('../img/icons-s84383a3abc.png') 0 -805px no-repeat;
       width: 5px;
       height: 5px; }
       @media only screen and (max-width: 480px) {
@@ -552,7 +555,7 @@ a {
   background: #fff;
   border: 0;
   display: none;
-  background: url('../img/icons-s1aa40bf27f.png') 0 -625px no-repeat;
+  background: url('../img/icons-s84383a3abc.png') 0 -625px no-repeat;
   width: 24px;
   height: 27px; }
   @media only screen and (max-width: 480px) {
@@ -562,7 +565,7 @@ a {
 .menu-key_act {
   top: -21px;
   right: 10;
-  background: url('../img/icons-s1aa40bf27f.png') 0 -402px no-repeat;
+  background: url('../img/icons-s84383a3abc.png') 0 -402px no-repeat;
   width: 24px;
   height: 23px;
   -webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, 0.24);
@@ -657,7 +660,7 @@ a {
     position: absolute;
     top: -5px;
     left: 10px;
-    background: url('../img/icons-s1aa40bf27f.png') 0 -354px no-repeat;
+    background: url('../img/icons-s84383a3abc.png') 0 -354px no-repeat;
     width: 13px;
     height: 13px; }
     @media only screen and (max-width: 768px) {
@@ -671,7 +674,7 @@ a {
       position: absolute;
       top: 7px;
       right: 12px;
-      background: url('../img/icons-s1aa40bf27f.png') 0 -786px no-repeat;
+      background: url('../img/icons-s84383a3abc.png') 0 -805px no-repeat;
       width: 5px;
       height: 5px; }
     .separator-big strong:after {
@@ -745,7 +748,7 @@ a {
     position: absolute;
     left: -11px;
     top: 5px;
-    background: url('../img/icons-s1aa40bf27f.png') 0 -610px no-repeat;
+    background: url('../img/icons-s84383a3abc.png') 0 -610px no-repeat;
     width: 5px;
     height: 5px; }
   .footer-nav a {
@@ -772,7 +775,7 @@ a {
     left: 50%;
     top: -3px;
     margin-left: -4px;
-    background: url('../img/icons-s1aa40bf27f.png') 0 -536px no-repeat;
+    background: url('../img/icons-s84383a3abc.png') 0 -536px no-repeat;
     width: 7px;
     height: 7px; }
   .separator-blue strong {
@@ -792,7 +795,7 @@ a {
   margin: 25px 0 20px; }
   .separator-blue_mod i {
     margin-left: -5px;
-    background: url('../img/icons-s1aa40bf27f.png') 0 -662px no-repeat;
+    background: url('../img/icons-s84383a3abc.png') 0 -662px no-repeat;
     width: 9px;
     height: 9px; }
 
