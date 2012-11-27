@@ -1491,34 +1491,161 @@
 /* Shopes */
 .wrap_shopes {
     margin: 0 -20% 0 -16px;
+    @include respond-to(pda) {
+        margin: 0 -20% 0 0;
+    }
 }
-.shop_big {
+.shop-item {
+    position: relative;
+    float: left;
     margin: 0 1% 30px 0;
     width: 26.8%;
     height: 246px;
     overflow: hidden;
-    @include respond-to(med) {
-        padding: 0;
+    @include respond-to(pda) {
+        height: 210px;
+        margin: 0 1% 1% 0;
     }
-    .shop__main {
+    @include respond-to(pda) {
+        width: 40.8%;
+    }
+    img {
+        width: 298px;
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+    .watch-more {
+        position: absolute;
         top: 21%;
         right: 20%;
         bottom: 22%;
         left: 20%;
-        @include respond-to(med) {
-            width: auto;
-            height: auto;
-            background: #fff;
+        padding: 35px 40px;
+        @include respond-to(pda) {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
-        &:hover {
-            top: 24%;
-            right: 23%;
-            bottom: 25%;
-            left: 23%;
-            opacity: 0.5;
+        a {
+            @include respond-to(pda) {
+                margin-top: 62px;
+                 &:before, &:after {
+                    content: "";
+                    top: 50%;
+                    width: 8%;
+                }
+            }
+            @include respond-to(mob-lan) {
+                width: 50%;
+                margin: 63px auto 0;
+                &:before, &:after {
+                    content: "";
+                    top: 75%;
+                    width: 30%;
+                    left: -25%;
+                }
+                &:after {
+                    content: "";
+                    right: -25%;
+                    left: auto;
+                }
+            }
         }
     }
-    img {
-        width: 298px;
+}
+.shop-item__main {
+    position: absolute;
+    top: 21%;
+    right: 20%;
+    bottom: 22%;
+    left: 20%;
+    background: #fff;
+    @include respond-to(pda) {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border: 2px solid #000;
+    }
+    &:hover {
+        opacity: .5;
+        top: 23%;
+        right: 22%;
+        bottom: 24%;
+        left: 22%;
+        @include respond-to(pda) {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+.shop-item__title {
+    width: 140px;
+    margin: 30px auto 0;
+    text-align: center;
+    @include pfd_b();
+    font-size: 22px;
+    text-transform: uppercase;
+    @include respond-to(pda) {
+        margin-top: 62px;
+    }
+    a {
+        color: #000;
+        text-decoration: none;
+        background: none;
+        &:hover {
+            color: #2d8db4;
+        }
+    }
+    span {
+        display: block;
+    }
+    
+}
+.shop-item__adr {
+    color: #727272;
+    font-size: 12px;
+    @include hel_r();
+    text-align: center;
+    margin-top: 11px;
+} 
+.watch-more {
+    border: 2px solid #d4d4d4;
+    a {
+        position: relative;
+        display: block;
+        margin-top: 5px;
+        font-size: 24px;
+        @include pfd_b();
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        @include respond-to(med) {
+            font-size: 22px;
+        }
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            top: 75%;
+            left: 7%;
+            width: 17%;
+            height: 1px;
+            background: #96c6d9;
+            @include respond-to(med) {
+                left: 0;
+            }
+        }
+        &:after {
+            content: "";
+            left: auto;
+            right: 7%;
+            @include respond-to(med) {
+                right: 0;
+            }
+        }
     }
 }

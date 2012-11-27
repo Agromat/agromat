@@ -188,6 +188,9 @@ a {
 
 .title-l-1_mod {
   margin-top: 0; }
+  @media only screen and (max-width: 480px) {
+    .title-l-1_mod {
+      margin-top: 35px; } }
 
 .title-l-2 {
   margin-bottom: 15px;

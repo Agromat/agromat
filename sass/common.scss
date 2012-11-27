@@ -210,6 +210,9 @@ a{
 }
 .title-l-1_mod {
     margin-top: 0;
+    @include respond-to(mob-lan) {
+        margin-top: 35px;
+    } 
 }
 .title-l-2 {
     margin-bottom: 15px;

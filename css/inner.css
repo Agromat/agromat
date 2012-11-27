@@ -1456,30 +1456,148 @@
 /* Shopes */
 .wrap_shopes {
   margin: 0 -20% 0 -16px; }
+  @media only screen and (max-width: 768px) {
+    .wrap_shopes {
+      margin: 0 -20% 0 0; } }
 
-.shop_big {
+.shop-item {
+  position: relative;
+  float: left;
   margin: 0 1% 30px 0;
   width: 26.8%;
   height: 246px;
   overflow: hidden; }
-  @media only screen and (max-width: 1024px) {
-    .shop_big {
-      padding: 0; } }
-  .shop_big .shop__main {
+  @media only screen and (max-width: 768px) {
+    .shop-item {
+      height: 210px;
+      margin: 0 1% 1% 0; } }
+  @media only screen and (max-width: 768px) {
+    .shop-item {
+      width: 40.8%; } }
+  .shop-item img {
+    width: 298px; }
+    @media only screen and (max-width: 768px) {
+      .shop-item img {
+        display: none; } }
+  .shop-item .watch-more {
+    position: absolute;
     top: 21%;
     right: 20%;
     bottom: 22%;
-    left: 20%; }
+    left: 20%;
+    padding: 35px 40px; }
+    @media only screen and (max-width: 768px) {
+      .shop-item .watch-more {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; } }
+    @media only screen and (max-width: 768px) {
+      .shop-item .watch-more a {
+        margin-top: 62px; }
+        .shop-item .watch-more a:before, .shop-item .watch-more a:after {
+          content: "";
+          top: 50%;
+          width: 8%; } }
+    @media only screen and (max-width: 480px) {
+      .shop-item .watch-more a {
+        width: 50%;
+        margin: 63px auto 0; }
+        .shop-item .watch-more a:before, .shop-item .watch-more a:after {
+          content: "";
+          top: 75%;
+          width: 30%;
+          left: -25%; }
+        .shop-item .watch-more a:after {
+          content: "";
+          right: -25%;
+          left: auto; } }
+
+.shop-item__main {
+  position: absolute;
+  top: 21%;
+  right: 20%;
+  bottom: 22%;
+  left: 20%;
+  background: #fff; }
+  @media only screen and (max-width: 768px) {
+    .shop-item__main {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border: 2px solid #000; } }
+  .shop-item__main:hover {
+    opacity: .5;
+    top: 23%;
+    right: 22%;
+    bottom: 24%;
+    left: 22%; }
+    @media only screen and (max-width: 768px) {
+      .shop-item__main:hover {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0; } }
+
+.shop-item__title {
+  width: 140px;
+  margin: 30px auto 0;
+  text-align: center;
+  font-weight: normal;
+  font-family: 'pf_din_text_comp_probold', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase; }
+  @media only screen and (max-width: 768px) {
+    .shop-item__title {
+      margin-top: 62px; } }
+  .shop-item__title a {
+    color: #000;
+    text-decoration: none;
+    background: none; }
+    .shop-item__title a:hover {
+      color: #2d8db4; }
+  .shop-item__title span {
+    display: block; }
+
+.shop-item__adr {
+  color: #727272;
+  font-size: 12px;
+  font-weight: normal;
+  font-family: 'helveticaneuecyrroman', sans-serif;
+  text-align: center;
+  margin-top: 11px; }
+
+.watch-more {
+  border: 2px solid #d4d4d4; }
+  .watch-more a {
+    position: relative;
+    display: block;
+    margin-top: 5px;
+    font-size: 24px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase; }
     @media only screen and (max-width: 1024px) {
-      .shop_big .shop__main {
-        width: auto;
-        height: auto;
-        background: #fff; } }
-    .shop_big .shop__main:hover {
-      top: 24%;
-      right: 23%;
-      bottom: 25%;
-      left: 23%;
-      opacity: 0.5; }
-  .shop_big img {
-    width: 298px; }
+      .watch-more a {
+        font-size: 22px; } }
+    .watch-more a:before, .watch-more a:after {
+      content: "";
+      position: absolute;
+      top: 75%;
+      left: 7%;
+      width: 17%;
+      height: 1px;
+      background: #96c6d9; }
+      @media only screen and (max-width: 1024px) {
+        .watch-more a:before, .watch-more a:after {
+          left: 0; } }
+    .watch-more a:after {
+      content: "";
+      left: auto;
+      right: 7%; }
+      @media only screen and (max-width: 1024px) {
+        .watch-more a:after {
+          right: 0; } }
