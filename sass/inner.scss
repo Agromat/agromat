@@ -983,7 +983,7 @@
     }
     div {
         margin: 0 auto;
-        width: 45%;
+        width: 50%;
         height: 42px;
         line-height: 42px;
     }
@@ -992,7 +992,7 @@
         display: inline-block;
         vertical-align: middle;
         line-height: 1;
-        @include pfd_m;
+        @include pfd_b;
         color: #000;
         font-size: 17px;
         text-transform: uppercase;
@@ -1002,12 +1002,12 @@
             position: absolute;
             top: 50%;
             margin-top: -3px;
-            right: -35%;
-            @include sized-sprite($icons, rhomb-s);
+            right: -30%;
+            @include sized-sprite($icons, rhomb-m);
         }
         &:before {
             content: "";
-            left: -35%;
+            left: -30%;
         }
     }
 }
@@ -1160,11 +1160,22 @@
     position: relative;
     margin-bottom: 41px;
 }
+.map-wrap_shop {
+    width: 872px;
+    margin: 0 auto;
+}
 .map {
     height: 585px;
     iframe {
         width: 100%;
         height: 585px;
+    }
+}
+.map_shop {
+    height: 365px;
+    iframe {
+        width: 100%;
+        height: 365px;
     }
 }
 .map-point {
@@ -1648,4 +1659,33 @@
             }
         }
     }
+}
+
+.plan {
+    position: relative;
+    margin-bottom: 58px;
+    img {
+        border: 1px solid #d4d4d4;
+        display: block;
+        width: 872px;
+        margin: 0 auto;
+    }
+}
+.plan__link {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    margin-left: -80px;
+    display: block;
+    width: 160px;
+    height: 48px;
+    line-height: 48px;
+    color: #000;
+    font-size: 16px;
+    @include pfd_m();
+    text-align: center;
+    border: 2px solid;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
 }
