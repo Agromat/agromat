@@ -96,13 +96,31 @@ $(document).ready(function() {
     }
     else {
       $(this).addClass("select-list-act");
-      $(".select-list ul").show();
+      $(".select-list ul").slideDown("fast");
     }
   });
   $(".select-list li").click(function(){
-    $(this).parent().hide();
+    $(this).parent().slideUp("fast");
     var city = $(this).text();
     $(this).parent().prev().children("b").text(city);
+  });
+
+  // show/hide answer
+  $(".js-quest-body").hide();
+  $(".question__answer-link").click(function(){
+    $(".js-quest-body").slideUp("fast");
+    if ($(this).hasClass("question__answer-link-act")) {
+      $(this).removeClass("question__answer-link-act");
+      $(this).parent().parent().removeClass("question_act");
+      $(this).parent().next().slideUp("fast");
+    }
+    else {
+      $(this).addClass("question__answer-link-act");
+      $(this).parent().parent().addClass("question_act");
+      $(this).parent().next().slideDown("fast");
+    }
+
+    return false;
   });
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
