@@ -88,6 +88,22 @@ $(document).ready(function() {
     $(act_tab).show();
   });
 
+  // show/hide select list
+  $(".select-list div").click(function(){
+    if ($(this).hasClass("select-list-act")) {
+      $(".select-list ul").hide();
+      $(this).removeClass("select-list-act");
+    }
+    else {
+      $(this).addClass("select-list-act");
+      $(".select-list ul").show();
+    }
+  });
+  $(".select-list li").click(function(){
+    $(this).parent().hide();
+    var city = $(this).text();
+    $(this).parent().prev().children("b").text(city);
+  });
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
   if (width_test == 0) {}
