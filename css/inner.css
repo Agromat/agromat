@@ -136,9 +136,9 @@
     .banner-img {
       display: none; } }
 
-.quote {
+.content blockquote {
   position: relative;
-  margin-top: 161px;
+  width: 212px;
   padding: 26px 40px 23px 53px;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
@@ -146,7 +146,7 @@
   color: #000;
   font-weight: normal;
   font-family: 'helveticaneuecyrbold_italic', sans-serif; }
-  .quote:before {
+  .content blockquote:before {
     content: "”";
     position: absolute;
     left: 9px;
@@ -156,7 +156,7 @@
     font-style: normal;
     font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
     color: #2d8db4; }
-  .quote i {
+  .content blockquote i {
     display: block;
     margin-top: 17px;
     color: #737373;
@@ -483,7 +483,7 @@
     width: 8.2%;
     text-align: center;
     color: #ccc;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: normal;
     font-family: 'pf_din_text_comp_probold', sans-serif;
     text-decoration: none;
@@ -494,7 +494,8 @@
         font-size: 19px; } }
     @media only screen and (max-width: 480px) {
       .filter_year a {
-        font-size: 15px; } }
+        font-size: 15px;
+        width: 10%; } }
     .filter_year a:hover {
       color: #2C8DB7; }
   .filter_year .filter_year__active {
@@ -652,9 +653,11 @@
     border-bottom: 1px solid #d4d4d4; }
     .text-rows li:hover {
       border: 1px solid #000;
-      margin-bottom: -1px;
+      margin-top: -1px;
       position: relative;
       height: 53px; }
+      .text-rows li:hover div {
+        padding-top: 18px; }
     @media only screen and (max-width: 768px) {
       .text-rows li {
         line-height: 30px; } }
@@ -719,7 +722,7 @@
 /* Vacancy */
 .person-policy {
   overflow: hidden;
-  margin-bottom: 29px; }
+  margin-bottom: 27px; }
   .person-policy p {
     float: left;
     width: 70%;
@@ -730,11 +733,11 @@
   .person-policy a {
     position: relative;
     float: right;
-    width: 19%;
+    width: 19.5%;
     height: 48px;
     line-height: 48px;
     color: #000;
-    border: 2px solid;
+    border: 2px solid #000;
     font-size: 19px;
     font-weight: normal;
     font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
@@ -744,6 +747,8 @@
     @media only screen and (max-width: 768px) {
       .person-policy a {
         display: none; } }
+    .person-policy a:hover {
+      color: #2D8DB4; }
     .person-policy a i {
       position: absolute;
       top: 50%;
@@ -772,7 +777,7 @@
 .vacancy {
   position: relative;
   margin-bottom: 15px;
-  padding: 23px 10% 5px 5.5%;
+  padding: 18px 10% 14px 5.5%;
   border: 1px solid #d4d4d4; }
   .vacancy:hover {
     border: 1px solid #000;
