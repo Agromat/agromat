@@ -1389,10 +1389,16 @@
     box-sizing: border-box;
     padding: 0 11px;
     width: 100%;
-    height: 32px;
+    height: 34px;
     color: #000;
     border: 2px solid #000;
     font-size: 14px;
+    @include respond-to(pda) {
+        font-size: 12px;
+    }
+    @include respond-to(mob-lan) {
+        padding: 0 3px;
+    }
 }
 .valid-error {
     position: absolute;
@@ -1464,11 +1470,17 @@
     @include hel_r;
     font-size: 14px;
     border: 2px solid #000;
+    @include respond-to(pda) {
+        font-size: 12px;
+    }
+    @include respond-to(mob-lan) {
+        padding: 3px;
+    }
 }
 .submit {
     position: relative;
     display: block;
-    margin: -38px auto 0;
+    margin: -35px auto 0;
     line-height: 63px;
     color: #fff;
     @include pfd_b;
@@ -2239,3 +2251,97 @@
     @include pfd_b;
     text-transform: uppercase;
 }
+
+/* FAQ */
+.faq-wrap {
+    margin-bottom: 20px;
+}
+.faq {
+    position: relative;
+    padding-bottom: 23px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #d4d4d4;
+    .counter {
+        position: absolute;
+        top: 6px;
+        right: 0;
+        @include respond-to(mob-lan) {
+            top: -14px;
+        }
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+.faq__list {
+    margin-top: -11px;
+    width: 90%;
+    line-height: 18px;
+}
+.faq__all {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+    @include respond-to(mob-lan) {
+        position: static;
+        margin-top: 15px;
+        display: inline-block;
+    }
+}
+.counter {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 26px;
+    font-size: 20px;
+    @include pfd_m;
+    color: #000;
+    line-height: 26px;
+    text-align: center;
+    border: 2px solid;
+    &:after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        bottom: -8px;
+        @include sized-sprite($icons, counter-corner);
+    }
+}
+
+.feedback_faq {
+    width: 64%;
+    @include respond-to(mob-lan) {
+        width: 100%;
+    }
+    .valid-error {
+        right: -162px;
+        width: 145px;
+        @include respond-to(pda) {
+            right: 0;
+            top: 30px;
+        }
+        @include respond-to(mob-lan) {
+            top: 68px;
+        }
+    }
+}
+.input-captcha {
+    @include clr;
+    .input {
+       float: left; 
+       width: 70%;
+       @include respond-to(mob-lan) {
+            width: 100%;
+            float: none;
+        }
+    }
+}
+.captcha {
+    float: left;
+    width: 30%;
+    height: 34px;
+    @include respond-to(mob-lan) {
+        width: auto;
+        float: none;
+    }
+} 
