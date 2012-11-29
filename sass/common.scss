@@ -169,12 +169,15 @@ a{
 	clear: both;
 	height: 525px;
 }
+.wrapper {
+    overflow: hidden;
+}
 .wrap {
     @include clr();
 }
-.wrap_main {
+/*.wrap_main {
     overflow: hidden;
-}
+}*/
 .title-l-1 {
     @include pfd_m();
     font-size: 24px;
@@ -230,6 +233,7 @@ a{
     }
 }
 .title-l-3 {
+    display: inline-block;
     margin-bottom: 15px;
     @include pfd_m();
     font-size: 24px;

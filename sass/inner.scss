@@ -11,8 +11,44 @@
         font-size: 14px;
         line-height: 17px;
     }
-    a {
-
+    blockquote {
+        position: relative;
+        float: left;
+        width: 25%;
+        margin-left: -40%;
+        padding: 26px 40px 23px 53px;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        font-size: 14px;
+        color: #000;
+        @include hel_bi();
+        @include respond-to(med) {
+           margin: 0 25px 0 0;
+           width: 30%;
+        }
+        @include respond-to(pda) {
+           margin: 0 0 20px 0;
+           float: none;
+           width: 100%;
+           -moz-box-sizing: border-box;
+           box-sizing: border-box;
+        }
+        &:before {
+            content: "”";
+            position: absolute;
+            left: 9px;
+            top: 18px;
+            font-size: 50px;
+            @include pfd_mi();
+            color: #2d8db4;
+        }
+        i {
+            display: block;
+            margin-top: 17px;
+            color: #737373;
+            font-size: 12px;
+            @include hel_i();
+        }
     }
 }
 .content_width {
@@ -22,12 +58,8 @@
         padding-left: 0;
     }
 }
-.border {
-    
-}
 .main-cont {
     padding: 19px 0 15px 3.4%;
-    overflow: hidden;
     @include respond-to(pda) {
       padding: 15px 0 30px; 
       left: 100%;
@@ -159,32 +191,6 @@
     margin-bottom: 40px;
     @include respond-to(mob-lan) { 
        display: none;
-    }
-}
-.content blockquote {
-    position: relative;
-    width: 212px;
-    padding: 26px 40px 23px 53px;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    font-size: 14px;
-    color: #000;
-    @include hel_bi();
-    &:before {
-        content: "”";
-        position: absolute;
-        left: 9px;
-        top: 18px;
-        font-size: 50px;
-        @include pfd_mi();
-        color: #2d8db4;
-    }
-    i {
-        display: block;
-        margin-top: 17px;
-        color: #737373;
-        font-size: 12px;
-        @include hel_i();
     }
 }
 .quote_mod {
@@ -676,6 +682,9 @@
             height: 53px;
             div {
                 padding-top: 18px;
+            }
+            .report__download {
+                margin-top: 16px;
             }
         }
         @include respond-to(pda) {
@@ -1325,9 +1334,6 @@
 .wrap_shop-addr {
     margin: 36px -25% -2px 0; 
 }
-.wrap_shop-addr-office {
-    margin-bottom: 35px;  
-}
 .shop-addr {
     float: left;
     margin: 0 0.8% 0.8% 0;
@@ -1749,10 +1755,13 @@
     font-size: 20px;
     @include pfd_m();
     text-align: center;
-    border: 2px solid;
+    border: 2px solid #000;
     background: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+        color: #2C8DB7;
+    }
 }
 
 /* wholesale */
@@ -1885,6 +1894,13 @@
         border-top: 1px solid #d4d4d4; 
         &:hover {
             border: 1px solid #000; 
+            margin: 0 0 -1px;
+            div {
+                padding-top: 17px;
+            }
+            .report__download {
+                margin-top: 15px;
+            }
         }
     }
 }
@@ -2325,12 +2341,13 @@
 
 .feedback_faq {
     width: 64%;
+    padding-bottom: 15px;
     @include respond-to(mob-lan) {
         width: 100%;
     }
-    .valid-error {
-        right: -162px;
-        width: 145px;
+    .valid-error { 
+        right: -130px;
+        width: 115px;
         @include respond-to(pda) {
             right: 0;
             top: 30px;

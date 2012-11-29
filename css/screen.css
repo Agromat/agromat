@@ -145,6 +145,9 @@ a {
   clear: both;
   height: 525px; }
 
+.wrapper {
+  overflow: hidden; }
+
 .wrap:after {
   content: ".";
   display: block;
@@ -152,9 +155,9 @@ a {
   clear: both;
   visibility: hidden; }
 
-.wrap_main {
-  overflow: hidden; }
-
+/*.wrap_main {
+    overflow: hidden;
+}*/
 .title-l-1 {
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
@@ -209,6 +212,7 @@ a {
       line-height: 20px; } }
 
 .title-l-3 {
+  display: inline-block;
   margin-bottom: 15px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
@@ -1726,6 +1730,46 @@ a {
     margin-bottom: 20px;
     font-size: 14px;
     line-height: 17px; }
+  .content blockquote {
+    position: relative;
+    float: left;
+    width: 25%;
+    margin-left: -40%;
+    padding: 26px 40px 23px 53px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    font-family: 'helveticaneuecyrbold_italic', sans-serif; }
+    @media only screen and (max-width: 1024px) {
+      .content blockquote {
+        margin: 0 25px 0 0;
+        width: 30%; } }
+    @media only screen and (max-width: 768px) {
+      .content blockquote {
+        margin: 0 0 20px 0;
+        float: none;
+        width: 100%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box; } }
+    .content blockquote:before {
+      content: "”";
+      position: absolute;
+      left: 9px;
+      top: 18px;
+      font-size: 50px;
+      font-weight: normal;
+      font-style: normal;
+      font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
+      color: #2d8db4; }
+    .content blockquote i {
+      display: block;
+      margin-top: 17px;
+      color: #737373;
+      font-size: 12px;
+      font-weight: normal;
+      font-family: 'helveticaneuecyritalic', sans-serif; }
 
 .content_width {
   width: 100%;
@@ -1734,8 +1778,7 @@ a {
     padding-left: 0; }
 
 .main-cont {
-  padding: 19px 0 15px 3.4%;
-  overflow: hidden; }
+  padding: 19px 0 15px 3.4%; }
   @media only screen and (max-width: 768px) {
     .main-cont {
       padding: 15px 0 30px;
@@ -1852,34 +1895,6 @@ a {
   @media only screen and (max-width: 480px) {
     .banner-img {
       display: none; } }
-
-.content blockquote {
-  position: relative;
-  width: 212px;
-  padding: 26px 40px 23px 53px;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-  font-size: 14px;
-  color: #000;
-  font-weight: normal;
-  font-family: 'helveticaneuecyrbold_italic', sans-serif; }
-  .content blockquote:before {
-    content: "”";
-    position: absolute;
-    left: 9px;
-    top: 18px;
-    font-size: 50px;
-    font-weight: normal;
-    font-style: normal;
-    font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
-    color: #2d8db4; }
-  .content blockquote i {
-    display: block;
-    margin-top: 17px;
-    color: #737373;
-    font-size: 12px;
-    font-weight: normal;
-    font-family: 'helveticaneuecyritalic', sans-serif; }
 
 .quote_mod {
   margin-top: 106px; }
@@ -2375,6 +2390,8 @@ a {
       height: 53px; }
       .text-rows li:hover div {
         padding-top: 18px; }
+      .text-rows li:hover .report__download {
+        margin-top: 16px; }
     @media only screen and (max-width: 768px) {
       .text-rows li {
         line-height: 30px; } }
@@ -3004,9 +3021,6 @@ a {
 .wrap_shop-addr {
   margin: 36px -25% -2px 0; }
 
-.wrap_shop-addr-office {
-  margin-bottom: 35px; }
-
 .shop-addr {
   float: left;
   margin: 0 0.8% 0.8% 0;
@@ -3417,10 +3431,12 @@ a {
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
   text-align: center;
-  border: 2px solid;
+  border: 2px solid #000;
   background: #fff;
   text-decoration: none;
   text-transform: uppercase; }
+  .link-box:hover {
+    color: #2C8DB7; }
 
 /* wholesale */
 .link-box_order {
@@ -3554,7 +3570,12 @@ a {
     border: 1px solid transparent;
     border-top: 1px solid #d4d4d4; }
     .text-rows_width li:hover {
-      border: 1px solid #000; }
+      border: 1px solid #000;
+      margin: 0 0 -1px; }
+      .text-rows_width li:hover div {
+        padding-top: 17px; }
+      .text-rows_width li:hover .report__download {
+        margin-top: 15px; }
 
 /* trademarks */
 .filter-let {
@@ -3978,13 +3999,14 @@ a {
     height: 8px; }
 
 .feedback_faq {
-  width: 64%; }
+  width: 64%;
+  padding-bottom: 15px; }
   @media only screen and (max-width: 480px) {
     .feedback_faq {
       width: 100%; } }
   .feedback_faq .valid-error {
-    right: -162px;
-    width: 145px; }
+    right: -130px;
+    width: 115px; }
     @media only screen and (max-width: 768px) {
       .feedback_faq .valid-error {
         right: 0;
