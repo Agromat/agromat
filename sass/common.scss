@@ -636,22 +636,22 @@ a{
 }
 .sidebar_l {
     float: left;
+    @include respond-to(med) {
+       width: 23.4%; 
+       float: left;
+    }
+    @include respond-to(mob-lan) {
+       float: none;
+       width: 100%;
+    }
     .quote, .banner_action {
         @include respond-to(med) {
-           display: none;
+           display: none; 
         }
     }
     .banner {
         @include respond-to(med) {
-           width: 100%;
-           height: 98px;
-           margin-bottom: 30px;
-           .banner__name {
-                margin-top: 30px;
-           }
-           .separator-blue_bot {
-                margin-top: 15px;
-           }
+           display: none;
         }
     }
 }

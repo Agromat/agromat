@@ -2,9 +2,17 @@
   float: right;
   position: relative;
   width: 75%; }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 480px) {
     .content {
+      float: none;
       width: 100%; } }
+  .content .banner {
+    display: none;
+    margin-bottom: 25px; }
+    @media only screen and (max-width: 1024px) {
+      .content .banner {
+        width: 100%;
+        display: block; } }
   .content p {
     margin-bottom: 20px;
     font-size: 14px;
@@ -112,6 +120,18 @@
   border: 2px solid #000;
   background: #fff;
   z-index: 100; }
+  @media only screen and (max-width: 480px) {
+    .submenu {
+      margin-top: 25px; }
+      .submenu:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -9px;
+        margin-left: -7px;
+        background: url('../img/icons-sd7b85b4b99.png') 0 -40px no-repeat;
+        width: 15px;
+        height: 9px; } }
   .submenu li {
     position: relative;
     border-top: 1px solid #d4d4d4; }
@@ -125,9 +145,28 @@
       background: url('../img/icons-sd7b85b4b99.png') 0 -951px no-repeat;
       width: 5px;
       height: 5px; }
+      @media only screen and (max-width: 1024px) {
+        .submenu li:before {
+          left: 8px;
+          top: 16px; } }
+      @media only screen and (max-width: 768px) {
+        .submenu li:before {
+          display: none; } }
+      @media only screen and (max-width: 480px) {
+        .submenu li:before {
+          display: block; } }
     .submenu li ul {
       padding: 12px 0;
       border-top: 1px solid #d4d4d4; }
+      @media only screen and (max-width: 1024px) {
+        .submenu li ul {
+          padding: 5px 0; } }
+      @media only screen and (max-width: 768px) {
+        .submenu li ul {
+          padding: 0; } }
+      @media only screen and (max-width: 480px) {
+        .submenu li ul {
+          padding: 12px 0; } }
     .submenu li li {
       border: 0; }
       .submenu li li:before {
@@ -138,6 +177,15 @@
         color: #898989;
         font-size: 16px;
         line-height: 23px; }
+        @media only screen and (max-width: 1024px) {
+          .submenu li li a {
+            font-size: 14px; } }
+        @media only screen and (max-width: 768px) {
+          .submenu li li a {
+            font-size: 12px; } }
+        @media only screen and (max-width: 480px) {
+          .submenu li li a {
+            font-size: 16px; } }
   .submenu a {
     display: block;
     padding-left: 37px;
@@ -149,6 +197,24 @@
     font-size: 20px;
     text-transform: uppercase;
     text-decoration: none; }
+    @media only screen and (max-width: 1024px) {
+      .submenu a {
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        padding-left: 20px; } }
+    @media only screen and (max-width: 768px) {
+      .submenu a {
+        padding-left: 3px;
+        font-size: 12px;
+        height: 30px;
+        line-height: 30px; } }
+    @media only screen and (max-width: 480px) {
+      .submenu a {
+        padding-left: 37px;
+        height: 47px;
+        line-height: 47px;
+        font-size: 20px; } }
     .submenu a:hover {
       color: #2c8db7; }
   .submenu .submenu__active:after {
@@ -160,6 +226,9 @@
     background: url('../img/icons-sd7b85b4b99.png') 0 -490px no-repeat;
     width: 9px;
     height: 15px; }
+    @media only screen and (max-width: 480px) {
+      .submenu .submenu__active:after {
+        display: none; } }
   .submenu .submenu__active a {
     color: #2c8db7; }
   .submenu .submenu__active li a {
@@ -200,6 +269,13 @@
       float: none;
       margin: 0 auto 10px;
       width: 84%; } }
+  @media only screen and (max-width: 480px) {
+    .video {
+      float: none;
+      margin: 0 auto 10px;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; } }
   .video img {
     display: block;
     position: relative;
@@ -605,7 +681,7 @@
   margin: 20px 0;
   padding: 16px 3.5% 20px;
   border: 2px solid #d4d4d4; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 1024px) {
     .bloc {
       display: none; } }
 
@@ -2327,6 +2403,10 @@
     font-weight: normal;
     font-family: 'helveticaneuecyrroman', sans-serif;
     text-transform: none; }
+    @media only screen and (max-width: 480px) {
+      .question_width .question__body {
+        font-size: 15px;
+        line-height: 20px; } }
 
 .question__answer .categ-name {
   float: left; }
