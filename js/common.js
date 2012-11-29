@@ -122,6 +122,15 @@ $(document).ready(function() {
 
     return false;
   });
+
+  // show/hide hidden fancybox photos
+  $(".js-hidden-photo").hide();
+  $(".js-more-photos").click(function(){
+    $(this).hide();
+    $(this).parent().children(".js-hidden-photo").show();
+    return false;
+  });
+
   // fancybox gallery
   var width_test = $(".fancybox-test").width();
   if (width_test == 0) {}

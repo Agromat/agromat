@@ -943,6 +943,8 @@
     clear: both;
     visibility: hidden; }
   .short-gallery a {
+    width: 170px;
+    height: 130px;
     float: left;
     margin: 0 6px 6px 0;
     border: 2px solid #fff; }
@@ -951,12 +953,14 @@
       -moz-box-shadow: 0 0 0 2px black;
       box-shadow: 0 0 0 2px black; }
     .short-gallery a img {
+      width: 100%;
+      height: 100%;
       display: block; }
   .short-gallery .more-photos {
     margin-top: 3px;
-    width: 100px;
-    height: 75px;
-    line-height: 75px;
+    width: 166px;
+    height: 126px;
+    line-height: 126px;
     border: 1px solid #d4d4d4;
     font-size: 12px;
     font-weight: normal;
