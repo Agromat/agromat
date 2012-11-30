@@ -253,6 +253,9 @@
                 display: block;
             }
         }
+        @include respond-to(mob-lan) {
+            margin-top: 20px;
+        }
     }
 }
 .banner__wrap {

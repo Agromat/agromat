@@ -467,6 +467,9 @@
   margin: 0 auto;
   width: 67%;
   background: #fff; }
+  @media only screen and (max-width: 480px) {
+    .pagin__wrap {
+      width: 80%; } }
 
 .pagin__title {
   padding: 0 6% 0 0;
@@ -750,6 +753,10 @@
     @media only screen and (max-width: 768px) {
       .text-rows li {
         line-height: 30px; } }
+    @media only screen and (max-width: 480px) {
+      .text-rows li {
+        line-height: 24px;
+        height: 45px; } }
   .text-rows div {
     float: left;
     width: 72%;
@@ -759,6 +766,12 @@
     @media only screen and (max-width: 768px) {
       .text-rows div {
         height: 30px; } }
+    @media only screen and (max-width: 768px) {
+      .text-rows div {
+        width: 50%; } }
+    @media only screen and (max-width: 480px) {
+      .text-rows div {
+        padding-top: 9px; } }
 
 .text-rows_bold {
   margin-bottom: 40px; }
@@ -796,6 +809,9 @@
   font-size: 12px;
   text-decoration: none;
   text-transform: uppercase; }
+  @media only screen and (max-width: 480px) {
+    .report__download {
+      margin-top: 8px; } }
   .report__download i {
     display: inline-block;
     vertical-align: middle;
@@ -942,12 +958,21 @@
     height: 0;
     clear: both;
     visibility: hidden; }
+  @media only screen and (max-width: 480px) {
+    .short-gallery {
+      text-align: center; } }
   .short-gallery a {
     width: 170px;
     height: 130px;
     float: left;
     margin: 0 6px 6px 0;
     border: 2px solid #fff; }
+    @media only screen and (max-width: 480px) {
+      .short-gallery a {
+        float: none;
+        display: inline-block;
+        width: 185px;
+        height: 145px; } }
     .short-gallery a:hover {
       -webkit-box-shadow: 0 0 0 2px black;
       -moz-box-shadow: 0 0 0 2px black;
@@ -979,13 +1004,15 @@
 .auto-service {
   margin: 40px 0 30px;
   width: 95.6%;
-  margin-left: 3px; }
+  margin-left: 3px;
+  overflow: hidden;
+  word-wrap: break-word; }
   .auto-service .list li {
     font-size: 14px;
     margin-bottom: 8px; }
     @media only screen and (max-width: 480px) {
       .auto-service .list li {
-        font-size: 12px; } }
+        font-size: 11px; } }
   .auto-service p {
     margin-bottom: 0; }
     @media only screen and (max-width: 480px) {
@@ -1020,6 +1047,9 @@
         height: 1px;
         width: 56px;
         background: #2d8db4; }
+        @media only screen and (max-width: 480px) {
+          .auto-service th strong:before, .auto-service th strong:after {
+            display: none; } }
       .auto-service th strong:before {
         left: -65px; }
   .auto-service thead th {
@@ -1055,6 +1085,11 @@
   border: 1px solid #d4d4d4;
   text-decoration: none;
   overflow: hidden; }
+  @media only screen and (max-width: 480px) {
+    .img-link {
+      display: block;
+      float: none;
+      margin: 0 auto 15px; } }
   .img-link:hover {
     border: 1px solid #000;
     -webkit-box-shadow: inset 0 0 0 1px black;
@@ -1233,7 +1268,7 @@
       left: -6px; } }
   @media only screen and (max-width: 768px) {
     .label_radio .label__text:after {
-      top: 3px; } }
+      top: 2px; } }
 
 .label_check .label__text:after {
   content: "";
@@ -1259,11 +1294,15 @@
 
 .map-wrap {
   position: relative;
-  margin-bottom: 41px; }
+  margin-bottom: 41px;
+  overflow: hidden; }
 
 .map-wrap_shop {
-  width: 872px;
+  width: 92.5%;
   margin: 0 auto; }
+  @media only screen and (max-width: 480px) {
+    .map-wrap_shop {
+      margin-bottom: 20px; } }
 
 .map {
   height: 585px; }
@@ -1379,6 +1418,9 @@
 
 .wrap_shop-addr {
   margin: 36px -25% -2px 0; }
+  @media only screen and (max-width: 480px) {
+    .wrap_shop-addr {
+      margin-top: 0px; } }
 
 .shop-addr {
   float: left;
@@ -1425,7 +1467,7 @@
 
 .feedback {
   margin: 0 auto -11px;
-  padding-top: 15px;
+  padding: 15px 0;
   width: 46.1%; }
   @media only screen and (max-width: 768px) {
     .feedback {
@@ -1562,11 +1604,20 @@
 /* Newspaper */
 .wrap_newspaper {
   margin-bottom: 45px; }
+  @media only screen and (max-width: 480px) {
+    .wrap_newspaper {
+      text-align: center; } }
 
 .newspaper {
   float: left;
   width: 181px;
   margin: 0 4.4% 4% 0; }
+  @media only screen and (max-width: 480px) {
+    .newspaper {
+      float: none;
+      display: inline-block;
+      text-align: left;
+      margin: 0 2.4% 10% 0; } }
   .newspaper img {
     display: block;
     margin-bottom: 15px;
@@ -1665,6 +1716,9 @@
         right: 0;
         bottom: 0;
         left: 0; } }
+    @media only screen and (max-width: 480px) {
+      .shop-item .watch-more {
+        margin-bottom: 10px; } }
     @media only screen and (max-width: 768px) {
       .shop-item .watch-more a {
         margin-top: 62px; }
@@ -1674,13 +1728,12 @@
           width: 8%; } }
     @media only screen and (max-width: 480px) {
       .shop-item .watch-more a {
-        width: 50%;
-        margin: 63px auto 0; }
+        width: 100%;
+        margin: 63px auto 0;
+        font-size: 17px; }
         .shop-item .watch-more a:before, .shop-item .watch-more a:after {
           content: "";
-          top: 75%;
-          width: 30%;
-          left: -25%; }
+          display: none; }
         .shop-item .watch-more a:after {
           content: "";
           right: -25%;
@@ -1801,7 +1854,7 @@
 .link-box_order {
   position: relative;
   float: right;
-  margin-top: 10px; }
+  margin: 10px 0 0 10px; }
   .link-box_order:before {
     content: "";
     position: absolute;
@@ -1870,7 +1923,7 @@
   overflow: hidden; }
   @media only screen and (max-width: 480px) {
     .tab {
-      font-size: 15px; } }
+      font-size: 13px; } }
   .tab ul {
     padding-left: 163px;
     height: 45px;
@@ -1884,7 +1937,7 @@
       visibility: hidden; }
     @media only screen and (max-width: 480px) {
       .tab ul {
-        padding-left: 100px;
+        padding-left: 94px;
         height: 37px; } }
   .tab li {
     float: left;
@@ -1900,7 +1953,8 @@
     @media only screen and (max-width: 480px) {
       .tab li {
         height: 35px;
-        line-height: 35px; } }
+        line-height: 35px;
+        padding: 0 5px; } }
   .tab .tab__active {
     position: relative;
     height: 45px;
@@ -1918,7 +1972,7 @@
   font-weight: normal; }
   @media only screen and (max-width: 480px) {
     .tab__title {
-      font-size: 15px; } }
+      font-size: 13px; } }
 
 .tab-cont {
   margin-top: 32px; }
@@ -2244,7 +2298,7 @@
         height: 5px; }
 
 .wrap_mark {
-  margin: -24px -25% 45px 0;
+  margin: 0 -25% 45px 0;
   overflow: hidden; }
 
 .mark {
