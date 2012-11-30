@@ -123,6 +123,14 @@ $(document).ready(function() {
     return false;
   });
 
+  // show/hide all shopes
+  $(".js-hidden-shop").hide();
+  $(".js-more-shopes").click(function(){
+    $(this).parent().hide();
+    $(this).parent().parent().children(".js-hidden-shop").show();
+    return false;
+  });
+
   // show/hide hidden fancybox photos
   $(".js-hidden-photo").hide();
   $(".js-more-photos").click(function(){
