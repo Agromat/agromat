@@ -314,12 +314,17 @@
   .submenu .submenu__active:after {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 15px;
     right: -10px;
-    margin-top: -5px;
     background: url('../img/icons-sd7b85b4b99.png') 0 -490px no-repeat;
     width: 9px;
     height: 15px; }
+    @media only screen and (max-width: 1024px) {
+      .submenu .submenu__active:after {
+        top: 13px; } }
+    @media only screen and (max-width: 768px) {
+      .submenu .submenu__active:after {
+        top: 8px; } }
     @media only screen and (max-width: 480px) {
       .submenu .submenu__active:after {
         display: none; } }
@@ -1472,6 +1477,7 @@
   .shop-addr .title-l-3 {
     margin: 3px 0 9px;
     line-height: 24px;
+    display: block;
     font-weight: normal;
     font-family: 'pf_din_text_comp_probold', sans-serif; }
     @media only screen and (max-width: 768px) {
@@ -1783,26 +1789,27 @@
       bottom: 0;
       left: 0;
       border: 2px solid #000; } }
-
-.shop-item__title {
-  width: 140px;
-  margin: 30px auto 0;
-  text-align: center;
-  font-weight: normal;
-  font-family: 'pf_din_text_comp_probold', sans-serif;
-  font-size: 22px;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 768px) {
-    .shop-item__title {
-      margin-top: 62px; } }
-  .shop-item__title a {
-    color: #000;
-    text-decoration: none;
-    background: none; }
-    .shop-item__title a:hover {
-      color: #2d8db4; }
-  .shop-item__title span {
+  .shop-item__main .shop-item__title {
+    width: 140px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 22px;
     display: block; }
+    @media only screen and (max-width: 768px) {
+      .shop-item__main .shop-item__title {
+        margin-top: 62px; } }
+    .shop-item__main .shop-item__title a {
+      color: #000;
+      text-decoration: none;
+      background: none; }
+      .shop-item__main .shop-item__title a:hover {
+        color: #2d8db4; }
+    .shop-item__main .shop-item__title span {
+      display: block; }
 
 .shop-item__adr {
   color: #727272;
@@ -2378,13 +2385,13 @@
     font-weight: normal;
     font-family: 'helveticaneuecyrroman', sans-serif;
     line-height: 15px; }
-
-.mark__title {
-  padding-bottom: 13px;
-  font-size: 22px;
-  font-weight: normal;
-  font-family: 'pf_din_text_comp_probold', sans-serif;
-  text-transform: uppercase; }
+  .mark__main .mark__title {
+    padding-bottom: 13px;
+    margin-bottom: 0;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+    text-transform: uppercase; }
 
 /* FAQ */
 .faq-wrap {
