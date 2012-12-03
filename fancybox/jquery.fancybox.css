@@ -54,7 +54,7 @@
 .fancybox-outer:after {
 	content: "";
 	top: auto;
-	bottom: -73px;
+	bottom: -53px;
 	right: -53px;
 	left: auto;
 	background: #fff url(rhomb-s.png) 50% 50% no-repeat;
