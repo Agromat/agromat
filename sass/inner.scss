@@ -911,54 +911,60 @@
             display: block;
         }
     } 
-}
-.vacancy__item {
-    margin-bottom: 30px;
-}
-.vacancy__title {
-    padding-bottom: 20px;
-    font-size: 24px;
-    @include pfd_m();
-    text-transform: uppercase;
-}
-.send-cv {
-    display: none;
-    position: absolute;
-    height: 50px;
-    width: 43px;
-    top: 19px;
-    right: 17px;
-    text-decoration: none;
-    @include respond-to(pda) {
-        right: 10px;
-        top: 55px;
+    div {
+        margin-bottom: 30px;
     }
-    i {
-        display: block;
-        margin-bottom: 4px;
-        @include sized-sprite($icons, latter);
-    }
-    span {
+    h2 {
+        padding-bottom: 20px;
+        font-size: 24px;
         @include pfd_m();
-        line-height: 12px;
         text-transform: uppercase;
     }
-}
-.list {
-    margin-top: 6px;
-    li {
-        position: relative;
-        padding-left: 13px;
-        margin-bottom: 2px;
-        &:before {
-            content: "";
-            position: absolute;
-            top: 4px;
-            left: 0;
-            @include sized-sprite($icons, rhomb-s);
+    h6 {
+        color: #818181;
+        font-size: 12px;
+        @include pfd_m();
+        text-transform: uppercase;
+    }
+    ul {
+        margin-top: 6px;
+        li {
+            position: relative;
+            padding-left: 13px;
+            margin-bottom: 2px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                left: 0;
+                @include sized-sprite($icons, rhomb-s);
+            }
+        }
+    }  
+    a {
+        display: none;
+        position: absolute;
+        height: 50px;
+        width: 43px;
+        top: 19px;
+        right: 17px;
+        text-decoration: none;
+        @include respond-to(pda) {
+            right: 10px;
+            top: 55px;
+        }
+        i {
+            display: block;
+            margin-bottom: 4px;
+            @include sized-sprite($icons, latter);
+        }
+        span {
+            @include pfd_m();
+            line-height: 12px;
+            text-transform: uppercase;
         }
     }
-}  
+}
 /* Add service */
 .galleries-wrap {
     overflow: hidden;
