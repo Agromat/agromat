@@ -1104,6 +1104,8 @@ a {
   line-height: 95px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_proregular', sans-serif;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  background: #000;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
@@ -1224,7 +1226,7 @@ a {
         display: block; } }
   @media only screen and (max-width: 480px) {
     .banner .separator-blue_bot {
-      margin-top: 20px; } }
+      margin-top: 15px; } }
 
 .banner__wrap {
   position: absolute;
@@ -1279,8 +1281,7 @@ a {
     .banner__name {
       width: 100%; }
       .banner__name span {
-        position: relative; } }
-      @media only screen and (max-width: 1024px) and (max-width: 1024px) {
+        position: relative; }
         .banner__name span:before, .banner__name span:after {
           content: "";
           position: absolute;
@@ -1291,15 +1292,18 @@ a {
           height: 7px; }
         .banner__name span:before {
           left: -27px; } }
-      @media only screen and (max-width: 1024px) and (max-width: 768px) {
-        .banner__name span:before, .banner__name span:after {
-          display: none; } }
   @media only screen and (max-width: 768px) {
     .banner__name {
       width: 100%;
       font-size: 25px;
       margin-top: 27px;
-      line-height: 26px; } }
+      line-height: 26px; }
+      .banner__name span:before, .banner__name span:after {
+        content: "";
+        display: none; } }
+  @media only screen and (max-width: 480px) {
+    .banner__name {
+      font-size: 20px; } }
 
 .banner_action {
   background: url(../img/hot-girl.jpg) 0 0 no-repeat;
@@ -1375,11 +1379,17 @@ a {
         .banner_action .banner__name:before, .banner_action .banner__name:after {
           display: block;
           right: -15%; } }
+      @media only screen and (max-width: 480px) {
+        .banner_action .banner__name:before, .banner_action .banner__name:after {
+          right: -25%; } }
     .banner_action .banner__name:before {
       left: 0; }
       @media only screen and (max-width: 768px) {
         .banner_action .banner__name:before {
           left: -15%; } }
+      @media only screen and (max-width: 480px) {
+        .banner_action .banner__name:before {
+          left: -25%; } }
 
 .wrap_news-item {
   margin-bottom: 58px; }
@@ -1452,6 +1462,9 @@ a {
   @media only screen and (max-width: 768px) {
     .item__title {
       font-size: 18px; } }
+  @media only screen and (max-width: 480px) {
+    .item__title {
+      font-size: 15px; } }
   .item__title a {
     color: #000;
     background: #fff;
@@ -2614,6 +2627,9 @@ a {
         padding-top: 9px; } }
   .text-rows a {
     font-size: 14px; }
+    @media only screen and (max-width: 480px) {
+      .text-rows a {
+        font-size: 11px; } }
 
 .text-rows_bold {
   margin-bottom: 40px; }
@@ -3682,7 +3698,7 @@ a {
       font-size: 16px; } }
   @media only screen and (max-width: 480px) {
     .item-cont__title {
-      font-size: 14px;
+      font-size: 14px !important;
       margin-bottom: 10px; } }
 
 .item-cont__img {
@@ -4349,13 +4365,10 @@ a {
   width: 1280px;
   margin: 0 auto; }
 .lteie8 .wrap_shop-addr {
-  overflow: hidden; }
-.lteie8 .input-col {
-  width: 287px; }
+  overflow: hidden;
+  padding-bottom: 10px; }
 .lteie8 .input {
-  height: 30px;
-  line-height: 25px;
-  width: 287px; }
+  line-height: 30px; }
 .lteie8 .select {
   height: 20px; }
   .lteie8 .select select {
@@ -4364,9 +4377,27 @@ a {
     display: none; }
 .lteie8 .submit {
   margin-top: -32px; }
-
-* + html .wrap_input {
+.lteie8 .title-media {
+  clear: both; }
+.lteie8 .index-page .wrap {
   overflow: hidden; }
+
+/* IE7 only */
+* + html .wrap_input,
+* + html .wrap_article {
+  overflow: hidden;
+  margin-bottom: 20px; }
+
+* + html .input {
+  height: 30px;
+  width: 260px; }
+
+* + html .input-captcha input {
+  display: block;
+  width: 172px !important; }
+
+* + html .textarea {
+  width: 560px; }
 
 * + html .footer-wrap_2 {
   clear: none; }
@@ -4377,6 +4408,21 @@ a {
 * + html .map-wrap_shop {
   margin-bottom: 50px; }
 
+* + html .shop-item {
+  width: 26.6%; }
+
 * + html .filter a,
 * + html .pagin * {
   display: inline; }
+
+* + html .filter-let {
+  line-height: 43px; }
+
+* + html .filter-let .filter-let__active {
+  height: 51px; }
+
+* + html .filter-let .filter-let__all {
+  width: 5.1%; }
+
+* + html .filter-let .filter-let__all a {
+  height: 45px; }

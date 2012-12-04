@@ -123,6 +123,8 @@
   line-height: 95px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_proregular', sans-serif;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+  background: #000;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
@@ -243,7 +245,7 @@
         display: block; } }
   @media only screen and (max-width: 480px) {
     .banner .separator-blue_bot {
-      margin-top: 20px; } }
+      margin-top: 15px; } }
 
 .banner__wrap {
   position: absolute;
@@ -298,8 +300,7 @@
     .banner__name {
       width: 100%; }
       .banner__name span {
-        position: relative; } }
-      @media only screen and (max-width: 1024px) and (max-width: 1024px) {
+        position: relative; }
         .banner__name span:before, .banner__name span:after {
           content: "";
           position: absolute;
@@ -310,15 +311,18 @@
           height: 7px; }
         .banner__name span:before {
           left: -27px; } }
-      @media only screen and (max-width: 1024px) and (max-width: 768px) {
-        .banner__name span:before, .banner__name span:after {
-          display: none; } }
   @media only screen and (max-width: 768px) {
     .banner__name {
       width: 100%;
       font-size: 25px;
       margin-top: 27px;
-      line-height: 26px; } }
+      line-height: 26px; }
+      .banner__name span:before, .banner__name span:after {
+        content: "";
+        display: none; } }
+  @media only screen and (max-width: 480px) {
+    .banner__name {
+      font-size: 20px; } }
 
 .banner_action {
   background: url(../img/hot-girl.jpg) 0 0 no-repeat;
@@ -394,11 +398,17 @@
         .banner_action .banner__name:before, .banner_action .banner__name:after {
           display: block;
           right: -15%; } }
+      @media only screen and (max-width: 480px) {
+        .banner_action .banner__name:before, .banner_action .banner__name:after {
+          right: -25%; } }
     .banner_action .banner__name:before {
       left: 0; }
       @media only screen and (max-width: 768px) {
         .banner_action .banner__name:before {
           left: -15%; } }
+      @media only screen and (max-width: 480px) {
+        .banner_action .banner__name:before {
+          left: -25%; } }
 
 .wrap_news-item {
   margin-bottom: 58px; }
@@ -471,6 +481,9 @@
   @media only screen and (max-width: 768px) {
     .item__title {
       font-size: 18px; } }
+  @media only screen and (max-width: 480px) {
+    .item__title {
+      font-size: 15px; } }
   .item__title a {
     color: #000;
     background: #fff;

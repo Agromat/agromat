@@ -136,6 +136,8 @@
         padding-top: 25px;
     }
     @include pfd_r();
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    background: #000;
     @include background-image(linear-gradient(left, rgba(0,0,0,0.9), rgba(0,0,0,0)));
     a {
         display: block;
@@ -254,7 +256,7 @@
             }
         }
         @include respond-to(mob-lan) {
-            margin-top: 20px;
+            margin-top: 15px;
         }
     }
 }
@@ -309,24 +311,16 @@
         width: 100%;
         span {
             position: relative;
-            @include respond-to(med) {
-                &:before,
-                &:after {
-                    content: "";
-                    position: absolute;
-                    right: -27px;
-                    top: 40%;
-                    @include sized-sprite($icons, rhomb-m);
-                }
-                &:before {
-                    left: -27px;
-                }
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                right: -27px;
+                top: 40%;
+                @include sized-sprite($icons, rhomb-m);
             }
-            @include respond-to(pda) {
-                &:before,
-                &:after {
-                    display: none;
-                }
+            &:before {
+            left: -27px;
             }
         }
     }
@@ -335,7 +329,17 @@
         font-size: 25px;
         margin-top: 27px;
         line-height: 26px;
+        span {
+            &:before,
+            &:after {
+                content: "";
+                display: none;
+            }
+        }
     }
+    @include respond-to(mob-lan) {
+        font-size: 20px;
+    }   
 }
 .banner_action {
     background: url(../img/hot-girl.jpg) 0 0 no-repeat;
@@ -416,11 +420,17 @@
                 display: block;
                 right: -15%;
             }
+            @include respond-to(mob-lan) {
+                right: -25%;
+            }
         }
         &:before {
             left: 0;
             @include respond-to(pda) {
                 left: -15%;
+            }
+            @include respond-to(mob-lan) {
+                left: -25%;
             }
         }
     }
@@ -498,6 +508,9 @@
     text-transform: uppercase;
     @include respond-to(pda) {
         font-size: 18px;
+    }
+    @include respond-to(mob-lan) {
+        font-size: 15px;
     }
     a {
         color: #000;
