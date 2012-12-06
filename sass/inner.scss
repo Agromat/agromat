@@ -757,6 +757,7 @@
     }
 }
 .action-slider-wrap {
+    margin-bottom: 40px;
     @include clr();
     .banner {
         float: left;
@@ -778,6 +779,10 @@
     @include respond-to(med) { 
        width: 100%;
     }
+}
+.slider-action_mod {
+    width: 100%;
+    float: none;
 }
 .slider_actions {
     position:relative;
