@@ -236,7 +236,19 @@
     }
 }
 .cont-gallery_contact {
-    width: 96%;
+    width: 47%;
+    float: left;
+    margin: 0 7% 0 0;
+    @include respond-to(med) {
+      margin-right: 3%;
+    }
+    @include respond-to(pda) {
+       margin-right: 1%;
+    }
+    @include respond-to(mob-lan) {
+       width: 100%;
+       margin-bottom: 15px;
+    }
 }
 .submenu {
     position: relative;
@@ -2775,9 +2787,6 @@
 }
 
 /* Contact shop */
-.l-col__wrap {
-    padding-left: 45px;
-}
 .contact-col {
     float: left;
     margin: 0 42px 42px 0;
@@ -2804,9 +2813,25 @@
     .shop-addr {
         width: 22.5%;
         margin: 0 1.8% 1.8% 0;
-        padding: 0.8% 1.34% 0.7%;
+        padding: 0.8% 1.34% 1.7%;
+        @include respond-to(med) {
+            width: 23.2%;
+            min-height: 126px;
+        }
+        @include respond-to(pda) {
+            width: 36.5%;
+        }
+        @include respond-to(mob-lan) {
+            width: 80%;
+            min-height: 100px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
     } 
     .title-l-3 {
         font-size: 20px;
+        @include respond-to(med) {
+            font-size: 18px;
+        }
     }
 }
