@@ -2467,6 +2467,21 @@
         }
     }
 }
+.select-list_ukr {
+    width: 213px;
+    border:1px solid #d4d4d4;
+    div {
+        &:after {
+            content: "";
+            @include sized-sprite($icons, ukr-map); 
+        }
+    }
+    ul {
+        width: 211px;
+        left: -1px;
+        border: 1px solid #d4d4d4;
+    }
+}
 .wrap_mark {
     margin: 0 -25% 45px 0;
     overflow: hidden;
@@ -2840,6 +2855,8 @@
 }
 .worker {
     overflow: hidden;
+    position: relative;
+    clear: both;
     border: 1px solid #d4d4d4;
     margin-bottom: -1px;
 }
@@ -2848,6 +2865,9 @@
     width: 66%;
     overflow: hidden;
     padding: 1%;
+    @include respond-to(mob-lan) {
+        width: 50%;
+    }
 }
 .worker__img {
     position: relative;
@@ -2873,27 +2893,105 @@
 .worker__info {
     float: left;
     width: 23%;
+    @include respond-to(med) {
+        width: 50%;
+    }
     .worker__name {
         display: block;
         margin: 3px 0 0;
         font-size: 20px;
         @include pfd_b;
         line-height: 21px;
+        text-transform: uppercase;
+        @include respond-to(med) {
+            font-size: 15px;
+            line-height: 17px;
+        }
+        @include respond-to(mob-lan) {
+            text-align: left;
+        }
+    }
+    @include respond-to(mob-lan) {
+        width: 100%;
     }
 }
 .worker__cont {
-    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
     width: 27%;
-    padding: 24px 0 24px 28px;
+    padding: 20px 0 0 2%;
     background: #f6f6f6;
+    @include respond-to(med) {
+        width: 45%;
+    }
     span {
         display: block;
-
     }
 }
 .no-img {
     &:after {
         content: "";
         display: none;
+    }
+}
+.workers-wrap {
+    padding: 23px 3.4% 0;
+    border-top: 2px solid #000;
+}
+.workers__dep-title {
+    width: 73%;
+    float: left;
+    margin-bottom: 30px;
+    @include pfd_b;
+    font-size: 30px;
+    line-height: 24px;
+    text-transform: uppercase;
+    @include respond-to(pda) {
+        width: 55%;
+        font-size: 25px;
+    }
+    @include respond-to(mob-lan) {
+        width: 55%;
+        font-size: 18px;
+    }
+}
+.workers__dep-cont {
+    float: left;
+    strong {
+        display: block;
+        font-size: 14px;
+    }
+}
+.select-region {
+    margin: 24px 0 -1px;
+    @include clr;
+    .select-list {
+        border-bottom: 0;
+        @include respond-to(mob-lan) {
+            border-bottom: 1px solid #d4d4d4;
+        }
+    }
+}
+.select-region__wrap {
+    float: left;
+    width: 73%;
+    @include respond-to(mob-lan) {
+        float: none;
+        width: 100%;
+    }
+}
+.region-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    @include pfd_b;
+    color: #2d8db4;
+    text-transform: uppercase;
+    @include respond-to(pda) {
+        font-size: 18px;
+        margin: 10px 0;
+        padding-left: 16px;
     }
 }

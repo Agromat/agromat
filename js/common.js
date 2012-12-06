@@ -104,7 +104,11 @@ $(document).ready(function() {
     var city = $(this).text();
     $(this).parent().prev().children("b").text(city);
   });
-
+  $(".select-list_ukr li").click(function(){
+    $(this).parent().slideUp("fast");
+    var city = $(this).text();
+    $(this).parent().prev().parent().parent().next().text(city);
+  });
   // show/hide answer
   $(".js-quest-body").hide();
   $(".question__answer-link").click(function(){
