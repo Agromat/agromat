@@ -3705,20 +3705,20 @@ a {
     .item-cont__main {
       float: none;
       width: 100%; } }
-
-.item-cont__title {
-  margin-bottom: 21px;
-  font-weight: normal;
-  font-family: 'pf_din_text_comp_probold', sans-serif;
-  font-size: 18px;
-  text-transform: uppercase; }
-  @media only screen and (max-width: 1024px) {
-    .item-cont__title {
-      font-size: 16px; } }
-  @media only screen and (max-width: 480px) {
-    .item-cont__title {
-      font-size: 14px !important;
-      margin-bottom: 10px; } }
+  .item-cont__main .item-cont__title {
+    margin-bottom: 21px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    text-transform: uppercase; }
+    @media only screen and (max-width: 1024px) {
+      .item-cont__main .item-cont__title {
+        font-size: 16px; } }
+    @media only screen and (max-width: 480px) {
+      .item-cont__main .item-cont__title {
+        font-size: 14px !important;
+        margin-bottom: 10px; } }
 
 .item-cont__img {
   float: right;

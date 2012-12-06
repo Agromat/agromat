@@ -2011,20 +2011,22 @@
         float: none;
         width: 100%;
     }
-}
-.item-cont__title {
-    margin-bottom: 21px;
-    @include pfd_b();
-    font-size: 18px;
-    text-transform: uppercase;
-    @include respond-to(med) {
-        font-size: 16px;
+    .item-cont__title {
+        margin-bottom: 21px;
+        @include pfd_b();
+        font-size: 18px;
+        line-height: 23px;
+        text-transform: uppercase;
+        @include respond-to(med) {
+            font-size: 16px;
+        }
+        @include respond-to(mob-lan) {
+            font-size: 14px !important;
+            margin-bottom: 10px;
+        }
     }
-    @include respond-to(mob-lan) {
-        font-size: 14px !important;
-        margin-bottom: 10px;
-    }
 }
+
 .item-cont__img {
     float: right;
     width: 40%;
