@@ -136,8 +136,6 @@
         padding-top: 25px;
     }
     @include pfd_r();
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-    background: #000;
     @include background-image(linear-gradient(left, rgba(0,0,0,0.9), rgba(0,0,0,0)));
     a {
         display: block;

@@ -1114,8 +1114,6 @@ a {
   line-height: 95px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_proregular', sans-serif;
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-  background: #000;
   background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0.9)), color-stop(100%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
@@ -3669,7 +3667,7 @@ a {
 .link-box_order {
   position: relative;
   float: right;
-  margin: 10px 0 0 10px; }
+  margin: 10px 0 10px 10px; }
   .link-box_order:before {
     content: "";
     position: absolute;

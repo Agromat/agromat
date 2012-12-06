@@ -1919,7 +1919,7 @@
 .link-box_order {
   position: relative;
   float: right;
-  margin: 10px 0 0 10px; }
+  margin: 10px 0 10px 10px; }
   .link-box_order:before {
     content: "";
     position: absolute;
