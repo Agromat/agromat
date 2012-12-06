@@ -4503,6 +4503,62 @@ a {
       .wrap_depart .title-l-3 {
         font-size: 18px; } }
 
+.workers {
+  margin-bottom: 37px; }
+
+.worker {
+  overflow: hidden;
+  border: 1px solid #d4d4d4;
+  margin-bottom: -1px; }
+
+.worker__main {
+  float: left;
+  width: 66%;
+  overflow: hidden;
+  padding: 1%; }
+
+.worker__img {
+  position: relative;
+  float: left;
+  margin: 0 10px 0 0;
+  border: 3px solid #fff; }
+  .worker__img:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-top: 7px solid transparent;
+    border-right: 7px solid #fff;
+    border-bottom: 7px solid #fff;
+    border-left: 7px solid transparent; }
+  .worker__img img {
+    display: block; }
+
+.worker__info {
+  float: left;
+  width: 23%; }
+  .worker__info .worker__name {
+    display: block;
+    margin: 3px 0 0;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+    line-height: 21px; }
+
+.worker__cont {
+  float: right;
+  width: 27%;
+  padding: 24px 0 24px 28px;
+  background: #f6f6f6; }
+  .worker__cont span {
+    display: block; }
+
+.no-img:after {
+  content: "";
+  display: none; }
+
 .lteie8 .l-wrapper {
   width: 1280px; }
 .lteie8 .wrap_news-shop .item-row {
