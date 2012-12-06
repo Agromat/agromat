@@ -3,17 +3,9 @@
     float: right;
     position: relative;
     width: 75%;
-    @include respond-to(mob-lan) {
+    @include respond-to(pda) {
        float: none;
        width: 100%;
-    }
-    .banner {
-        display: none;
-        margin-bottom: 25px;
-        @include respond-to(med) {
-           width: 100%;
-           display: block;
-       }
     }
     p {
         margin-bottom: 20px;
@@ -32,7 +24,7 @@
         color: #000;
         @include hel_bi();
         @include respond-to(med) {
-           margin: 0 25px 0 0;
+           margin: 0 25px 20px 0;
            width: 30%;
         }
         @include respond-to(pda) {
@@ -43,13 +35,12 @@
            box-sizing: border-box;
         }
         &:before {
-            content: "”";
+            content: "";
             position: absolute;
-            left: 9px;
-            top: 18px;
-            font-size: 50px;
-            @include pfd_mi();
+            left: 13px;
+            top: 29px;
             color: #2d8db4;
+            @include sized-sprite($icons, quote);
         }
         i {
             display: block;
@@ -172,6 +163,7 @@
         @include respond-to(mob-lan) { 
             font-size: 20px;
             line-height: 20px;
+            text-align: center;
         }
     }
     h3 {
@@ -185,6 +177,7 @@
         @include respond-to(mob-lan) { 
             font-size: 18px;
             line-height: 24px;
+            text-align: center;
         }
     }
     .separator-blue_mod {
@@ -250,8 +243,11 @@
     border: 2px solid #000;
     background: #fff;
     z-index: 100;
-    @include respond-to(mob-lan) { 
-        margin-top: 25px;
+    @include respond-to(med) {
+        margin: 0 0 20px;
+    }
+    @include respond-to(pda) { 
+        margin: 0 0 40px;
         &:after {
             content: "";
             position: absolute;
@@ -261,11 +257,21 @@
             @include sized-sprite($icons, arrow-b);
         }
     }
+    @include respond-to(mob-lan) { 
+        margin: 25px 0 0;
+    }
     li {
         position:relative;
+        line-height: 47px;
         border-top: 1px solid #d4d4d4;
         &:first-child {
             border-top: 0;
+        }
+        @include respond-to(med) { 
+            line-height: 40px;
+        }
+        @include respond-to(pda) { 
+            line-height: 47px;
         }
         &:before {
             content: "";
@@ -277,12 +283,6 @@
                 left: 8px;
                 top: 16px;
             }
-            @include respond-to(pda) { 
-                display: none;
-            }
-            @include respond-to(mob-lan) { 
-                display: block;
-            }
         }
         ul {
             padding: 12px 0;
@@ -291,61 +291,49 @@
                 padding: 5px 0;
             }
             @include respond-to(pda) { 
-                padding: 0;
-            }
-            @include respond-to(mob-lan) { 
                 padding: 12px 0;
             }
         }
         li {
             border: 0;
+            line-height: 23px;
             &:before {
                 content: "";
                 display: none;
+
             }
             a {
-                height: 23px;
                 color: #898989;
                 font-size: 16px;
-                line-height: 23px;
+                vertical-align: middle;
+                line-height: 1;
                 @include respond-to(med) { 
                     font-size: 14px;
                 }
                 @include respond-to(pda) { 
-                    font-size: 12px;
-                }
-                @include respond-to(mob-lan) { 
                     font-size: 16px;
                 }
             }
         }
     }
     a {
-        display: block;
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
         padding-left: 37px;
-        height: 47px;
-        line-height: 47px;
+        line-height: 1;
+        vertical-align: middle;
         color: #000;
         @include pfd_m();
         font-size: 20px;
         text-transform: uppercase;
         text-decoration: none;
         @include respond-to(med) { 
-            height: 40px;
-            line-height: 40px;
             font-size: 16px;
             padding-left: 20px;
         }
         @include respond-to(pda) { 
-            padding-left: 3px;
-            font-size: 12px;
-            height: 30px;
-            line-height: 30px;
-        }
-        @include respond-to(mob-lan) { 
             padding-left: 37px;
-            height: 47px;
-            line-height: 47px;
             font-size: 20px;
         }
         &:hover {
@@ -363,9 +351,6 @@
                 top: 13px;
             }
             @include respond-to(pda) { 
-                top: 8px;
-            }
-            @include respond-to(mob-lan) { 
                 display: none;
             }
 
@@ -501,7 +486,6 @@
 /* aricles */
 .wrap_article {
     overflow: hidden;
-    margin-right: -20%;
     @include respond-to(mob-lan) { 
        margin: 0;
     }
@@ -509,12 +493,14 @@
 .article {
     display: inline-block;
     vertical-align: top;
-    width: 27.2%;
+    width: 32.1%;
+    min-width: 279px;
     margin: 0 0.9% 45px 0;
     font-size: 12px;
     color: #727272;
     @include respond-to(med) { 
-       width: 41.3%;
+       width: 48.3%;
+       min-width: auto;
     }
     @include respond-to(mob-lan) { 
        width: 48%;
@@ -556,6 +542,9 @@
                 color: #2d8db4;
             }
         }
+        @include respond-to(med) { 
+           font-size: 16px;
+        }
         @include respond-to(pda) { 
            font-size: 17px;
         }
@@ -577,13 +566,13 @@
     @include hel_r();
 }
 .pagin {
-    margin: 0 auto;
+    margin: 0 auto 20px;
     height: 1px;
     background: #96c6d9;
     width: 55%;
     text-align: center;
     @include respond-to(med) { 
-       width: 52%;
+       width: 65%;
     }
     @include respond-to(pda) { 
        width: 85%;
@@ -719,6 +708,9 @@
         text-decoration: none;
         border-left: 1px solid #ccc;
         border-right: 1px solid #ccc;
+        @include respond-to(med) { 
+           font-size: 24px;
+        }
         @include respond-to(pda) { 
            font-size: 19px;
         }
@@ -1122,30 +1114,30 @@
         text-align: center;
     }
     a {
-        width: 170px;
+        width: 18.6%;
         height: 130px;
         float: left;
         margin: 0 6px 6px 0;
         border: 2px solid #fff;
+        overflow: hidden;
+        @include respond-to(med) {
+            width: 23%;
+        }
+        @include respond-to(pda) {
+            width: 30%;
+        }
         @include respond-to(mob-lan) {
-            float: none;
-            display: inline-block;
-            width: 185px;
-            height: 145px;
+            width: 45%;
         }
         &:hover {
             @include box-shadow(0 0 0 2px #000);
         }
         img {
-            width: 100%;
-            height: 100%;
+            height: 130px;
             display: block;
         }
     }
     .more-photos {
-        margin-top: 3px;
-        width: 166px;
-        height: 126px;
         line-height: 126px;
         border: 1px solid #d4d4d4;
         font-size: 12px;
@@ -1168,19 +1160,23 @@
 
 /* Add restaurant */
 .wrap_img-link {
-    margin: 0 -20px 34px 0;
+    margin: 0 -20% 34px 0;
     overflow: hidden;
 }
 .img-link {
     float: left;
-    margin: 0 11px 11px 0;
+    margin: 0 1% 1% 0;
     padding: 1% 0.5%;
-    width: 208px;
+    width: 18.8%;
     background: #fff;
     text-align: center;
     border: 1px solid #d4d4d4;
     text-decoration: none;
     overflow: hidden;
+    @include respond-to(med) {
+       margin: 0 3% 3% 0;
+       width: 38%;
+    }
     @include respond-to(mob-lan) {
        display: block;
        float: none;
@@ -1209,6 +1205,9 @@
         color: #000;
         font-size: 17px;
         text-transform: uppercase;
+        @include respond-to(med) {
+           font-size: 14px; 
+        }
         &:before,
         &:after {
             content: "";
@@ -1228,6 +1227,11 @@
     position: relative;
     padding: 2.7% 0.5%;
     overflow: visible;
+    @include respond-to(mob-lan) {
+       margin: 0 0 20px;
+       box-sizing: border-box;
+       width: 82%; 
+    }
 }
 .img-link-active {
     border: 1px solid #000;
@@ -1772,12 +1776,17 @@
     width: 26.8%;
     height: 246px;
     overflow: hidden;
+    @include respond-to(med) {
+       width: 38%;
+       margin-right: 4%;
+    }
     @include respond-to(pda) {
         height: 210px;
         margin: 0 1% 1% 0;
-    }
-    @include respond-to(pda) {
         width: 40.8%;
+    }
+    @include respond-to(mob-lan) {
+        height: 190px;
     }
     &:hover {
         .shop-item__main {
@@ -1907,7 +1916,7 @@
             content: "";
             position: absolute;
             top: 75%;
-            left: 7%;
+            left: -7%;
             width: 17%;
             height: 1px;
             background: #96c6d9;
@@ -1918,7 +1927,7 @@
         &:after {
             content: "";
             left: auto;
-            right: 7%;
+            right: -7%;
             @include respond-to(med) {
                 right: 0;
             }
@@ -2238,26 +2247,40 @@
 .colections {
     overflow: hidden;
 }
+.wrap_collect {
+    margin-right: -20%;
+    @include respond-to(med) {
+        margin-bottom: 15px;
+    }
+}
 .collect {
     float: left;
     width: 26.3%;
     margin: 0 1.6% 8px 0;
     overflow: hidden;
     border: 2px solid #d4d4d4;
+    @include respond-to(med) {
+        -moz-box-sizing:border-box;
+        box-sizing:border-box;
+        padding: 2%;
+        width: 26%;
+    }
     @include respond-to(pda) {
         width: 40.3%;
     }
     @include respond-to(mob-lan) {
-        width: 47.5%;
+        width: 40.5%;
     }
 }
 .collect__img {
     float: left;
+    width: 40%;
+    overflow: hidden;
     margin: 4px 12px 4px 4px;
     img {
         display: block;
     }
-    @include respond-to(mob-lan) {
+    @include respond-to(med) {
         display: none;
     }
 }
@@ -2265,12 +2288,12 @@
     position: relative;
     overflow: hidden;
     height: 98px;
+    padding-bottom: 10px;
     @include respond-to(mob-lan) {
         text-align: center;
     }
     span {
         position: absolute;
-        left: 0;
         bottom: 10px;
         font-size: 11px;
         color: #626262;
@@ -2298,11 +2321,11 @@
     @include pfd_b;
     text-transform: uppercase;
     @include respond-to(med) {
-        font-size: 13px;
-        line-height: 15px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 30px;
     }
     @include respond-to(mob-lan) {
-        padding-top: 30px;
         font-size: 18px;
         margin-bottom: 5px;
     }

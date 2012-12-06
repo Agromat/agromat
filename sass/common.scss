@@ -536,13 +536,13 @@ a{
         width: 11%;
     }
     @include respond-to(pda) { 
-        width: 32.3%;
+        width: 31.3%;
     }
 }
 .menu .menu__item3 {
     width: 18%;
     @include respond-to(pda) { 
-        width: 35.3%;
+        width: 36.3%;
     }
     &:before {
         content: "";
@@ -572,7 +572,7 @@ a{
         width: 18%;
     }
     @include respond-to(pda) { 
-        width: 32.3%;
+        width: 31%;
     }
 }
 .menu .menu__item6 {
@@ -582,7 +582,7 @@ a{
         width: 23%;
     }
     @include respond-to(pda) { 
-        width: 35.3%;
+        width: 37.1%;
         text-align: center;
     }
     @include respond-to(mob-lan) { 
@@ -643,7 +643,7 @@ a{
        width: 23.4%; 
        float: left;
     }
-    @include respond-to(mob-lan) {
+    @include respond-to(pda) {
        float: none;
        width: 100%;
     }
@@ -658,6 +658,16 @@ a{
         }
     }
 }
+.banner.banner-main {
+        float: none;
+        display: none;
+        margin-bottom: 25px;
+        clear: both;
+        @include respond-to(med) {
+           width: 100%;
+           display: block;
+       }
+    }
 /* --------------------------------------- //END layout ---------------------------------------- */
 
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */

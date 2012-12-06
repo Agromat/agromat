@@ -180,7 +180,7 @@ a {
       position: absolute;
       right: 5%;
       top: 7px;
-      background: url('../img/icons-sd7b85b4b99.png') 0 -951px no-repeat;
+      background: url('../img/icons-sbcb74d6883.png') 0 -975px no-repeat;
       width: 5px;
       height: 5px; }
     .title-l-1 span:before {
@@ -386,7 +386,7 @@ a {
           bottom: -9px;
           left: 50%;
           margin-left: -7px;
-          background: url('../img/icons-sd7b85b4b99.png') 0 -40px no-repeat;
+          background: url('../img/icons-sbcb74d6883.png') 0 -40px no-repeat;
           width: 15px;
           height: 9px; } }
   .menu li {
@@ -414,7 +414,7 @@ a {
       content: "";
       float: right;
       margin-top: 8px;
-      background: url('../img/icons-sd7b85b4b99.png') 0 -951px no-repeat;
+      background: url('../img/icons-sbcb74d6883.png') 0 -975px no-repeat;
       width: 5px;
       height: 5px; }
       @media only screen and (max-width: 480px) {
@@ -499,13 +499,13 @@ a {
       width: 11%; } }
   @media only screen and (max-width: 768px) {
     .menu__item2 {
-      width: 32.3%; } }
+      width: 31.3%; } }
 
 .menu .menu__item3 {
   width: 18%; }
   @media only screen and (max-width: 768px) {
     .menu .menu__item3 {
-      width: 35.3%; } }
+      width: 36.3%; } }
   .menu .menu__item3:before {
     content: ""; }
     @media only screen and (max-width: 768px) {
@@ -534,7 +534,7 @@ a {
       width: 18%; } }
   @media only screen and (max-width: 768px) {
     .menu__item5 {
-      width: 32.3%; } }
+      width: 31%; } }
 
 .menu .menu__item6 {
   text-align: right;
@@ -544,7 +544,7 @@ a {
       width: 23%; } }
   @media only screen and (max-width: 768px) {
     .menu .menu__item6 {
-      width: 35.3%;
+      width: 37.1%;
       text-align: center; } }
   @media only screen and (max-width: 480px) {
     .menu .menu__item6 {
@@ -562,7 +562,7 @@ a {
   background: #fff;
   border: 0;
   display: none;
-  background: url('../img/icons-sd7b85b4b99.png') 0 -756px no-repeat;
+  background: url('../img/icons-sbcb74d6883.png') 0 -780px no-repeat;
   width: 24px;
   height: 27px; }
   @media only screen and (max-width: 480px) {
@@ -572,7 +572,7 @@ a {
 .menu-key_act {
   top: -21px;
   right: 10;
-  background: url('../img/icons-sd7b85b4b99.png') 0 -515px no-repeat;
+  background: url('../img/icons-sbcb74d6883.png') 0 -539px no-repeat;
   width: 24px;
   height: 23px;
   -webkit-box-shadow: -2px 0 0 rgba(0, 0, 0, 0.24);
@@ -608,7 +608,7 @@ a {
     .sidebar_l {
       width: 23.4%;
       float: left; } }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 768px) {
     .sidebar_l {
       float: none;
       width: 100%; } }
@@ -618,6 +618,16 @@ a {
   @media only screen and (max-width: 1024px) {
     .sidebar_l .banner {
       display: none; } }
+
+.banner.banner-main {
+  float: none;
+  display: none;
+  margin-bottom: 25px;
+  clear: both; }
+  @media only screen and (max-width: 1024px) {
+    .banner.banner-main {
+      width: 100%;
+      display: block; } }
 
 /* --------------------------------------- //END layout ---------------------------------------- */
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */
@@ -669,7 +679,7 @@ a {
     position: absolute;
     top: -5px;
     left: 10px;
-    background: url('../img/icons-sd7b85b4b99.png') 0 -443px no-repeat;
+    background: url('../img/icons-sbcb74d6883.png') 0 -467px no-repeat;
     width: 13px;
     height: 13px; }
     @media only screen and (max-width: 768px) {
@@ -683,7 +693,7 @@ a {
       position: absolute;
       top: 7px;
       right: 12px;
-      background: url('../img/icons-sd7b85b4b99.png') 0 -951px no-repeat;
+      background: url('../img/icons-sbcb74d6883.png') 0 -975px no-repeat;
       width: 5px;
       height: 5px; }
     .separator-big strong:after {
@@ -757,7 +767,7 @@ a {
     position: absolute;
     left: -11px;
     top: 5px;
-    background: url('../img/icons-sd7b85b4b99.png') 0 -741px no-repeat;
+    background: url('../img/icons-sbcb74d6883.png') 0 -765px no-repeat;
     width: 5px;
     height: 5px; }
   .footer-nav a {
@@ -784,7 +794,7 @@ a {
     left: 50%;
     top: -3px;
     margin-left: -4px;
-    background: url('../img/icons-sd7b85b4b99.png') 0 -667px no-repeat;
+    background: url('../img/icons-sbcb74d6883.png') 0 -691px no-repeat;
     width: 7px;
     height: 7px; }
   .separator-blue strong {
@@ -804,7 +814,7 @@ a {
   margin: 25px 0 20px; }
   .separator-blue_mod i {
     margin-left: -5px;
-    background: url('../img/icons-sd7b85b4b99.png') 0 -793px no-repeat;
+    background: url('../img/icons-sbcb74d6883.png') 0 -817px no-repeat;
     width: 9px;
     height: 9px; }
 
