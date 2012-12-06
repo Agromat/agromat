@@ -193,17 +193,17 @@ a{
         padding: 0 29px;
         background: #fff;
         text-transform: uppercase;
-        letter-spacing: 5px;
+        letter-spacing: 4px;
         &:before,
         &:after {
             content: "";
             position: absolute;
-            right: 5%;
-            top: 7px;
+            right: 13px;
+            top: 7px;  
             @include sized-sprite($icons, rhomb-s);
         }
         &:before {
-            left: 5%;
+            left: 13px;
         }
     }
 }
@@ -224,7 +224,7 @@ a{
         padding: 0 23px;
         letter-spacing: 3px;
     }
-}
+} 
 .title-l-1_mod {
     margin-top: 0;
     @include respond-to(mob-lan) {

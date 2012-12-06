@@ -174,17 +174,17 @@ a {
     padding: 0 29px;
     background: #fff;
     text-transform: uppercase;
-    letter-spacing: 5px; }
+    letter-spacing: 4px; }
     .title-l-1 span:before, .title-l-1 span:after {
       content: "";
       position: absolute;
-      right: 5%;
+      right: 13px;
       top: 7px;
       background: url('../img/icons-sbcb74d6883.png') 0 -975px no-repeat;
       width: 5px;
       height: 5px; }
     .title-l-1 span:before {
-      left: 5%; }
+      left: 13px; }
 
 .title-l-1.title-media {
   font-size: 16px;
