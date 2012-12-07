@@ -544,7 +544,7 @@ a {
       width: 23%; } }
   @media only screen and (max-width: 768px) {
     .menu .menu__item6 {
-      width: 37.1%;
+      width: 37%;
       text-align: center; } }
   @media only screen and (max-width: 480px) {
     .menu .menu__item6 {

@@ -582,7 +582,7 @@ a{
         width: 23%;
     }
     @include respond-to(pda) { 
-        width: 37.1%;
+        width: 37%;
         text-align: center;
     }
     @include respond-to(mob-lan) { 
