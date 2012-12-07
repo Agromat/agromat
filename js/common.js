@@ -49,6 +49,12 @@ $(document).ready(function() {
        }
      });
    }
+
+   // show/hide popup on map
+   $(".popup__close").click(function(){
+      $(this).prev().parent().fadeOut();
+   });
+
    // play video
    $(".video__play").click(function(){
       $(this).prev().hide();
