@@ -63,7 +63,8 @@
 
 * + html .filter a,
 * + html .pagin *,
-* + html .newspaper {
+* + html .newspaper,
+* + html .wrap_article .item {
   display: inline; }
 
 * + html .filter-let {

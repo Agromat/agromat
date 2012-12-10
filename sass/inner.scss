@@ -383,82 +383,43 @@
 /* aricles */
 .wrap_article {
     overflow: hidden;
+    margin: 0 -20% 35px 0;
     @include respond-to(mob-lan) { 
-       margin: 0;
+       margin: 0 0 20px 0;
     }
-}
-.article {
-    display: inline-block;
-    vertical-align: top;
-    width: 32.1%;
-    margin: 0 0.9% 45px 0;
-    font-size: 12px;
-    color: #727272;
-    @include respond-to(med) { 
-       width: 48.3%;
-       min-width: auto;
-    }
-    @include respond-to(pda) { 
-       margin: 0 0.9% 1.3% 0;
-    }
-    @include respond-to(mob-lan) { 
-       width: 48%;
-    }
-}
-.article__preview {
-    float: left;
-    margin: 0 13px 15px 0;
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-    @include respond-to(pda) { 
-       float: none;
-       display: block;
-       width: 100%;
-       margin: 0 auto 10px;
-    }
-}
-.article__main {
-    overflow: hidden;
-    min-width: 150px;
-    @include respond-to(med) { 
-        min-width: auto;
-    }
-    @include respond-to(pda) { 
-        text-align: center;
-    }
-    .article__title {
-        padding-top: 10px;
-        font-size: 20px;
-        line-height: 24px;
-        @include pfd_b();
-        text-transform: uppercase;
-        a {
-            color: #000;
-            text-decoration: none;
-            &:hover {
-                color: #2d8db4;
-            }
-        }
+    .item {
+        float: none;
+        display: inline-block;
+        vertical-align: top;
+        width: 20.1%;
+        padding-left: 0;
+        margin: 0 0.7% 1% 0;
         @include respond-to(med) { 
-           font-size: 16px;
-           line-height: 20px;
+           width: 27%;
         }
         @include respond-to(pda) { 
-           font-size: 17px;
+           width: 41%;
+        }
+        @include respond-to(mob-lan) { 
+           width: 48%;
+           margin-bottom: 1.3%;
         }
     }
-}
-.article__header {
-    overflow: hidden;
-    @include pfd_m();
-} 
-.article__excerpt {
-    line-height: 15px;
-    @include respond-to(mob-lan) { 
-       line-height: 14px;
+    .item__title {
+        line-height: 18px;
+        font-size: 20px;
+        margin: -7px 0 0 0;
+        @include respond-to(med) { 
+           font-size: 18px;
+        }
+        @include respond-to(pda) { 
+           display: block;
+        }
+        @include respond-to(mob-lan) { 
+           text-align: left;
+           font-size: 16px;
+           line-height: 16px;
+        }
     }
 }
 
@@ -467,33 +428,6 @@
     margin: 25px -20% 0 0;
     @include respond-to(pda) { 
         margin-top: 0;
-    }
-    .article {
-        width: 20%;
-        @include respond-to(med) { 
-           width: 27%;
-        }
-        @include respond-to(pda) { 
-           width: 26.9%;
-           -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 1px solid #D4D4D4;
-            padding: 5px;
-        }
-        @include respond-to(mob-lan) { 
-            width: 40.5%;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            border: 1px solid #D4D4D4;
-            padding: 5px;
-        }
-    }
-    .article__title {
-        @include respond-to(pda) { 
-           line-height: 15px;
-           padding-top: 5px;
-           margin-bottom: 10px;
-        }
     }
 }
 .action-slider-wrap {
