@@ -569,11 +569,14 @@
 .link-box_back {
     float:left;
     clear: both;
-    margin:10px  243px 20px 0;
+    margin: 10px 26.5% 20px 0;
     padding: 0 14px;
     height: 28px;
     line-height: 28px;
     font-size: 17px;
+    @include respond-to(med) { 
+       float: none;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -2424,5 +2427,55 @@
         font-size: 18px;
         margin: 10px 0;
         padding-left: 16px;
+    }
+}
+
+// Page 404
+
+.error-page {
+    .header__logo {
+        margin: 92px 0 110px;
+        @include respond-to(mob-lan) {
+           margin-bottom: 40px; 
+        }
+    }
+}
+.error-img {
+    position: relative;
+    left: 5.7%;
+    margin: 0 auto 65px; 
+    width: 58%;
+    height: 335px;
+    background: url(../img/404.jpg) 63% 0 no-repeat;
+    -webkit-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    @include respond-to(pda) {
+        margin-bottom: 0;
+    }
+    @include respond-to(mob-lan) {
+       margin-bottom: -160px;
+    }
+    div {
+        position: absolute;
+        bottom: 0;
+        width: 84%;
+        text-align: center;
+        color: #818181;
+        font-size: 22px;
+        @include pfd_m;
+        text-transform: uppercase;
+        @include transition(all, 0.5s, linear);
+        @include respond-to(med) {
+            bottom: 73px;
+        }
+        @include respond-to(pda) {
+            bottom: 130px;
+            font-size: 18px;
+        }
+        @include respond-to(mob-lan) {
+            bottom: 210px;
+            font-size: 14px;
+        }
     }
 }

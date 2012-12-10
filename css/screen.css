@@ -1650,16 +1650,6 @@ a {
       background: #efefef;
       border-top: 1px solid #d7d7d7; } }
 
-.test {
-  position: absolute;
-  left: 50%;
-  margin-left: -797px;
-  top: 0;
-  width: 1600px;
-  height: 2800px;
-  background: url(../img/test.jpg) 0 0 no-repeat;
-  opacity: 0.5; }
-
 .fancybox-test {
   display: block; }
   @media only screen and (max-width: 480px) {
@@ -2967,11 +2957,14 @@ a {
 .link-box_back {
   float: left;
   clear: both;
-  margin: 10px  243px 20px 0;
+  margin: 10px 26.5% 20px 0;
   padding: 0 14px;
   height: 28px;
   line-height: 28px;
   font-size: 17px; }
+  @media only screen and (max-width: 1024px) {
+    .link-box_back {
+      float: none; } }
   .link-box_back:before {
     content: "";
     position: absolute;
@@ -4774,6 +4767,55 @@ a {
       font-size: 18px;
       margin: 10px 0;
       padding-left: 16px; } }
+
+.error-page .header__logo {
+  margin: 92px 0 110px; }
+  @media only screen and (max-width: 480px) {
+    .error-page .header__logo {
+      margin-bottom: 40px; } }
+
+.error-img {
+  position: relative;
+  left: 5.7%;
+  margin: 0 auto 65px;
+  width: 58%;
+  height: 335px;
+  background: url(../img/404.jpg) 63% 0 no-repeat;
+  -webkit-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto; }
+  @media only screen and (max-width: 768px) {
+    .error-img {
+      margin-bottom: 0; } }
+  @media only screen and (max-width: 480px) {
+    .error-img {
+      margin-bottom: -160px; } }
+  .error-img div {
+    position: absolute;
+    bottom: 0;
+    width: 84%;
+    text-align: center;
+    color: #818181;
+    font-size: 22px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    text-transform: uppercase;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    transition: all 0.5s linear; }
+    @media only screen and (max-width: 1024px) {
+      .error-img div {
+        bottom: 73px; } }
+    @media only screen and (max-width: 768px) {
+      .error-img div {
+        bottom: 130px;
+        font-size: 18px; } }
+    @media only screen and (max-width: 480px) {
+      .error-img div {
+        bottom: 210px;
+        font-size: 14px; } }
 
 .lteie8 .l-wrapper {
   width: 1280px; }
