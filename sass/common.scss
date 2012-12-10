@@ -670,6 +670,714 @@ a{
     }
 /* --------------------------------------- //END layout ---------------------------------------- */
 
+/* ------------------------------------------- Blocks ------------------------------------------ */
+
+// label with text
+.label-t {
+    color: #818181;
+    font-weight: normal;
+    font-size: 12px;
+    @include pfd_m();
+    text-transform: uppercase;
+}
+
+// submenu
+.submenu {
+    position: relative;
+    margin: 40px 0 20px;
+    padding: 1px;
+    border: 2px solid #000;
+    background: #fff;
+    z-index: 100;
+    @include respond-to(med) {
+        margin: 0 0 20px;
+    }
+    @include respond-to(pda) { 
+        margin: 0 0 40px;
+        &:after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -9px;
+            margin-left: -7px;
+            @include sized-sprite($icons, arrow-b);
+        }
+    }
+    @include respond-to(mob-lan) { 
+        margin: 25px 0 0;
+    }
+    li {
+        position:relative;
+        line-height: 47px;
+        border-top: 1px solid #d4d4d4;
+        &:first-child {
+            border-top: 0;
+        }
+        @include respond-to(med) { 
+            line-height: 40px;
+        }
+        @include respond-to(pda) { 
+            line-height: 47px;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 19px;
+            left: 12px;
+            @include sized-sprite($icons, rhomb-s);
+            @include respond-to(med) { 
+                left: 8px;
+                top: 16px;
+            }
+        }
+        ul {
+            padding: 12px 0;
+            border-top: 1px solid #d4d4d4;
+            @include respond-to(med) { 
+                padding: 5px 0;
+            }
+            @include respond-to(pda) { 
+                padding: 12px 0;
+            }
+        }
+        li {
+            border: 0;
+            line-height: 23px;
+            &:before {
+                content: "";
+                display: none;
+
+            }
+            a {
+                color: #898989;
+                font-size: 16px;
+                vertical-align: middle;
+                line-height: 1;
+                @include respond-to(med) { 
+                    font-size: 14px;
+                }
+                @include respond-to(pda) { 
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    a {
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding-left: 37px;
+        line-height: 1;
+        vertical-align: middle;
+        color: #000;
+        @include pfd_m();
+        font-size: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include respond-to(med) { 
+            font-size: 16px;
+            padding-left: 20px;
+        }
+        @include respond-to(pda) { 
+            padding-left: 37px;
+            font-size: 20px;
+        }
+        &:hover {
+            color: #2c8db7;
+        }
+    }
+    .submenu__active {
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            right: -10px;
+            @include sized-sprite($icons, arrow-l);
+            @include respond-to(med) { 
+                top: 13px;
+            }
+            @include respond-to(pda) { 
+                display: none;
+            }
+
+        }
+        a {
+            color: #2c8db7;
+        }
+        li a {
+            color: #898989;
+        }
+    }
+    .submenu__active2 {
+        a {
+            color: #2c8db7 !important;
+        } 
+    }
+}
+
+// pagination
+.pagin {
+    margin: 20px auto;
+    height: 1px;
+    background: #96c6d9;
+    width: 55%;
+    text-align: center;
+    @include respond-to(med) { 
+       width: 65%;
+    }
+    @include respond-to(pda) { 
+       width: 100%;
+    }
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        width: 18px;
+        height: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: #000;
+        font-size: 17px;
+        @include pfd_m();
+        border: 2px solid transparent;
+        text-decoration: none;
+        @include respond-to(pda) { 
+            height: 25px;
+            width: 25px;
+            line-height: 25px;
+        }
+    }
+}
+.pagin__wrap {
+    position: relative;
+    top: -11px;
+    margin: 0 auto;
+    width: 67%;
+    background: #fff;
+    @include respond-to(mob-lan) { 
+       width: 100%;
+    }
+}
+.pagin__title {
+    padding: 0 6% 0 0;
+    color: #9f9f9f;
+    font-size: 15px;
+    @include pfd_m;
+    text-transform: uppercase;
+}
+.pagin__first {
+    cursor: pointer;
+    @include sized-sprite($icons, prev-s); 
+}
+.pagin__last {
+    cursor: pointer;
+    @include sized-sprite($icons, next-s); 
+}
+.pagin .pagin__active {
+    border: 2px solid #000;
+}
+
+// question
+.question {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px 1px 1px;
+    width: 93.5%;
+    background: #fff;
+    border: 2px solid #d4d4d4;
+    @include respond-to(med) { 
+       display: none;
+    }
+    &:hover {
+        border-color: #000;
+        &:after {
+            content: "";
+            @include sized-sprite($icons, question-corner-h);
+        }
+    }
+    &:after { 
+        content: "";
+        position: absolute;
+        bottom: -14px;
+        left: 15px;
+        @include sized-sprite($icons, question-corner); 
+    } 
+    .categ-name {
+        padding-left: 3%;
+    }   
+}
+.question_small {
+    width: 74.5%;
+}
+.question_normal {
+    width: 98%;
+    .question__body {
+        font-size: 18px;
+        @include hel_r;
+        text-transform: none;
+    }
+}
+.question__body {
+    padding: 8px 3% 15px;
+    @include pfd_b;
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+.question__answer {
+    padding-right: 4%;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    background: #f6f6f6;
+    @include clr;
+    a {
+        font-size: 14px;
+    }
+}
+
+
+// filter with year
+.filter {
+    margin-bottom: 34px;
+    height: 49px;
+    line-height: 49px;
+    border: 2px solid #000;
+}
+.filter_year {
+    text-align: center;
+    @include respond-to(mob-lan) { 
+       text-align: justify;
+       overflow: hidden;
+    }
+    a {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: -4px;
+        width: 8.2%;
+        text-align: center;
+        color: #ccc;
+        font-size: 30px;
+        @include pfd_b();
+        text-decoration: none;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        @include respond-to(med) { 
+           font-size: 24px;
+           width: 10%;
+        }
+        @include respond-to(pda) { 
+           font-size: 19px;
+        }
+        @include respond-to(mob-lan) { 
+           font-size: 18px; 
+           width: 16.51%;
+           &:first-child {
+                border-left: 0;
+           }
+           &:last-child {
+                border-right: 0;
+           }
+        }
+        &:hover {
+            color: #2C8DB7;
+        }
+    }
+    .filter_year__active {
+        color: #000;
+        &:hover {
+            color: #000;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -9px;
+            margin-left: -7px;
+            @include sized-sprite($icons, arrow-b); 
+        }  
+    }
+}
+.filter__size {
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+}
+
+// filter letters
+.filter-let {
+    margin-bottom: 35px;
+    padding: 1px 0;
+    height: 49px;
+    line-height: 49px;
+    border: 2px solid #000;
+    a {
+        float: left;
+        margin-left: -1px;
+        width: 3.8%;
+        text-align: center;
+        color: #ccc;
+        font-size: 20px;
+        @include pfd_b;
+        text-decoration: none;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+        text-transform: uppercase;
+        @include respond-to(med) {
+            width: 3.6%;
+        }
+        @include respond-to(pda) {
+            font-size: 15px;
+            @include pfd_m;
+        }
+        @include respond-to(med) {
+            width: 3.3%;
+        }
+        &:first-child {
+            border-left: 0;
+        }
+        &:hover {
+            color: #2D8DB4;
+            background: #f1f1f1;
+            @include box-shadow(inset 0 0 0 1px #fff);
+        }
+    }
+    .filter-let__last {
+        border-right: 0;
+    }
+    .filter-let__act {
+        position: relative;
+        top: -4px;
+        height: 57px;
+        line-height: 57px;
+        padding: 0 1px;
+        color: #000;
+        border-left: 0;
+        border-right: 0;
+        @include box-shadow(0 0 0 2px #000);
+        background: #fff;
+        &:hover {
+            color: #000;
+            background: #fff;
+            @include box-shadow(0 0 0 2px #000);
+        }
+    }
+    .filter-let__all {
+        float: right;
+        width: 5.6%;
+        @include respond-to(pda) {
+            width: 7.5%;
+        }
+        a {
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin-top: -1px;
+            height: 51px;
+            width: 100%;
+            color: #000;
+            font-size: 18px;
+            border-right: 0;
+            background: #f1f1f1;
+            border-left: 2px solid #000;
+            @include respond-to(pda) {
+                font-size: 14px;
+            }
+        }
+        
+    }
+}
+.filter-let_width {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 0;
+    a {
+        width: 3.84%;
+        @include respond-to(pda) {
+            width: 3.7%;
+        }
+        @include respond-to(mob-lan) {
+            width: 3.5%;
+        }
+    }
+    .filter-let__all {
+        @include respond-to(med) {
+            width: 4.8%;
+        }
+        @include respond-to(pda) {
+            width: 6.4%;
+        }
+        @include respond-to(mob-lan) {
+            width: 8%;
+        }
+    }
+}
+
+// form's elements
+.input-wrap {
+    position: relative;
+    margin-bottom: 20px;
+}
+.input-col {
+    float: left;
+    width: 42.6%;
+    margin-right: 1%;
+}
+.input {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 11px;
+    width: 100%;
+    height: 34px;
+    color: #000;
+    border: 2px solid #000;
+    font-size: 14px;
+    @include respond-to(pda) {
+        font-size: 12px;
+    }
+    @include respond-to(mob-lan) {
+        padding: 0 3px;
+    }
+}
+.input-captcha {
+    @include clr;
+    .input {
+       float: left; 
+       width: 70%;
+       @include respond-to(mob-lan) {
+            width: 100%;
+            float: none;
+       }
+    }
+}
+.captcha {
+    float: left;
+    width: 30%;
+    height: 34px;
+    @include respond-to(mob-lan) {
+        width: auto;
+        float: none;
+    }
+} 
+.valid-error {
+    position: absolute;
+    right: -175px;
+    top: 0;
+    width: 160px;
+    height: 26px;
+    line-height: 26px;
+    color: #ed1c24;
+    font-size: 11px;
+    text-align: center;
+    border: 2px solid #d4d4d4;
+    background: #fff;
+    @include respond-to(pda) {
+        top: 27px;
+        right: 0;
+        background: none;
+        border: 0;
+        width: auto;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+        left: -8px;
+        top: 50%;
+        margin-top: -5px;
+        @include sized-sprite($icons, valid-corner);
+        @include respond-to(pda) {
+            display: none;
+        }
+    }
+}
+.select {
+    position: relative;
+    margin-bottom: 20px;
+    height: 34px;
+    font-size: 14px;
+    span {
+        display: block;
+        padding: 0 8px;
+        height: 30px;
+        line-height: 30px;
+        border: 2px solid #000;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 2px;
+            top: 2px;
+            @include sized-sprite($icons, select);
+        }
+        
+    }
+    select {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+}
+.textarea {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    min-height: 192px;
+    width: 100%;
+    max-width: 100%;
+    @include hel_r;
+    font-size: 14px;
+    border: 2px solid #000;
+    @include respond-to(pda) {
+        font-size: 12px;
+    }
+    @include respond-to(mob-lan) {
+        padding: 3px;
+    }
+}
+.submit {
+    position: relative;
+    display: block;
+    margin: -35px auto 0;
+    line-height: 63px;
+    color: #fff;
+    @include pfd_b;
+    font-size: 20px; 
+    text-transform: uppercase;
+    @include sized-sprite($logos, submit);
+}
+
+// Tabs
+
+.tab {
+    position: relative;
+    font-size: 18px;
+    @include pfd_m();
+    text-transform: uppercase;
+    padding-bottom: 2px;
+    overflow: hidden;
+    @include respond-to(mob-lan) {
+        font-size: 13px;
+    }
+    ul {
+        padding-left: 163px;
+        height: 45px;
+        @include clr();
+        border-bottom: 2px solid;
+        color: #000;
+        @include respond-to(mob-lan) {
+            padding-left: 94px;
+            height: 37px;
+        }
+    }
+    li {
+        float: left;
+        padding: 0 17px;
+        margin-right: -2px;
+        height: 43px;
+        line-height: 43px;
+        color: #a0a0a0;
+        border: 2px solid #d4d4d4;
+        border-bottom: 0;
+        cursor: pointer;
+        background: #fff;
+        @include respond-to(mob-lan) {
+            height: 35px;
+            line-height: 35px;
+            padding: 0 5px;
+        }
+    }
+    .tab__active {
+        position: relative;
+        height: 45px;
+        color: #000;
+        border-color: #000;
+        @include respond-to(mob-lan) {
+            height: 37px;
+        }
+    }
+}
+
+.tab__title {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 22px;
+    font-weight: normal;
+    @include respond-to(mob-lan) {
+        font-size: 13px;
+    }
+}
+.tab-cont {
+    margin-top: 32px; 
+}
+
+// some text block
+.bloc {
+    position: relative;
+    margin: 20px 0;
+    padding: 16px 3.5% 20px;
+    border: 2px solid #d4d4d4;
+    @include respond-to(med) { 
+       display: none;
+    }
+}
+.bloc__header {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.block__preview {
+    float: left;
+    margin: 0 4.2% 0 0;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+.bloc__main {
+    overflow: hidden;
+}
+.bloc__title {
+    font-size: 20px;
+    @include pfd_b();
+    text-transform: uppercase; 
+    a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: #2D8DB4;
+        }
+    }
+}
+.bloc__body {
+    color: #727272
+}
+
+// block link
+.link-box {
+    position: relative;
+    display: inline-block;
+    padding: 0 28px;
+    height: 48px;
+    line-height: 48px;
+    color: #000;
+    font-size: 20px;
+    @include pfd_m();
+    text-align: center;
+    border: 2px solid #000;
+    background: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+        color: #2C8DB7;
+    }
+}
+
+/* ---------------------------------------- END Blocks ----------------------------------------- */
+
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */
 .footer {
     position: relative;
