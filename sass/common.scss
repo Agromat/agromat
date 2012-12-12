@@ -1004,7 +1004,6 @@ a{
     height: 1px;
     display: inline-block;
 }
-
 // filter letters
 .filter-let {
     margin-bottom: 35px;
@@ -1012,10 +1011,32 @@ a{
     height: 49px;
     line-height: 49px;
     border: 2px solid #000;
+    @include clr;
+    @include respond-to(pda) {
+        height: 151px;
+        line-height: 57px;
+    }
+    div {
+        float: left;
+        width: 46.75%;
+        @include clr;
+        @include respond-to(pda) {
+            float: none;
+            width: 100%;
+            border-bottom: 1px solid #d4d4d4;
+            &:first-child {
+                a {
+                    border-right: 0;
+                }
+            }
+        }
+    }
     a {
         float: left;
-        margin-left: -1px;
-        width: 3.8%;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-right: -1px;
+        width: 7.92%;
         text-align: center;
         color: #ccc;
         font-size: 20px;
@@ -1025,14 +1046,17 @@ a{
         border-right: 1px solid #ccc;
         text-transform: uppercase;
         @include respond-to(med) {
-            width: 3.6%;
+            font-size: 20px;
+            @include pfd_m;  
+            width: 7.95%;
         }
         @include respond-to(pda) {
-            font-size: 15px;
+            font-size: 20px;
             @include pfd_m;
+            width: 7.82%;
         }
-        @include respond-to(med) {
-            width: 3.3%;
+        @include respond-to(mob-lan) {
+            width: 7.9%;
         }
         &:first-child {
             border-left: 0;
@@ -1044,7 +1068,7 @@ a{
         }
     }
     .filter-let__last {
-        border-right: 0;
+        border-right: 1px solid #fff;
     }
     .filter-let__act {
         position: relative;
@@ -1057,6 +1081,9 @@ a{
         border-right: 0;
         @include box-shadow(0 0 0 2px #000);
         background: #fff;
+        @include respond-to(pda) {
+            top: -1px;
+        }
         &:hover {
             color: #000;
             background: #fff;
@@ -1065,9 +1092,12 @@ a{
     }
     .filter-let__all {
         float: right;
-        width: 5.6%;
+        width: 6.5%;
         @include respond-to(pda) {
-            width: 7.5%;
+            float: none;
+            width: 100%;
+            margin-top: 1px;
+            border-bottom: 0;
         }
         a {
             -moz-box-sizing: border-box;
@@ -1082,6 +1112,9 @@ a{
             border-left: 2px solid #000;
             @include respond-to(pda) {
                 font-size: 14px;
+                border: 0;
+                height: 36px;
+                line-height: 36px;
             }
         }
         
@@ -1092,23 +1125,12 @@ a{
     z-index: 2;
     margin-bottom: 0;
     a {
-        width: 3.84%;
-        @include respond-to(pda) {
-            width: 3.7%;
-        }
-        @include respond-to(mob-lan) {
-            width: 3.5%;
-        }
-    }
-    .filter-let__all {
+        width: 7.85%;
         @include respond-to(med) {
-            width: 4.8%;
+            width: 7.85%;
         }
         @include respond-to(pda) {
-            width: 6.4%;
-        }
-        @include respond-to(mob-lan) {
-            width: 8%;
+            width: 7.82%;
         }
     }
 }

@@ -1,4 +1,3 @@
-@charset "IBM866";
 /* HOW TO USE SPRITES, see _base.scss*/
 @font-face {
   font-family: 'helveticaneuecyrroman';
@@ -954,10 +953,38 @@ a {
   height: 49px;
   line-height: 49px;
   border: 2px solid #000; }
+  .filter-let:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  @media only screen and (max-width: 768px) {
+    .filter-let {
+      height: 151px;
+      line-height: 57px; } }
+  .filter-let div {
+    float: left;
+    width: 46.75%; }
+    .filter-let div:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden; }
+    @media only screen and (max-width: 768px) {
+      .filter-let div {
+        float: none;
+        width: 100%;
+        border-bottom: 1px solid #d4d4d4; }
+        .filter-let div:first-child a {
+          border-right: 0; } }
   .filter-let a {
     float: left;
-    margin-left: -1px;
-    width: 3.8%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-right: -1px;
+    width: 7.92%;
     text-align: center;
     color: #ccc;
     font-size: 20px;
@@ -969,15 +996,19 @@ a {
     text-transform: uppercase; }
     @media only screen and (max-width: 1024px) {
       .filter-let a {
-        width: 3.6%; } }
+        font-size: 20px;
+        font-weight: normal;
+        font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+        width: 7.95%; } }
     @media only screen and (max-width: 768px) {
       .filter-let a {
-        font-size: 15px;
+        font-size: 20px;
         font-weight: normal;
-        font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif; } }
-    @media only screen and (max-width: 1024px) {
+        font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+        width: 7.82%; } }
+    @media only screen and (max-width: 480px) {
       .filter-let a {
-        width: 3.3%; } }
+        width: 7.9%; } }
     .filter-let a:first-child {
       border-left: 0; }
     .filter-let a:hover {
@@ -987,7 +1018,7 @@ a {
       -moz-box-shadow: inset 0 0 0 1px white;
       box-shadow: inset 0 0 0 1px white; }
   .filter-let .filter-let__last {
-    border-right: 0; }
+    border-right: 1px solid #fff; }
   .filter-let .filter-let__act {
     position: relative;
     top: -4px;
@@ -1001,6 +1032,9 @@ a {
     -moz-box-shadow: 0 0 0 2px black;
     box-shadow: 0 0 0 2px black;
     background: #fff; }
+    @media only screen and (max-width: 768px) {
+      .filter-let .filter-let__act {
+        top: -1px; } }
     .filter-let .filter-let__act:hover {
       color: #000;
       background: #fff;
@@ -1009,10 +1043,13 @@ a {
       box-shadow: 0 0 0 2px black; }
   .filter-let .filter-let__all {
     float: right;
-    width: 5.6%; }
+    width: 6.5%; }
     @media only screen and (max-width: 768px) {
       .filter-let .filter-let__all {
-        width: 7.5%; } }
+        float: none;
+        width: 100%;
+        margin-top: 1px;
+        border-bottom: 0; } }
     .filter-let .filter-let__all a {
       -moz-box-sizing: border-box;
       box-sizing: border-box;
@@ -1026,29 +1063,23 @@ a {
       border-left: 2px solid #000; }
       @media only screen and (max-width: 768px) {
         .filter-let .filter-let__all a {
-          font-size: 14px; } }
+          font-size: 14px;
+          border: 0;
+          height: 36px;
+          line-height: 36px; } }
 
 .filter-let_width {
   position: relative;
   z-index: 2;
   margin-bottom: 0; }
   .filter-let_width a {
-    width: 3.84%; }
+    width: 7.85%; }
+    @media only screen and (max-width: 1024px) {
+      .filter-let_width a {
+        width: 7.85%; } }
     @media only screen and (max-width: 768px) {
       .filter-let_width a {
-        width: 3.7%; } }
-    @media only screen and (max-width: 480px) {
-      .filter-let_width a {
-        width: 3.5%; } }
-  @media only screen and (max-width: 1024px) {
-    .filter-let_width .filter-let__all {
-      width: 4.8%; } }
-  @media only screen and (max-width: 768px) {
-    .filter-let_width .filter-let__all {
-      width: 6.4%; } }
-  @media only screen and (max-width: 480px) {
-    .filter-let_width .filter-let__all {
-      width: 8%; } }
+        width: 7.82%; } }
 
 .input-wrap {
   position: relative;
@@ -1787,6 +1818,7 @@ a {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); }
   @media only screen and (max-width: 768px) {
     .slider__capt {
@@ -2802,7 +2834,7 @@ a {
         width: 48%;
         margin-bottom: 1.3%; } }
   .wrap_article .item__title {
-    line-height: 18px;
+    line-height: 20px;
     font-size: 20px;
     margin: -7px 0 0 0; }
     @media only screen and (max-width: 1024px) {
@@ -4017,6 +4049,11 @@ a {
   .shop-logo img {
     line-height: 1;
     vertical-align: middle; }
+  @media only screen and (max-width: 768px) {
+    .shop-logo {
+      display: block;
+      float: none;
+      margin: 0 auto 15px; } }
 
 .colections {
   overflow: hidden; }

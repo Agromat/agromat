@@ -409,7 +409,7 @@
         }
     }
     .item__title {
-        line-height: 18px;
+        line-height: 20px;
         font-size: 20px;
         margin: -7px 0 0 0;
         @include respond-to(med) { 
@@ -1650,6 +1650,11 @@
     img {
         line-height: 1;
         vertical-align: middle;
+    }
+    @include respond-to(pda) {
+        display: block;
+        float: none;
+        margin: 0 auto 15px;
     }
 }
 .colections {

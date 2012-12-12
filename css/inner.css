@@ -1,4 +1,3 @@
-@charset "IBM866";
 .content {
   float: right;
   position: relative;
@@ -385,7 +384,7 @@
         width: 48%;
         margin-bottom: 1.3%; } }
   .wrap_article .item__title {
-    line-height: 18px;
+    line-height: 20px;
     font-size: 20px;
     margin: -7px 0 0 0; }
     @media only screen and (max-width: 1024px) {
@@ -1600,6 +1599,11 @@
   .shop-logo img {
     line-height: 1;
     vertical-align: middle; }
+  @media only screen and (max-width: 768px) {
+    .shop-logo {
+      display: block;
+      float: none;
+      margin: 0 auto 15px; } }
 
 .colections {
   overflow: hidden; }
