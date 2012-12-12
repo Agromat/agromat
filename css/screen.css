@@ -627,7 +627,9 @@ a {
   @media only screen and (max-width: 1024px) {
     .banner.banner-main {
       width: 100%;
-      display: block; } }
+      display: block; }
+      .banner.banner-main .separator-blue_bot {
+        display: block; } }
 
 /* --------------------------------------- //END layout ---------------------------------------- */
 /* ------------------------------------------- Blocks ------------------------------------------ */
@@ -1888,6 +1890,7 @@ a {
 
 .banner {
   position: relative;
+  display: block;
   height: 194px;
   margin-bottom: 10px;
   border: 2px solid #000;
@@ -1930,7 +1933,7 @@ a {
   @media only screen and (max-width: 768px) {
     .banner .separator-blue_bot {
       display: block;
-      margin-top: 9px; }
+      margin-top: 15px; }
       .banner .separator-blue_bot i {
         display: block; } }
   @media only screen and (max-width: 480px) {
@@ -1957,7 +1960,7 @@ a {
       bottom: 12.8%;
       left: 11.8%; } }
 
-.banner .banner__link {
+.banner .banner__go {
   display: block;
   margin: 37px auto 0;
   line-height: 19px;
@@ -1972,7 +1975,7 @@ a {
   text-transform: uppercase;
   text-decoration: none; }
   @media only screen and (max-width: 1024px) {
-    .banner .banner__link {
+    .banner .banner__go {
       display: none; } }
 
 .banner__name {

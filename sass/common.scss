@@ -665,6 +665,9 @@ a{
         @include respond-to(med) {
            width: 100%;
            display: block;
+           .separator-blue_bot {
+                display: block;
+           }
        }
     }
 /* --------------------------------------- //END layout ---------------------------------------- */

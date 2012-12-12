@@ -627,7 +627,9 @@ a {
   @media only screen and (max-width: 1024px) {
     .banner.banner-main {
       width: 100%;
-      display: block; } }
+      display: block; }
+      .banner.banner-main .separator-blue_bot {
+        display: block; } }
 
 /* --------------------------------------- //END layout ---------------------------------------- */
 /* ------------------------------------------- Blocks ------------------------------------------ */

@@ -201,6 +201,7 @@
 }
 .banner {
     position: relative;
+    display: block;
     height: 194px;
     margin-bottom: 10px;
     border: 2px solid #000;
@@ -248,7 +249,7 @@
         }
         @include respond-to(pda) {
             display: block;
-            margin-top: 9px;
+            margin-top: 15px;
             i {
                 display: block;
             }
@@ -278,7 +279,7 @@
         left: 11.8%;
     }
 }
-.banner .banner__link {
+.banner .banner__go {
     display: block;
     margin: 37px auto 0;
     line-height: 19px;
