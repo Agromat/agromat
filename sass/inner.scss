@@ -1039,9 +1039,10 @@
             @include box-shadow(1px 1px 2px rgba(0,0,0,0.2));
             @include respond-to(pda) {
                 left: -6px;
-            }
-            @include respond-to(pda) {
                 top: 20px;
+            }
+            @include respond-to(mob-lan) {
+                top: 2px;
             }
 
         }
