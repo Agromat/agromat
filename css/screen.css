@@ -1,3 +1,4 @@
+@charset "IBM866";
 /* HOW TO USE SPRITES, see _base.scss*/
 @font-face {
   font-family: 'helveticaneuecyrroman';
@@ -1820,7 +1821,6 @@ a {
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   background-image: linear-gradient(left, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0)); }
   @media only screen and (max-width: 768px) {
     .slider__capt {
@@ -3468,7 +3468,7 @@ a {
       left: -6px; } }
   @media only screen and (max-width: 768px) {
     .label_radio .label__text:after {
-      top: 2px; } }
+      top: 20px; } }
 
 .label_check .label__text:after {
   content: "";

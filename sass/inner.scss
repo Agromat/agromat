@@ -1041,8 +1041,9 @@
                 left: -6px;
             }
             @include respond-to(pda) {
-                top: 2px;
+                top: 20px;
             }
+
         }
     }
 }

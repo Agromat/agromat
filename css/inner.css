@@ -1,3 +1,4 @@
+@charset "IBM866";
 .content {
   float: right;
   position: relative;
@@ -1015,7 +1016,7 @@
       left: -6px; } }
   @media only screen and (max-width: 768px) {
     .label_radio .label__text:after {
-      top: 2px; } }
+      top: 20px; } }
 
 .label_check .label__text:after {
   content: "";
