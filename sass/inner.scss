@@ -836,6 +836,9 @@
 .wrap_img-link {
     margin: 0 -20% 34px 0;
     overflow: hidden;
+    @include respond-to(mob-lan) {
+        margin-bottom: 10px;
+    }
 }
 .img-link {
     float: left;
@@ -857,7 +860,7 @@
     @include respond-to(mob-lan) {
        display: block;
        float: none;
-       margin: 0 auto 15px; 
+       margin: 0 auto 10px; 
     }
     &:hover{
         border: 1px solid #000;
@@ -890,7 +893,7 @@
         font-size: 17px;
         text-transform: uppercase;
         @include respond-to(med) {
-           font-size: 14px; 
+           font-size: 20px; 
         }
         &:before,
         &:after {
@@ -911,10 +914,15 @@
     position: relative;
     padding: 2.7% 0.5%;
     overflow: visible;
+    width: 18.8%;
     @include respond-to(mob-lan) {
-       margin: 0 0 20px;
+       margin: 0 0 10px;
        box-sizing: border-box;
        width: 82%; 
+    }
+    @include respond-to(med) {
+       margin: 0 3% 3% 0;
+       width: 38%;
     }
 }
 .img-link-active {
@@ -981,6 +989,9 @@
         display: inline-block;
         vertical-align: middle;
     }
+    @include respond-to(med) {
+        padding: 0 7px;
+    }
     @include respond-to(pda) {
         padding: 0 3px;
     }
@@ -994,7 +1005,7 @@
     cursor: pointer;
     text-transform: uppercase;
     @include respond-to(pda) {
-        font-size: 13px;
+        font-size: 11px;
     }
     @include respond-to(mob-lan) {
         font-size: 11px;
@@ -1145,6 +1156,7 @@
     background: #fff;
     @include respond-to(mob-lan) {
         position: relative;
+        width: auto;
     }
 }
 .popup_cont {
@@ -1157,6 +1169,13 @@
         bottom: auto;
         right: auto;
         margin: 15px auto 0;
+        width: auto;
+        border: 2px solid #000;
+    }
+    h2{
+       @include respond-to(mob-lan) {
+          font-size: 24px;
+       }
     }
 }
 .popup__body {

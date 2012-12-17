@@ -3250,6 +3250,9 @@ a {
 .wrap_img-link {
   margin: 0 -20% 34px 0;
   overflow: hidden; }
+  @media only screen and (max-width: 480px) {
+    .wrap_img-link {
+      margin-bottom: 10px; } }
 
 .img-link {
   float: left;
@@ -3272,7 +3275,7 @@ a {
     .img-link {
       display: block;
       float: none;
-      margin: 0 auto 15px; } }
+      margin: 0 auto 10px; } }
   .img-link:hover {
     border: 1px solid #000;
     -webkit-box-shadow: inset 0 0 0 1px black;
@@ -3304,7 +3307,7 @@ a {
     text-transform: uppercase; }
     @media only screen and (max-width: 1024px) {
       .img-link strong {
-        font-size: 14px; } }
+        font-size: 20px; } }
     .img-link strong:before, .img-link strong:after {
       content: "";
       position: absolute;
@@ -3321,12 +3324,17 @@ a {
 .img-link_mod {
   position: relative;
   padding: 2.7% 0.5%;
-  overflow: visible; }
+  overflow: visible;
+  width: 18.8%; }
   @media only screen and (max-width: 480px) {
     .img-link_mod {
-      margin: 0 0 20px;
+      margin: 0 0 10px;
       box-sizing: border-box;
       width: 82%; } }
+  @media only screen and (max-width: 1024px) {
+    .img-link_mod {
+      margin: 0 3% 3% 0;
+      width: 38%; } }
 
 .img-link-active {
   border: 1px solid #000;
@@ -3396,6 +3404,9 @@ a {
   .label * {
     display: inline-block;
     vertical-align: middle; }
+  @media only screen and (max-width: 1024px) {
+    .label {
+      padding: 0 7px; } }
   @media only screen and (max-width: 768px) {
     .label {
       padding: 0 3px; } }
@@ -3411,7 +3422,7 @@ a {
   text-transform: uppercase; }
   @media only screen and (max-width: 768px) {
     .label__text {
-      font-size: 13px; } }
+      font-size: 11px; } }
   @media only screen and (max-width: 480px) {
     .label__text {
       font-size: 11px; } }
@@ -3571,7 +3582,8 @@ a {
   background: #fff; }
   @media only screen and (max-width: 480px) {
     .popup {
-      position: relative; } }
+      position: relative;
+      width: auto; } }
 
 .popup_cont {
   top: 30px;
@@ -3583,7 +3595,12 @@ a {
       top: auto;
       bottom: auto;
       right: auto;
-      margin: 15px auto 0; } }
+      margin: 15px auto 0;
+      width: auto;
+      border: 2px solid #000; } }
+  @media only screen and (max-width: 480px) {
+    .popup_cont h2 {
+      font-size: 24px; } }
 
 .popup__body {
   padding: 22px 30px; }
