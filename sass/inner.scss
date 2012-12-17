@@ -1197,6 +1197,9 @@
     top: -12px;
     cursor: pointer;
     @include sized-sprite($icons, close);
+    @include respond-to(mob-lan) {
+          display: none;
+       }
 }
 .shop-info {
     padding: 25px 0;

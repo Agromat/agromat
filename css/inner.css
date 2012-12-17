@@ -1171,6 +1171,9 @@
   background: url('../img/icons-s1672a42282.png') 0 -327px no-repeat;
   width: 24px;
   height: 24px; }
+  @media only screen and (max-width: 480px) {
+    .popup__close {
+      display: none; } }
 
 .shop-info {
   padding: 25px 0;
