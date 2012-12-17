@@ -716,10 +716,10 @@
         }
     } 
     div {
-        margin-bottom: 30px;
+        
     }
     h2 {
-        padding-bottom: 20px;
+//         padding-bottom: 20px;
         font-size: 24px;
         @include pfd_m();
         text-transform: uppercase;
@@ -729,6 +729,7 @@
         font-size: 12px;
         @include pfd_m();
         text-transform: uppercase;
+        margin-top: 30px;
     }
     ul {
         margin-top: 6px;
@@ -840,7 +841,10 @@
     float: left;
     margin: 0 1% 1% 0;
     padding: 1% 0.5%;
-    width: 18.8%;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+    width: 18.8% + 1%;
     background: #fff;
     text-align: center;
     border: 1px solid #d4d4d4;
@@ -858,7 +862,14 @@
     &:hover{
         border: 1px solid #000;
         @include box-shadow(inset 0 0 0 1px #000);   
-    } 
+    }
+    .img-link__img{
+       display: block;
+       width: auto;
+       line-height: auto;
+       height: auto;
+       padding: 4px;
+    }
     img {
         display: block;
         width: 100%;
