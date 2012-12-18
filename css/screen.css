@@ -4009,6 +4009,10 @@ a {
     .item-cont {
       width: 38%;
       margin-right: 2%; } }
+  .item-cont .item-cont__url {
+    text-decoration: underline; }
+  .item-cont:hover {
+    border-color: #333; }
 
 .item-cont__main {
   float: left;
@@ -4026,7 +4030,8 @@ a {
     font-family: 'pf_din_text_comp_probold', sans-serif;
     font-size: 18px;
     line-height: 23px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #222; }
     @media only screen and (max-width: 1024px) {
       .item-cont__main .item-cont__title {
         font-size: 16px; } }

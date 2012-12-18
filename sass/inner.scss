@@ -1608,6 +1608,12 @@
         width: 38%;
         margin-right: 2%;
     }
+    .item-cont__url{
+       text-decoration: underline;
+    }
+    &:hover{
+       border-color: #333;
+    }
 }
 .item-cont__main {
     float: left;
@@ -1625,6 +1631,7 @@
         font-size: 18px;
         line-height: 23px;
         text-transform: uppercase;
+        color: #222;
         @include respond-to(med) {
             font-size: 16px;
         }
