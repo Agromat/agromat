@@ -2966,6 +2966,32 @@ a {
   line-height: 26px;
   border-bottom: 2px solid; }
 
+.wrap-text-rows {
+  overflow: hidden;
+  padding-right: 2px;
+  margin-bottom: -2px; }
+  .wrap-text-rows .text-rows {
+    overflow: hidden;
+    padding-bottom: 2px; }
+
+.text-rows-title {
+  float: left;
+  padding-top: 15px;
+  width: 12%;
+  padding-right: 1%;
+  font-weight: bold;
+  font-size: 14px;
+  border-top: 1px solid #d4d4d4;
+  word-wrap: break-word; }
+  @media only screen and (max-width: 1024px) {
+    .text-rows-title {
+      font-size: 12px;
+      width: 15%; } }
+  @media only screen and (max-width: 480px) {
+    .text-rows-title {
+      font-size: 12px;
+      width: 20%; } }
+
 .text-rows {
   padding: 0 3.1% 0 0; }
   .text-rows li {
@@ -2992,7 +3018,7 @@ a {
         height: 45px; } }
   .text-rows div {
     float: left;
-    width: 72%;
+    width: 80%;
     height: 37px;
     overflow: hidden;
     padding-top: 17px; }
@@ -3005,10 +3031,11 @@ a {
     @media only screen and (max-width: 480px) {
       .text-rows div {
         padding-top: 9px; } }
-  .text-rows a {
+  .text-rows a, .text-rows span {
+    color: #2D8DB4;
     font-size: 14px; }
     @media only screen and (max-width: 480px) {
-      .text-rows a {
+      .text-rows a, .text-rows span {
         font-size: 11px; } }
 
 .text-rows_bold {
@@ -3108,7 +3135,8 @@ a {
     .l-col-wrap {
       margin-right: 0; } }
 
-.l-col-wrap_contacts .l-col, .l-col-wrap_contacts .cont-gallery {
+.l-col-wrap_contacts .l-col,
+.l-col-wrap_contacts .cont-gallery {
   margin-bottom: 0; }
 
 .l-col {

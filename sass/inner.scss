@@ -538,6 +538,33 @@
     line-height: 26px;
     border-bottom: 2px solid;
 }
+.wrap-text-rows {
+    overflow: hidden;
+    padding-right: 2px;
+    margin-bottom: -2px;
+    .text-rows  {
+        overflow: hidden;
+        padding-bottom: 2px;
+    }
+}
+.text-rows-title {
+    float: left;
+    padding-top: 15px;
+    width: 12%;
+    padding-right: 1%;
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 1px solid #d4d4d4;
+    word-wrap: break-word;
+    @include respond-to(med) {
+        font-size: 12px;
+        width: 15%;
+    }
+    @include respond-to(mob-lan) {
+        font-size: 12px;
+        width: 20%;
+    }
+}
 .text-rows {
     padding: 0 3.1% 0 0; 
     li {
@@ -568,7 +595,7 @@
     }
     div {
         float: left;
-        width: 72%;
+        width: 80%;
         height: 37px;
         overflow: hidden;
         padding-top: 17px;
@@ -582,7 +609,8 @@
             padding-top: 9px;
         }
     }
-    a {
+    a,span {
+        color: #2D8DB4;
         font-size: 14px;
         @include respond-to(mob-lan) {
             font-size: 11px;
