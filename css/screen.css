@@ -322,7 +322,7 @@ a {
     letter-spacing: 2px;
     text-decoration: none;
     text-transform: uppercase;
-    background: url(../img/logo.png) 0 0 no-repeat; }
+    background: url(../_img/logo.png) 0 0 no-repeat; }
     @media only screen and (max-width: 768px) {
       .header__logo a {
         top: -33px;
@@ -981,7 +981,7 @@ a {
         border-bottom: 1px solid #d4d4d4; }
         .filter-let div:first-child a {
           border-right: 0; } }
-  .filter-let a {
+  .filter-let a, .filter-let span {
     float: left;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -997,28 +997,30 @@ a {
     border-right: 1px solid #ccc;
     text-transform: uppercase; }
     @media only screen and (max-width: 1024px) {
-      .filter-let a {
+      .filter-let a, .filter-let span {
         font-size: 20px;
         font-weight: normal;
         font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
         width: 7.95%; } }
     @media only screen and (max-width: 768px) {
-      .filter-let a {
+      .filter-let a, .filter-let span {
         font-size: 20px;
         font-weight: normal;
         font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
         width: 7.82%; } }
     @media only screen and (max-width: 480px) {
-      .filter-let a {
+      .filter-let a, .filter-let span {
         width: 7.9%; } }
-    .filter-let a:first-child {
+    .filter-let a:first-child, .filter-let span:first-child {
       border-left: 0; }
-    .filter-let a:hover {
+    .filter-let a:hover, .filter-let span:hover {
       color: #2D8DB4;
       background: #f1f1f1;
       -webkit-box-shadow: inset 0 0 0 1px white;
       -moz-box-shadow: inset 0 0 0 1px white;
       box-shadow: inset 0 0 0 1px white; }
+  .filter-let span {
+    color: #f1f1f1; }
   .filter-let .filter-let__last {
     border-right: 1px solid #fff; }
   .filter-let .filter-let__act {
@@ -2461,6 +2463,31 @@ a {
     .content {
       float: none;
       width: 100%; } }
+  .content hr {
+    position: relative;
+    margin: 23px 0 30px;
+    height: 1px;
+    background: #000;
+    border: 0; }
+    .content hr:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      z-index: 2;
+      margin-left: -4px;
+      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
+      width: 7px;
+      height: 7px; }
+    .content hr:after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 28px;
+      height: 4px;
+      margin-left: -14px;
+      background: #fff; }
   .content p {
     margin-bottom: 20px; }
   .content blockquote {
@@ -3423,7 +3450,10 @@ a {
 
 .label {
   padding: 0 22px;
-  display: block; }
+  display: block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
   .label * {
     display: inline-block;
     vertical-align: middle; }
@@ -4905,31 +4935,6 @@ a {
       @media only screen and (max-width: 480px) {
         .text-cont ul li {
           font-size: 11px; } }
-  .text-cont hr {
-    position: relative;
-    margin: 23px 0 30px;
-    height: 1px;
-    background: #000;
-    border: 0; }
-    .text-cont hr:before {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: 50%;
-      z-index: 2;
-      margin-left: -4px;
-      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
-      width: 7px;
-      height: 7px; }
-    .text-cont hr:after {
-      content: "";
-      position: absolute;
-      top: -3px;
-      left: 50%;
-      width: 28px;
-      height: 4px;
-      margin-left: -14px;
-      background: #fff; }
 
 .lteie8 .l-wrapper {
   width: 1280px; }

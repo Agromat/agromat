@@ -8,6 +8,31 @@
     .content {
       float: none;
       width: 100%; } }
+  .content hr {
+    position: relative;
+    margin: 23px 0 30px;
+    height: 1px;
+    background: #000;
+    border: 0; }
+    .content hr:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      z-index: 2;
+      margin-left: -4px;
+      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
+      width: 7px;
+      height: 7px; }
+    .content hr:after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 28px;
+      height: 4px;
+      margin-left: -14px;
+      background: #fff; }
   .content p {
     margin-bottom: 20px; }
   .content blockquote {
@@ -970,7 +995,10 @@
 
 .label {
   padding: 0 22px;
-  display: block; }
+  display: block;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none; }
   .label * {
     display: inline-block;
     vertical-align: middle; }
@@ -2452,28 +2480,3 @@
       @media only screen and (max-width: 480px) {
         .text-cont ul li {
           font-size: 11px; } }
-  .text-cont hr {
-    position: relative;
-    margin: 23px 0 30px;
-    height: 1px;
-    background: #000;
-    border: 0; }
-    .text-cont hr:before {
-      content: "";
-      position: absolute;
-      top: -2px;
-      left: 50%;
-      z-index: 2;
-      margin-left: -4px;
-      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
-      width: 7px;
-      height: 7px; }
-    .text-cont hr:after {
-      content: "";
-      position: absolute;
-      top: -3px;
-      left: 50%;
-      width: 28px;
-      height: 4px;
-      margin-left: -14px;
-      background: #fff; }
