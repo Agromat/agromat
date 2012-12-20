@@ -8,6 +8,13 @@
     .content {
       float: none;
       width: 100%; } }
+  .content h1 {
+    margin-bottom: 16px;
+    font-size: 31px;
+    line-height: 38px;
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    text-transform: uppercase; }
   .content hr {
     position: relative;
     margin: 23px 0 30px;
@@ -2050,7 +2057,7 @@
   .feedback_faq .valid-error {
     right: -130px;
     width: 115px; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1024px) {
       .feedback_faq .valid-error {
         right: 0;
         top: 30px; } }
@@ -2457,34 +2464,6 @@
     font-weight: normal;
     font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
     text-transform: uppercase; }
-  .text-cont h1 {
-    padding-bottom: 16px;
-    font-size: 31px;
-    line-height: 38px; }
-  .text-cont h2 {
-    padding: 0 0 9px;
-    font-size: 24px;
-    line-height: 24px; }
-  .text-cont h3 {
-    padding: 0 0 8px;
-    color: #3f3f3f;
-    font-size: 20px;
-    line-height: 24px; }
-  .text-cont h4 {
-    padding: 0 0 7px;
-    color: #585858;
-    font-size: 16px;
-    line-height: 24px; }
-  .text-cont h5 {
-    padding-bottom: 6px;
-    color: #7f7f7f;
-    font-size: 14px;
-    line-height: 24px; }
-  .text-cont h6 {
-    padding-bottom: 5px;
-    color: #818181;
-    font-size: 12px;
-    line-height: 24px; }
   .text-cont ul {
     padding-left: 10px;
     margin-bottom: 20px; }

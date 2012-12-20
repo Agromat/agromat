@@ -9,6 +9,13 @@
        float: none;
        width: 100%;
     }
+    h1 {
+        margin-bottom: 16px;
+        font-size: 31px;
+        line-height: 38px;
+        @include pfd_m;
+        text-transform: uppercase;
+    }
     hr {
         position: relative;
         margin: 23px 0 30px;
@@ -2134,7 +2141,7 @@
     .valid-error { 
         right: -130px;
         width: 115px;
-        @include respond-to(pda) {
+        @include respond-to(med) {
             right: 0;
             top: 30px;
         }
@@ -2553,40 +2560,6 @@
     h1,h2,h3,h4,h5,h6 {
         @include pfd_m;
         text-transform: uppercase;
-    }
-    h1 {
-        padding-bottom: 16px;
-        font-size: 31px;
-        line-height: 38px;
-    }
-    h2 {
-        padding: 0 0 9px;
-        font-size: 24px;
-        line-height: 24px;
-    }
-    h3 {
-        padding: 0 0 8px;
-        color: #3f3f3f;
-        font-size: 20px;
-        line-height: 24px;
-    }
-    h4 {
-        padding: 0 0 7px;
-        color: #585858;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    h5 {
-        padding-bottom: 6px;
-        color: #7f7f7f;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    h6 {
-        padding-bottom: 5px;
-        color: #818181;
-        font-size: 12px;
-        line-height: 24px;
     }
     ul {
         padding-left: 10px;

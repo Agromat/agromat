@@ -161,8 +161,8 @@ a {
 .title-l-1 {
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 24px !important;
+  line-height: 24px !important;
   height: 1px;
   margin: 30px 0;
   background: #000;
@@ -187,8 +187,8 @@ a {
       left: 13px; }
 
 .title-l-1.title-media {
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 16px !important;
+  line-height: 20px !important;
   margin: 30px 0;
   display: block; }
   .title-l-1.title-media span {
@@ -196,8 +196,8 @@ a {
     padding: 0 23px; }
 
 .title-l-1_index {
-  font-size: 16px;
-  line-height: 16px; }
+  font-size: 16px !important;
+  line-height: 16px !important; }
   .title-l-1_index span {
     padding: 0 23px;
     letter-spacing: 3px; }
@@ -212,9 +212,9 @@ a {
   margin-bottom: 15px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
-  font-size: 31px;
+  font-size: 31px !important;
   text-transform: uppercase;
-  line-height: 38px; }
+  line-height: 38px !important; }
   @media only screen and (max-width: 480px) {
     .title-l-2 {
       font-size: 20px;
@@ -225,9 +225,9 @@ a {
   margin-bottom: 15px;
   font-weight: normal;
   font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
-  font-size: 24px;
+  font-size: 24px !important;
   text-transform: uppercase;
-  line-height: 38px;
+  line-height: 38px !important;
   clear: both; }
   @media only screen and (max-width: 480px) {
     .title-l-3 {
