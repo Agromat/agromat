@@ -3778,10 +3778,16 @@ a {
       box-shadow: 0 0 0 2px black; }
 
 .shop-addr__wrap {
+  position: relative;
+  min-height: 100px;
   padding: 4% 8% 20%; }
 
-.shop-addr__cont span {
-  display: block; }
+.shop-addr__cont {
+  position: absolute;
+  bottom: 25px;
+  left: auto; }
+  .shop-addr__cont span {
+    display: block; }
 
 .shop-addr_office .title-l-3 {
   font-size: 18px;

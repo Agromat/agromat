@@ -1357,9 +1357,14 @@
 }
 
 .shop-addr__wrap {
+    position: relative;
+    min-height: 100px;
     padding: 4% 8% 20%;
 }
 .shop-addr__cont {
+    position: absolute;
+    bottom: 25px;
+    left: auto;
     span {
         display: block;
     }
