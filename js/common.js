@@ -181,4 +181,12 @@ $(document).ready(function() {
   var img_caption = $(".cont-gallery a:first").attr("title");
   $(".cont-gallery span:first").text(img_caption);
 
+  // shop address (block hover effect)
+  // $(".shop-addr a").each(function(){
+  //     var shop_link = $(".shop-addr__link").attr("href");
+  //     if (shop_link.length == 0) {
+  //       $(this).addClass("empty");
+  //     }
+  // });
+
 });

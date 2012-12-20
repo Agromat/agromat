@@ -1296,15 +1296,20 @@
       .shop-addr .title-l-3 {
         font-size: 18px;
         line-height: 18px; } }
-
-.shop-addr__link {
-  display: block;
-  color: #000;
-  text-decoration: none; }
-  .shop-addr__link:hover {
-    -webkit-box-shadow: 0 0 0 2px black;
-    -moz-box-shadow: 0 0 0 2px black;
-    box-shadow: 0 0 0 2px black; }
+  .shop-addr .empty {
+    cursor: default; }
+    .shop-addr .empty:hover {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none; }
+  .shop-addr .shop-addr__link {
+    display: block;
+    color: #000;
+    text-decoration: none; }
+    .shop-addr .shop-addr__link:hover {
+      -webkit-box-shadow: 0 0 0 2px black;
+      -moz-box-shadow: 0 0 0 2px black;
+      box-shadow: 0 0 0 2px black; }
 
 .shop-addr__wrap {
   padding: 4% 8% 20%; }

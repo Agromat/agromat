@@ -1333,15 +1333,22 @@
             line-height: 18px;
         }
     }
-}
-.shop-addr__link {
-    display: block;
-    color: #000;
-    text-decoration: none;
-    &:hover {
-        @include box-shadow(0 0 0 2px #000);
+    .empty {
+        cursor: default;
+        &:hover {
+            @include box-shadow(none);
+        }
+    }
+    .shop-addr__link {
+        display: block;
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            @include box-shadow(0 0 0 2px #000);
+        }
     }
 }
+
 .shop-addr__wrap {
     padding: 4% 8% 20%;
 }
