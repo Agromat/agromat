@@ -15,7 +15,7 @@ relative_assets = true
 # relative_assets = true
 
 # To disable debugging comments that display the original location of your selectors. Uncomment:
-output_style = :nested
+output_style = :compressed
 line_comments = false
 preferred_syntax = :scss
 

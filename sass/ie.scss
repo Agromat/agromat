@@ -22,7 +22,7 @@
         width:auto;
     }
     .label__text {
-        &:before, 
+        &:before,  
         &:after {
             content: "";
             display: none;
@@ -41,7 +41,7 @@
         padding-bottom: 10px;
     }
     .input {
-        line-height: 30px;
+        line-height: 30px; 
     }
     .select {
         height: 20px;
