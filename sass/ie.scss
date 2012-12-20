@@ -1,4 +1,12 @@
 .lteie8 {
+    .footer-wrap {
+        overflow: hidden;
+    }
+    .footer-wrap_1,
+    .footer-wrap_2,
+    .footer-wrap {
+        overflow: hidden;
+    }
     .l-wrapper {
         width: 1280px;
     }
@@ -14,7 +22,7 @@
         width:auto;
     }
     .label__text {
-        &:before,
+        &:before, 
         &:after {
             content: "";
             display: none;
@@ -23,6 +31,10 @@
     .footer {
         width: 1280px;
         margin: 0 auto;
+        overflow: hidden;
+        .separator-blue {
+            clear: both;
+        }
     }
     .wrap_shop-addr {
         overflow: hidden;
@@ -69,9 +81,6 @@
 *+html .textarea{
     width: 560px;
 }
-*+html .footer-wrap_2 {
-    clear: none;
-}
 *+html .part-logo li {
     width: 14%;
 }
@@ -85,7 +94,8 @@
 *+html .pagin *,
 *+html .newspaper,
 *+html .wrap_article .item,
-*+html .shop-add {
+*+html .shop-add,
+*+html .part-logo a {
     display: inline;
 }
 *+html .filter-let {

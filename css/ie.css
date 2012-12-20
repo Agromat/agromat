@@ -1,3 +1,9 @@
+.lteie8 .footer-wrap {
+  overflow: hidden; }
+.lteie8 .footer-wrap_1,
+.lteie8 .footer-wrap_2,
+.lteie8 .footer-wrap {
+  overflow: hidden; }
 .lteie8 .l-wrapper {
   width: 1280px; }
 .lteie8 .wrap_news-shop .item-row {
@@ -13,7 +19,10 @@
   display: none; }
 .lteie8 .footer {
   width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
+  .lteie8 .footer .separator-blue {
+    clear: both; }
 .lteie8 .wrap_shop-addr {
   overflow: hidden;
   padding-bottom: 10px; }
@@ -49,9 +58,6 @@
 * + html .textarea {
   width: 560px; }
 
-* + html .footer-wrap_2 {
-  clear: none; }
-
 * + html .part-logo li {
   width: 14%; }
 
@@ -65,7 +71,8 @@
 * + html .pagin *,
 * + html .newspaper,
 * + html .wrap_article .item,
-* + html .shop-add {
+* + html .shop-add,
+* + html .part-logo a {
   display: inline; }
 
 * + html .filter-let {

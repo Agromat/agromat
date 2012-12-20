@@ -1568,9 +1568,6 @@ a{
         width: 27px;
         height: 1px;
         background: #fff;
-        // @include respond-to(pda) { 
-        //    display: none;
-        // }
     }
     i {
         position: absolute;
@@ -1589,9 +1586,6 @@ a{
         color: #2d8db5;
         font-size: 11px;
         @include pfd_m();
-        // @include respond-to(pda) {
-        //    display: inline;
-        // }
     }
 }
 .separator-blue_mod {
@@ -1646,50 +1640,21 @@ a{
     }
     a {
         display: inline-block;
+        @include gray;
+        opacity: 0.4;
+        &:hover {
+            @include gray_none;
+            opacity: 1;
+        }
     }
 }
-.part-logo__1 {
-    @include sized-sprite($logos, logo1);
-    &:hover {
-    @include sized-sprite($logos, logo1_h);
-    }
-} 
-.part-logo__2 {
-    @include sized-sprite($logos, logo2);
-    &:hover {
-       @include sized-sprite($logos, logo2_h);    
-    }
-}
-.part-logo__3 {
-    @include sized-sprite($logos, logo3);
-    &:hover {
-        @include sized-sprite($logos, logo3_h);      
-    }
-}
-.part-logo__4 {
-    @include sized-sprite($logos, logo4);
-    &:hover {
-        @include sized-sprite($logos, logo4_h);
-    }
-} 
-.part-logo__5 {
-    @include sized-sprite($logos, logo5);
-    &:hover {
-        @include sized-sprite($logos, logo5_h);
-    }
-}
-.part-logo__6 {
-    @include sized-sprite($logos, logo6);
-    &:hover {
-        @include sized-sprite($logos, logo6_h);
-    }
-}
-.part-logo__7 {
-    @include sized-sprite($logos, logo7);
-    &:hover {
-        @include sized-sprite($logos, logo7_h);
-    } 
-}
+.part-logo__1 {@include sized-sprite($logos, logo1);} 
+.part-logo__2 {@include sized-sprite($logos, logo2);}
+.part-logo__3 {@include sized-sprite($logos, logo3);}
+.part-logo__4 {@include sized-sprite($logos, logo4);} 
+.part-logo__5 {@include sized-sprite($logos, logo5);}
+.part-logo__6 {@include sized-sprite($logos, logo6);}
+.part-logo__7 {@include sized-sprite($logos, logo7);}
 .footer__copy {
     float: left;
     color: #c2c2c2;

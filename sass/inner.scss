@@ -1421,10 +1421,7 @@
             opacity: 1;
             border: 1px solid #000;
             @include box-shadow(0 0 0 1px #000);
-            -o-filter: grayscale(0);
-            -moz-filter: grayscale(0);
-            -webkit-filter: grayscale(0);
-            filter: grayscale(0);
+            @include gray_none;
         }
         .newspaper__title {
             color: #2D8DB4;
@@ -1435,10 +1432,7 @@
         margin-bottom: 15px;
         border: 1px solid #d4d4d4;
         opacity: 0.7;
-        -o-filter: grayscale(100%);
-        -moz-filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+        @include gray;
         @include respond-to(mob-lan) {
             margin-bottom: 5px;
         }

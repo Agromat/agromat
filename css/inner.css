@@ -349,7 +349,7 @@
   margin: -82px 0 0 -82px;
   border: 0;
   cursor: pointer;
-  background: url('../_img/logos-s08af55c885.png') 0 -521px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -289px no-repeat;
   width: 165px;
   height: 165px; }
   @media only screen and (max-width: 768px) {
@@ -1383,10 +1383,14 @@
     -webkit-box-shadow: 0 0 0 1px black;
     -moz-box-shadow: 0 0 0 1px black;
     box-shadow: 0 0 0 1px black;
+    filter: none;
+    filter: gray;
     -o-filter: grayscale(0);
-    -moz-filter: grayscale(0);
     -webkit-filter: grayscale(0);
-    filter: grayscale(0); }
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=0)"; }
   .newspaper:hover .newspaper__title {
     color: #2D8DB4; }
   .newspaper img {
@@ -1394,10 +1398,14 @@
     margin-bottom: 15px;
     border: 1px solid #d4d4d4;
     opacity: 0.7;
+    filter: url("../_img/filter.svg#grayscale");
+    filter: gray;
     -o-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); }
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; }
     @media only screen and (max-width: 480px) {
       .newspaper img {
         margin-bottom: 5px; } }

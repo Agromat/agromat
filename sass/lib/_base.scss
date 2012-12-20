@@ -62,3 +62,24 @@
   background: sprite($map, $sprite) no-repeat;
   @include image-size(sprite-file($map, $sprite));
 }
+
+@mixin gray(){
+  filter: url("../_img/filter.svg#grayscale");
+  filter: gray;
+  -o-filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)";
+}
+@mixin gray_none(){
+  filter: none;
+  filter: gray;
+  -o-filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  filter: grayscale(0);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=0)";
+}

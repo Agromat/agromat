@@ -286,11 +286,11 @@ a {
   .fb a {
     display: inline-block;
     margin-left: 6px;
-    background: url('../_img/logos-s08af55c885.png') 0 -1034px no-repeat;
+    background: url('../_img/logos-s7d131d3a11.png') 0 -631px no-repeat;
     width: 81px;
     height: 18px; }
     .fb a:hover {
-      background: url('../_img/logos-s08af55c885.png') 0 -1052px no-repeat;
+      background: url('../_img/logos-s7d131d3a11.png') 0 -649px no-repeat;
       width: 81px;
       height: 18px; }
   @media only screen and (max-width: 1024px) {
@@ -1224,7 +1224,7 @@ a {
   font-family: 'pf_din_text_comp_probold', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
-  background: url('../_img/logos-s08af55c885.png') 0 -971px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -568px no-repeat;
   width: 151px;
   height: 63px; }
 
@@ -1573,70 +1573,61 @@ a {
         .part-logo li:last-child {
           width: 24%; } }
   .part-logo a {
-    display: inline-block; }
+    display: inline-block;
+    filter: url("../_img/filter.svg#grayscale");
+    filter: gray;
+    -o-filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)";
+    opacity: 0.4; }
+    .part-logo a:hover {
+      filter: none;
+      filter: gray;
+      -o-filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+      -moz-filter: grayscale(0);
+      filter: grayscale(0);
+      filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=0);
+      -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=0)";
+      opacity: 1; }
 
 .part-logo__1 {
-  background: url('../_img/logos-s08af55c885.png') 0 -116px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 0 no-repeat;
   width: 123px;
   height: 58px; }
-  .part-logo__1:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 0 no-repeat;
-    width: 123px;
-    height: 58px; }
 
 .part-logo__2 {
-  background: url('../_img/logos-s08af55c885.png') 0 -463px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -58px no-repeat;
   width: 72px;
   height: 58px; }
-  .part-logo__2:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -58px no-repeat;
-    width: 72px;
-    height: 58px; }
 
 .part-logo__3 {
-  background: url('../_img/logos-s08af55c885.png') 0 -743px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -511px no-repeat;
   width: 80px;
   height: 57px; }
-  .part-logo__3:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -914px no-repeat;
-    width: 80px;
-    height: 57px; }
 
 .part-logo__4 {
-  background: url('../_img/logos-s08af55c885.png') 0 -289px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -231px no-repeat;
   width: 92px;
   height: 58px; }
-  .part-logo__4:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -347px no-repeat;
-    width: 92px;
-    height: 58px; }
 
 .part-logo__5 {
-  background: url('../_img/logos-s08af55c885.png') 0 -686px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -174px no-repeat;
   width: 50px;
   height: 57px; }
-  .part-logo__5:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -232px no-repeat;
-    width: 50px;
-    height: 57px; }
 
 .part-logo__6 {
-  background: url('../_img/logos-s08af55c885.png') 0 -405px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -116px no-repeat;
   width: 122px;
   height: 58px; }
-  .part-logo__6:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -174px no-repeat;
-    width: 122px;
-    height: 58px; }
 
 .part-logo__7 {
-  background: url('../_img/logos-s08af55c885.png') 0 -800px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -454px no-repeat;
   width: 144px;
   height: 57px; }
-  .part-logo__7:hover {
-    background: url('../_img/logos-s08af55c885.png') 0 -857px no-repeat;
-    width: 144px;
-    height: 57px; }
 
 .footer__copy {
   float: left;
@@ -2808,7 +2799,7 @@ a {
   margin: -82px 0 0 -82px;
   border: 0;
   cursor: pointer;
-  background: url('../_img/logos-s08af55c885.png') 0 -521px no-repeat;
+  background: url('../_img/logos-s7d131d3a11.png') 0 -289px no-repeat;
   width: 165px;
   height: 165px; }
   @media only screen and (max-width: 768px) {
@@ -3842,10 +3833,14 @@ a {
     -webkit-box-shadow: 0 0 0 1px black;
     -moz-box-shadow: 0 0 0 1px black;
     box-shadow: 0 0 0 1px black;
+    filter: none;
+    filter: gray;
     -o-filter: grayscale(0);
-    -moz-filter: grayscale(0);
     -webkit-filter: grayscale(0);
-    filter: grayscale(0); }
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=0)"; }
   .newspaper:hover .newspaper__title {
     color: #2D8DB4; }
   .newspaper img {
@@ -3853,10 +3848,14 @@ a {
     margin-bottom: 15px;
     border: 1px solid #d4d4d4;
     opacity: 0.7;
+    filter: url("../_img/filter.svg#grayscale");
+    filter: gray;
     -o-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
-    filter: grayscale(100%); }
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)"; }
     @media only screen and (max-width: 480px) {
       .newspaper img {
         margin-bottom: 5px; } }
@@ -4949,6 +4948,12 @@ a {
         .text-cont ul li {
           font-size: 11px; } }
 
+.lteie8 .footer-wrap {
+  overflow: hidden; }
+.lteie8 .footer-wrap_1,
+.lteie8 .footer-wrap_2,
+.lteie8 .footer-wrap {
+  overflow: hidden; }
 .lteie8 .l-wrapper {
   width: 1280px; }
 .lteie8 .wrap_news-shop .item-row {
@@ -4964,7 +4969,10 @@ a {
   display: none; }
 .lteie8 .footer {
   width: 1280px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: hidden; }
+  .lteie8 .footer .separator-blue {
+    clear: both; }
 .lteie8 .wrap_shop-addr {
   overflow: hidden;
   padding-bottom: 10px; }
@@ -5000,9 +5008,6 @@ a {
 * + html .textarea {
   width: 560px; }
 
-* + html .footer-wrap_2 {
-  clear: none; }
-
 * + html .part-logo li {
   width: 14%; }
 
@@ -5016,7 +5021,8 @@ a {
 * + html .pagin *,
 * + html .newspaper,
 * + html .wrap_article .item,
-* + html .shop-add {
+* + html .shop-add,
+* + html .part-logo a {
   display: inline; }
 
 * + html .filter-let {
