@@ -2454,15 +2454,15 @@ a {
 .content {
   float: right;
   position: relative;
-  width: 75%; }
+  width: 75%;
+  font-size: 14px;
+  line-height: 17px; }
   @media only screen and (max-width: 768px) {
     .content {
       float: none;
       width: 100%; } }
   .content p {
-    margin-bottom: 20px;
-    font-size: 14px;
-    line-height: 17px; }
+    margin-bottom: 20px; }
   .content blockquote {
     position: relative;
     float: left;
@@ -2506,29 +2506,13 @@ a {
     margin: 40px 0 30px 3px;
     width: 95.6%;
     word-wrap: break-word; }
-    .content table li {
-      position: relative;
-      font-size: 14px;
-      margin-bottom: 8px;
-      padding-left: 16px; }
-      .content table li:before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 0;
-        background: url('../img/icons-s1672a42282.png') 0 -1011px no-repeat;
-        width: 5px;
-        height: 5px; }
-      @media only screen and (max-width: 480px) {
-        .content table li {
-          font-size: 11px; } }
     .content table p {
       margin-bottom: 0; }
       @media only screen and (max-width: 480px) {
         .content table p {
           font-size: 12px; } }
     .content table td {
-      padding: 2.2% 5.4% 2.9%;
+      padding: 2% 1.4% 2%;
       width: 50%;
       border: 2px solid #d4d4d4; }
       .content table td:first-child {
@@ -2539,7 +2523,6 @@ a {
       width: 50%;
       padding: 1.1% 0 1.7%; }
       .content table th strong {
-        position: relative;
         font-size: 24px;
         font-weight: normal;
         font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
@@ -2548,25 +2531,37 @@ a {
         @media only screen and (max-width: 480px) {
           .content table th strong {
             font-size: 16px; } }
-        .content table th strong:before, .content table th strong:after {
+    .content table thead th {
+      position: relative;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000; }
+      .content table thead th:first-child {
+        border-left: 2px solid #000; }
+      .content table thead th:last-child {
+        border-right: 2px solid #000; }
+      .content table thead th strong {
+        position: relative;
+        z-index: 2;
+        background: #fff;
+        padding: 0 10px; }
+      .content table thead th div {
+        position: relative;
+        overflow: hidden;
+        padding: 2px 0; }
+        .content table thead th div:before, .content table thead th div:after {
           content: "";
           position: absolute;
           top: 50%;
-          right: -65px;
           height: 1px;
-          width: 56px;
+          width: 20%;
+          left: 15%;
           background: #2d8db4; }
           @media only screen and (max-width: 480px) {
-            .content table th strong:before, .content table th strong:after {
+            .content table thead th div:before, .content table thead th div:after {
               display: none; } }
-        .content table th strong:before {
-          left: -65px; }
-    .content table thead th {
-      border: 2px solid #000; }
-      .content table thead th:first-child {
-        border-right: 0; }
-      .content table thead th:last-child {
-        border-left: 0; }
+        .content table thead th div:before {
+          right: 15%;
+          left: auto; }
     .content table tfoot th {
       border: 2px solid #d4d4d4;
       border-top: 0;
@@ -2574,7 +2569,7 @@ a {
       .content table tfoot th strong {
         color: #2d8db4; }
     .content table tfoot td {
-      padding: 2.8% 5.4% 3.6%; }
+      padding: 2.8% 1.4% 3.6%; }
 
 .content_width {
   width: 100%;
@@ -4856,6 +4851,85 @@ a {
       .error-img div {
         bottom: 210px;
         font-size: 14px; } }
+
+.text-cont {
+  font: normal 14px/17px Arial, sans-serif; }
+  .text-cont h1, .text-cont h2, .text-cont h3, .text-cont h4, .text-cont h5, .text-cont h6 {
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    text-transform: uppercase; }
+  .text-cont h1 {
+    padding-bottom: 16px;
+    font-size: 31px;
+    line-height: 38px; }
+  .text-cont h2 {
+    padding: 0 0 9px;
+    font-size: 24px;
+    line-height: 24px; }
+  .text-cont h3 {
+    padding: 0 0 8px;
+    color: #3f3f3f;
+    font-size: 20px;
+    line-height: 24px; }
+  .text-cont h4 {
+    padding: 0 0 7px;
+    color: #585858;
+    font-size: 16px;
+    line-height: 24px; }
+  .text-cont h5 {
+    padding-bottom: 6px;
+    color: #7f7f7f;
+    font-size: 14px;
+    line-height: 24px; }
+  .text-cont h6 {
+    padding-bottom: 5px;
+    color: #818181;
+    font-size: 12px;
+    line-height: 24px; }
+  .text-cont ul {
+    padding-left: 10px;
+    margin-bottom: 20px; }
+    .text-cont ul li {
+      position: relative;
+      font-size: 14px;
+      margin-bottom: 8px;
+      padding-left: 16px; }
+      .text-cont ul li:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background: url('../img/icons-s1672a42282.png') 0 -1011px no-repeat;
+        width: 5px;
+        height: 5px; }
+      @media only screen and (max-width: 480px) {
+        .text-cont ul li {
+          font-size: 11px; } }
+  .text-cont hr {
+    position: relative;
+    margin: 23px 0 30px;
+    height: 1px;
+    background: #000;
+    border: 0; }
+    .text-cont hr:before {
+      content: "";
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      z-index: 2;
+      margin-left: -4px;
+      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
+      width: 7px;
+      height: 7px; }
+    .text-cont hr:after {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 50%;
+      width: 28px;
+      height: 4px;
+      margin-left: -14px;
+      background: #fff; }
 
 .lteie8 .l-wrapper {
   width: 1280px; }
