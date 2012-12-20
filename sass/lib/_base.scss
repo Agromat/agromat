@@ -70,8 +70,6 @@
   -webkit-filter: grayscale(100%);
   -moz-filter: grayscale(100%);
   filter: grayscale(100%);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=1);
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=1)";
 }
 @mixin gray_none(){
   filter: none;
@@ -80,6 +78,4 @@
   -webkit-filter: grayscale(0);
   -moz-filter: grayscale(0);
   filter: grayscale(0);
-  filter: progid:DXImageTransform.Microsoft.BasicImage(grayScale=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(grayScale=0)";
-}
+} 
