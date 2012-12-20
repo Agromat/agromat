@@ -64,7 +64,8 @@
 * + html .filter a,
 * + html .pagin *,
 * + html .newspaper,
-* + html .wrap_article .item {
+* + html .wrap_article .item,
+* + html .shop-add {
   display: inline; }
 
 * + html .filter-let {

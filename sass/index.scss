@@ -341,12 +341,12 @@
     }   
 }
 .banner_action {
-    background: url(../img/hot-girl.jpg) 0 0 no-repeat;
+    background: url(../_img/hot-girl.jpg) 0 0 no-repeat;
     margin-bottom: 0;
     border: 0;
     @include respond-to(med) {
         float: right;
-        background: #000 url(../img/hot-girl.jpg) 50% 0 no-repeat;
+        background: #000 url(../_img/hot-girl.jpg) 50% 0 no-repeat;
         height: 96px;
     }
     @include respond-to(pda) {

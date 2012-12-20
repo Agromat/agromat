@@ -31,7 +31,7 @@
         right: -10px;
         top: 50%;
         margin-top: -3px;
-        background: url('../img/icons-s1672a42282.png') 0 -1011px no-repeat;
+        background: url('../_img/icons-s1672a42282.png') 0 -1011px no-repeat;
         width: 5px;
         height: 5px; }
       .index-page .menu .menu__active span:before {
@@ -83,7 +83,7 @@
     font: 0/0 a;
     text-shadow: none;
     color: transparent;
-    background: url('../img/icons-s1672a42282.png') 0 -300px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -300px no-repeat;
     width: 17px;
     height: 17px; }
     .slider-nav a:hover {
@@ -91,11 +91,11 @@
       left: -1px;
       margin-left: 2px;
       top: 1px;
-      background: url('../img/icons-s1672a42282.png') 0 -127px no-repeat;
+      background: url('../_img/icons-s1672a42282.png') 0 -127px no-repeat;
       width: 15px;
       height: 15px; }
   .slider-nav .activeSlide {
-    background: url('../img/icons-s1672a42282.png') 0 -216px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -216px no-repeat;
     width: 17px;
     height: 17px; }
 
@@ -179,7 +179,7 @@
     position: absolute;
     top: 0;
     right: -9px;
-    background: url('../img/icons-s1672a42282.png') 0 -152px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -152px no-repeat;
     width: 9px;
     height: 30px; }
 
@@ -191,7 +191,7 @@
   font-size: 14px; }
   .stamp_s:after {
     right: -6px;
-    background: url('../img/icons-s1672a42282.png') 0 -361px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -361px no-repeat;
     width: 6px;
     height: 22px; }
 
@@ -306,7 +306,7 @@
           position: absolute;
           right: -27px;
           top: 40%;
-          background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
+          background: url('../_img/icons-s1672a42282.png') 0 -727px no-repeat;
           width: 7px;
           height: 7px; }
         .banner__name span:before {
@@ -325,13 +325,13 @@
       font-size: 20px; } }
 
 .banner_action {
-  background: url(../img/hot-girl.jpg) 0 0 no-repeat;
+  background: url(../_img/hot-girl.jpg) 0 0 no-repeat;
   margin-bottom: 0;
   border: 0; }
   @media only screen and (max-width: 1024px) {
     .banner_action {
       float: right;
-      background: black url(../img/hot-girl.jpg) 50% 0 no-repeat;
+      background: black url(../_img/hot-girl.jpg) 50% 0 no-repeat;
       height: 96px; } }
   @media only screen and (max-width: 768px) {
     .banner_action {
@@ -388,7 +388,7 @@
       position: absolute;
       right: 0;
       top: 8px;
-      background: url('../img/icons-s1672a42282.png') 0 -727px no-repeat;
+      background: url('../_img/icons-s1672a42282.png') 0 -727px no-repeat;
       width: 7px;
       height: 7px; }
       @media only screen and (max-width: 1024px) {
@@ -554,20 +554,20 @@
 
 .prev {
   left: -10px;
-  background: url('../img/icons-s1672a42282.png') 0 -920px no-repeat;
+  background: url('../_img/icons-s1672a42282.png') 0 -920px no-repeat;
   width: 7px;
   height: 13px; }
   .prev:hover {
-    background: url('../img/icons-s1672a42282.png') 0 -744px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -744px no-repeat;
     width: 7px;
     height: 13px; }
 
 .next {
-  background: url('../img/icons-s1672a42282.png') 0 -897px no-repeat;
+  background: url('../_img/icons-s1672a42282.png') 0 -897px no-repeat;
   width: 7px;
   height: 13px; }
   .next:hover {
-    background: url('../img/icons-s1672a42282.png') 0 -686px no-repeat;
+    background: url('../_img/icons-s1672a42282.png') 0 -686px no-repeat;
     width: 7px;
     height: 13px; }
 

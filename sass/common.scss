@@ -1022,6 +1022,7 @@ a{
     div {
         float: left;
         width: 46.75%;
+        height: 57px;
         @include clr;
         @include respond-to(pda) {
             float: none;
@@ -1063,7 +1064,7 @@ a{
         }
         &:first-child {
             border-left: 0;
-        }
+        } 
         &:hover {
             color: #2D8DB4;
             background: #f1f1f1;
@@ -1072,6 +1073,10 @@ a{
     }
     span {
         color: #f1f1f1;
+        &:hover {
+            color: #f1f1f1;
+            background: #fff;
+        }
     }
     .filter-let__last {
         border-right: 1px solid #fff;
