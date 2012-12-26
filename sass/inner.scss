@@ -598,48 +598,36 @@
 .text-rows {
     padding: 0 3.1% 0 0; 
     li {
-        padding: 0 2.6% 0 2.2%;
-        overflow: hidden;
-        height: 52px;
+        padding: 16px 2.6% 16px 2.2%;
+        line-height: 20px;
         border: 1px solid transparent;
         border-bottom: 1px solid #d4d4d4;
+        color: #2D8DB4;
+        clear: both;
+        overflow: hidden;
         &:hover {
             border: 1px solid #000;
-            margin-top: -1px;
+            margin: 0px 0 -2px;
+            padding-bottom: 17px;
             position: relative;
-            height: 53px;
-            div {
-                padding-top: 18px;
-            }
             .report__download {
-                margin-top: 16px;
+                margin-top: 5px;
             }
         }
-        @include respond-to(pda) {
-            line-height: 30px;
-        }
-        @include respond-to(mob-lan) {
-            line-height: 24px;
-            height: 45px;
-        }
+        div {
+            float: left;
+            width: 80%;
+            overflow: hidden;
+            padding-top: 4px;
+            @include respond-to(pda) {
+                width: 50%;
+            }
+        } 
     }
-    div {
-        float: left;
-        width: 80%;
-        height: 37px;
-        overflow: hidden;
-        padding-top: 17px;
-        @include respond-to(pda) {
-            height: 30px;
-        }
-        @include respond-to(pda) {
-            width: 50%;
-        }
-        @include respond-to(mob-lan) {
-            padding-top: 9px;
-        }
+    ol {
+        padding-top: 15px;
     }
-    a,span {
+    a {
         color: #2D8DB4;
         font-size: 14px;
         @include respond-to(mob-lan) {
@@ -649,9 +637,6 @@
 }
 .text-rows_bold {
     margin-bottom: 40px;
-    div {
-        width: 100%;
-    }
     li {
         padding-left: 4%;
         border: 1px solid transparent;
@@ -670,15 +655,21 @@
         &:hover {
             @include box-shadow(inset 0 0 0 1px #000);
             margin: 0 0 -1px;
-            div {
-                padding-top: 17px;
-            }
+        }
+    }
+}
+.text-rows_download {
+    li {
+        &:hover {
+            margin: -1px 0 0;
+            padding-top: 17px;
+            padding-bottom: 16px;
         }
     }
 }
 .report__download {
     float: right;
-    margin-top: 15px;
+    margin-top: 5px;
     color: #898989;
     @include pfd_b();
     font-size: 12px;
@@ -973,14 +964,15 @@
     padding: 2.7% 0.5%;
     overflow: visible;
     width: 18.8%;
-    @include respond-to(mob-lan) {
-       margin: 0 0 10px;
-       box-sizing: border-box;
-       width: 82%; 
-    }
     @include respond-to(med) {
        margin: 0 3% 3% 0;
        width: 38%;
+    }
+    @include respond-to(mob-lan) {
+       margin: 0 0 10px;
+       -moz-box-sizing: border-box;
+       box-sizing: border-box;
+       width: 82%; 
     }
 }
 .img-link-active {
@@ -1761,14 +1753,19 @@
     li {
         border: 1px solid transparent;
         border-top: 1px solid #d4d4d4; 
+
         &:hover {
             border: 1px solid #000; 
             margin: 0 0 -1px;
             div {
-                padding-top: 17px;
+                padding-top: 4px;
+                float: left;
             }
             .report__download {
-                margin-top: 15px;
+                margin-top: 5px;
+                @include respond-to(mob-lan) {
+                    margin-top: 8px;
+                }
             }
         }
     }
@@ -1789,9 +1786,7 @@
 .shop-logo {
     float: right;
     margin: 0 0 20px 45px;
-    height: 184px;
     line-height: 184px;
-    width: 293px;
     border: 1px solid #d4d4d4;
     text-align: center;
     img {
@@ -1910,6 +1905,7 @@
     @include respond-to(mob-lan) {
         height: auto;
         line-height: 1;
+        margin-bottom: 20px;
     }
     label {
         float: left;
@@ -2031,26 +2027,27 @@
     }
 }
 .wrap_mark {
-    margin: 0 -25% 45px 0;
+    margin: 0 -10% 45px 0;
     overflow: hidden;
 }
 .mark {
     float: left;
+    overflow: hidden;
     margin: 0 0.8% 0.8% 0;
-    width: 15.2%;
+    width: 17.2%;
     height: 198px;
     border: 1px solid #d4d4d4;
     text-align: center;
     text-decoration: none;
     color: #000;
     @include respond-to(med) {
-        width: 19.1%;
+        width: 21.8%;
     }
     @include respond-to(pda) {
-        width: 25.5%;
+        width: 29.3%;
     }
     @include respond-to(mob-lan) {
-        width: 38.5%;
+        width: 44.4%;
     }
     &:hover {
         border-color: #000;
@@ -2617,7 +2614,7 @@
         font-size: 12px;
         line-height: 24px;
     }
-    ul {
+    ul, ol {
         padding-left: 10px;
         margin-bottom: 20px;
         li {
@@ -2634,6 +2631,65 @@
             }
             @include respond-to(mob-lan) {
                 font-size: 11px;
+            }
+        }
+    }
+    .text-rows {
+        padding: 0 3.1% 0 0; 
+        li {
+            position: static;
+            padding: 16px 2.6% 16px 2.2%;
+            line-height: 20px;
+            border: 1px solid transparent;
+            border-bottom: 1px solid #d4d4d4;
+            color: #2D8DB4;
+            clear: both;
+            margin-bottom: 0;
+            &:hover {
+                border: 1px solid #000;
+                margin: 0px 0 -2px;
+                padding-bottom: 17px;
+                position: relative;
+                .report__download {
+                    margin-top: 6px;
+                }
+            }
+            &:before {
+                display: none;
+            }
+        }
+        ol {
+            padding-top: 15px;
+            margin-bottom: 0;
+        }
+        a {
+            color: #2D8DB4;
+            font-size: 14px;
+            @include respond-to(mob-lan) {
+                font-size: 11px;
+            }
+        }
+    }
+    .text-rows_bold {
+        margin-bottom: 10px;
+        li {
+            padding-left: 4%;
+            border: 1px solid transparent;
+            border-top: 1px solid #d4d4d4;
+            a {
+                text-decoration: none;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 6px;
+                    @include sized-sprite($icons, rhomb-s); 
+                }  
+            }
+            &:hover {
+                @include box-shadow(inset 0 0 0 1px #000);
+                margin: 0 0 -1px;
             }
         }
     }

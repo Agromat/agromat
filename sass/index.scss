@@ -68,8 +68,6 @@
 .slider {
     position: relative;
     width: 100%;
-    // height: 410px;
-    overflow: hidden;
 }
 .slider_cont {
     height: 200px;
@@ -113,6 +111,14 @@
         display: block;
         width: 100% !important;
         height: 100%;
+    }
+    .stamp {
+        display: none;
+    }
+}
+.is_action {
+    .stamp {
+        display: block !important;
     }
 }
 .slider__item-wrap {
@@ -436,40 +442,41 @@
 }
 .wrap_news-item {
     margin-bottom: 58px;
+    .item {
+        width: 24%;
+        vertical-align: top;
+    }
+    @include respond-to(med) {
+        .item {
+            width: 31.5%;
+            &:nth-child(3) {
+                display: none;
+            }
+        }
+    }
     @include respond-to(pda) {
         margin-bottom: 0;
+        .item {
+            width: 45.5%;
+            &:nth-child(3) {
+                display: inline-block !important; 
+            }
+        }
     }
-}
-.item-row_last .item:first-child {
-    @include respond-to(med) {
-        display: none;
-    }
-    @include respond-to(pda) {
-        display: block;
-        padding: 0;
-    }
-}
-.item-row:first-child .item:first-child {
-    padding-left: 0;
 }
 .item {
-    float: left;
+    display: inline-block;
     padding-left: 0.72%;
     width: 24.45%;
     overflow: hidden;
     @include respond-to(med) {
         width: 32.4%;
         padding-left: 1.4%;
-    }
+    } 
     @include respond-to(pda) {
         width: 48.3%;
         padding-left: 3.3%;
         margin-bottom: 19px;
-    }
-    &:first-child {
-        @include respond-to(pda) {
-            display: block;
-        }
     }
     img {
          &:hover {
