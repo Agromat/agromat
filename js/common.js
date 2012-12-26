@@ -97,15 +97,16 @@ $(document).ready(function() {
   // show/hide select list
   $(".select-list div").click(function(){
     if ($(this).hasClass("select-list-act")) {
-      $(".select-list ul").hide();
+      $(this).next().slideUp("fast");
       $(this).removeClass("select-list-act");
     }
     else {
       $(this).addClass("select-list-act");
-      $(".select-list ul").slideDown("fast");
+      $(this).next().slideDown("fast");
     }
   });
   $(".select-list li").click(function(){
+    $(this).parent().prev().removeClass("select-list-act");
     $(this).parent().slideUp("fast");
     var city = $(this).text();
     $(this).parent().prev().children("b").text(city);
@@ -115,6 +116,7 @@ $(document).ready(function() {
     var city = $(this).text();
     $(this).parent().prev().parent().parent().next().text(city);
   });
+  
   // show/hide answer
   $(".js-quest-body").hide();
   $(".question__answer-link").click(function(){
@@ -180,13 +182,5 @@ $(document).ready(function() {
   });
   var img_caption = $(".cont-gallery a:first").attr("title");
   $(".cont-gallery span:first").text(img_caption);
-
-  // shop address (block hover effect)
-  // $(".shop-addr a").each(function(){
-  //     var shop_link = $(".shop-addr__link").attr("href");
-  //     if (shop_link.length == 0) {
-  //       $(this).addClass("empty");
-  //     }
-  // });
 
 });
