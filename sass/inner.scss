@@ -605,15 +605,15 @@
         color: #2D8DB4;
         clear: both;
         overflow: hidden;
-        &:hover {
-            border: 1px solid #000;
-            margin: 0px 0 -2px;
-            padding-bottom: 17px;
-            position: relative;
-            .report__download {
-                margin-top: 5px;
-            }
-        }
+//         &:hover {
+//             border: 1px solid #000;
+//             margin: 0px 0 -2px;
+//             padding-bottom: 17px;
+//             position: relative;
+//             .report__download {
+//                 margin-top: 5px;
+//             }
+//         }
         div {
             float: left;
             width: 80%;
