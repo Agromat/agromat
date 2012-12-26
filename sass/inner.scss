@@ -1517,7 +1517,8 @@
     }
     &:hover {
         .shop-item__main {
-            opacity: .5;
+            @include transition(all,  0.5s, ease-in-out);
+            opacity: 0;
             top: 23%;
             right: 22%;
             bottom: 24%;
@@ -1529,7 +1530,7 @@
                 left: 0;
             }
             a {
-                color: #2D8DB4;
+                color: #000;
              } 
         }
     }
@@ -1589,6 +1590,8 @@
     bottom: 22%;
     left: 20%;
     background: #fff;
+    opacity: 1;
+    overflow: hidden;
     @include respond-to(pda) {
         top: 0;
         right: 0;
@@ -2270,7 +2273,7 @@
 }
 .action {
     float: left;
-    margin: 0 1% 1% 0;
+    margin: 20px 1% 1% 0;
     padding: 1px;
     width: 40.5%;
     border: 1px solid #d4d4d4;

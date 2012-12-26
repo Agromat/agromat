@@ -64,7 +64,6 @@
 }
 
 @mixin gray(){
-  filter: url("../_img/filter.svg#grayscale");
   filter: gray;
   -o-filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
