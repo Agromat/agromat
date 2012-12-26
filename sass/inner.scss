@@ -831,7 +831,7 @@
 .short-gallery {
     padding-left: 3.4%;
     @include clr;
-    float: left;
+//     float: left;
     margin-bottom: 53px;
     @include respond-to(mob-lan) {
         text-align: center;
