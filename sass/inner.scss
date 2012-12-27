@@ -2484,10 +2484,6 @@
     width: 73%;
     float: left;
     margin-bottom: 30px;
-    @include pfd_b;
-    font-size: 30px;
-    line-height: 24px;
-    text-transform: uppercase;
     @include respond-to(pda) {
         width: 55%;
         font-size: 25px;
@@ -2495,6 +2491,15 @@
     @include respond-to(mob-lan) {
         width: 55%;
         font-size: 18px;
+    }
+    h2 {
+        @include pfd_b;
+        font-size: 30px;
+        line-height: 26px;
+        text-transform: uppercase;
+    }
+    span {
+        font-size: 14px;
     }
 }
 .workers__dep-cont {
@@ -2658,15 +2663,15 @@
             color: #2D8DB4;
             clear: both;
             margin-bottom: 0;
-            &:hover {
-                border: 1px solid #000;
-                margin: 0px 0 -2px;
-                padding-bottom: 17px;
-                position: relative;
-                .report__download {
-                    margin-top: 6px;
-                }
-            }
+            // &:hover {
+            //     border: 1px solid #000;
+            //     margin: 0px 0 -2px;
+            //     padding-bottom: 17px;
+            //     position: relative;
+            //     .report__download {
+            //         margin-top: 6px;
+            //     }
+            // }
             &:before {
                 display: none;
             }

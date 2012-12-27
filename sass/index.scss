@@ -56,6 +56,8 @@
         @include respond-to(height) {
             .slider__item img {
                 height: auto;
+                position: relative;
+                top: -100px;
             }
             .slider__capt {
                 height: 75px;
@@ -650,8 +652,34 @@
     width: 243px;
     height: 200px;
     margin: 0 0.02%;
+    &:hover {
+        .shop__main {
+            top: 35px;
+            left: 35px;
+            right: 35px;
+            bottom: 35px;
+            opacity: 0.5;
+            @include transition(all, .2s, ease-in-out);
+            .shop__title {
+                margin-top: 25px;
+                @include transition(all, .2s, ease-in-out);
+                @include respond-to(med) {
+                    margin-top: 30px;
+                }
+                @include respond-to(pda) {
+                    margin-top: 67px;
+                }
+            }
+            @include respond-to(med) {
+                top: 180px;
+                left: 0;
+            }
+        }
+    }
     a {
         display: block;
+        text-decoration: none;
+        color: #000;
     }
     img {
         @include respond-to(pda) {
@@ -736,14 +764,7 @@
     @include pfd_b();
     font-size: 22px;
     text-transform: uppercase;
-    a {
-        color: #000;
-        text-decoration: none;
-        background: none;
-        &:hover {
-            color: #2d8db4;
-        }
-    }
+    line-height: 24px;
     @include respond-to(med) {
         width: 100%;
     }
