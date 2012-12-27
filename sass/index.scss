@@ -53,30 +53,12 @@
                 display: none;
             }
         }
-        @include respond-to(height) {
-            .slider__item img {
-                height: auto;
-                position: relative;
-                top: -100px;
-            }
-            .slider__capt {
-                height: 75px;
-                line-height: 75px;
-            }
-            .slider,
-            .slider__item,
-            .js-slider,
-            .slider__item-wrap {
-                height: 200px !important;  
-            }
-            .banner_action {
-                display: none;
-            }
-        }
     }
     @include respond-to(height) {
         .slider__item img {
             height: auto;
+            position: relative;
+            top: -100px;
         }
         .slider__capt {
             height: 75px;
