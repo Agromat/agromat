@@ -1273,7 +1273,7 @@ a{
         padding: 3px;
     }
 }
-.submit {
+.submit, .btn-rhomb{
     position: relative;
     display: block;
     margin: -35px auto 0;
@@ -1284,7 +1284,13 @@ a{
     text-transform: uppercase;
     @include sized-sprite($logos, submit);
 }
-
+.btn-rhomb {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+     @include pfd_m;
+     font-size: 15px;
+}
 // Tabs
 
 .tab {
