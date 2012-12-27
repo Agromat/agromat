@@ -10,7 +10,7 @@ $break-1: 320px;
 $break-2: 480px;
 $break-3: 768px;
 $break-4: 1024px;
-$break-5: 1280px; 
+$break-5: 700px; 
 @mixin respond-to($media) {
   @if $media == mob {
     @media only screen and (max-width: $break-1) { @content; }
@@ -24,8 +24,8 @@ $break-5: 1280px;
   @else if $media == med {
     @media only screen and (max-width: $break-4) { @content; }
   }
-  @else if $media == wide {
-    @media only screen and (max-width: $break-5) { @content; }
+  @else if $media == height {
+    @media only screen and (max-height: $break-5) { @content; }
   }
 }
 // fonts
