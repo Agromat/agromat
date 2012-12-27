@@ -1369,8 +1369,17 @@
 
 .shop-addr__wrap {
     position: relative;
-    min-height: 130px;
+    min-height: 110px;
     padding: 4% 5% 20%;
+    @include respond-to(med) {
+        min-height: 120px;
+    }
+    @include respond-to(pda) {
+        min-height: 110px;
+    }
+    .shop-addr {
+        margin-bottom: 1.4%;
+    }
 }
 .shop-addr__cont {
     position: absolute;
