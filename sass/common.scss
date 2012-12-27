@@ -660,7 +660,7 @@ a{
 .banner.banner-main {
         float: none;
         display: none;
-        margin-bottom: 25px;
+        margin: 25px 0;
         clear: both;
         @include respond-to(med) {
            width: 100%;
