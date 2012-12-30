@@ -2425,7 +2425,7 @@
     img {
         display: block;
     }
-}
+} 
 .worker__info {
     float: left;
     width: 23%;
@@ -2436,6 +2436,7 @@
         display: block;
         margin: 3px 0 0;
         font-size: 20px;
+        width: 250px;
         @include pfd_b;
         line-height: 21px;
         @include respond-to(med) {
