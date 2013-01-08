@@ -381,7 +381,7 @@ a{
 }
 .menu {
     position: relative;
-    margin-top: 51px;
+    margin-top: 55px;
     @include respond-to(pda) { 
         padding: 0 10px;
     }
@@ -1642,37 +1642,43 @@ a{
        display: none;
     }
     li {
-        float: left;
+        display: inline-block;
         height: 54px;
         line-height: 54px;
-        width: 12%; 
+        //width: 12%; 
         text-align: center;
-        &:first-child {
-            width: 16%;
-            text-align: left;
-        }
-        &:nth-child(3) {
-            width: 14%;
-            @include respond-to(med) {
-               width: 12%;
-            }
-        }
-        &:nth-child(4) {
-            width: 14%;
-            @include respond-to(med) {
-               width: 12%;
-            }
-        }
-        &:nth-child(5) {
-            @include respond-to(med) {
-               width: 9%;
-            } 
-        }
+        // &:first-child {
+        //     width: 16%;
+        //     text-align: left;
+        // }
+        // &:nth-child(3) {
+        //     width: 14%;
+        //     @include respond-to(med) {
+        //        width: 12%;
+        //     }
+        // }
+        // &:nth-child(4) {
+        //     width: 14%;
+        //     @include respond-to(med) {
+        //        width: 12%;
+        //     }
+        // }
+        // &:nth-child(5) {
+        //     @include respond-to(med) {
+        //        width: 9%;
+        //     } 
+        // }
+        // &:last-child {
+        //     text-align: right;
+        //     width: 18%;
+        //     @include respond-to(med) {
+        //        width: 24%;
+        //     }
+        // }
         &:last-child {
-            text-align: right;
-            width: 18%;
-            @include respond-to(med) {
-               width: 24%;
+            width: 100%;
+            a {
+                background: none;
             }
         }
     }
@@ -1755,3 +1761,13 @@ a{
 }
 
 /* --------------------------------------- //END Footer ---------------------------------------- */
+// .test {
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     margin-left: -800px;
+//     width: 1600px;
+//     height: 2500px;
+//     background: url(../_img/test.jpg) 0 0 no-repeat;
+//     opacity: 0.5;
+// }

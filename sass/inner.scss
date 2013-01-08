@@ -1041,10 +1041,14 @@
 .filter-map__cities {
     float: left;
     padding: 1px 0;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
     @include respond-to(mob-lan) {
         float: none;
         height: 18px;
-        padding: 10px 0 13px;
+        margin-bottom: 34px;
+        padding: 1px 0 13px;
         @include clr;
     }
 }
@@ -1759,6 +1763,8 @@
         &:hover {
             border: 1px solid #000; 
             margin: 0 0 -1px;
+            padding-bottom: 17px;
+            position: relative;
             div {
                 padding-top: 4px;
                 float: left;
@@ -2598,17 +2604,18 @@
         text-transform: uppercase;
     }
     h1 {
-        padding-bottom: 16px;
         font-size: 31px;
         line-height: 38px;
     }
     h2 {
-        padding: 0 0 9px;
+        padding: 10px 0 0;
+        margin-bottom: 10px;
         font-size: 24px;
         line-height: 24px;
     }
     h3 {
         padding: 0 0 8px;
+        margin-bottom: 0;
         color: #3f3f3f;
         font-size: 20px;
         line-height: 24px;
@@ -2620,7 +2627,7 @@
         line-height: 24px;
     }
     h5 {
-        padding-bottom: 6px;
+        padding: 5px 0 6px;
         color: #7f7f7f;
         font-size: 14px;
         line-height: 24px;
