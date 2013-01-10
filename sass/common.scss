@@ -937,6 +937,19 @@ a{
         padding-left: 3%;
     }   
 }
+.question:target {
+    &:hover {
+        border-color: #000;
+        &:after {
+            content: "";
+            @include sized-sprite($icons, question-corner-h2);
+        }
+    }
+    &:after {
+        content: "";
+        @include sized-sprite($icons, question-corner2);   
+    }
+}
 .question_small {
     width: 74.5%;
 }

@@ -134,7 +134,11 @@ $(document).ready(function() {
 
     return false;
   });
-
+  $(".question__answer-link").each(function(){
+    if ($(this).hasClass("question__answer-link-act")) {
+        $(this).parent().parent().addClass("question_act");
+    }
+  });
   // show/hide all shopes
   $(".js-hidden-shop").hide();
   $(".js-more-shopes").click(function(){
