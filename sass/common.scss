@@ -473,7 +473,7 @@ a{
             span {
                 position: relative;
                 z-index: 2;
-                padding-bottom: 11px;
+                padding-bottom: 9px;
                 @include respond-to(mob-lan) {
                     position: relative;
                     border-bottom: 0;
