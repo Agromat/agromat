@@ -1791,11 +1791,15 @@
         @include sized-sprite($icons, arrow-t);
     }
 }
-.shop-logo {
+.tm-website {
     float: right;
+    text-align: center;
     margin: 0 0 20px 45px;
+}
+.shop-logo {
+    margin-bottom: 10px;
     line-height: 184px;
-    border: 1px solid #d4d4d4;
+    border: 1px solid #d4d4d4; 
     text-align: center;
     img {
         line-height: 1;
