@@ -2439,7 +2439,6 @@
 } 
 .worker__info {
     float: left;
-    width: 23%;
     @include respond-to(med) {
         width: 50%;
     }
