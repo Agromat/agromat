@@ -375,7 +375,6 @@
         float: right;
         background: #000 url(../_img/hot-girl.jpg) 50% 0 no-repeat;
         height: 96px;
-        display: block !important;
     }
     @include respond-to(pda) {
         height: 117px;
