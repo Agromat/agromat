@@ -188,7 +188,7 @@ a{
     text-align: center;
     span {
         position: relative;
-        top: -10px;
+        top: -7px;
         display: inline-block;
         padding: 0 29px;
         background: #fff;
@@ -199,7 +199,7 @@ a{
             content: "";
             position: absolute;
             right: 13px;
-            top: 7px;  
+            top: 5px;  
             @include sized-sprite($icons, rhomb-s);
         }
         &:before {
