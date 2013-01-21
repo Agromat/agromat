@@ -184,6 +184,10 @@
       padding: 15px 0 30px; 
       left: 100%;
     }
+    @include respond-to(mob-lan) {
+      padding: 15px 0 5px; 
+      left: 100%;
+    }
     h2 {
         margin-bottom: 15px;
         @include pfd_m();
@@ -559,6 +563,9 @@
     @include respond-to(pda) {
         margin-bottom: 30px;
     }
+    @include respond-to(pda) {
+        margin: 15px 0;
+    }
 }
 .report-year {
     padding: 0 0 12px 2.2%;
@@ -907,9 +914,9 @@
        width: 38%;
     }
     @include respond-to(mob-lan) {
-       display: block;
-       float: none;
-       margin: 0 auto 10px; 
+        float: none;
+       display: inline-block;
+       vertical-align: top;
     }
     &:hover{
         border: 1px solid #000;
@@ -931,6 +938,11 @@
         width: 50%;
         height: 42px;
         line-height: 42px;
+        @include respond-to(mob-lan) {
+           min-height: 45px;
+           height: auto;
+           width: 100%;
+        }
     }
     strong {
         position: relative;
@@ -944,6 +956,9 @@
         @include respond-to(med) {
            font-size: 20px; 
         }
+        @include respond-to(mob-lan) {
+           font-size: 15px; 
+        }
         &:before,
         &:after {
             content: "";
@@ -952,6 +967,9 @@
             margin-top: -3px;
             right: -30%;
             @include sized-sprite($icons, rhomb-m);
+            @include respond-to(mob-lan) {
+               display: none;
+            }
         }
         &:before {
             content: "";
@@ -1488,20 +1506,21 @@
 
 /* Shopes */
 .wrap_shopes {
-    margin: 0 -20% 0 -16px;
+    margin: 0 -20px 0 -16px;
     @include respond-to(pda) {
         margin: 0 -20% 0 0;
+        padding-bottom: 15px;
     }
 }
 .shop-item {
     position: relative;
     float: left;
     margin: 0 1% 30px 0;
-    width: 26.8%;
+    width: 31.8%;
     height: 246px;
     overflow: hidden;
     @include respond-to(med) {
-       width: 38%;
+       width: 41%;
        margin-right: 4%;
     }
     @include respond-to(pda) {
@@ -1510,12 +1529,13 @@
         width: 40.8%;
     }
     @include respond-to(mob-lan) {
-        height: 190px;
+        min-height: 120px;
+        height: auto;
     }
     &:hover {
         .shop-item__main {
-            @include transition(all,  0.5s, ease-in-out);
-            opacity: 0;
+            //@include transition(all,  0.5s, ease-in-out);
+            //opacity: 0;
             top: 23%;
             right: 22%;
             bottom: 24%;
@@ -1607,6 +1627,9 @@
         display: block;
         @include respond-to(pda) {
             margin-top: 62px;
+        }
+        @include respond-to(mob-lan) {
+            margin-top: 30px;
         }
         a {
             color: #000;

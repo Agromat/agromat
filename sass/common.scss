@@ -1802,6 +1802,13 @@ a{
 }
 
 /* --------------------------------------- //END Footer ---------------------------------------- */
+
+// fancybox 
+.fancybox-opened {
+     @include respond-to(mob-lan) {
+        left: 5px !important;
+    }
+}
 // .test {
 //     position: absolute;
 //     top: 0;
