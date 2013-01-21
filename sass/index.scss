@@ -1,5 +1,10 @@
 @import "base";
 .index-page {
+    @include respond-to(med) {
+        .banner_action {
+            display: block !important;
+        }
+    }
     @include respond-to(mob-lan) {
         .menu {
             position: static;
@@ -74,7 +79,6 @@
             display: none;
         }
     }
-    
 } 
  .main {
     padding: 30px 0 47px;
@@ -462,26 +466,35 @@
     }
 }
 .wrap_news-item {
-    margin-bottom: 58px;
+    margin: 0 -20px 58px 0;
     .item {
         width: 24%;
         vertical-align: top;
+        padding: 0  0.57% 0 0;
     }
     @include respond-to(med) {
         .item {
             width: 31.5%;
+            padding: 0  1.4% 0 0;
             &:nth-child(3) {
                 display: none;
             }
         }
     }
     @include respond-to(pda) {
-        margin-bottom: 0;
+        margin: 0;
         .item {
             width: 45.5%;
+            padding: 0 0 0 3.3%;
             &:nth-child(3) {
                 display: inline-block !important; 
             }
+        }
+    }
+    @include respond-to(pda) {
+        .item {
+            width: 48.1%;
+            padding: 0;
         }
     }
 }
@@ -630,6 +643,10 @@
     width: 243px;
     height: 200px;
     margin: 0 0.02%;
+    @include respond-to(mob-lan) {
+        min-height: 155px;
+        height: auto;
+    }
     &:hover {
         .shop__main {
             top: 35px;
@@ -637,15 +654,18 @@
             right: 35px;
             bottom: 35px;
             opacity: 0.5;
-            @include transition(all, .2s, ease-in-out);
+            //@include transition(all, .2s, ease-in-out);
             .shop__title {
                 margin-top: 25px;
-                @include transition(all, .2s, ease-in-out);
+                //@include transition(all, .2s, ease-in-out);
                 @include respond-to(med) {
                     margin-top: 30px;
                 }
                 @include respond-to(pda) {
                     margin-top: 67px;
+                }
+                @include respond-to(mob-lan) {
+                    margin-top: 40px;
                 }
             }
             @include respond-to(med) {
@@ -712,28 +732,31 @@
         border: 2px solid;
         background: #fff;
     }
-    &:hover {
-        top: 35px;
-        left: 35px;
-        right: 35px;
-        bottom: 35px;
-        opacity: 0.5;
-        @include transition(all, .2s, ease-in-out);
-        .shop__title {
-            margin-top: 25px;
-            @include transition(all, .2s, ease-in-out);
-            @include respond-to(med) {
-                margin-top: 30px;
-            }
-            @include respond-to(pda) {
-                margin-top: 67px;
-            }
-        }
-        @include respond-to(med) {
-            top: 180px;
-            left: 0;
-        }
-    }
+    // &:hover {
+    //     top: 35px;
+    //     left: 35px;
+    //     right: 35px;
+    //     bottom: 35px;
+    //     opacity: 0.5;
+    //     //@include transition(all, .2s, ease-in-out);
+    //     .shop__title {
+    //         margin-top: 25px;
+    //         //@include transition(all, .2s, ease-in-out);
+    //         @include respond-to(med) {
+    //             margin-top: 30px;
+    //         }
+    //         @include respond-to(pda) {
+    //             margin-top: 67px;
+    //         }
+    //         @include respond-to(mob-lan) {
+    //             margin-top: 40px;
+    //         }
+    //     }
+    //     @include respond-to(med) {
+    //         top: 180px;
+    //         left: 0;
+    //     }
+    // }
 }
 .shop__title {
     width: 140px;
@@ -749,6 +772,9 @@
     @include respond-to(pda) {
         font-size: 18px;
         margin-top: 67px;
+    }
+    @include respond-to(mob-lan) {
+        margin-top: 40px;
     }
     span {
         display: block;
@@ -831,12 +857,4 @@
 .banners, .slider-wrap, .about-comp {
     @include transition(all, .3s, ease-in-out);
 }
-// .item_shop {
-//     @include transition(none);
-//     .item__main {
-//         @include transition(background, .8s, ease-in-out);
-//     }
-// }
-// .header-top {
-//     @include transition(background, .6s, ease-in-out);
-// }
+
