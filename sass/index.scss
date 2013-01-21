@@ -638,13 +638,13 @@
     }
 } 
 .shop {
-    float: left;
+    float: left; 
     position: relative;
     width: 243px;
     height: 200px;
     margin: 0 0.02%;
     @include respond-to(mob-lan) {
-        min-height: 155px;
+        min-height: 120px;
         height: auto;
     }
     &:hover {
@@ -665,7 +665,7 @@
                     margin-top: 67px;
                 }
                 @include respond-to(mob-lan) {
-                    margin-top: 40px;
+                    margin-top: 30px;
                 }
             }
             @include respond-to(med) {
@@ -774,7 +774,7 @@
         margin-top: 67px;
     }
     @include respond-to(mob-lan) {
-        margin-top: 40px;
+        margin-top: 30px;
     }
     span {
         display: block;
