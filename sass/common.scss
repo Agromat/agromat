@@ -942,14 +942,30 @@ a{
 
 // question
 .question {
+    display: block;
     position: relative;
     margin-bottom: 20px;
     padding: 10px 1px 1px;
     width: 93.5%;
+    color: #000;
     background: #fff;
     border: 2px solid #d4d4d4;
+    text-decoration: none;
     @include respond-to(med) { 
        display: none;
+    }
+    &:target {
+        &:hover { 
+            border-color: #000;
+            &:after {
+                content: "";
+                @include sized-sprite($icons, question-corner-h2);
+            }
+        }
+        &:after {
+            content: "";
+            @include sized-sprite($icons, question-corner2);   
+        }
     }
     &:hover {
         border-color: #000;
@@ -969,26 +985,13 @@ a{
         padding-left: 3%;
     }   
 }
-.question:target {
-    &:hover {
-        border-color: #000;
-        &:after {
-            content: "";
-            @include sized-sprite($icons, question-corner-h2);
-        }
-    }
-    &:after {
-        content: "";
-        @include sized-sprite($icons, question-corner2);   
-    }
-}
 .question_small {
     width: 74.5%;
 }
 .question_normal {
     width: 98%;
     .question__body {
-        font-size: 18px;
+        font-size: 16px;
         @include hel_r;
         text-transform: none;
     }
@@ -996,7 +999,7 @@ a{
 .question__body {
     padding: 8px 3% 15px;
     @include pfd_b;
-    font-size: 22px;
+    font-size: 17px;
     line-height: 24px;
     text-transform: uppercase;
 }
@@ -1007,8 +1010,11 @@ a{
     text-align: right;
     background: #f6f6f6;
     @include clr;
-    a {
+    span {
         font-size: 14px;
+        cursor: pointer;
+        color: #2d8db4;
+        text-decoration: underline;
     }
 }
 
