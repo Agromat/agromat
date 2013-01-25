@@ -173,6 +173,11 @@
             }
         }
     }
+    .banner {
+        @include respond-to(pda) {
+          height: 85px;
+        }
+    }
 }
 .content_width {
     width: 100%;
@@ -572,7 +577,7 @@
 }
 .report-year {
     padding: 0 0 12px 2.2%;
-    margin-right: 3.1%;
+    margin: 0 3.1% 0 0 !important;
     @include pfd_b();
     font-size: 26px;
     line-height: 26px;
@@ -841,8 +846,7 @@
 .short-gallery {
     padding-left: 3.4%;
     @include clr;
-//     float: left;
-    margin-bottom: 53px;
+    margin-bottom: 12px;
     @include respond-to(mob-lan) {
         text-align: center;
     }
@@ -1212,6 +1216,14 @@
         margin-bottom: 20px;
     }
 }  
+.map_shop {
+    @include respond-to(mob-lan) {
+        height: 250px;
+        #map_canvas {
+            height: 250px !important;
+        }
+    }
+}
 // .map-point {
 //     position: relative;
 //     display: block;
@@ -1277,6 +1289,9 @@
 }
 .popup__body {
     padding: 22px 30px;
+    @include respond-to(mob-lan) {
+        padding: 22px 30px 0;
+    }
 }
 .popup__title {
     @include pfd_m;
@@ -1295,12 +1310,15 @@
     cursor: pointer;
     @include sized-sprite($icons, close);
     @include respond-to(mob-lan) {
-          display: none;
-       }
+        display: none;
+    }
 }
 .shop-info {
     padding: 25px 0;
     font-size: 14px;
+    @include respond-to(mob-lan) {
+        padding: 25px 0 0;
+    }
 }
 .shop-info__shed {
     span {
@@ -1524,22 +1542,20 @@
     height: 246px;
     overflow: hidden;
     @include respond-to(med) {
-       width: 41%;
-       margin-right: 4%;
+       width: 46%;
+        margin-right: 4%;
     }
     @include respond-to(pda) {
-        height: 210px;
+        height: 215px;
         margin: 0 1% 1% 0;
         width: 40.8%;
     }
     @include respond-to(mob-lan) {
-        min-height: 120px;
+        min-height: 106px;
         height: auto;
     }
     &:hover {
         .shop-item__main {
-            //@include transition(all,  0.5s, ease-in-out);
-            //opacity: 0;
             top: 23%;
             right: 22%;
             bottom: 24%;
@@ -1557,6 +1573,10 @@
     }
     img {
         width: 298px;
+        @include respond-to(med) {
+            width: 100%;
+            height: 100%;
+        }
         @include respond-to(pda) {
             display: none;
         }
@@ -1613,38 +1633,44 @@
     background: #fff;
     opacity: 1;
     overflow: hidden;
+    height: 140px;
+    line-height: 140px;
     @include respond-to(pda) {
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         border: 2px solid #000;
+        height: 210px;
+        line-height: 210px;
+    }
+    @include respond-to(mob-lan) {
+        height: 100px;
+        line-height: 100px;
     }
     .shop-item__title {
-        width: 140px;
-        margin: 30px auto 0;
+        padding: 0 5px;
         text-align: center;
         @include pfd_b();
         font-size: 22px;
         text-transform: uppercase;
         line-height: 22px;
         display: block;
-        @include respond-to(pda) {
-            margin-top: 62px;
-        }
-        @include respond-to(mob-lan) {
-            margin-top: 30px;
-        }
-        a {
-            color: #000;
-            text-decoration: none;
-            background: none;
-        }
+        overflow: hidden;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        color: #000;
         span {
             display: block;
         }
         
+    }
 }
+.shop-item__wrap {
+    display: inline-block;
+    width: 100%;
+    line-height: 1px;
+    vertical-align: middle;
 }
 .shop-item__adr {
     color: #727272;
@@ -1954,7 +1980,7 @@
             padding: 0 9px; 
         }
         @include respond-to(mob-lan) {
-            float: none;
+            float: left;
             margin: 12px 0;
             padding: 0 5px; 
         }
@@ -1969,16 +1995,38 @@
         right: -2px;
         top: 0;
         border-top: 0;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
         @include respond-to(mob-lan) {
-            width: 145px;
+            float: none;
+            right: 0;
+            width: 100%;     
+            border: 0;
+            border-top: 2px solid;
             ul {
-                width: 143px;
-            }        
+                width: 100%;
+                padding: 0;
+            }
+            li {
+                -moz-box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                float: left;
+                width: 50%;
+                &:nth-child(2n) {
+                    float: right;
+                }
+            }
         }
     }
 }
 .filter__col {
     float: left;
+    @include respond-to(mob-lan) {
+        float: none;
+        overflow: hidden;
+    }
 }
 .select-list {
     position: relative;

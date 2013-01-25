@@ -58,6 +58,17 @@
                 display: none;
             }
         }
+        .wrap_news-shop {
+            margin-right: -20px;
+            .shop {
+                margin: 0 3% 3% 0;
+                width: 41.7%;
+                min-height: 100px;
+            }
+        }
+        .wrap-index {
+            overflow: hidden;
+        }
     }
     @include respond-to(height) {
         .slider__item img {
@@ -243,8 +254,14 @@
         height: 92px;
     }
     @include respond-to(pda) {
-        height: 115px;
+        height: 117px;
         width: 47%;
+    }
+    @include respond-to(mob-lan) {
+        width: 48%;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
     }
     &:first-child:hover {
         @include box-shadow(inset 0px 0px 0 1px #000 );
@@ -255,7 +272,7 @@
     }
     .separator-blue {
         width: 40%;
-        margin: 12px auto -15px;
+        margin: 7px auto -15px;
         span {
             display: none;  
         }
@@ -266,6 +283,9 @@
         }
         @include respond-to(pda) {
             width: 100%;
+        }
+        @include respond-to(mob-lan) {
+            margin-top: 5px;
         }
     }
     .separator-blue_bot {
@@ -286,7 +306,7 @@
             }
         }
         @include respond-to(mob-lan) {
-            margin-top: 15px;
+            margin-top: 23px;
         }
     }
 }
@@ -369,6 +389,7 @@
     }
     @include respond-to(mob-lan) {
         font-size: 20px;
+        line-height: 20px;
     }   
 }
 .banner_action {
@@ -385,45 +406,48 @@
     }
     &:hover {
         .banner__wrap {
-            top: 10%;
-            right: 8.3%;
-            bottom: 10%;
-            left: 8.3%;
-            .banner__name {
-                margin-top: 39px;
-                &:before,
-                &:after {
-                    right: 1px;
-                    @include respond-to(pda) {
-                        right: -15%;
-                    }
-                }
-                @include respond-to(med) {
-                    margin-top: 15px;
-                }
-                @include respond-to(pda) {
-                    width: 42%;
-                    margin: 8px auto 0;
-                }
-            }
-            @include respond-to(med) {
-                top: 10%;
-                right: 4%;
-                bottom: 10%;
-                left: 4%;
-                @include box-shadow(0 0 0 3px #fff);
-            }
-            @include respond-to(pda) {
-                top: 12.8%;
-                right: 11.8%;
-                bottom: 12.8%;
-                left: 11.8%;
-            }
+            // top: 10%;
+            // right: 8.3%;
+            // bottom: 10%;
+            // left: 8.3%;
+            // .banner__name {
+            //     margin-top: 39px;
+            //     &:before,
+            //     &:after {
+            //         right: 1px;
+            //         @include respond-to(pda) {
+            //             right: -15%;
+            //         }
+            //     }
+            //     @include respond-to(med) {
+            //         margin-top: 15px;
+            //     }
+            //     @include respond-to(pda) {
+            //         width: 42%;
+            //         margin: 8px auto 0;
+            //     }
+            // }
+            // @include respond-to(med) {
+            //     top: 10%;
+            //     right: 4%;
+            //     bottom: 10%;
+            //     left: 4%;
+            //     @include box-shadow(0 0 0 3px #fff);
+            // }
+            // @include respond-to(pda) {
+            //     top: 12.8%;
+            //     right: 11.8%;
+            //     bottom: 12.8%;
+            //     left: 11.8%;
+            // }
         }
     }
     .separator-blue {
         @include respond-to(pda) {
             width: 80%;
+        }
+        @include respond-to(mob-lan) {
+            margin-top: 17px;
         }
     }
     .banner__name {
@@ -484,8 +508,6 @@
     @include respond-to(pda) {
         margin: 0;
         .item {
-            width: 45.5%;
-            padding: 0 0 0 3.3%;
             &:nth-child(3) {
                 display: inline-block !important; 
             }
@@ -497,12 +519,29 @@
             padding: 0;
         }
     }
+    @include respond-to(mob-lan) {
+        margin-right: -20px;
+        .item {
+            width: 45%;
+            padding: 0;
+            margin-right: 2.7%;
+        }
+    }
 }
 .item {
     display: inline-block;
     padding-left: 0.72%;
     width: 24.45%;
     overflow: hidden;
+    text-decoration: none;
+    &:hover {
+        .item__title {
+            color: #2d8db4;
+        }
+        img {
+            opacity: 0.8;
+        }
+    }
     @include respond-to(med) {
         width: 32.4%;
         padding-left: 1.4%;
@@ -513,9 +552,6 @@
         margin-bottom: 19px;
     }
     img {
-         &:hover {
-            opacity: 0.8;
-        }
         display: block;
         margin-bottom: -25px;
         width: 100%;
@@ -546,20 +582,15 @@
     @include pfd_b();
     font-size: 22px;
     text-transform: uppercase;
+    color: #000;
+    background: #fff;
+    text-decoration: none;
+    @include box-shadow(5px 0 0 #fff);
     @include respond-to(pda) {
         font-size: 18px;
     }
     @include respond-to(mob-lan) {
         font-size: 15px;
-    }
-    a {
-        color: #000;
-        background: #fff;
-        text-decoration: none;
-        @include box-shadow(5px 0 0 #fff);
-        &:hover {
-            color: #2d8db4;
-        }
     }
 }
 
@@ -654,10 +685,8 @@
             right: 35px;
             bottom: 35px;
             opacity: 0.5;
-            //@include transition(all, .2s, ease-in-out);
             .shop__title {
                 margin-top: 25px;
-                //@include transition(all, .2s, ease-in-out);
                 @include respond-to(med) {
                     margin-top: 30px;
                 }
