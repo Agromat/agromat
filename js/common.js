@@ -2,6 +2,32 @@ $(document).ready(function() {
   if (!("ontouchstart" in document.documentElement)) {
     document.documentElement.className += "no-touch";
   }
+
+
+  // content  to 100% if we don't have sidebar nav
+  var window_width = $(window).width();
+  var submenu = $(".submenu").length;
+  if ((window_width <= 1024) && submenu == 0) {
+    $(".sidebar_l, .content").css({"width": "100%","float":"none"});
+  }
+  else if ((window_width > 1024)) {
+    $(".sidebar_l").css({"width": "24.4%","float":"left"});
+    $(".content").css({"width": "75%","float":"right"});
+  }
+  $(window).resize(function(){
+    var window_width = $(window).width();
+    var submenu = $(".submenu").length;
+    if ((window_width <= 1024) && submenu == 0) {
+      $(".sidebar_l, .content").css({"width": "100%","float":"none"});
+    }
+    else if ((window_width > 1024)) {
+      $(".sidebar_l").css({"width": "24.4%","float":"left"});
+      $(".content").css({"width": "75%","float":"right"});
+    }
+  });
+
+
+
   $('.js-slider').cycle({ 
       fx:     'fade',
       timeout: 2000,
