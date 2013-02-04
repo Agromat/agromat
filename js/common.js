@@ -10,7 +10,10 @@ $(document).ready(function() {
   if ((window_width <= 1024) && submenu == 0) {
     $(".sidebar_l, .content").css({"width": "100%","float":"none"});
   }
-  else if ((window_width > 1024)) {
+  else if ((window_width <= 768) && submenu !== 0) {
+    $(".sidebar_l, .content").css({"width": "100%","float":"none"});
+  }
+  else {
     $(".sidebar_l").css({"width": "24.4%","float":"left"});
     $(".content").css({"width": "75%","float":"right"});
   }
@@ -20,13 +23,25 @@ $(document).ready(function() {
     if ((window_width <= 1024) && submenu == 0) {
       $(".sidebar_l, .content").css({"width": "100%","float":"none"});
     }
-    else if ((window_width > 1024)) {
+    else if ((window_width <= 768) && submenu !== 0) {
+      $(".sidebar_l, .content").css({"width": "100%","float":"none"});
+    }
+    else {
       $(".sidebar_l").css({"width": "24.4%","float":"left"});
       $(".content").css({"width": "75%","float":"right"});
     }
   });
 
-
+  var sidebar = $(".sidebar").length;
+  if (sidebar == 0) {
+    $(".content").css({"width": "100%","float":"none"});
+  }
+  $(window).resize(function(){
+    var sidebar = $(".sidebar").length;
+    if (sidebar == 0) {
+      $(".content").css({"width": "100%","float":"none"});
+    }
+  });
 
   $('.js-slider').cycle({ 
       fx:     'fade',
