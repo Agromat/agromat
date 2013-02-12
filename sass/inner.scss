@@ -600,6 +600,9 @@
     float: left;
     padding-top: 15px;
     width: 12%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     padding-right: 1%;
     font-weight: bold;
     font-size: 14px;
