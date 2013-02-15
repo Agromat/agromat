@@ -905,14 +905,15 @@
     }
 }
 .img-link {
-    float: left;
-    margin: 0 1% 1% 0;
+    display: inline-block;
+    margin: 0 0.6% 1% 0;
     width: 18.8% + 1%;
     background: #fff;
     text-align: center;
     border: 1px solid #d4d4d4;
     text-decoration: none;
     overflow: hidden;
+    vertical-align: top;
     @include respond-to(med) {
        margin: 0 3% 3% 0;
        width: 38%;
