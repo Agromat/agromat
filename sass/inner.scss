@@ -594,6 +594,7 @@
     .text-rows  {
         overflow: hidden;
         padding-bottom: 2px;
+        padding-right: 1px;
     }
 }
 .text-rows-title {
@@ -2837,6 +2838,7 @@
     ul, ol {
         padding-left: 10px;
         margin-bottom: 20px;
+        overflow: hidden;
         li {
             position: relative;
             font-size: 14px;
