@@ -2705,6 +2705,8 @@
     }
 }
 .select-region {
+    position: relative;
+    z-index: 1000;
     margin: 24px 0 -1px;
     @include clr;
     .select-list {
