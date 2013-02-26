@@ -527,6 +527,36 @@
             margin-right: 2.7%;
         }
     }
+    .news__more{
+        text-align: center;
+        @include pfd_m();
+        margin:15px 20px 0 0;
+        font-size: 16px;
+        text-transform: uppercase;
+        @include respond-to(pda) {
+            margin-top: 0px;
+        }
+        a{
+            width:10%;
+            margin:0 auto 0 auto;
+            display: block;
+            border:2px solid #c4c4c4;
+            padding:6px 20px 4px 20px;
+            color:#000;
+            text-decoration:none;
+            &:hover{
+                color:#2D8DB4;
+                border-color:#cee5ee;
+            }
+            @include respond-to(pda) {
+                width:30%;
+                font-size: 18px;
+            }
+            @include respond-to(mob-lan) {
+                font-size: 16px;
+            }
+        }
+    }
 }
 .item {
     display: inline-block;
@@ -587,7 +617,7 @@
     text-decoration: none;
     @include box-shadow(5px 0 0 #fff);
     @include respond-to(pda) {
-        font-size: 18px;
+        font-size: 20px;
     }
     @include respond-to(mob-lan) {
         font-size: 15px;
@@ -678,12 +708,16 @@
         min-height: 120px;
         height: auto;
     }
+    @include respond-to(pda) {
+        min-height: 160px;
+        height: auto;
+    }
     &:hover {
         .shop__main {
-            top: 35px;
+            top: 55px;
             left: 35px;
             right: 35px;
-            bottom: 35px;
+            bottom: 55px;
             opacity: 0.5;
             .shop__title {
                 margin-top: 25px;
@@ -691,7 +725,7 @@
                     margin-top: 30px;
                 }
                 @include respond-to(pda) {
-                    margin-top: 67px;
+                    margin-top: 57px;
                 }
                 @include respond-to(mob-lan) {
                     margin-top: 30px;
@@ -739,10 +773,10 @@
 }
 .shop__main {
     position: absolute;
-    top: 30px;
+    top: 50px;
     left: 30px;
     right: 30px;
-    bottom: 30px;
+    bottom: 50px;
     background: #fff;
     @include respond-to(med) {
         top: 180px;
@@ -788,7 +822,7 @@
     // }
 }
 .shop__title {
-    width: 140px;
+    width: 150px;
     margin: 30px auto 0;
     text-align: center;
     @include pfd_b();
@@ -799,8 +833,8 @@
         width: 100%;
     }
     @include respond-to(pda) {
-        font-size: 18px;
-        margin-top: 67px;
+        font-size: 22px;
+        margin-top: 57px;
     }
     @include respond-to(mob-lan) {
         margin-top: 30px;

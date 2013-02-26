@@ -1581,7 +1581,7 @@
         margin-right: 4%;
     }
     @include respond-to(pda) {
-        height: 215px;
+        height: 180px;
         margin: 0 1% 1% 0;
         width: 40.8%;
     }
@@ -1661,23 +1661,23 @@
 }
 .shop-item__main {
     position: absolute;
-    top: 21%;
+    top: 24%;
     right: 20%;
-    bottom: 22%;
+    bottom: 26%;
     left: 20%;
     background: #fff;
     opacity: 1;
     overflow: hidden;
-    height: 140px;
-    line-height: 140px;
+    height: 120px;
+    line-height: 120px;
     @include respond-to(pda) {
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
         border: 2px solid #000;
-        height: 210px;
-        line-height: 210px;
+        height: 160px;
+        line-height: 160px;
     }
     @include respond-to(mob-lan) {
         height: 100px;
