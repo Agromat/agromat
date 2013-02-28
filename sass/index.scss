@@ -637,7 +637,7 @@
 }
 .wrap_news-shop {
     position: relative;
-    height: 200px;
+    height: 280px;
     @include respond-to(med) {
         padding-bottom: 75px;
         overflow: hidden;
@@ -649,7 +649,7 @@
     .item-row {
         position: absolute;
         width: 2000em;
-        height: 200px;
+        height: 280px;
         text-align: center;
         @include respond-to(pda) {
             position: static;
@@ -661,7 +661,7 @@
 }
 .js-scroll-shop {
     position: relative;
-    height: 200px;
+    height: 280px;
     overflow: hidden;
     @include respond-to(med) {
         padding-bottom: 75px;
@@ -674,7 +674,7 @@
 }
 .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 36%;
     margin-top: -6px;
     right: -10px;
     cursor: pointer;
@@ -703,7 +703,7 @@
     float: left; 
     position: relative;
     width: 243px;
-    height: 200px;
+    height: 280px;
     margin: 0 0.02%;
     @include respond-to(mob-lan) {
         min-height: 120px;
@@ -715,13 +715,14 @@
     }
     &:hover {
         .shop__main {
-            top: 55px;
-            left: 35px;
-            right: 35px;
-            bottom: 55px;
-            opacity: 0.5;
+            //top: 55px;
+            //left: 35px;
+            //right: 35px;
+            //bottom: 55px;
+            //opacity: 0.5;
             .shop__title {
-                margin-top: 25px;
+                //color:#2D8DB4;
+                /*margin-top: 25px;
                 @include respond-to(med) {
                     margin-top: 30px;
                 }
@@ -730,12 +731,15 @@
                 }
                 @include respond-to(mob-lan) {
                     margin-top: 30px;
-                }
+                }*/
             }
             @include respond-to(med) {
                 top: 180px;
                 left: 0;
             }
+        }
+        img {
+            opacity: 0.8;
         }
     }
     a {
@@ -773,20 +777,22 @@
     }
 }
 .shop__main {
-    position: absolute;
-    top: 50px;
-    left: 30px;
-    right: 30px;
-    bottom: 50px;
+    //position: absolute;
+    //top: 50px;
+    //left: 30px;
+    //right: 30px;
+    //bottom: 50px;
     background: #fff;
     @include respond-to(med) {
-        top: 180px;
-        left: 0;
+        //position: absolute;
+        //top: 180px;
+        //left: 0;
         width: 100%;
         height: 50px;
         background: none;
     }
     @include respond-to(pda) {
+        position: absolute;
         top: 0;
         left: 0;
         right: 0;
@@ -824,7 +830,7 @@
 }
 .shop__title {
     width: 150px;
-    margin: 30px auto 0;
+    margin: 10px auto 0;
     text-align: center;
     @include pfd_b();
     font-size: 22px;
@@ -838,6 +844,7 @@
         margin-top: 57px;
     }
     @include respond-to(mob-lan) {
+        font-size: 18px;
         margin-top: 30px;
     }
     span {
@@ -856,7 +863,7 @@
     font-size: 12px;
     @include hel_r();
     text-align: center;
-    margin-top: 11px;
+    margin-top: 5px;
     @include respond-to(med) {
         margin-top: 2px;
     }
