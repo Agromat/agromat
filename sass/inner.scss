@@ -1578,10 +1578,10 @@
 .shop-item {
     position: relative;
     float: left;
-    margin: 0 1% 30px 0;
+    margin: 0 1% 40px 0;
     width: 31.8%;
-    height: 246px;
-    overflow: hidden;
+    height: 310px;
+    //overflow: hidden;
     @include respond-to(med) {
        width: 46%;
         margin-right: 4%;
@@ -1597,10 +1597,10 @@
     }
     &:hover {
         .shop-item__main {
-            top: 23%;
-            right: 22%;
-            bottom: 24%;
-            left: 22%;
+            //top: 23%;
+            //right: 22%;
+            //bottom: 24%;
+            //left: 22%;
             @include respond-to(pda) {
                 top: 0;
                 right: 0;
@@ -1666,21 +1666,22 @@
     }
 }
 .shop-item__main {
-    position: absolute;
-    top: 24%;
-    right: 20%;
-    bottom: 26%;
-    left: 20%;
+    //position: absolute;
+    //top: 24%;
+    //right: 20%;
+    //bottom: 26%;
+    //left: 20%;
     background: #fff;
     opacity: 1;
-    overflow: hidden;
-    height: 120px;
-    line-height: 120px;
+    margin-top: 10px;
+    //overflow: hidden;
+    //height: 120px;
+    //line-height: 120px;
     @include respond-to(pda) {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+        //top: 0;
+        //right: 0;
+        //bottom: 0;
+        //left: 0;
         border: 2px solid #000;
         height: 160px;
         line-height: 160px;

@@ -155,9 +155,17 @@ input[type='submit']::-moz-focus-inner{
     }
     .shop-item {
         &:hover {
+            img {
+                opacity: 0.8;
+                }
             .shop-item__main {
-                @include transition(all,  0.5s, ease-in-out);
-                opacity: 0.5;
+                .shop-item__wrap {
+                    .shop-item__title {
+                        color: #2C8DB7;
+                    }
+                }
+                //@include transition(all,  0.5s, ease-in-out);
+                //opacity: 0.5;
             }
         }
     }
@@ -896,6 +904,9 @@ a{
         }
         li a {
             color: #898989;
+            &:hover {
+                color: #2c8db7;
+            }
         }
     }
     .submenu__active2 {
