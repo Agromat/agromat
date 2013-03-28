@@ -754,6 +754,10 @@ a{
     font-size: 12px;
     @include pfd_m();
     text-transform: uppercase;
+    @include respond-to(mob-lan){
+        display: block;
+        text-align: center;
+    }
 }
 
 // submenu

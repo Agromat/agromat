@@ -605,16 +605,17 @@
 }
 .text-rows-title {
     float: left;
-    padding-top: 15px;
+    padding-top: 12px;
+    padding-bottom:10px;
     width: 12%;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    //white-space: nowrap;
+    //text-overflow: ellipsis;
     padding-right: 1%;
     font-weight: bold;
     font-size: 14px;
     border-top: 1px solid #d4d4d4;
-    word-wrap: break-word;
+    //word-wrap: break-word;
     @include respond-to(med) {
         font-size: 12px;
         width: 15%;
@@ -622,9 +623,9 @@
     @include respond-to(mob-lan) {
         float: none;
         padding: 15px 0 10px;
-        font-size: 12px;
+        font-size: 14px;
         width: 100%;
-        border-top: 0;
+        //border-top: 0;
     }
 }
 .text-rows {
@@ -638,16 +639,20 @@
         clear: both;
         overflow: hidden;
         @include respond-to(mob-lan) {
-            padding: 4px 2.6% 4px 2.2%;
+            padding: 3px 2.6% 6px 0;
             line-height: 12px;
         }
         div {
             float: left;
             width: 80%;
             overflow: hidden;
-            padding-top: 4px;
+            padding-top: 7px;
+            padding-bottom: 7px;
             @include respond-to(pda) {
                 width: 65%;
+            }
+            @include respond-to(mob-lan) {
+                padding-top: 12px;
             }
         } 
     }
@@ -657,8 +662,8 @@
     a {
         color: #2D8DB4;
         font-size: 14px;
-        @include respond-to(mob-lan) {
-            font-size: 11px;
+        @include respond-to(pda) {
+            font-size: 12px;
         }
     }
 }
@@ -683,16 +688,17 @@
 }
 .text-rows_download {
     li {
-        &:hover {
-            margin: -1px 0 0;
-            padding-top: 17px;
-            padding-bottom: 16px;
+        a {
+            &:hover {
+                color:#000;
+            }
         }
     }
 }
 .report__download {
     float: right;
     margin-top: 5px;
+    margin-bottom: 4px;
     color: #898989;
     @include pfd_b();
     font-size: 12px;
@@ -1463,6 +1469,8 @@
     @include respond-to(mob-lan) {
         position: static;
         line-height: 16px;
+        text-align: center;
+        font-size: 11px;
     }
     span {
         display: block;
@@ -1894,20 +1902,20 @@
         border-top: 1px solid #d4d4d4; 
         &:hover {
             border: 1px solid #000; 
-            margin: 0 0 -1px;
-            padding-bottom: 8px;
+            //margin: 0 0 -1px;
+            //padding-bottom: 8px;
             position: relative;
             @include respond-to(mob-lan) {
-                padding-bottom: 5px;
+                //padding-bottom: 5px;
             }
             div {
-                padding-top: 4px;
+                //padding-top: 4px;
                 float: left;
             }
             .report__download {
-                margin-top: 5px;
+                //margin-top: 5px;
                 @include respond-to(mob-lan) {
-                    margin-top: 8px;
+                    //margin-bottom: 8px;
                 }
             }
         }
@@ -2195,6 +2203,9 @@
 .select-list_ukr {
     width: 213px;
     border:1px solid #d4d4d4;
+    @include respond-to(mob-lan){
+        width: 100%;
+    }
     div {
         &:after {
             content: "";
@@ -2612,7 +2623,10 @@
     overflow: hidden;
     padding: 1%;
     @include respond-to(mob-lan) {
-        width: 50%;
+        width: 100%;
+        float:none;
+        overflow: none;
+        padding:12px 10px 5px 10px;
     }
 }
 .worker__img {
@@ -2620,6 +2634,9 @@
     float: left;
     margin: 0 10px 0 0;
     border: 3px solid #fff;
+    @include respond-to(mob-lan){
+        display: none;
+    }
     &:after {
         content: "";
         position: absolute;
@@ -2641,6 +2658,11 @@
     @include respond-to(med) {
         width: 50%;
     }
+    @include respond-to(mob-lan) {
+        width: 100%;
+        float:none;
+        overflow: none;
+    }
     .worker__name {
         display: block;
         margin: 3px 0 0;
@@ -2649,8 +2671,9 @@
         @include pfd_b;
         line-height: 21px;
         @include respond-to(med) {
-            font-size: 15px;
+            font-size: 18px;
             line-height: 17px;
+            margin:0;
         }
         @include respond-to(mob-lan) {
             text-align: left;
@@ -2661,6 +2684,9 @@
     }
     .label-t {
         text-transform: none;
+        @include respond-to(mob-lan) {
+            text-align: left;
+        }
     }
 }
 .worker__cont {
@@ -2673,6 +2699,12 @@
     background: #f6f6f6;
     @include respond-to(med) {
         width: 45%;
+    }
+    @include respond-to(mob-lan) {
+        position:static;
+        width: 100%;
+        padding:5px 10px 12px 10px;
+        font-size: 12px;
     }
     span {
         display: block;
@@ -2697,14 +2729,18 @@
         font-size: 25px;
     }
     @include respond-to(mob-lan) {
-        width: 55%;
+        width: 100%;
         font-size: 18px;
+        margin:0 0 5px 10px;
     }
     h2 {
         @include pfd_b;
         font-size: 30px;
         line-height: 26px;
         text-transform: uppercase;
+        @include respond-to(mob-lan) {
+            font-size: 22px;
+        }
     }
     span {
         font-size: 14px;
@@ -2715,6 +2751,10 @@
     strong {
         display: block;
         font-size: 14px;
+    }
+    @include respond-to(mob-lan){
+        margin:0 0 10px 10px;
+        float: none;
     }
 }
 .select-region {
@@ -2807,8 +2847,25 @@
 }
 
 // Text page
+
+.likesocial{
+    li{
+        float:left;
+        list-style: none;
+        width: 22%;
+        padding-left:0px;
+        height: 25px;
+        &:before {
+            display: none;
+        }
+        @include respond-to(mob-lan){
+            width: 49%;
+        }
+    }
+}
+
 .text-cont {
-    font: normal 14px/1.2 Arial,sans-serif;
+    font: normal 14px/1.4 Arial,sans-serif;
     h1,h2,h3,h4,h5,h6 {
         display: block;
         margin: 23px 0 10px;
@@ -2854,7 +2911,7 @@
     ul, ol {
         padding-left: 10px;
         margin-bottom: 20px;
-        overflow: hidden;
+        //overflow: hidden;
         li {
             position: relative;
             font-size: 14px;
@@ -2886,7 +2943,7 @@
         padding: 0 3.1% 0 0; 
         li {
             position: static;
-            padding: 7px 2.6% 7px 2.2%;
+            padding: 9px 2.6% 7px 2.2%;
             line-height: 15px; 
             border: 1px solid transparent;
             border-bottom: 1px solid #d4d4d4;
@@ -2894,7 +2951,7 @@
             clear: both;
             margin-bottom: 0;
             @include respond-to(mob-lan) {
-                padding: 4px 2.6% 4px 2.2%;
+                padding: 7px 2.6% 4px 2.2%;
             }
             &:before {
                 display: none;
