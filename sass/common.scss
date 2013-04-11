@@ -1823,10 +1823,10 @@ a{
 .part-logo__7 {@include sized-sprite($logos, logo7);}
 .footer__copy {
     float: left;
-    color: #c2c2c2;
+    color: #a2a2a2;
     @include hel_r();
-    font-size: 10px;
-    line-height: 12px;
+    font-size: 11px;
+    line-height: 14px;
     div {
         margin-top: 13px;
     }
@@ -1842,11 +1842,11 @@ a{
 }
 .footer__contacts {
     float: right;
-    color: #c2c2c2;
+    color: #a2a2a2;
     @include hel_r();
-    font-size: 10px;
+    font-size: 11px;
     text-align: right;
-    line-height: 12px;
+    line-height: 14px;
     strong {
         font-weight: normal;
         color: #000;

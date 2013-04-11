@@ -3,11 +3,6 @@ $(document).ready(function() {
     document.documentElement.className += "no-touch";
   }
 
-  // ie fix z-index
-    $(".select-region").click(function(){
-        $(".select-region").css("z-index", "1000");
-        $(this).css("z-index", "2000");
-    });
 
   // content  to 100% if we don't have sidebar nav
   var window_width = $(window).width();
