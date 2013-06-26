@@ -309,6 +309,11 @@
        margin-bottom: 15px;
     }
 }
+cont-gallery_contact__text {
+    p{
+        margin: 7px 0 4px 0;
+    }
+}
 .banner-img {
     display: block;
     height: 200px;
@@ -1327,7 +1332,7 @@
 
 }
 .popup__main {
-    margin: 25px 0 29px;
+    margin: 15px 0 29px;
     @include respond-to(mob-lan) {
         margin: 15px 0;
     }
@@ -1343,8 +1348,8 @@
     }
 }
 .shop-info {
-    padding: 25px 0;
-    font-size: 14px;
+    padding: 20px 0;
+    font-size: 13px;
     @include respond-to(mob-lan) {
         padding: 15px 0;
     }
