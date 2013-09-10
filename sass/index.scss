@@ -84,10 +84,37 @@
         .slider__item,
         .js-slider,
         .slider__item-wrap {
-            height: 200px !important;  
+            height: 280px !important;  
+        }
+        .banner{
+            height: 131px;
+            .banner__wrap{
+                top:10%;
+            }
+            .banner__go {
+                display: none;
+            }
         }
         .banner_action {
-            display: none;
+            //display: none;
+            &:hover{
+                .banner__wrap {
+                    top:15%;
+                    bottom:15%;
+                    .banner__name{
+                        font-size: 0.7;
+                    }
+                }
+            }
+            .banner__wrap {
+                top:15%;
+                .banner__name{
+                    margin-top: 15px;
+                }
+                .separator-blue{
+                    display: none;
+                }
+            }
         }
     }
 } 
