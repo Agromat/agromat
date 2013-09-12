@@ -421,6 +421,42 @@
         line-height: 20px;
     }   
 }
+.banner_wide_index{
+    display: block;
+    margin: 20px auto;
+    width:100%;
+    overflow: hidden;
+    position:relative;
+    height:240px;
+    &:hover {
+        img {
+            opacity:0.8;
+        }
+    }
+    .banner_wide__title{
+        width: 40%;
+        font-size: 30px;
+        @include pfd_r;
+        color: #fff;
+        position:absolute;
+        top:20px;
+        left: 20px;
+        z-index: 100;
+    }
+    .banner_wide__text{
+        width: 30%;
+        color: #000;
+        padding:25px;
+        background-color:#fff;
+        font-size: 16px;
+        line-height: 1.5;
+        position:absolute;
+        right: 20px;
+        top:20px;
+        bottom:20px;
+        z-index: 120;
+    }
+}
 .banner_action {
     background: url(../_img/hot-girl.jpg) 0 0 no-repeat;
     margin-bottom: 0;
