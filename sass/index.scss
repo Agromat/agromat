@@ -417,8 +417,9 @@
         }
     }
     @include respond-to(mob-lan) {
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 20px!important;
+        line-height: 20px!important;
+        width: 59%!important;
     }   
 }
 .banner_wide_index{
@@ -456,6 +457,20 @@
         bottom:20px;
         z-index: 120;
     }
+    @include respond-to(pda) {
+    }
+    @include respond-to(mob-lan) {
+        height: 180px;
+        .banner_wide__title{
+            width: 90%;
+            right:20px;
+            line-height: 1;
+            font-size: 24px;
+        }
+        .banner_wide__text{
+            display: none;
+        }
+    } 
 }
 .banner_action {
     background: url(../_img/hot-girl.jpg) 0 0 no-repeat;

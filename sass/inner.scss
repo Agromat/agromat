@@ -667,6 +667,9 @@ cont-gallery_contact__text {
     a {
         color: #2D8DB4;
         font-size: 14px;
+        &:hover{
+            color:#000;
+        }
         @include respond-to(pda) {
             font-size: 12px;
         }
@@ -2855,6 +2858,7 @@ cont-gallery_contact__text {
 
 .likesocial{
     clear:left;
+    padding-bottom: 20px;
     li{
         float:left;
         list-style: none;
@@ -2919,7 +2923,6 @@ cont-gallery_contact__text {
         margin-bottom: 20px;
         //overflow: hidden;
         li {
-            position: relative;
             font-size: 14px;
             margin-bottom: 8px;
             padding-left: 16px;
@@ -2933,6 +2936,11 @@ cont-gallery_contact__text {
             @include respond-to(mob-lan) {
                 font-size: 11px;
             }
+        }
+    }
+    ul {
+        li {
+            position: relative;
         }
     }
     ol{
@@ -2970,6 +2978,9 @@ cont-gallery_contact__text {
         a {
             color: #2D8DB4;
             font-size: 14px;
+            &:hover{
+                color:#000;
+            }
             @include respond-to(mob-lan) {
                 font-size: 11px;
             }
