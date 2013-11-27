@@ -1515,6 +1515,9 @@ a{
         float: left;
         margin: 0 4.2% 0 0;
         height: auto;
+        @include respond-to(med1100){
+            float: none;
+        }
     }
 }
 .bloc__header {
