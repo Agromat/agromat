@@ -52,18 +52,20 @@ $break-6: 700px;
 }
 @mixin hel_r{
     font-weight: normal;
-    font-family: 'helveticaneuecyrroman', sans-serif;
+    font-family: Helvetica, Arial, Calibri, sans-serif;
 }
 @mixin hel_b{
-    font-weight: normal;
-    font-family: 'helveticaneuecyrbold', sans-serif;
+    font-weight: bold;
+    font-family: Helvetica, Arial, Calibri, sans-serif;
 }
 @mixin hel_i{
     font-weight: normal;
-    font-family: 'helveticaneuecyritalic', sans-serif;
+    font-family: Helvetica, Arial, Calibri, sans-serif;
+    font-style: italic;
 }
 @mixin hel_bi{
-    font-weight: normal;
-    font-family: 'helveticaneuecyrbold_italic', sans-serif;
+    font-weight: bold;
+    font-family: Helvetica, Arial, Calibri, sans-serif;
+    font-style: italic;
 }
 //animations example

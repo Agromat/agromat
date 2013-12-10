@@ -1449,6 +1449,8 @@ cont-gallery_contact__text {
             height: 150px;
             line-height: 150px;
         }
+    }
+    a.shop-addr__link {
         &:hover {
             @include box-shadow(0 0 0 2px #000);
         }
@@ -2875,7 +2877,8 @@ cont-gallery_contact__text {
 }
 
 .text-cont {
-    font: normal 14px/1.4 Arial,sans-serif;
+    @include hel_r();
+    font-size: 14px/1.4;
     h1,h2,h3,h4,h5,h6 {
         display: block;
         margin: 23px 0 10px;
