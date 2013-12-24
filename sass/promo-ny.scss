@@ -135,7 +135,7 @@
         }
         &.right {
             position:absolute;
-            bottom:0px;
+            top:140px;
             right:0px;
             @include respond-to(pda) {
             }
