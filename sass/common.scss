@@ -227,7 +227,8 @@ a{
 }
 .push {
 	clear: both;
-	height: 525px;
+	//height: 525px;
+    height: 525px;
 }
 .wrapper {
     overflow: hidden;
@@ -1521,10 +1522,13 @@ a{
             float: none;
         }
     }
+    &:hover{
+        border: 2px solid #090909;
+    }
 }
 .bloc__header {
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .bloc__main {
     overflow: hidden;
@@ -1542,7 +1546,8 @@ a{
     }
 }
 .bloc__body {
-    color: #727272
+    color: #727272;
+    font-size: 14px;
     p{
         line-height: 1.4;
     }
