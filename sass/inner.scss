@@ -47,7 +47,6 @@
     }
     p {
         margin-bottom: 20px;
-        line-height: 1.5;
     }
     blockquote {
         position: relative;
@@ -200,6 +199,9 @@
       padding: 15px 0 5px; 
       left: 100%;
     }
+    p{
+        line-height:1.5;
+    }
     h2 {
         margin-bottom: 15px;
         @include pfd_m();
@@ -278,6 +280,7 @@
             font-size: 12px;
             @include respond-to(med) {
                font-size: 11px;
+               line-height: 1.2;
             } 
             @include respond-to(pda) {
                 display: inline-block;
@@ -289,8 +292,11 @@
                 content: "";
                 position: absolute;
                 left: 0;
-                top: 0;
+                top: 5px;
                 @include sized-sprite($icons, glass);
+                @include respond-to(pda) {
+                   top: 0px;
+                }
             }
         }
     }
@@ -2414,6 +2420,7 @@ cont-gallery_contact__text {
         font-weight: normal;
         //font-family: 'helveticaneuecyrroman', sans-serif;
         text-transform: none;
+        text-decoration: none;
         @include respond-to(mob-lan) {
             font-size: 15px;
             line-height: 20px;
@@ -2880,6 +2887,9 @@ cont-gallery_contact__text {
 .text-cont {
     @include hel_r();
     font-size: 14px/1.4;
+    p{
+        line-height: 1.5;
+    }
     h1,h2,h3,h4,h5,h6 {
         display: block;
         margin: 23px 0 10px;
@@ -3084,11 +3094,11 @@ cont-gallery_contact__text {
     .question {
         padding:15px 20px 0 20px;
         line-height:22px;
-        
-            &:hover{
-                border-color: #d4d4d4;
-
-            }
+        overflow: hidden;
+        .cont-gallery{
+            float: right;
+            margin-left: 20px;
+        }
         &:after {
             @include sized-sprite($icons, question-corner2); 
         }

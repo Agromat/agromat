@@ -493,7 +493,7 @@ a{
     }
     li {
         float: left;
-        padding-bottom: 13px;
+        padding-bottom: 11px;
         text-align: center;
         border-bottom: 1px solid #000;
         line-height: 1.6em;
@@ -1004,8 +1004,11 @@ a{
     background: #fff;
     border: 2px solid #d4d4d4;
     text-decoration: none;
-    @include respond-to(med) { 
-       display: none;
+    @include respond-to(med) {
+        .cont-gallery {
+            float: none;
+        }
+       //display: none;
     }
     &:target {
         &:hover { 
@@ -1037,6 +1040,13 @@ a{
     .label-t {
         padding-left: 3%;
     }   
+}
+.question_link{
+    display:block;
+    text-decoration: none;
+    .question__answer{
+        text-decoration: underline;
+    }
 }
 .question_small {
     width: 74.5%;
@@ -1487,7 +1497,7 @@ a{
 
 .tab__title {
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 0;
     font-size: 22px;
     font-weight: normal;
@@ -1507,7 +1517,7 @@ a{
     display: block;
     position: relative;
     margin: 20px 0;
-    padding: 16px 3.5% 20px;
+    padding: 16px 3.5% 14px;
     color: #000;
     border: 2px solid #d4d4d4;
     text-decoration: none;
@@ -1547,7 +1557,7 @@ a{
 }
 .bloc__body {
     color: #727272;
-    font-size: 14px;
+    font-size: 12px;
     p{
         line-height: 1.4;
     }
