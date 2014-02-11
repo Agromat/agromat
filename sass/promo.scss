@@ -1,0 +1,337 @@
+/* Акция */
+
+ul.promo-items-list,
+ul.promo-items-list li {
+    margin: 0;
+    padding: 0;
+}
+
+ul.promo-items-list>li {
+    position: relative;
+    border: 1px solid #d4d4d4;
+    padding: 0;
+    text-align: right;
+    font-size: 0;
+    margin-right: 16px;
+    margin-bottom: 10px;
+}
+
+
+
+ul.promo-items-list li:before {
+    background: transparent;
+}
+
+ul.promo-items-list>li img {
+    width: 40%;
+    padding: 12px;
+    float: left;
+}
+
+ul.promo-items-list.promo201306>li img {
+    width: 30%;
+    padding: 12px;
+    float: left;
+}
+
+ul.promo-items-list li div {
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 10px;
+    padding-top: 12px;
+    background: #f8f8f8;
+}
+
+ul.promo-items-list li div.promo-text {
+    width: 30%;
+    float: left;
+    background: transparent;
+}
+
+ul.promo-items-list.promo201306 li div.promo-text {
+    width: 40%;
+}
+
+ul.promo-items-list li div ul.feblist {
+    list-style-type: disc;
+    margin-left: 11px;
+}
+
+ul.promo-items-list li div ul.feblist li {
+    margin-left: 6px;
+    font-size: 14px;
+    text-align: left;
+    color: #727272;
+}
+
+ul.promo-items-list li div ul.feblist li:before {
+    background: transparent;
+}
+
+ul.promo-items-list li div h3 {
+    display: block;
+    text-align: left;
+    line-height: 30px;
+    font-size: 30px;
+	margin-top:10px;
+}
+
+ul.promo-items-list li div.promo-price {
+    position: relative;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+    height: 200px;
+    width: 144px;
+    text-align: left;
+    padding: 12px 0px 12px 19px;
+    border-left: 1px solid #d4d4d4;
+}
+
+ul.promo-items-list.promo201306 li div.promo-price {
+    width: 204px;
+	height:270px;
+}
+
+ul.promo-items-list li div.promo-price p.old span,
+ul.promo-items-list li div.promo-price p.new span {
+    font-size: 30px;
+}
+
+ul.promo-items-list li div.promo-price p.old {
+    position: absolute;
+    bottom: 78px;
+    left: 19px;
+    color: #bdbdbd;
+    font-size: 48px;
+    background: url(/_img/promo/febline.png) repeat-x 0 50%;
+}
+
+ul.promo-items-list.promo201306 li div.promo-price p.old {
+    position:static;
+	text-decoration: line-through;
+	background:none;
+	margin: 0;
+}
+
+ul.promo-items-list li div.promo-price p.new {
+    position: absolute;
+    bottom: 27px;
+    left: 19px;
+    color: #2b88ae;
+    font-size: 48px;
+}
+
+ul.promo-items-list.promo201306 li div.promo-price p.new {
+    position:static;
+    color: #ed1c24;
+}
+
+ul.promo-items-list li div.promo-price.promo-last p.old {
+    font-size: 36px;
+    background: url(/_img/promo/febline.png) repeat-x 0 30%;
+}
+
+ul.promo-items-list li div.promo-price.promo-last p.old span {
+    font-size: 23px;
+}
+
+ul.promo-items-list li h3.promo-show {display: none;}
+
+@media only screen and (max-width: 1024px) {
+    ul.promo-items-list>li {
+        height: 240px;
+    }
+
+    ul.promo-items-list li div.promo-price {
+        height: 216px;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+    ul.promo-items-list > li {
+        height: auto;
+    }
+    ul.promo-items-list li h3.promo-show {
+        display: block;
+        font-size: 26px;
+        margin-top: 12px;
+    }
+    ul.promo-items-list li h3.promo-hide {display: none;}
+
+    ul.promo-items-list > li img {
+        display: block;
+        float: none;
+        width: 94%;
+        padding-top: 0;
+    }
+    ul.promo-items-list li div.promo-text {
+        display: block;
+        width: 94%;
+        float: none;
+        background: transparent;
+        padding-top: 0;
+    }
+    ul.promo-items-list li div.promo-price {
+        position: relative;
+        display: block;
+        width: auto;
+        height: 60px;
+        padding: 0;
+        border: 0;
+        margin-top: 12px;
+    }
+    ul.promo-items-list li div.promo-price p.new {
+        position: absolute;
+        bottom: -3px;
+        left: 15px;
+        right: auto;
+    }
+    ul.promo-items-list li div.promo-price p.old {
+        position: absolute;
+        bottom: -3px;
+        left: 125px;
+        right: auto;
+    }
+    ul.promo-items-list li div ul.feblist {
+        list-style-type: disc;
+        margin-left: 30px;
+    }
+    ul.promo-items-list li div.promo-price p.old,
+    ul.promo-items-list li div.promo-price p.new {
+        font-size: 36px;
+    }
+    ul.promo-items-list li div.promo-price p.old span, ul.promo-items-list li div.promo-price p.new span {
+        font-size: 23px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    ul.promo-items-list li h3.promo-show {font-size: 25px;}
+    ul.promo-items-list li div.promo-price p.old {
+        position: absolute;
+        bottom: -5px;
+        left: 100px;
+        font-size: 26px;
+        right: auto;
+    }
+    ul.promo-items-list li div.promo-price p.new {
+        position: absolute;
+        bottom: -5px;
+        right: auto;
+        left: 15px;
+        font-size: 26px;
+    }
+    ul.promo-items-list li div.promo-price p.old span, ul.promo-items-list li div.promo-price p.new span {
+        font-size: 20px;
+    }
+    ul.promo-items-list li div.promo-price.promo-last p.old {
+        font-size: 26px;
+        background: url(/_img/promo/febline.png) repeat-x 0 30%;
+    }
+    ul.promo-items-list li div.promo-price {
+        height: 50px;
+    }
+    ul.promo-items-list li div.promo-price.promo-last p.old span {
+        font-size: 20px;
+    }
+}
+
+ul.promo-list.table {
+	margin:0; padding:0;
+	}
+	30ul.promo-list.table li{
+	/*margin:0; 
+    padding:0; */
+    width:25%; 
+    float:left;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+}
+
+//================================================================================
+// February action
+//================================================================================	
+	
+.action-february {
+    max-width: 945px;
+    margin: auto;
+    .action-item {
+        padding: 22px;
+        border: solid 1px #d4d4d4;
+        margin-bottom: 25px;
+    }
+    .action-item_content {
+        overflow: hidden;
+    }
+    .action-item_image {
+        float: left;
+        width: 40%;
+        img {
+            max-width: 100%;
+        }
+    }
+    .action-item_list {
+        float: left;
+        width: 60%;
+        padding-left: 20px;
+    }
+    .action-item_sub {
+        @include clearfix;
+    }
+    .print-caption {
+        float: left;
+        width: 40%;
+    }
+    .action-item_links {
+        float: left;
+        width: 60%;
+        padding-left: 20px;
+    }
+    .price-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-bottom: solid 1px #bebebe;
+        li {
+            overflow: hidden;
+            border-top: solid 1px #bebebe;
+            padding: 10px 0;
+        }
+    }
+    .price-list_name {
+        float: left;
+        width: 76%;
+    }
+    .price-list_old {
+        float: left;
+        width: 12%;
+        text-align: right;
+        padding-right: 10px;
+        color: #3a3a3a;
+    }
+    .price-list_actual {
+        float: right;
+        background: #ed1c24;
+        width: 12%;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+    }
+}
+
+
+	
+	
+	
+	
