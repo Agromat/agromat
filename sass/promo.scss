@@ -264,39 +264,213 @@ ul.promo-list.table {
 //================================================================================	
 	
 .action-february {
-    max-width: 945px;
-    margin: auto;
+    *,
+    *:before,
+    *:after {
+    	-moz-box-sizing: border-box;
+    	-webkit-box-sizing: border-box;
+    	box-sizing: border-box;
+    }
+    h3 {
+        margin-top: 5px;
+        margin-bottom: 22px;
+        font-size: 30px;
+        padding-left: 10px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        @include respond-to(iphone5) {
+            
+        }
+        @include respond-to(mob-lan) {
+           text-align: left;
+           font-size: 20px;
+           padding-left: 0;
+           margin: 2px 0 0;
+           padding-right: 30px;
+           cursor: pointer;
+           position: relative;
+           &:after {
+               content: "";
+               position: absolute;
+               right: 0;
+               top: 4px;
+               width: 6px;
+               height: 13px;
+               background: url('../_img/arr-r.png') no-repeat left top;
+           }
+           &.is-open {
+               &:after {
+                   content: "";
+                   position: absolute;
+                   right: 0;
+                   top: 8px;
+                   width: 13px;
+                   height: 6px;
+                   background: url('../_img/arr-d.png') no-repeat left top;
+               }
+           }
+        }
+    }
     .action-item {
         padding: 22px;
+        padding-left: 12px;
         border: solid 1px #d4d4d4;
         margin-bottom: 25px;
+        @include respond-to(mob-lan) {
+           padding: 10px;
+        }
+        @include respond-to(mob-lan) {
+            margin-bottom: 10px;
+        }
     }
     .action-item_content {
         overflow: hidden;
+        @include respond-to(mob-lan) {
+            margin-top: 10px;
+        }
     }
     .action-item_image {
         float: left;
-        width: 40%;
+        width: 48%;
+        @include respond-to(pda) {
+           width: 40%
+        }
+        @include respond-to(mob-lan) {
+           width: 100%;
+           padding-bottom: 10px;
+        }
         img {
             max-width: 100%;
         }
     }
     .action-item_list {
         float: left;
-        width: 60%;
+        width: 52%;
         padding-left: 20px;
+        @include respond-to(pda) {
+           width: 60%
+        }
+        @include respond-to(mob-lan) {
+           width: 100%;
+           padding-left: 0;
+        }
     }
     .action-item_sub {
         @include clearfix;
+        padding-top: 20px;
     }
     .print-caption {
         float: left;
-        width: 40%;
+        width: 48%;
+        border: solid 2px #2c8db7;
+        color: #2c8db7;
+        text-align: right;
+        height: 48px;
+        padding: 5px 23px 0;
+        position: relative;
+        @include respond-to(pda) {
+           width: 40%;
+           font-size: 12px;
+        }
+        @include respond-to(med) {
+           font-size: 12px;
+           padding-right: 15px;
+           padding-left: 15px;
+           padding-top: 7px;
+        }
+        @include respond-to(iphone5) {
+           width: 100%;
+           text-align: center;
+           margin-bottom: 10px;
+           padding: 10px;
+           font-size: 13px;
+           height: auto;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            margin-top: -8px;
+            width: 10px;
+            height: 17px;
+            background: url('../_img/blue_arrows.png') no-repeat left top;
+            @include respond-to(iphone5) {
+                width: 17px;
+                height: 10px;
+                right: 50%;
+                top: 100%;
+                margin-top: 0;
+                margin-right: -8px;
+                background: url('../_img/blue_arrows.png') no-repeat left -20px;
+            }
+        }
     }
     .action-item_links {
         float: left;
-        width: 60%;
+        width: 52%;
         padding-left: 20px;
+        @include respond-to(pda) {
+           width: 60%
+        }
+         @include respond-to(iphone5) {
+           width: 100%;
+           text-align: center;
+           padding-left: 70px;
+           padding-right: 70px;
+        }
+        @include respond-to(mob-lan) {
+           width: 100%;
+           text-align: center;
+           padding-left: 30px;
+           padding-right: 30px;
+        }
+       
+        .link-box {
+            padding: 0 15px;
+            margin: 0;
+            @include respond-to(iphone5) {
+                text-align: center;
+                display: block;
+                float: none;
+                margin: 10px 0;
+                vertical-align: top;
+            }
+            @include respond-to(mob-lan) {
+                text-align: center;
+                display: inline-block;
+                margin: 8px 0;
+                vertical-align: top;
+            }
+            
+            &:before {
+                background: url('../_img/icons-s85831c5421.png') 0 -633px no-repeat;
+                right:-9px;
+                left: auto;
+            }
+            &.link-box_print {
+                background: #2c8db7;
+                color: #fff;
+                border: solid 3px #2c8db7;
+                padding: 0;
+                span {
+                    display: block;
+                    border: solid 1px #fff;
+                    height: 42px;
+                    line-height: 42px;
+                    padding: 0 15px;
+                    i {
+                        font-style: normal;
+                        padding-right: 10px;
+                        @include respond-to(med) {
+                           display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
     .price-list {
         margin: 0;
@@ -306,27 +480,61 @@ ul.promo-list.table {
         li {
             overflow: hidden;
             border-top: solid 1px #bebebe;
-            padding: 10px 0;
+            padding: 12px 0 9px;
+            margin: 0;
+            @include respond-to(mob-lan) {
+                text-align: center;
+                padding: 8px 0;
+                font-size: 14px;
+            }
+            &:before {
+                display: none;
+            }
         }
     }
     .price-list_name {
         float: left;
-        width: 76%;
+        width: 70%;
+        padding-right: 30px;
+        @include respond-to(mob-lan) {
+           width: 100%;
+           padding-right: 0;
+           padding-bottom: 8px;
+        }
     }
     .price-list_old {
         float: left;
-        width: 12%;
+        width: 15%;
         text-align: right;
-        padding-right: 10px;
+        padding-right: 13px;
         color: #3a3a3a;
+        @include respond-to(mob-lan) {
+           float: none;
+           display: inline-block;
+           width: auto;
+        }
     }
     .price-list_actual {
         float: right;
         background: #ed1c24;
-        width: 12%;
+        width: 15%;
         font-weight: bold;
         text-align: center;
         color: #fff;
+        padding: 3px 0;
+        margin-top: -3px;
+        @include respond-to(mob-lan) {
+           float: none;
+           display: inline-block;
+           width: auto;
+           padding: 3px 5px;
+        }
+    }
+    
+    .mobile-closed-content {
+        @include respond-to(mob-lan) {
+            display: none;
+        }
     }
 }
 

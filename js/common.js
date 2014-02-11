@@ -7,7 +7,13 @@ $(document).ready(function() {
   // content  to 100% if we don't have sidebar nav
   var window_width = $(window).width();
   var submenu = $(".submenu").length;
-  if ((window_width <= 1024) && submenu == 0) {
+  if (window_width <= 480) {
+      $('.action-item h3').on('click', function(e) {
+           e.preventDefault();
+           $(this).toggleClass('is-open').next('.mobile-closed-content').toggle();
+       });
+  }
+  else if ((window_width <= 1024) && submenu == 0) {
     $(".sidebar_l, .content").css({"width": "100%","float":"none"});
   }
   else if ((window_width <= 768) && submenu !== 0) {
@@ -230,5 +236,12 @@ $(document).ready(function() {
   });
   var img_caption = $(".cont-gallery a:first").attr("title");
   $(".cont-gallery span:first").text(img_caption);
+  
+   
+  
+  
+  
+  
+  
 
 });
