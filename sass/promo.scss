@@ -464,7 +464,7 @@ ul.promo-list.table {
                     i {
                         font-style: normal;
                         padding-right: 10px;
-                        @include respond-to(med) {
+                        @include respond-to(med1150) {
                            display: none;
                         }
                     }
