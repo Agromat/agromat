@@ -494,7 +494,7 @@ ul.promo-list.table {
     }
     .price-list_name {
         float: left;
-        width: 70%;
+        width: 68%;
         padding-right: 30px;
         @include respond-to(mob-lan) {
            width: 100%;
@@ -504,7 +504,7 @@ ul.promo-list.table {
     }
     .price-list_old {
         float: left;
-        width: 15%;
+        width: 16%;
         text-align: right;
         padding-right: 13px;
         color: #3a3a3a;
@@ -517,11 +517,12 @@ ul.promo-list.table {
     .price-list_actual {
         float: right;
         background: #ed1c24;
-        width: 15%;
+        width: 16%;
         font-weight: bold;
         text-align: center;
         color: #fff;
-        padding: 3px 0;
+        padding: 3px 5px;
+        white-space: nowrap;
         margin-top: -3px;
         @include respond-to(mob-lan) {
            float: none;
