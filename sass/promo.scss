@@ -787,6 +787,59 @@ ul.promo-list.table {
     }
 }
 
+.coupon {
+    border: solid 2px #000;
+    color: #474747;
+    text-align: center;
+    padding: 40px 40px 20px;
+    font-size: 14px;
+    margin: auto;
+    max-width: 913px;
+    h1, h2, h3, h4 {
+        color: #000;
+    }
+    h1 {
+        @include pfd_r;
+        font-size: 48px;
+        font-weight: normal;
+        margin: 0;
+        &:before, &:after {
+            content: "◼︎";
+            color: #96c6d9;
+            font-size: 18px;
+            vertical-align: middle;
+            margin: 0 15px;
+            display: inline-block;
+  -webkit-transform: rotate(-45deg); 
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+          position: relative;
+          top: -3px;
+        }
+    }
+    h2 {
+        font-size: 31px;
+    }
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    p {
+        margin: 1em 0;
+    }
+    .sale-number {
+        @include pfd_r;
+        display: inline-block;
+        font-size: 90px;
+        color: #fff;
+        background: #2d8db4;
+        line-height: 1em;
+        padding: 13px 40px 10px;
+        margin: 30px 0 30px;
+    }
+}
 
 	
 	
