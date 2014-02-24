@@ -1,3 +1,6 @@
+@import "_base";
+
+
 /* Акция */
 
 ul.promo-items-list,
@@ -511,7 +514,7 @@ ul.promo-list.table {
   }
 }
 	
-.action-february {
+.action-container {
     *,
     *:before,
     *:after {
@@ -803,6 +806,7 @@ ul.promo-list.table {
         font-size: 48px;
         font-weight: normal;
         margin: 0;
+        text-transform: uppercase;
         &:before, &:after {
             content: "◼︎";
             color: #96c6d9;
@@ -821,6 +825,10 @@ ul.promo-list.table {
     }
     h2 {
         font-size: 31px;
+        font-weight: normal;
+        font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+        text-transform: uppercase;
+        margin-top: 20px;
     }
     h3 {
         margin-top: 40px;
@@ -838,6 +846,14 @@ ul.promo-list.table {
         line-height: 1em;
         padding: 13px 40px 10px;
         margin: 30px 0 30px;
+    }
+}
+
+@media print {
+    .coupon h1,
+    .coupon h2,
+    .coupon h3 {
+        color: #000;
     }
 }
 
