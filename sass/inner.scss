@@ -616,9 +616,7 @@ cont-gallery_contact__text {
         padding-right: 1px;
     }
 }
-.text-rows_trademarks {
-    margin-top: -30px;
-}
+
 .text-rows-title {
     float: left;
     padding-top: 12px;
@@ -644,6 +642,8 @@ cont-gallery_contact__text {
         //border-top: 0;
     }
 }
+
+
 .text-rows {
     padding: 0 3.1% 0 0; 
     li {
@@ -737,6 +737,10 @@ cont-gallery_contact__text {
         display: inline-block;
         vertical-align: middle;
     }
+}
+.text-rows.text-rows_trademarks {
+    margin-top: -30px;
+    padding-right: 0!important;
 }
 /* Vacancy */
 .person-policy {
@@ -2881,6 +2885,9 @@ cont-gallery_contact__text {
         height: 25px;
         &:before {
             display: none;
+        }
+        &:last-child {
+            float: none;
         }
         @include respond-to(mob-lan){
             width: 45%;
