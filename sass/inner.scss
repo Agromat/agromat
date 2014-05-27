@@ -469,6 +469,7 @@ cont-gallery_contact__text {
         line-height: 20px;
         font-size: 20px;
         margin: -7px 0 0 0;
+        padding-top: 2px;
         @include respond-to(med) { 
            font-size: 18px;
         }
@@ -614,6 +615,9 @@ cont-gallery_contact__text {
         padding-bottom: 2px;
         padding-right: 1px;
     }
+}
+.text-rows_trademarks {
+    margin-top: -30px;
 }
 .text-rows-title {
     float: left;
