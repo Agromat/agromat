@@ -358,7 +358,7 @@ a{
         }
         @include respond-to(pda) { 
             float: left;
-            width: 33.3%;
+            width: 24.5%;
             text-align: center;
         }
     }
@@ -368,6 +368,9 @@ a{
         text-decoration: none;
         @include respond-to(mob-lan) {
             margin-right: 0;
+        }
+        @include respond-to(pda) { 
+            margin: 0 10px;
         }
         &:hover {
             color:#2d8db4;
@@ -654,7 +657,7 @@ a{
         width: 23%;
     }
     @include respond-to(pda) { 
-        width: 37%;
+        width: 36%;
         text-align: center;
     }
     @include respond-to(mob-lan) { 
