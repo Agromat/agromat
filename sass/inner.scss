@@ -2246,6 +2246,7 @@ cont-gallery_contact__text {
         @include respond-to(mob-lan) {
             //border-bottom: 2px solid #000;
             float: none;
+            margin: 10px 12px 0;
         }
     }
     .select-list_ukr {
@@ -2260,12 +2261,23 @@ cont-gallery_contact__text {
     border:1px solid #d4d4d4;
     @include respond-to(mob-lan){
         width: 100%;
+        div {
+            height: 25px;
+            line-height: 20px;
+            &:after {
+                margin-top: -26px;
+            }
+            i {
+                top: 0;
+            }
+        }
     }
     div {
         &:after {
             content: "";
             @include sized-sprite($icons, ukr-map);
         }
+
     }
     ul {
         width: auto;
@@ -2276,11 +2288,14 @@ cont-gallery_contact__text {
         padding: 0;
         margin-right: -1px;
         @include respond-to(mob-lan) {
-            left: 0;
-            width: 100%;
+            left: auto;
+            right: 0;
+            width: 211px;
             -moz-box-sizing: border-box;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            top:54px;
+            //margin:0 -3px 0 -1px
         }
         li {
             float: left;
@@ -2289,6 +2304,11 @@ cont-gallery_contact__text {
             border-width: 1px 1px 0 0;
             &:first-child {
                 border-top: 1px solid #d4d4d4;;
+            }
+            @include respond-to(mob-lan) {
+                float: none;
+                width: auto;
+                border-width: 1px 1px 0 0;
             }
         }
     }
