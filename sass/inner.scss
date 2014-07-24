@@ -2757,7 +2757,7 @@ cont-gallery_contact__text {
         margin: 3px 0 0;
         font-size: 20px;
         width: 250px;
-        @include pfd_b;
+        @include pfd_m;
         line-height: 21px;
         @include respond-to(med) {
             font-size: 18px;
@@ -2772,6 +2772,8 @@ cont-gallery_contact__text {
         width: 100%;
     }
     .label-t {
+        font-size: 14px;
+        @include pfd_r();
         text-transform: none;
         @include respond-to(mob-lan) {
             text-align: left;
