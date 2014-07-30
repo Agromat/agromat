@@ -55,19 +55,19 @@ ul.promo-items-list.promo201306 li div.promo-text {
     width: 40%;
 }
 
-ul.promo-items-list li div ul.feblist {
+ul.promo-items-list li div.promo-text  ul {
     list-style-type: disc;
     margin-left: 11px;
 }
 
-ul.promo-items-list li div ul.feblist li {
+ul.promo-items-list li div.promo-text  ul li {
     margin-left: 6px;
     font-size: 14px;
     text-align: left;
     color: #727272;
 }
 
-ul.promo-items-list li div ul.feblist li:before {
+ul.promo-items-list li div.promo-text  ul li:before {
     background: transparent;
 }
 
@@ -85,8 +85,12 @@ ul.promo-items-list li div.promo-price {
     height: 200px;
     width: 144px;
     text-align: left;
-    padding: 12px 0px 12px 19px;
+    padding: 20px 0px 12px 19px;
     border-left: 1px solid #d4d4d4;
+}
+
+ul.promo-items-list li div.promo-price p {
+    line-height: 44px;
 }
 
 ul.promo-items-list.promo201306 li div.promo-price {
