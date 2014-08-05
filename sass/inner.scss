@@ -2952,9 +2952,9 @@ cont-gallery_contact__text {
         &:before {
             display: none;
         }
-        &:last-child {
+        /*&:last-child {
             float: none;
-        }
+        }*/
         @include respond-to(mob-lan){
             width: 45%;
         }
