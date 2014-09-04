@@ -1009,6 +1009,7 @@ a{
     border: 2px solid #d4d4d4;
     text-decoration: none;
     @include respond-to(med) {
+        display: none;
         .cont-gallery {
             float: none;
         }
@@ -1448,6 +1449,8 @@ a{
      @include pfd_m;
      font-size: 15px;
 }
+
+
 // Tabs
 
 .tab {
@@ -1508,6 +1511,7 @@ a{
     @include respond-to(mob-lan) {
         font-size: 13px;
     }
+
 }
 .tab-cont {
     margin-top: 20px; 
