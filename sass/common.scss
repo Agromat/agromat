@@ -255,7 +255,7 @@ a{
     } 
     span {
         position: relative;
-        top: -7px;
+        top: -11px;
         display: inline-block;
         padding: 0 29px;
         background: #fff;
@@ -266,7 +266,7 @@ a{
             content: "";
             position: absolute;
             right: 13px;
-            top: 5px;  
+            top: 9px;  
             @include sized-sprite($icons, rhomb-s);
         }
         &:before {
@@ -723,15 +723,42 @@ a{
        width: 100%;
     }
     .quote, .banner_action {
+        margin-bottom: 20px;
         @include respond-to(med) {
            display: none; 
         }
     }
     .banner {
+        margin-bottom: 40px;
         @include respond-to(med) {
            display: none;
         }
     }
+    .banner_action{
+        margin-bottom: 20px;
+    }
+    .question {
+        width: auto;
+        &:target {
+            &:hover { 
+                border-color: #000;
+                &:after {
+                    content: "";
+                    @include sized-sprite($icons, question-corner-h2);
+                }
+            }
+        }
+        &:hover {
+            border-color: #000;
+            &:after {
+                content: "";
+                @include sized-sprite($icons, question-corner-h);
+            }
+        }
+        .question__body{
+            font-size: 14px;
+        }
+    }   
 }
 .banner.banner-main {
         float: none;
@@ -770,7 +797,7 @@ a{
 // submenu
 .submenu {
     position: relative;
-    margin: 40px 0 20px;
+    margin: 0 0 20px;
     padding: 1px;
     border: 2px solid #000;
     background: #fff;
@@ -1016,25 +1043,25 @@ a{
        //display: none;
     }
     &:target {
-        &:hover { 
+        /*&:hover { 
             border-color: #000;
             &:after {
                 content: "";
                 @include sized-sprite($icons, question-corner-h2);
             }
-        }
+        }*/
         &:after {
             content: "";
             @include sized-sprite($icons, question-corner2);   
         }
     }
-    &:hover {
+    /*&:hover {
         border-color: #000;
         &:after {
             content: "";
             @include sized-sprite($icons, question-corner-h);
         }
-    }
+    }*/
     &:after { 
         content: "";
         position: absolute;
@@ -1052,6 +1079,24 @@ a{
     .question__answer{
         text-decoration: underline;
     }
+    .question {
+        &:target {
+            &:hover { 
+                border-color: #000;
+                &:after {
+                    content: "";
+                    @include sized-sprite($icons, question-corner-h2);
+                }
+            }
+        }
+        &:hover {
+            border-color: #000;
+            &:after {
+                content: "";
+                @include sized-sprite($icons, question-corner-h);
+            }
+        }
+    }
 }
 .question_small {
     width: 74.5%;
@@ -1067,8 +1112,8 @@ a{
 .question__body {
     padding: 8px 3% 15px;
     font-size: 17px;
-    line-height: 24px;
-    text-transform: uppercase;
+    line-height: 1.4;
+    /*text-transform: uppercase;*/
 }
 .question__answer {
     padding-right: 4%;

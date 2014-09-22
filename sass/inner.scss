@@ -2510,6 +2510,7 @@ cont-gallery_contact__text {
     float: right;
     font-size: 12px;
     padding-right: 15px;
+    /*
     &:after {
         content: "";
         position: absolute;
@@ -2518,6 +2519,7 @@ cont-gallery_contact__text {
         margin-top: -2px;
         @include sized-sprite($icons, arr1);
     }
+    */
 }
 .question__answer-link-act {
     &:after {
@@ -2534,13 +2536,15 @@ cont-gallery_contact__text {
 .question__cons {
     @include clr();
     height: 49px;
-    padding-left: 14px;    
+    padding-top: 15px;
 }
 .question__cons-img {
     position: relative;
     float: left;
-    margin: -13px 10px 0 0;
-    border: 3px solid #fff;
+    margin: 0 13px 0 0;
+    //border: 3px solid #fff;
+    /*
+    // уголок на фотке
     &:after {
         content: "";
         position: absolute;
@@ -2553,6 +2557,7 @@ cont-gallery_contact__text {
         border-bottom: 7px solid #fff;
         border-left: 7px solid transparent;
     }
+    */
     img {
         display: block;
     }
@@ -2563,9 +2568,11 @@ cont-gallery_contact__text {
     strong {
         display: block;
         font-weight: normal;
+        font-size: 16px;
     }
     span {
         color: #2d8db4;
+        font-size: 12px;
     }
 }
 .question_act {
@@ -3173,7 +3180,7 @@ cont-gallery_contact__text {
     .question {
         padding:15px 20px 0 20px;
         line-height:22px;
-        overflow: hidden;
+        //overflow: hidden;
         .cont-gallery{
             float: right;
             margin-left: 20px;
