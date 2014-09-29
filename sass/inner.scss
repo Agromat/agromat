@@ -487,6 +487,15 @@ cont-gallery_contact__text {
     }
 }
 
+
+.wrap_article{
+    &.trademarks {
+        margin-left:3.4%;
+    }
+}
+
+
+
 /* News */
 .wrap_news {
     margin: 25px -20% 0 0;
@@ -744,6 +753,9 @@ cont-gallery_contact__text {
 .text-rows.text-rows_trademarks {
     margin-top: -30px;
     padding-right: 0!important;
+    li{
+        padding-left: 3.4%;
+    }
 }
 /* Vacancy */
 .person-policy {
