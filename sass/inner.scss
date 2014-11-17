@@ -2747,6 +2747,7 @@ cont-gallery_contact__text {
     @include respond-to(mob-lan){
         display: none;
     }
+    /*
     &:after {
         content: "";
         position: absolute;
@@ -2759,6 +2760,7 @@ cont-gallery_contact__text {
         border-bottom: 7px solid #fff;
         border-left: 7px solid transparent;
     }
+    */
     img {
         display: block;
     }
