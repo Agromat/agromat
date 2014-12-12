@@ -66,6 +66,11 @@
 
 
 .promo {
+    .newspaper{
+        a {
+            text-decoration: none;
+        }
+    }
     &.wrap_shopes{
         @include respond-to(pda) {
             margin: 0 0 0 0;
@@ -105,6 +110,9 @@
             //display: inline-block;
             float: left;
         }
+        .img-cntnr{
+            position: relative;
+        }
         img {
             width:100%;
             @include respond-to(med) {
@@ -118,11 +126,121 @@
     }
 
     .promo-item-ny__main {
+        //background: #fff;
+        opacity: 1;
+        margin-top: 10px;
+        position:absolute;
+        //top:245px;
+        bottom:3px;
+        width: 100%;
+        @include respond-to(pda) {
+            //border: 2px solid #000;
+            //height: 160px;
+            //line-height: 160px;
+        }
+        @include respond-to(mob-lan) {
+            position:relative;
+            top:0;
+            margin-top: 0px;
+        }
+        .right {
+            //position:absolute;
+            //top:245px;
+            //right:0px;
+            //bottom:3px;
+            //float: right;
+            width: auto;
+            @include respond-to(pda) {
+            }
+            @include respond-to(mob-lan) {
+                position:relative;
+                top:0;
+            }
+        }
+        .promo-item-ny__title {
+            padding: 0 3px;
+            margin: 0;
+            @include pfd_b();
+            font-size: 22px;
+            text-transform: uppercase;
+            line-height: 22px;
+            display: block;
+            overflow:visible;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            color: #000;
+            //max-width:85%;
+            text-align: left;
+            @include respond-to (mob-lan) {
+                text-align: center;
+                padding: 0px;
+                font-size: 20px;
+                text-transform: uppercase;
+                line-height: 20px;
+                display: block;
+                overflow:visible;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                color: #000;
+                margin: 5px;
+                max-width:100%;
+            }
+            span {
+                display: block;
+            }
+            
+        }
+    }
+
+    .promo-item-ny__wrap {
+        background: #fff;
+        width: auto;
+        display: inline-block;
+        //width: 100%;
+        //line-height: 1px;
+        //vertical-align: middle;
+        padding: 15px 10px 10px 10px;
+        margin-right: -4px;
+        &.discount {
+            background-color:#d11242;
+            @include respond-to (mob-lan) {
+                display: block;
+                //width: 75%;
+                line-height: 1px;
+                vertical-align: middle; 
+                margin:0px auto;
+            }
+            div{
+                color: #fff;
+                display: block;
+                @include pfd_b();
+                font-size: 24px;
+                line-height: 22px;
+                text-transform: none;
+                height:22px;
+                padding: 0 3px;
+                text-align: center;
+                text-overflow: ellipsis;
+                //margin: 10px 10px;
+                @include respond-to (mob-lan) {
+                    font-size: 20px;
+                    line-height: 20px;
+                    margin: 5px 5px;
+                    height:20px;
+                }
+            }
+        }
+
+    }
+
+/*
+    .promo-item-ny__main {
         background: #fff;
         opacity: 1;
         margin-top: 10px;
         position:absolute;
-        top:245px;
+        //top:245px;
+        bottom:3px;
         @include respond-to(pda) {
             //border: 2px solid #000;
             //height: 160px;
@@ -135,8 +253,9 @@
         }
         &.right {
             position:absolute;
-            top:245px;
+            //top:245px;
             right:0px;
+            bottom:3px;
             @include respond-to(pda) {
             }
             @include respond-to(mob-lan) {
@@ -187,7 +306,7 @@
             background-color:#d11242;
             @include respond-to (mob-lan) {
                 display: block;
-                width: 100px;
+                width: 75%;
                 line-height: 1px;
                 vertical-align: middle; 
                 margin:0px auto;
@@ -196,24 +315,25 @@
                 color: #fff;
                 display: block;
                 @include pfd_b();
-                font-size: 40px;
-                line-height: 40px;
+                font-size: 30px;
+                line-height: 33px;
+                text-transform: none;
+                height:33px;
                 padding: 0 3px;
                 text-align: center;
                 text-overflow: ellipsis;
-                text-transform: uppercase;
                 margin: 10px 10px;
-                height:40px;
                 @include respond-to (mob-lan) {
-                    font-size: 30px;
-                    line-height: 30px;
+                    font-size: 20px;
+                    line-height: 20px;
                     margin: 5px 5px;
-                    height:30px;                    
+                    height:20px;
                 }
             }
         }
 
     }
+    */
     .promo-item-ny__adr {
         color: #727272;
         font-size: 12px;
@@ -222,11 +342,11 @@
         margin-top: 11px;
     } 
     .promo-item-ny__descr{
-        margin-top: 20px;
         p {
             margin: 0; padding: 0;
         }
         ul{
+            margin-top: 20px;
             li{
                 font-size: 12px;
                 margin-bottom: 0;
