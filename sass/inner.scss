@@ -3240,3 +3240,35 @@ cont-gallery_contact__text {
         }
     }
 }
+
+.top_message {
+    border: 2px solid #ed1c24;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    h3{
+        float: left;
+        width: 50%;
+        color: #ed1c24;
+        //white-space: nowrap;
+        margin: 8px 20px 0 0;
+        height: 40px;
+        font-size: 30px;
+        line-height: 34px;
+    }
+    .top__message_info {
+        //width: 50%;
+        overflow: hidden;
+        //@include pfd_m;
+        font-size: 16px;
+        //text-transform: uppercase;
+        margin: 13px 0 0;
+    }
+    ul {
+        li {
+            &.red {
+                color: #ed1c24;
+            }
+        }
+    }
+}
