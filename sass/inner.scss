@@ -206,7 +206,7 @@
         line-height:1.5;
     }
     h2 {
-        margin-bottom: 15px;
+        margin-top: 17px;
         @include pfd_m();
         font-size: 31px;
         text-transform: uppercase;
@@ -218,8 +218,8 @@
         }
     }
     h3 {
+        margin-top: 12px;
         display: inline-block;
-        margin-bottom: 15px;
         @include pfd_m();
         font-size: 24px;
         text-transform: uppercase;
@@ -839,6 +839,8 @@ cont-gallery_contact__text {
         font-size: 24px;
         @include pfd_m();
         text-transform: uppercase;
+        line-height: 1.2;
+        margin-top: 0px;
     }
     h6 {
         color: #818181;
