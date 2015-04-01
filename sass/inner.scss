@@ -235,6 +235,149 @@
         margin: 39px 0 42px;
     }
 }
+
+
+.text-cont {
+    @include hel_r();
+    font-size: 14px/1.4;
+    p{
+        line-height: 1.5;
+    }
+    h1,h2,h3,h4,h5,h6 {
+        display: block;
+        margin: 23px 0 10px;
+        @include pfd_m;
+        text-transform: uppercase;
+        @include respond-to(mob-lan) {
+            text-align: center;
+        }
+    }
+    h1 b,h2 b,h3 b,h4 b,h5 b,h6 b {
+        font-weight: normal;
+    }
+    h1 {
+        font-size: 31px;
+        line-height: 38px;
+        margin: 0 0 15px;
+    }
+    h2 {
+        margin: 30px 0 15px;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    h3 {
+        color: #3f3f3f;
+        font-size: 20px;
+        line-height: 24px;
+        clear:none;
+    }
+    h4 {
+        color: #585858;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    h5 {
+        color: #7f7f7f;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    h6 { 
+        color: #818181;
+        font-size: 12px;
+        line-height: 24px;
+    }
+    ul, ol {
+        padding-left: 10px;
+        margin-bottom: 20px;
+        overflow: hidden; //этот параметр был скрыт до 20.03.2015, когда он был раскомментирован ради этого списка: http://www.agromat.ua/news/legko-i-udobno-suhie-smesi-atis
+        li {
+            font-size: 14px;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 0;
+                @include sized-sprite($icons, rhomb-s);
+            }
+            @include respond-to(mob-lan) {
+                font-size: 11px;
+            }
+        }
+    }
+    ul {
+        li {
+            position: relative;
+        }
+    }
+    ol{
+        list-style-type:decimal;
+       li{
+        margin-left: 1.2em;
+        padding-left: 0;
+          &:before,&:after{
+             display: none;
+          }
+       }
+    }
+    .text-rows {
+        padding: 0 3.1% 0 0; 
+        li {
+            position: static;
+            padding: 9px 2.6% 7px 2.2%;
+            line-height: 1.3; 
+            border: 1px solid transparent;
+            border-bottom: 1px solid #d4d4d4;
+            color: #2D8DB4;
+            clear: both;
+            margin-bottom: 0;
+            @include respond-to(mob-lan) {
+                padding: 7px 2.6% 4px 2.2%;
+            }
+            &:before {
+                display: none;
+            }
+        }
+        ol {
+            padding-top: 15px;
+            margin-bottom: 0;
+        }
+        a {
+            color: #2D8DB4;
+            font-size: 14px;
+            &:hover{
+                color:#000;
+            }
+            @include respond-to(mob-lan) {
+                font-size: 11px;
+            }
+        }
+    }
+    .text-rows_bold {
+        margin-bottom: 10px;
+        li {
+            padding-left: 4%;
+            border: 1px solid transparent;
+            border-top: 1px solid #d4d4d4;
+            a {
+                text-decoration: none;
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: -20px;
+                    top: 6px;
+                    @include sized-sprite($icons, rhomb-s); 
+                }  
+            }
+            // &:hover {
+            //     @include box-shadow(inset 0 0 0 1px #000);
+            //     margin: 0 0 -1px;
+            // }
+        }
+    }
+}
 .cont-gallery {
     float: left;
     width: 32.7%;
@@ -2030,8 +2173,8 @@ cont-gallery_contact__text {
 }
 .collect__img {
     float: left;
-    width: 40%;
-    overflow: hidden;
+    //width: 40%;
+    //overflow: hidden;
     margin: 4px 12px 4px 4px;
     img {
         display: block;
@@ -2070,6 +2213,7 @@ cont-gallery_contact__text {
         text-transform: uppercase;
     }
 }
+
 .collect__title {
     padding-top: 7px;
     font-size: 20px;
@@ -2986,147 +3130,6 @@ cont-gallery_contact__text {
     }
 }
 
-.text-cont {
-    @include hel_r();
-    font-size: 14px/1.4;
-    p{
-        line-height: 1.5;
-    }
-    h1,h2,h3,h4,h5,h6 {
-        display: block;
-        margin: 23px 0 10px;
-        @include pfd_m;
-        text-transform: uppercase;
-        @include respond-to(mob-lan) {
-            text-align: center;
-        }
-    }
-    h1 b,h2 b,h3 b,h4 b,h5 b,h6 b {
-        font-weight: normal;
-    }
-    h1 {
-        font-size: 31px;
-        line-height: 38px;
-        margin: 0 0 15px;
-    }
-    h2 {
-        margin: 30px 0 15px;
-        font-size: 24px;
-        line-height: 24px;
-    }
-    h3 {
-        color: #3f3f3f;
-        font-size: 20px;
-        line-height: 24px;
-        clear:none;
-    }
-    h4 {
-        color: #585858;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    h5 {
-        color: #7f7f7f;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    h6 { 
-        color: #818181;
-        font-size: 12px;
-        line-height: 24px;
-    }
-    ul, ol {
-        padding-left: 10px;
-        margin-bottom: 20px;
-        //overflow: hidden;
-        li {
-            font-size: 14px;
-            margin-bottom: 8px;
-            padding-left: 16px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 5px;
-                left: 0;
-                @include sized-sprite($icons, rhomb-s);
-            }
-            @include respond-to(mob-lan) {
-                font-size: 11px;
-            }
-        }
-    }
-    ul {
-        li {
-            position: relative;
-        }
-    }
-    ol{
-        list-style-type:decimal;
-       li{
-        margin-left: 1.2em;
-        padding-left: 0;
-          &:before,&:after{
-             display: none;
-          }
-       }
-    }
-    .text-rows {
-        padding: 0 3.1% 0 0; 
-        li {
-            position: static;
-            padding: 9px 2.6% 7px 2.2%;
-            line-height: 1.3; 
-            border: 1px solid transparent;
-            border-bottom: 1px solid #d4d4d4;
-            color: #2D8DB4;
-            clear: both;
-            margin-bottom: 0;
-            @include respond-to(mob-lan) {
-                padding: 7px 2.6% 4px 2.2%;
-            }
-            &:before {
-                display: none;
-            }
-        }
-        ol {
-            padding-top: 15px;
-            margin-bottom: 0;
-        }
-        a {
-            color: #2D8DB4;
-            font-size: 14px;
-            &:hover{
-                color:#000;
-            }
-            @include respond-to(mob-lan) {
-                font-size: 11px;
-            }
-        }
-    }
-    .text-rows_bold {
-        margin-bottom: 10px;
-        li {
-            padding-left: 4%;
-            border: 1px solid transparent;
-            border-top: 1px solid #d4d4d4;
-            a {
-                text-decoration: none;
-                position: relative;
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: -20px;
-                    top: 6px;
-                    @include sized-sprite($icons, rhomb-s); 
-                }  
-            }
-            // &:hover {
-            //     @include box-shadow(inset 0 0 0 1px #000);
-            //     margin: 0 0 -1px;
-            // }
-        }
-    }
-}
 .thanks {
     position: relative;
     padding: 20px 144px 45px;
