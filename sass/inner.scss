@@ -1100,6 +1100,12 @@ cont-gallery_contact__text {
         margin: 15px 0 10px;
     }
 }
+a.img-link{
+    &:hover{
+        border: 1px solid #000;
+        @include box-shadow(inset 0 0 0 1px #000);   
+    }
+}
 .img-link {
     display: inline-block;
     margin: 0 0.6% 1% 0;
@@ -1119,10 +1125,7 @@ cont-gallery_contact__text {
         display: inline-block;
         vertical-align: top;
     }
-    &:hover{
-        border: 1px solid #000;
-        @include box-shadow(inset 0 0 0 1px #000);   
-    }
+
     .img-link__img{
        display: block;
        width: auto;
@@ -2108,6 +2111,45 @@ cont-gallery_contact__text {
 
 /* trademarks */
 
+.trademarks_disabled {
+   //position: relative;
+   // * {
+        opacity: 0.3;
+    //}
+}
+.trademarks__off-the-marlet {
+    position: absolute;
+    //top: 30%;
+    left: 25%;
+    display: block;
+    border: 5px solid #2d8db4;
+    padding: 25px 30px;
+    width: 400px;
+    z-index: 1000;
+    background-color: #fff;
+    @include pfd_m();
+    font-size: 30px;
+    line-height: 34px;
+    text-align: center;
+    opacity: 1;
+    text-transform: none;
+    margin-top: 75px;
+    strong {
+        white-space: nowrap;
+        opacity: 1;
+        @include pfd_b();
+    }
+    @include respond-to(pda) {
+        width: 40%;
+        left: 25%;
+        margin-top: 50%;
+        margin-top: 50%;
+    }
+    @include respond-to(mob-lan) {
+        width: 76%;
+        left: 0;
+    }
+}
 .link-box_shop {
     margin: 15px 0 35px;
     &:before {
@@ -2141,6 +2183,14 @@ cont-gallery_contact__text {
         display: block;
         float: none;
         margin: 0 auto 15px;
+    }
+    @include respond-to(mob-lan) {
+        display: block;
+        margin: 0 auto 15px;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }
 .colections {
@@ -2178,6 +2228,7 @@ cont-gallery_contact__text {
     margin: 4px 12px 4px 4px;
     img {
         display: block;
+        max-width: 120px;
     }
     @include respond-to(med) {
         display: none;
@@ -2797,6 +2848,12 @@ cont-gallery_contact__text {
     text-align: center;
     overflow: hidden;
     margin-top: 9px;
+    @include respond-to(mob-lan) {
+        img{
+            width: 100%;
+        }
+    }
+
 }
 .action__main {
     padding: 1.6% 2.6% 0;
