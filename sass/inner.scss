@@ -2244,8 +2244,8 @@ a.img-link{
     }
     span {
         position: absolute;
-        bottom: 10px;
-        font-size: 11px;
+        bottom: 0px;
+        font-size: 12px;
         color: #626262;
         @include respond-to(mob-lan) {
             position: static;
