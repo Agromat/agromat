@@ -1636,6 +1636,28 @@ a{
     }
 }
 
+
+.show-tel, .show-tel-hidden {
+    height: auto;
+    margin-bottom: 20px;
+    padding: 10px 28px;
+    line-height: 24px;
+    &:hover {
+        color: #000;
+    }
+    .show_tel_click {
+        border-bottom: 1px dotted;
+        text-decoration: none; 
+        //font-size: 18px;
+    }
+    .tel_full {
+        font-size: 40px;
+        display: block;
+        text-align: center;
+        line-height: 48px;
+    }
+}
+
 /* ---------------------------------------- END Blocks ----------------------------------------- */
 
 /* --------------------------------------- BEGIN Footer ---------------------------------------- */

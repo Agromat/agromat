@@ -189,6 +189,7 @@ $(document).ready(function() {
         $(this).parent().parent().addClass("question_act");
     }
   });
+
   // show/hide all shopes
   $(".js-hidden-shop").hide();
   $(".js-more-shopes").click(function(){
@@ -202,6 +203,14 @@ $(document).ready(function() {
   $(".js-more-photos").click(function(){
     $(this).hide();
     $(this).parent().children(".js-hidden-photo").show();
+    return false;
+  });
+
+  // show/hide promo telephone
+  $(".show-tel-hidden").hide();
+  $(".show_tel_click").click(function(){
+    $(this).parent().hide();
+    $(this).parent().parent().children(".show-tel-hidden").show();
     return false;
   });
 
