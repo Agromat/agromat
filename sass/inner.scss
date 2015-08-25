@@ -3313,7 +3313,7 @@ a.img-link{
         width: 50%;
         color: #ed1c24;
         //white-space: nowrap;
-        margin: 8px 20px 0 0;
+        margin: 8px 20px 30px 0;
         height: 40px;
         font-size: 30px;
         line-height: 34px;
@@ -3325,6 +3325,9 @@ a.img-link{
         font-size: 16px;
         //text-transform: uppercase;
         margin: 13px 0 0;
+        ul{
+            margin-bottom: 0;
+        }
     }
     ul {
         li {
