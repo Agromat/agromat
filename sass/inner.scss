@@ -505,7 +505,8 @@
        margin-bottom: 15px;
     }
 }
-cont-gallery_contact__text {
+.cont-gallery_contact__text {
+    overflow: hidden;
     p{
         margin: 7px 0 4px 0;
     }
@@ -1033,6 +1034,7 @@ cont-gallery_contact__text {
         text-transform: uppercase;
         line-height: 1.2;
         margin-top: 0px;
+        margin-right: 24px;
     }
     h6 {
         color: #818181;
@@ -1272,7 +1274,7 @@ a.img-link{
     }
 }
 .filter_map {
-    margin: -12px 0 9px 0;
+    margin: 10px 0 9px 0;
     @include respond-to(mob-lan) {
        height: auto;
        line-height: 1;
@@ -1358,10 +1360,10 @@ a.img-link{
         font-size: 15px;
     }
     @include respond-to(pda) {
-        font-size: 11px;
+        font-size: 14px;
     }
     @include respond-to(mob-lan) {
-        font-size: 11px;
+        font-size: 12px;
     }
     &:before {
         content: "";
@@ -1427,11 +1429,12 @@ a.img-link{
     .label__text {
         &:after {
             content: "";
-            top: 19px;
+            top: 9px;
             left: -16px;
             @include sized-sprite($icons, check);
             @include respond-to(pda) {
                 left: -9px;
+                top: 3px;
             }
             @include respond-to(mob-lan) {
                 top: 2px; 
@@ -1614,7 +1617,7 @@ a.img-link{
     margin-top: 17px;
 }
 .wrap_shop-addr {
-    margin: 36px -40px -2px 0; 
+    margin: 0px -40px 25px 0; 
     @include respond-to(mob-lan) {
         margin-top: 0px;
     }
@@ -2342,6 +2345,8 @@ a.img-link{
     @include clr;
     position: relative;
     top: -7px;
+    height: auto;
+    line-height: 30px;
     // @include respond-to(pda) {
     //     z-index: 2;
     //     margin-top: 5px;
@@ -2359,9 +2364,9 @@ a.img-link{
         }
         @include respond-to(pda) {
             padding: 0 9px; 
-            float: right;
-            margin: 12px 0;
-            width: 50%;
+            //float: right;
+            margin: 15px 0 0;
+            width: 30%;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -2370,6 +2375,7 @@ a.img-link{
             } 
         }
         @include respond-to(mob-lan) {
+            width: 50%;
             padding: 0 5px;
         }
     }
@@ -2411,9 +2417,16 @@ a.img-link{
 }
 .filter__col {
     float: left;
+    width: 80%;
+    padding: 5px;
+    @include respond-to(med) {
+        width: 70%;
+    }
     @include respond-to(pda) {
         float: none;
         overflow: hidden;
+        width: 100%;
+        padding: 5px 0 15px;
     }
 }
 .select-list {
@@ -2915,9 +2928,72 @@ a.img-link{
 }
 
 /* Contact shop */
+.contact_page {
+    .contacts_page_block {
+        display: inline-block;
+        margin: 30px 0.8% 0.8% 0;
+        padding: 10px 20px;
+        width: 44%;
+        vertical-align: top;
+        min-height: 100px;
+        border: 1px solid #d4d4d4;
+        text-decoration: none;
+        color: #000;
+
+        @include respond-to(med) {
+            width: 22.1%;
+            margin-bottom: 1.5%;
+        }
+        @include respond-to(pda) {
+            width: 44.2%;
+        }
+        @include respond-to(mob-lan) {
+            width: 42%;
+            margin-bottom: 1.8%;
+
+        }
+        h3 {
+            margin: 3px 0 9px;
+            line-height: 22px;
+            font-size: 20px;
+            display: block; 
+            @include pfd_b;
+            @include respond-to(pda) {
+                font-size: 18px;
+                line-height: 18px;
+            }
+            @include respond-to(mob-lan) {
+                font-size: 18px;
+                line-height: 18px;
+            }
+        }
+        .empty {
+            cursor: default;
+            &:hover {
+                @include box-shadow(none);
+            }
+        }
+        .shop-addr__link {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            @include respond-to(mob-lan) {
+                height: 150px;
+                line-height: 150px;
+            }
+        }
+        a.shop-addr__link {
+            &:hover {
+                @include box-shadow(0 0 0 2px #000);
+            }
+        }
+    }
+    
+}
+
 .contact-col {
     float: left;
-    margin: 0 42px 42px 0;
+    margin: 20px 42px 20px 0;
     font-size: 14px;
     @include respond-to(mob-lan) {
         float: none;

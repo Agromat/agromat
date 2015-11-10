@@ -358,7 +358,7 @@ a{
         }
         @include respond-to(pda) { 
             float: left;
-            width: 24.5%;
+            width: 32.5%;
             text-align: center;
         }
     }
@@ -589,12 +589,12 @@ a{
 } 
 .menu .menu__item1 {
     text-align: left;
-    width: 11%;
+    width: 13%;
     @include respond-to(med) { 
         width: 13%;
     }
     @include respond-to(pda) { 
-        width: 32.3%;
+        width: 32.5%;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -606,18 +606,18 @@ a{
     }
 }
 .menu__item2 {
-    width: 15%;
+    width: 16%;
     @include respond-to(med) { 
-        width: 11%;
+        width: 14%;
     }
     @include respond-to(pda) { 
-        width: 31.3%;
+        width: 36.3%;
     }
 }
 .menu .menu__item3 {
-    width: 18%;
+    width: 20%;
     @include respond-to(pda) { 
-        width: 36.3%;
+        width: 31%;
     }
     &:before {
         content: "";
@@ -630,9 +630,9 @@ a{
     }
 }
 .menu .menu__item4 {
-    width: 18%;
+    width: 20%;
     @include respond-to(med) { 
-        width: 17%; 
+        width: 20%; 
     }
     @include respond-to(pda) { 
         width: 32.3%;
@@ -642,22 +642,22 @@ a{
     }
 }
 .menu__item5 {
-    width: 19%;
+    width: 21%;
     @include respond-to(med) { 
-        width: 18%;
+        width: 21%;
     }
     @include respond-to(pda) { 
-        width: 31%;
+        width: 36.5%;
     }
 }
 .menu .menu__item6 {
     text-align: right; 
-    width: 19%;
+    width: 10%;
     @include respond-to(med) { 
-        width: 23%;
+        width: 11%;
     }
     @include respond-to(pda) { 
-        width: 36%;
+        width: 31%;
         text-align: center;
     }
     @include respond-to(mob-lan) { 
@@ -1207,8 +1207,8 @@ a{
     border: 2px solid #000;
     @include clr;
     @include respond-to(pda) {
-        height: 151px;
-        line-height: 57px;
+        height: 117px;
+        line-height: 40px;
     }
     @include respond-to(mob-lan) {
         height: 117px;
@@ -1222,6 +1222,7 @@ a{
         @include respond-to(pda) {
             float: none;
             width: 100%;
+            height: 40px;
             border-bottom: 1px solid #d4d4d4;
             &:first-child {
                 a {
@@ -1902,7 +1903,7 @@ a{
             }
         }
     }
-    a {
+    a, div {
         display: inline-block;
         @include gray;
         opacity: 0.4;
@@ -1919,6 +1920,7 @@ a{
 .part-logo__5 {@include sized-sprite($logos, logo5);}
 .part-logo__6 {@include sized-sprite($logos, logo6);}
 .part-logo__7 {@include sized-sprite($logos, logo7);}
+
 .footer__copy {
     float: left;
     color: #a2a2a2;
