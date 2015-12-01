@@ -963,10 +963,10 @@ a{
     margin: 20px auto;
     height: 1px;
     background: #96c6d9;
-    width: 55%;
+    width: 65%;
     text-align: center;
     @include respond-to(med) { 
-       width: 65%;
+       width: 95%;
     }
     @include respond-to(pda) { 
        width: 100%;
@@ -998,6 +998,9 @@ a{
     margin: 0 auto;
     width: 67%;
     background: #fff;
+    @include respond-to(med) { 
+       width: 75%;
+    }
     @include respond-to(mob-lan) { 
        width: 100%;
     }
