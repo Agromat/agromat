@@ -134,6 +134,7 @@
 }
 .slider_cont {
     height: 200px;
+    margin-bottom: 40px;
     @include respond-to(pda) {
         display:none;
     }
@@ -476,6 +477,7 @@
     background: url(../_img/hot-girl.jpg) 0 0 no-repeat;
     margin-bottom: 0;
     border: 0;
+    height: 198px;
     @include respond-to(med) {
         float: right;
         background: #000 url(../_img/hot-girl.jpg) 50% 0 no-repeat;
