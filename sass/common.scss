@@ -591,10 +591,10 @@ a{
     text-align: left;
     width: 11%;
     @include respond-to(med) { 
-        width: 13%;
+        width: 12%;
     }
     @include respond-to(pda) { 
-        width: 32.5%;
+        width: 25%;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -608,16 +608,19 @@ a{
 .menu__item2 {
     width: 14%;
     @include respond-to(med) { 
-        width: 14%;
+        width: 13%;
     }
     @include respond-to(pda) { 
-        width: 36.3%;
+        width: 25%;
     }
 }
 .menu .menu__item3 {
     width: 14%;
+    @include respond-to(med) { 
+        width: 13%;
+    }
     @include respond-to(pda) { 
-        width: 31%;
+        width: 25%;
     }
     &:before {
         content: "";
@@ -631,8 +634,11 @@ a{
 }
 .menu .menu__item4 {
     width: 14%;
+    @include respond-to(med) { 
+        width: 13%;
+    }
     @include respond-to(pda) { 
-        width: 31%;
+        width: 25%;
     }
     &:before {
         content: "";
@@ -647,7 +653,7 @@ a{
 .menu .menu__item5 {
     width: 18%;
     @include respond-to(med) { 
-        width: 18%; 
+        width: 19%; 
     }
     @include respond-to(pda) { 
         width: 32.3%;
