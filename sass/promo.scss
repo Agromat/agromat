@@ -2,10 +2,15 @@
 
 /* Акция */
 
+
+
 ul.promo-items-list,
-ul.promo-items-list li {
+ul.promo-items-list * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box; /* Android ≤ 2.3, iOS ≤ 4 */
+    -moz-box-sizing: border-box; /* Firefox ≤ 28 */
+    box-sizing: border-box; /* Chrome, Firefox 29+, IE 8+, Opera, Safari 5.1 */
 }
 
 ul.promo-items-list>li {
@@ -16,6 +21,13 @@ ul.promo-items-list>li {
     font-size: 0;
     margin-right: 16px;
     margin-bottom: 10px;
+    padding: 0 220px 0 0;
+    overflow: hidden;
+    
+    @include respond-to(iphone5) {
+      padding: 0;
+      text-align: center;
+    }
 }
 
 
@@ -25,7 +37,7 @@ ul.promo-items-list li:before {
 }
 
 ul.promo-items-list>li img {
-    width: 40%;
+    width: 30%;
     padding: 12px;
     float: left;
 }
@@ -34,36 +46,52 @@ ul.promo-items-list.promo201306>li img {
     width: 30%;
     padding: 12px;
     float: left;
+    
+    @include respond-to(iphone5) {
+      width: 50%;
+      float: none;
+      margin: auto;
+      padding: 5px;
+    }
 }
 
 ul.promo-items-list li div {
+  /*
     display: inline-block;
     vertical-align: top;
+  */
     padding-right: 10px;
     padding-top: 12px;
     background: #f8f8f8;
 }
 
 ul.promo-items-list li div.promo-text {
-    width: 30%;
-    float: left;
+    overflow: hidden;
     background: transparent;
+    padding-bottom: 20px;
+    
+    @include respond-to(iphone5) {
+      width: 100%;
+      padding: 0 15px 15px;
+    }
 }
 
 ul.promo-items-list.promo201306 li div.promo-text {
-    width: 40%;
+    //width: 40%;
 }
 
 ul.promo-items-list li div.promo-text  ul {
     list-style-type: disc;
-    margin-left: 11px;
+    padding-left: 15px;
 }
 
 ul.promo-items-list li div.promo-text  ul li {
-    margin-left: 6px;
     font-size: 14px;
     text-align: left;
     color: #727272;
+    margin-left: 0;
+    margin-bottom: 4px;
+    padding-left: 0;
 }
 
 ul.promo-items-list li div.promo-text  ul li:before {
@@ -75,31 +103,54 @@ ul.promo-items-list li div h3 {
     text-align: left;
     line-height: 30px;
     font-size: 30px;
-	margin-top:10px;
+    margin-top:10px;
+    margin-bottom: 15px;
+    
+    @include respond-to(iphone5) {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 24px;
+    }
 }
 
 ul.promo-items-list li div.promo-price {
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 0;
     font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
-    height: 200px;
-    width: 144px;
+    height: 100%;
+    width: 220px;
     text-align: left;
-    padding: 20px 0px 12px 19px;
+    padding: 20px 0px 12px 12px;
     border-left: 1px solid #d4d4d4;
+    
+    @include respond-to(iphone5) {
+      position: relative;
+      width: 100%;
+      border-left: none;
+      border-top: 1px solid #d4d4d4;
+      padding: 12px 15px 8px;
+    }
 }
 
 ul.promo-items-list li div.promo-price p {
     line-height: 44px;
+    
+    @include respond-to(iphone5) {
+      display: inline-block;
+      vertical-align: top;
+    }
 }
 
 ul.promo-items-list.promo201306 li div.promo-price {
-    width: 204px;
-	height:270px;
+    //width: 204px;
+	//height:270px;
 }
 
 ul.promo-items-list li div.promo-price p.old span,
 ul.promo-items-list li div.promo-price p.new span {
-    font-size: 30px;
+    font-size: 26px;
+    white-space: nowrap;
 }
 
 ul.promo-items-list li div.promo-price p.old {
@@ -109,6 +160,11 @@ ul.promo-items-list li div.promo-price p.old {
     color: #bdbdbd;
     font-size: 48px;
     background: url(/_img/promo/febline.png) repeat-x 0 50%;
+    
+    @include respond-to(iphone5) {
+      font-size: 40px;
+      padding-right: 30px;
+    }
 }
 
 ul.promo-items-list.promo201306 li div.promo-price p.old {
@@ -119,11 +175,13 @@ ul.promo-items-list.promo201306 li div.promo-price p.old {
 }
 
 ul.promo-items-list li div.promo-price p.new {
-    position: absolute;
-    bottom: 27px;
-    left: 19px;
+    
     color: #2b88ae;
     font-size: 48px;
+    
+    @include respond-to(iphone5) {
+      font-size: 40px;
+    }
 }
 
 ul.promo-items-list.promo201306 li div.promo-price p.new {
@@ -142,6 +200,7 @@ ul.promo-items-list li div.promo-price.promo-last p.old span {
 
 ul.promo-items-list li h3.promo-show {display: none;}
 
+/*
 @media only screen and (max-width: 1024px) {
     ul.promo-items-list>li {
         height: 240px;
@@ -242,6 +301,7 @@ ul.promo-items-list li h3.promo-show {display: none;}
         font-size: 20px;
     }
 }
+*/
 
 ul.promo-list.table {
 	margin:0; padding:0;
@@ -269,7 +329,7 @@ ul.promo-list.table {
         margin: 0 0 0 -16px;
         position: relative;
         font-size: 18px;
-        @include pfd_m();
+        //@include pfd_m();
         text-transform: uppercase;
         padding-bottom: 2px;
         overflow: hidden;
