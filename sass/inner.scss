@@ -3420,10 +3420,10 @@ a.img-link{
     }
     h2 {
         @include respond-to(med) {
-            text-align: center;
+            text-align: left;
         }
         @include respond-to(pda) {
-            display: none;
+            display: block;
         }
     }
 }
