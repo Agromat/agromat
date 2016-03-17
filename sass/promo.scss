@@ -36,22 +36,42 @@ ul.promo-items-list li:before {
     background: transparent;
 }
 
-ul.promo-items-list>li img {
+ul.promo-items-list>li .promo-image {
     width: 40%;
-    padding: 12px;
+    padding: 10px;
     float: left;
+    background: #fff;
+    img {
+      max-width: 100%;
+      display: block;
+      float: none !important;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+    }
+    span {
+      display: block;
+      color: #727272;
+      font-size: 12px;
+      text-align: left;
+      text-decoration: none;
+      padding: 0 0 0 14px;
+      line-height: 14px;
+    }
 }
 
-ul.promo-items-list.promo201306>li img {
+ul.promo-items-list.promo201306>li .promo-image {
     width: 40%;
-    padding: 12px;
+    padding: 10px;
     float: left;
     
     @include respond-to(iphone5) {
-      width: 50%;
+      width: 70%;
       float: none;
-      margin: auto;
+      margin: 0 auto 10px;
       padding: 5px;
+      text-align: center;
     }
 }
 
