@@ -38,34 +38,37 @@ ul.promo-items-list li:before {
 
 ul.promo-items-list>li .promo-image {
     width: 40%;
-    padding: 10px;
+    padding: 20px;
     float: left;
     background: #fff;
     img {
       max-width: 100%;
       display: block;
       float: none !important;
+      border: 2px solid #fff;
     }
     a {
       display: block;
       text-decoration: none;
+      &:hover {
+        img {
+            border: 2px solid #2c8db7;
+        }
+        span {
+            color: #2c8db7;
+        }
+      }
     }
     span {
       display: block;
       color: #727272;
       font-size: 12px;
-      text-align: left;
+      text-align: center;
       text-decoration: none;
-      padding: 0 0 0 14px;
+      padding: 10px 0 0 14px;
       line-height: 14px;
     }
-}
-
-ul.promo-items-list.promo201306>li .promo-image {
-    width: 40%;
-    padding: 10px;
-    float: left;
-    
+   
     @include respond-to(iphone5) {
       width: 70%;
       float: none;
