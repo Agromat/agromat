@@ -1523,7 +1523,7 @@ a{
 
 // Tabs
 
-.tab {
+.tab, .tab-static {
     position: relative;
     font-size: 18px;
     @include pfd_m();
