@@ -1765,6 +1765,29 @@ a.img-link{
         text-align: left;
         margin: 0 2.4% 10% 0;
     }
+
+    &.downloadActionsCatalog {
+        background-color: #02abe6;
+        padding: 10px;
+
+        .newspaper__title {
+            color: #fff;
+        }
+
+        &:hover {
+            .newspaper__title {
+                color: #313131;
+            }
+        }
+
+        .newspaper__dwnld {
+            color: #313131;
+            i {
+                background: url('../_img/icons-sf089a82f61(v2).png') 0 -440px no-repeat; 
+            }
+        }
+    }
+
     &:hover {
         img {
             opacity: 1;
@@ -1793,6 +1816,7 @@ a.img-link{
         color: #000;
         text-transform: uppercase;
         text-align: left;
+
         @include respond-to(mob-lan) {
             font-size: 15px;
             margin-bottom: 0;
@@ -1800,12 +1824,14 @@ a.img-link{
         }
     }
 }
+
 .newspaper__dwnld {
     display: inline-block;
     margin-top: -3px;
     color: #898989;
     font-size: 14px;
     line-height: 14px;
+
     @include pfd_b;
     text-transform: uppercase;
     text-decoration: none;
