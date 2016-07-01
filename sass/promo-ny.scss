@@ -65,99 +65,95 @@
 }
 
 .summerAction{
-    ul{
-        padding: 0;
-        @include respond-to(pda) {
-            width: 440px;
-            margin: 0 auto;
-        }
-
-        @include respond-to(mob-lan) {
-            width: 100%;
-        }
-
-
-        li{
-            float: left;
-            background-color: #02abe6;
-            margin: 0;
-            margin-right:0.5%;
-            padding:5px;
-            position: relative;
-            width: 23%;
-
-            @include respond-to(pda) {
-                width:46%;
-                margin-right:0;
-                margin-bottom: 2%;
-            }
-
-            @include respond-to(mob-lan) {
-                width: 180px;
-                margin:0 auto 10px;
-                float: none;
-            }
-
-            a{
-                box-sizing: border-box;
-                height: 100px;
-                border: 2px solid #b4e6f8;
-                padding: 5px;
-                font-size: 15px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #fff;
-                display: block;
-                line-height: 1.2;
-                letter-spacing: 0.2px;
-            }
-            &:after{
-                content: "";
-                position: absolute;
-                bottom: -5px;
-                right: 0px;
-                display: block;
-                background: url("../_img/action-item.png") 0px -106px;
-                width: 114px;
-                height: 73px;
-            }
-
-            &:nth-child(2){
-                &:after{
-                    background: url("../_img/action-item.png") -127px -103px;
-                    width: 124px;
-                    height: 69px;
-                }
-            }
-
-            &:nth-child(3){
-                    &:after{
-                    background: url("../_img/action-item.png") 6px -11px;
-                    width: 131px;
-                    height: 86px;
-                }
-            }
-            &:nth-child(4){
-                &:after{
-                    background: url("../_img/action-item.png") 128px 0px;
-                    width: 116px;
-                    height: 103px;
-                }
-            }
-
-            &:nth-child(1), &:nth-child(3){
-                @include respond-to(pda) {
-                    margin-right: 2%;
-                }
-                @include respond-to(mob-lan) {
-                    width: 180px;
-                    margin:0 auto 10px;
-                    float: none;
-                }
-            }
-        }
-               
-    }
+   ul{
+       padding: 0;
+       @include respond-to(pda) {
+           width: 440px;
+           margin: 0 auto;
+       }
+       @include respond-to(mob-lan) {
+           width: 100%;
+       }
+       li{
+           float: left;
+           background-color: #02abe6;
+           margin: 0;
+           margin-right:1%;
+           padding:5px;
+           position: relative;
+           width: 22%;
+           @include respond-to(pda) {
+               width:46%;
+               margin-right:0;
+               margin-bottom: 2%;
+           }
+           @include respond-to(mob-lan) {
+               width: 180px;
+               margin:0 auto 10px;
+               float: none;
+           }
+           a{
+               box-sizing: border-box;
+               height: 100px;
+               border: 2px solid #b4e6f8;
+               padding: 5px;
+               font-size: 15px;
+               font-weight: bold;
+               text-decoration: none;
+               color: #fff;
+               display: block;
+               line-height: 1.2;
+               letter-spacing: 0.2px;
+               span{
+                   position: absolute;
+                   bottom: -5px;
+                   right: 0px;
+                   display: block;
+                   background: url("../_img/action-item.png") 0px -106px;
+                   width: 114px;
+                   height: 73px;
+               }
+           }
+           &:nth-child(2){
+               a{
+                   span{
+                       background: url("../_img/action-item.png") -127px -111px;
+                       width: 124px;
+                       height: 69px;
+                   }
+               }
+           }
+           &:nth-child(3){
+               a{
+                   span{
+                       background: url("../_img/action-item.png") 6px -11px;
+                       width: 131px;
+                       height: 86px;
+                   }
+               }
+           }
+           &:nth-child(4){
+               a{
+                   span{
+                       background: url("../_img/action-item.png") 128px 0px;
+                       width: 116px;
+                       height: 103px;
+                   }
+               }
+           }
+           &:nth-child(1), &:nth-child(3){
+               @include respond-to(pda) {
+                   margin-right: 2%;
+               }
+               @include respond-to(mob-lan) {
+                   width: 180px;
+                   margin:0 auto 10px;
+                   float: none;
+               }
+           }
+       }
+              
+   }
 }
 
 
