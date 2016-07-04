@@ -3507,6 +3507,19 @@ a.img-link{
         border: 1px solid #c0ddea;
         padding: 8px 0;
         text-align: center;
+        @include respond-to(pda) {
+            font-size: 24px;
+            padding: 16px 0;
+        }
+        @include respond-to(mob-lan) {
+            font-size: 22px;
+            
+        }
+
+        @include respond-to(mob){
+            font-size: 20px;
+        }
+
         &:after{
             content: "";
             display: inline-block;
