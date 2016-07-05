@@ -3517,7 +3517,7 @@ a.img-link{
             
         }
 
-        @include respond-to(mob){
+        @include respond-to(mob) {
             font-size: 20px;
         }
 
@@ -3533,3 +3533,4 @@ a.img-link{
         }
     }
 }
+
