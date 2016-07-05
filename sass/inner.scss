@@ -1190,7 +1190,7 @@ a.img-link{
     }
     div {
         margin: 0 auto;
-        width: 60%;
+        width: 65%;
         height: 42px;
         line-height: 42px;
         @include respond-to(mob-lan) {
@@ -1220,7 +1220,7 @@ a.img-link{
             position: absolute;
             top: 50%;
             margin-top: -3px;
-            right: -30%;
+            right: -25%;
             @include sized-sprite($icons, rhomb-m);
             @include respond-to(mob-lan) {
                display: none;
