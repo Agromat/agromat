@@ -1220,7 +1220,7 @@ a.img-link{
             position: absolute;
             top: 50%;
             margin-top: -3px;
-            right: -25%;
+            right: -20%;
             @include sized-sprite($icons, rhomb-m);
             @include respond-to(mob-lan) {
                display: none;
@@ -1228,7 +1228,7 @@ a.img-link{
         }
         &:before {
             content: "";
-            left: -30%;
+            left: -20%;
         }
     }
 }
