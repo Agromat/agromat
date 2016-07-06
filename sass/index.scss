@@ -291,6 +291,8 @@
 
     &.exportSales{
         height: 200px;
+        font-family: 'pf_din_text_comp_probold', sans-serif;
+
         a {
             letter-spacing: 0px;
             font-size: 26px;
@@ -308,8 +310,8 @@
 
         @include respond-to(mob-lan) {
             a {
-                font-size: 16px !important;
-                padding: 24px 0 !important;
+                font-size: 24px !important;
+                padding: 10px 0 !important;
             }
          }
     }
