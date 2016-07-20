@@ -358,10 +358,30 @@ a{
         }
         @include respond-to(pda) { 
             float: left;
-            width: 32.5%;
+            width: 25%;
             text-align: center;
         }
+    		
+		    &:first-child{
+		    	@include respond-to(mob-lan) { 
+		            width: 18%;
+		        }
+		    }
+
+		    &:nth-child(2){
+					@include respond-to(mob-lan) {
+		    			width: 32%;
+		    	}
+		    }
+
+		    &:first-child, &:nth-child(2), &:nth-child(3){
+		    	@include respond-to(mob-lan){
+		    		border-right: 1px solid #d7d7d7;
+		    		box-sizing:border-box; 
+		    	}
+		    }
     }
+
     a {
         color: #717171;
         margin-right: 26px;
@@ -378,6 +398,7 @@ a{
         }
     }
 }
+
 .header__links-act a {
     color: #000;
 }
