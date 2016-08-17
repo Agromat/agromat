@@ -273,7 +273,6 @@ a{
 			left: 13px;
 		}
 	}
-	
 }
 .title-l-1.title-media {
 	font-size: 16px !important;
@@ -281,6 +280,10 @@ a{
 	margin: 30px 0;
 	display: block;
 	clear: left;
+	@include respond-to (med){
+		margin-top: 0;
+		margin-bottom:35px;
+	}
 	span {
 		letter-spacing: 3px;
 		padding: 0 23px;
@@ -306,6 +309,9 @@ a{
 	font-size: 31px !important;
 	text-transform: uppercase;
 	line-height: 38px !important;
+	@include respond-to(med){
+		font-size: 25px !important;
+	}
 	@include respond-to(mob-lan) { 
 		font-size: 20px;
 		line-height: 20px;
@@ -813,9 +819,12 @@ a{
 	margin: 25px 0;
 	clear: both;
 	@include respond-to(med) {
-		width: 100%;
+		width: 31%;
 		display: block;
-		height: 92px;
+		height: 150px;
+		position: absolute;
+    left: -33.3333%;
+    top: 12.5%;
 		.separator-blue_bot {
 			display: block;
 		}
@@ -925,7 +934,8 @@ a{
 		}
 		li {
 			border: 0;
-			line-height: 23px;
+			line-height: 1;
+			margin: 5px 0;
 			&:before {
 				content: "";
 				display: none;
