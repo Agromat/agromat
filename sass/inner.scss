@@ -517,7 +517,7 @@
 	margin-bottom: 40px;
 	overflow: hidden;
 	@include respond-to(med){
-		margin-bottom:20px;
+		margin-bottom:16px;
 		height: 130px;
 	}
 	@include respond-to(mob-lan) { 
@@ -1095,7 +1095,7 @@
 	margin-bottom: -10px;
 	clear: both;
 	.title-media {
-		margin: 13px 0 37px;
+		margin: 37px 0;
 	}
 }
 .short-gallery {
