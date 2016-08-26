@@ -991,15 +991,21 @@ a{
 			@include respond-to(pda) { 
 				display: none;
 			}
-
 		}
 		a {
 			color: #2c8db7;
 		}
-		li a {
-			color: #898989;
-			&:hover {
-				color: #2c8db7;
+		ul{	
+			li {
+				@include respond-to(pda){
+					float: none;
+				}
+				a {
+					color: #898989;
+					&:hover {
+						color: #2c8db7;
+					}
+				}
 			}
 		}
 	}
