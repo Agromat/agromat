@@ -949,7 +949,7 @@ a{
 					font-size: 14px;
 				}
 				@include respond-to(pda) { 
-					font-size: 16px;
+					font-size: 15px;
 				}
 			}
 		}
@@ -971,7 +971,8 @@ a{
 			padding-left: 20px;
 		}
 		@include respond-to(pda) { 
-			padding-left: 37px;
+			// padding-left: 37px;
+	    padding-left: 10px;
 			font-size: 20px;
 		}
 		&:hover {
@@ -997,10 +998,6 @@ a{
 		}
 		ul{	
 			li {
-				@include respond-to(pda){
-					float: none;
-					width: 100%;
-				}
 				a {
 					color: #898989;
 					&:hover {
