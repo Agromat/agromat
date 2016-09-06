@@ -1096,6 +1096,9 @@
 	clear: both;
 	.title-media {
 		margin: 37px 0;
+		@include respond-to(mob-lan) {
+			margin-top: 22px;
+		}
 	}
 }
 .short-gallery {
@@ -1481,7 +1484,7 @@ a.img-link{
 	width: 92.5%;
 	margin: 0 auto;
 	@include respond-to(mob-lan) {
-		margin-bottom: 20px;
+		margin-bottom: 0;
 	}
 }  
 .map_shop {
@@ -3536,7 +3539,7 @@ a.img-link{
 		&:after{
 			content: "";
 			display: inline-block;
-			background: url("/_img/arr-w.png");/*D:/Projects/agromat.ua/Frontend/_img/arr-w.png*/
+			background: url("D:/Projects/agromat.ua/Frontend/_img/arr-w.png");/*D:/Projects/agromat.ua/Frontend/_img/arr-w.png*/
 			height: 15px;
 			width: 36px;
 			position: relative;
