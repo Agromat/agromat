@@ -248,6 +248,9 @@ a{
 	background: #000;
 	text-align: center;
 	clear: both;
+	@include respond-to(med) {
+		margin: 10px 0;
+	}
 	@include respond-to(mob-lan) {
 		margin-bottom: 0 !important;
 		height: auto;
