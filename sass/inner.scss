@@ -1,1492 +1,1507 @@
 @import "base";
 .content {
-    float: right;
-    position: relative;
-    width: 75%;
-    font-size: 14px;
-    line-height: 1.2em;  
-    @include respond-to(pda) {
-       float: none;
-       width: 100%;
-    }
-    h1 {
-        margin-bottom: 16px;
-        font-size: 31px;
-        line-height: 38px;
-        @include pfd_m;
-        text-transform: uppercase;
-        @include respond-to(mob-lan) {
-           text-align: center;
-        }
-    }
-    hr {
-        position: relative;
-        margin: 23px 0 30px;
-        height: 1px;
-        background: #000;
-        border: 0;
-        &:before {
-            content: "";
-            position: absolute;
-            top: -2px;
-            left: 50%;
-            z-index: 2;
-            margin-left: -4px;
-            @include sized-sprite($icons, rhomb-m);
-        }
-        &:after {
-            content: ""; 
-            position: absolute;
-            top: -3px;
-            left:50%;
-            width: 28px;
-            height: 4px;
-            margin-left: -14px;
-            background: #fff;
-        }  
-    }
-    p {
-        margin-bottom: 20px;
-    }
-    blockquote {
-        position: relative;
-        float: left;
-        width: 23.5%;
-        margin: -43px 0 0 -38%;
-        padding: 26px 40px 18px 53px;
-        border-top: 2px solid #000;
-        border-bottom: 2px solid #000;
-        font-size: 14px;
-        color: #000;
-        @include hel_bi();
-        @include respond-to(med) {
-           margin: 0 25px 20px 0;
-           width: 30%;
-        }
-        @include respond-to(pda) {
-           margin: 0 0 20px 0;
-           float: none;
-           width: 100%;
-           -moz-box-sizing: border-box;
-           box-sizing: border-box;
-        }
-        &:before {
-            content: "";
-            position: absolute;
-            left: 13px;
-            top: 29px;
-            color: #2d8db4;
-            @include sized-sprite($icons, quote);
-        }
-        i {
-            display: block;
-            margin-top: 17px;
-            color: #737373;
-            font-size: 12px;
-            @include hel_i();
-        }
-    }
-    table {
-        margin: 40px 0 30px 3px;
-        width: 95.6%;
-        word-wrap: break-word;
-        @include respond-to(mob-lan) {
-            margin-left: 0;
-        }
-        p {
-            margin-bottom: 0;
-            @include respond-to(mob-lan) {
-                font-size: 12px;
-            }
-        }
-        td {
-            padding: 2% 1.4% 2%;
-            //width: 50%;
-            border: 2px solid #d4d4d4;
-            &:first-child {
-                border-right: 1px solid #d4d4d4;
-            }
-            &:last-child {
-                border-left: 1px solid #d4d4d4;
-            }
-        }
-        th {
-            //width: 50%;
-            padding: 1.1% 0 1.7%;
-            strong {
-                font-size: 24px;
-                @include pfd_m;
-                text-align: center;
-                text-transform: uppercase;
-                @include respond-to(mob-lan) {
-                    font-size: 16px;
-                }
-            }
-        }
-        thead th {
-            position: relative;
-            border-top: 2px solid #000;
-            border-bottom: 2px solid #000;
-            &:first-child {
-                border-left: 2px solid #000;
-            }
-            &:last-child {
-                border-right: 2px solid #000;
-            }
-            strong {
-                position: relative;
-                z-index: 2;
-                background: #fff;
-                padding: 0 10px;
-            }
-            div {
-                position: relative;
-                overflow: hidden;
-                padding: 2px 0;
-                &:before,
-                &:after {
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    height: 1px;
-                    width: 20%;
-                    left: 15%;
-                    background: #2d8db4;
-                    @include respond-to(mob-lan) {
-                        display: none;
-                    }
-                }
-                &:before {
-                    right: 15%;
-                    left: auto;
-                }
-            }
-        }
-        tfoot {
-            th {
-                border: 2px solid #d4d4d4;
-                border-top: 0;
-                border-bottom: 0;
-                strong {
-                    color: #2d8db4;
-                }
-            }
-            td {
-                padding: 2.8% 1.4% 3.6%;
-            }
-        }
-    }
-    .banner {
-        @include respond-to(pda) {
-          height: 85px;
-        }
-    }
+	float: right;
+	position: relative;
+	width: 75%;
+	font-size: 14px;
+	line-height: 1.2em;  
+	@include respond-to(pda) {
+	   float: none;
+	   width: 100%;
+	}
+	h1 {
+		margin-bottom: 16px;
+		font-size: 31px;
+		line-height: 38px;
+		@include pfd_m;
+		text-transform: uppercase;
+		@include respond-to(mob-lan) {
+		   text-align: center;
+		}
+	}
+	hr {
+		position: relative;
+		margin: 23px 0 30px;
+		height: 1px;
+		background: #000;
+		border: 0;
+		&:before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: 50%;
+			z-index: 2;
+			margin-left: -4px;
+			@include sized-sprite($icons, rhomb-m);
+		}
+		&:after {
+			content: ""; 
+			position: absolute;
+			top: -3px;
+			left:50%;
+			width: 28px;
+			height: 4px;
+			margin-left: -14px;
+			background: #fff;
+		}  
+	}
+	p {
+		margin-bottom: 20px;
+	}
+	blockquote {
+		position: relative;
+		float: left;
+		width: 23.5%;
+		margin: -43px 0 0 -38%;
+		padding: 26px 40px 18px 53px;
+		border-top: 2px solid #000;
+		border-bottom: 2px solid #000;
+		font-size: 14px;
+		color: #000;
+		@include hel_bi();
+		@include respond-to(med) {
+		   margin: 0 25px 20px 0;
+		   width: 30%;
+		}
+		@include respond-to(pda) {
+		   margin: 0 0 20px 0;
+		   float: none;
+		   width: 100%;
+		   -moz-box-sizing: border-box;
+		   box-sizing: border-box;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			left: 13px;
+			top: 29px;
+			color: #2d8db4;
+			@include sized-sprite($icons, quote);
+		}
+		i {
+			display: block;
+			margin-top: 17px;
+			color: #737373;
+			font-size: 12px;
+			@include hel_i();
+		}
+	}
+	table {
+		margin: 40px 0 30px 3px;
+		width: 95.6%;
+		word-wrap: break-word;
+		@include respond-to(mob-lan) {
+			margin-left: 0;
+		}
+		p {
+			margin-bottom: 0;
+			@include respond-to(mob-lan) {
+				font-size: 12px;
+			}
+		}
+		td {
+			padding: 2% 1.4% 2%;
+			//width: 50%;
+			border: 2px solid #d4d4d4;
+			&:first-child {
+				border-right: 1px solid #d4d4d4;
+			}
+			&:last-child {
+				border-left: 1px solid #d4d4d4;
+			}
+		}
+		th {
+			//width: 50%;
+			padding: 1.1% 0 1.7%;
+			strong {
+				font-size: 24px;
+				@include pfd_m;
+				text-align: center;
+				text-transform: uppercase;
+				@include respond-to(mob-lan) {
+					font-size: 16px;
+				}
+			}
+		}
+		thead th {
+			position: relative;
+			border-top: 2px solid #000;
+			border-bottom: 2px solid #000;
+			&:first-child {
+				border-left: 2px solid #000;
+			}
+			&:last-child {
+				border-right: 2px solid #000;
+			}
+			strong {
+				position: relative;
+				z-index: 2;
+				background: #fff;
+				padding: 0 10px;
+			}
+			div {
+				position: relative;
+				overflow: hidden;
+				padding: 2px 0;
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					top: 50%;
+					height: 1px;
+					width: 20%;
+					left: 15%;
+					background: #2d8db4;
+					@include respond-to(mob-lan) {
+						display: none;
+					}
+				}
+				&:before {
+					right: 15%;
+					left: auto;
+				}
+			}
+		}
+		tfoot {
+			th {
+				border: 2px solid #d4d4d4;
+				border-top: 0;
+				border-bottom: 0;
+				strong {
+					color: #2d8db4;
+				}
+			}
+			td {
+				padding: 2.8% 1.4% 3.6%;
+			}
+		}
+	}
+	.banner {
+		@include respond-to(pda) {
+		  height: 85px;
+		}
+	}
 }
 .content_width {
-    width: 100%;
-    float: none;
-    .main-cont {
-        padding-left: 0;
-    }
+	width: 100%;
+	float: none;
+	.main-cont {
+		padding-left: 0;
+	}
 }
 .main-cont {
-    padding: 15px 0 15px 3.4%;
-    @include respond-to(med) {
-        padding: 15px 0 15px 0;
-    }
-    @include respond-to(pda) {
-      padding: 15px 0 30px; 
-      left: 100%;
-    }
-    @include respond-to(mob-lan) {
-      padding: 15px 0 5px; 
-      left: 100%;
-    }
-    p{
-        line-height:1.5;
-    }
-    h2 {
-        margin-top: 17px;
-        @include pfd_m();
-        font-size: 31px;
-        text-transform: uppercase;
-        line-height: 38px;
-        @include respond-to(mob-lan) { 
-            font-size: 20px;
-            line-height: 20px;
-            text-align: center;
-        }
-    }
-    h3 {
-        margin-top: 12px;
-        display: inline-block;
-        @include pfd_m();
-        font-size: 24px;
-        text-transform: uppercase;
-        line-height: 38px;
-        clear: both;
-        @include respond-to(mob-lan) { 
-            font-size: 18px;
-            line-height: 24px;
-            text-align: center;
-        }
-    }
-    .separator-blue_mod {
-        margin: 39px 0 42px;
-    }
+	padding: 15px 0 15px 3.4%;
+	@include respond-to(med) {
+		padding: 15px 0 15px 0;
+	}
+	@include respond-to(pda) {
+	  padding: 15px 0 30px; 
+	  left: 100%;
+	}
+	@include respond-to(mob-lan) {
+	  padding: 15px 0 5px; 
+	  left: 100%;
+	}
+	p{
+		line-height:1.5;
+	}
+	h2 {
+		margin-top: 17px;
+		@include pfd_m();
+		font-size: 31px;
+		text-transform: uppercase;
+		line-height: 38px;
+		@include respond-to(mob-lan) { 
+			font-size: 20px;
+			line-height: 20px;
+			text-align: center;
+		}
+	}
+	h3 {
+		margin-top: 12px;
+		display: inline-block;
+		@include pfd_m();
+		font-size: 24px;
+		text-transform: uppercase;
+		line-height: 38px;
+		clear: both;
+		@include respond-to(mob-lan) { 
+			font-size: 18px;
+			line-height: 24px;
+			text-align: center;
+		}
+	}
+	.separator-blue_mod {
+		margin: 39px 0 42px;
+	}
 }
 
 
 .text-cont {
-    @include hel_r();
-    font-size: 14px/1.4;
-    p{
-        line-height: 1.5;
-    }
-    h1,h2,h3,h4,h5,h6 {
-        display: block;
-        margin: 23px 0 10px;
-        @include pfd_m;
-        text-transform: uppercase;
-        @include respond-to(mob-lan) {
-            text-align: center;
-        }
-    }
-    h1 b,h2 b,h3 b,h4 b,h5 b,h6 b {
-        font-weight: normal;
-    }
-    h1 {
-        font-size: 31px;
-        line-height: 38px;
-        margin: 0 0 15px;
-    }
-    h2 {
-        margin: 30px 0 15px;
-        font-size: 24px;
-        line-height: 24px;
-    }
-    h3 {
-        color: #3f3f3f;
-        font-size: 20px;
-        line-height: 24px;
-        clear:none;
-    }
-    h4 {
-        color: #585858;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    h5 {
-        color: #7f7f7f;
-        font-size: 14px;
-        line-height: 24px;
-    }
-    h6 { 
-        color: #818181;
-        font-size: 12px;
-        line-height: 24px;
-    }
-    ul, ol {
-        padding-left: 10px;
-        margin-bottom: 20px;
-        line-height: 1.5;
-        overflow: hidden; //этот параметр был скрыт до 20.03.2015, когда он был раскомментирован ради этого списка: http://www.agromat.ua/news/legko-i-udobno-suhie-smesi-atis
-        li {
-            font-size: 14px;
-            margin-bottom: 8px;
-            padding-left: 16px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 5px;
-                left: 0;
-                @include sized-sprite($icons, rhomb-s);
-            }
-            @include respond-to(mob-lan) {
-                font-size: 11px;
-            }
-        }
-    }
-    ul {
-        li {
-            position: relative;
-        }
-    }
-    ol{
-        list-style-type:decimal;
-       li{
-        margin-left: 1.2em;
-        padding-left: 0;
-          &:before,&:after{
-             display: none;
-          }
-       }
-    }
-    .columns-2-list{
-        -webkit-column-width: 45%;
-        -moz-column-width: 45%;
-        column-width: 45%;
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-        -webkit-column-gap: 3%;
-        -moz-column-gap: 3%;
-        column-gap: 3%;
-        ul, ol {
-            overflow: visible;
-        }
-    }
-    .columns-3-list{
-        -webkit-column-width: 27%;
-        -moz-column-width: 27%;
-        column-width: 27%;
-        -webkit-column-count: 3;
-        -moz-column-count: 3;
-        column-count: 3;
-        -webkit-column-gap: 1%;
-        -moz-column-gap: 1%;
-        column-gap: 1%;
-        ul, ol {
-            overflow: visible;
-        }
-    }
-    .columns-4-list{
-        -webkit-column-width: 22%;
-        -moz-column-width: 22%;
-        column-width: 22%;
-        -webkit-column-count: 4;
-        -moz-column-count: 4;
-        column-count: 4;
-        -webkit-column-gap: 1%;
-        -moz-column-gap: 1%;
-        column-gap: 1%;
-        ul, ol {
-            overflow: visible;
-        }
-    }
-    .text-rows {
-        padding: 0 3.1% 0 0; 
-        li {
-            position: static;
-            padding: 9px 2.6% 7px 2.2%;
-            line-height: 1.3; 
-            border: 1px solid transparent;
-            border-bottom: 1px solid #d4d4d4;
-            color: #2D8DB4;
-            clear: both;
-            margin-bottom: 0;
-            @include respond-to(mob-lan) {
-                padding: 7px 2.6% 4px 2.2%;
-            }
-            &:before {
-                display: none;
-            }
-        }
-        ol {
-            padding-top: 15px;
-            margin-bottom: 0;
-        }
-        a {
-            color: #2D8DB4;
-            font-size: 14px;
-            &:hover{
-                color:#000;
-            }
-            @include respond-to(mob-lan) {
-                font-size: 11px;
-            }
-        }
-    }
-    .text-rows_bold {
-        margin-bottom: 10px;
-        li {
-            padding-left: 4%;
-            border: 1px solid transparent;
-            border-top: 1px solid #d4d4d4;
-            a {
-                text-decoration: none;
-                position: relative;
-                &:before {
-                    content: "";
-                    position: absolute;
-                    left: -20px;
-                    top: 6px;
-                    @include sized-sprite($icons, rhomb-s); 
-                }  
-            }
-            // &:hover {
-            //     @include box-shadow(inset 0 0 0 1px #000);
-            //     margin: 0 0 -1px;
-            // }
-        }
-    }
+	@include hel_r();
+	font-size: 14px/1.4;
+	p{
+		line-height: 1.5;
+	}
+	h1,h2,h3,h4,h5,h6 {
+		display: block;
+		margin: 23px 0 10px;
+		@include pfd_m;
+		text-transform: uppercase;
+		@include respond-to(mob-lan) {
+			text-align: center;
+		}
+	}
+	h1 b,h2 b,h3 b,h4 b,h5 b,h6 b {
+		font-weight: normal;
+	}
+	h1 {
+		font-size: 31px;
+		line-height: 38px;
+		margin: 0 0 15px;
+	}
+	h2 {
+		margin: 30px 0 15px;
+		font-size: 24px;
+		line-height: 24px;
+	}
+	h3 {
+		color: #3f3f3f;
+		font-size: 20px;
+		line-height: 24px;
+		clear:none;
+	}
+	h4 {
+		color: #585858;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	h5 {
+		color: #7f7f7f;
+		font-size: 14px;
+		line-height: 24px;
+	}
+	h6 { 
+		color: #818181;
+		font-size: 12px;
+		line-height: 24px;
+	}
+	ul, ol {
+		padding-left: 10px;
+		margin-bottom: 20px;
+		line-height: 1.5;
+		overflow: hidden; //этот параметр был скрыт до 20.03.2015, когда он был раскомментирован ради этого списка: http://www.agromat.ua/news/legko-i-udobno-suhie-smesi-atis
+		li {
+			font-size: 14px;
+			margin-bottom: 8px;
+			padding-left: 16px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 5px;
+				left: 0;
+				@include sized-sprite($icons, rhomb-s);
+			}
+			@include respond-to(mob-lan) {
+				font-size: 11px;
+			}
+		}
+	}
+	ul {
+		li {
+			position: relative;
+		}
+	}
+	ol{
+		list-style-type:decimal;
+	   li{
+		margin-left: 1.2em;
+		padding-left: 0;
+		  &:before,&:after{
+			 display: none;
+		  }
+	   }
+	}
+	.columns-2-list{
+		-webkit-column-width: 45%;
+		-moz-column-width: 45%;
+		column-width: 45%;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 3%;
+		-moz-column-gap: 3%;
+		column-gap: 3%;
+		ul, ol {
+			overflow: visible;
+		}
+	}
+	.columns-3-list{
+		-webkit-column-width: 27%;
+		-moz-column-width: 27%;
+		column-width: 27%;
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-gap: 1%;
+		-moz-column-gap: 1%;
+		column-gap: 1%;
+		ul, ol {
+			overflow: visible;
+		}
+	}
+	.columns-4-list{
+		-webkit-column-width: 22%;
+		-moz-column-width: 22%;
+		column-width: 22%;
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+		-webkit-column-gap: 1%;
+		-moz-column-gap: 1%;
+		column-gap: 1%;
+		ul, ol {
+			overflow: visible;
+		}
+	}
+	.text-rows {
+		padding: 0 3.1% 0 0; 
+		li {
+			position: static;
+			padding: 9px 2.6% 7px 2.2%;
+			line-height: 1.3; 
+			border: 1px solid transparent;
+			border-bottom: 1px solid #d4d4d4;
+			color: #2D8DB4;
+			clear: both;
+			margin-bottom: 0;
+			@include respond-to(mob-lan) {
+				padding: 7px 2.6% 4px 2.2%;
+			}
+			&:before {
+				display: none;
+			}
+		}
+		ol {
+			padding-top: 15px;
+			margin-bottom: 0;
+		}
+		a {
+			color: #2D8DB4;
+			font-size: 14px;
+			&:hover{
+				color:#000;
+			}
+			@include respond-to(mob-lan) {
+				font-size: 11px;
+			}
+		}
+	}
+	.text-rows_bold {
+		margin-bottom: 10px;
+		li {
+			padding-left: 4%;
+			border: 1px solid transparent;
+			border-top: 1px solid #d4d4d4;
+			a {
+				text-decoration: none;
+				position: relative;
+				&:before {
+					content: "";
+					position: absolute;
+					left: -20px;
+					top: 6px;
+					@include sized-sprite($icons, rhomb-s); 
+				}  
+			}
+			// &:hover {
+			//     @include box-shadow(inset 0 0 0 1px #000);
+			//     margin: 0 0 -1px;
+			// }
+		}
+	}
 }
 .cont-gallery {
-    float: left;
-    width: 32.7%;
-    margin: 3px 22px 30px 0;
-    padding: 7px 7px 16px;
-    background: #fff;
-    border: 1px solid #d6d6d6;
-    @include respond-to(pda) {
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        float: none;
-        text-align: center;
-        width: 100%;
-    }
-    @include respond-to(mob-lan) {
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        float: none;
-        padding: 7px;
-        width: 100%;
-    }
-    a {
-        display: none;
-        text-decoration: none;
-        &:first-child {
-            display: block;
-        }
-        img {
-            display: block;
-            width: 100%;
-            margin-bottom: 16px;
-            @include respond-to(pda) {
-                margin: 0 auto 16px;
-            }
-            @include respond-to(mob-lan) {
-               margin-bottom: 0;
-               width: 100%;
-            }
-        }
-        span {
-            position: relative;
-            display: block;
-            margin-left: 8px;
-            padding-left: 27px;
-            color: #737373;
-            font-size: 12px;
-            @include respond-to(med) {
-               font-size: 11px;
-               line-height: 1.2;
-            } 
-            @include respond-to(pda) {
-                display: inline-block;
-            }
-            @include respond-to(mob-lan) {
-               display: none;
-            }
-            &:before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top: 5px;
-                @include sized-sprite($icons, glass);
-                @include respond-to(pda) {
-                   top: 0px;
-                }
-            }
-        }
-    }
+	float: left;
+	width: 32.7%;
+	margin: 3px 22px 30px 0;
+	padding: 7px 7px 16px;
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	@include respond-to(pda) {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	@include respond-to(mob-lan) {
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		float: none;
+		padding: 7px;
+		width: 100%;
+	}
+	a {
+		display: none;
+		text-decoration: none;
+		&:first-child {
+			display: block;
+		}
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 16px;
+			@include respond-to(pda) {
+				margin: 0 auto 16px;
+			}
+			@include respond-to(mob-lan) {
+			   margin-bottom: 0;
+			   width: 100%;
+			}
+		}
+		span {
+			position: relative;
+			display: block;
+			margin-left: 8px;
+			padding-left: 27px;
+			color: #737373;
+			font-size: 12px;
+			@include respond-to(med) {
+			   font-size: 11px;
+			   line-height: 1.2;
+			} 
+			@include respond-to(pda) {
+				display: inline-block;
+			}
+			@include respond-to(mob-lan) {
+			   display: none;
+			}
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 5px;
+				@include sized-sprite($icons, glass);
+				@include respond-to(pda) {
+				   top: 0px;
+				}
+			}
+		}
+	}
 }
 .cont-gallery_contact {
-    width: 47%;
-    float: left;
-    margin: 0 7% 0 0;
-    @include respond-to(med) {
-      margin-right: 3%;
-    }
-    @include respond-to(pda) {
-       margin-right: 4%;
-    }
-    @include respond-to(mob-lan) {
-       width: 100%;
-       margin-bottom: 15px;
-    }
+	width: 47%;
+	float: left;
+	margin: 0 7% 0 0;
+	@include respond-to(med) {
+	  margin-right: 3%;
+	}
+	@include respond-to(pda) {
+	   margin-right: 4%;
+	}
+	@include respond-to(mob-lan) {
+	   width: 100%;
+	   margin-bottom: 15px;
+	}
 }
 .cont-gallery_contact__text {
-    overflow: hidden;
-    p{
-        margin: 7px 0 4px 0;
-    }
+	overflow: hidden;
+	p{
+		margin: 7px 0 4px 0;
+	}
 }
 .banner-img {
-    display: block;
-    height: 200px;
-    margin-bottom: 40px;
-    overflow: hidden;
-    @include respond-to(mob-lan) { 
-       display: none;
-    }
-    img {
-        height: 200px;
-       
-    }
+	display: block;
+	height: 200px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	@include respond-to(med){
+		margin-bottom:16px;
+		height: 130px;
+	}
+	@include respond-to(mob-lan) { 
+	   display: none;
+	}
+	img {
+		height: 200px;
+		@include respond-to(med){
+			position: relative;
+			top: -80%;
+		}
+	}
 }
 .quote_mod {
-    margin-top: 106px;
+	margin-top: 106px;
 }
 /* OUR dvertising */
 .wrap_video {
-    overflow: hidden;
-    margin-right: -35%;
-    padding-top: 11px;
-    @include respond-to(pda) { 
-       margin: 0;
-    }
+	overflow: hidden;
+	margin-right: -35%;
+	padding-top: 11px;
+	@include respond-to(pda) { 
+	   margin: 0;
+	}
 }
 .video {
-    position: relative;
-    float: left;
-    margin: 0 1.3% 1.3% 0;
-    padding: 1.2% 1.3% 1.9%;
-    width: 33.6%;
-    border: 1px solid #d4d4d4;
-    text-align: center;
-    @include respond-to(med) { 
-       width: 33.5%;
-    }
-    @include respond-to(pda) { 
-       float: none;
-       margin: 0 auto 10px;
-       width: 84%;
-    }
-    @include respond-to(mob-lan) { 
-       float: none;
-       margin: 0 auto 10px;
-       width: 100%;
-       -moz-box-sizing: border-box;
-       box-sizing: border-box;
-    }
-    img {
-        display: block;
-        position: relative;
-        z-index: 2;
-        width: 100%;
-        height: 100%;
-    }
-    iframe {
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
+	position: relative;
+	float: left;
+	margin: 0 1.3% 1.3% 0;
+	padding: 1.2% 1.3% 1.9%;
+	width: 33.6%;
+	border: 1px solid #d4d4d4;
+	text-align: center;
+	@include respond-to(med) { 
+	   width: 33.5%;
+	}
+	@include respond-to(pda) { 
+	   float: none;
+	   margin: 0 auto 10px;
+	   width: 84%;
+	}
+	@include respond-to(mob-lan) { 
+	   float: none;
+	   margin: 0 auto 10px;
+	   width: 100%;
+	   -moz-box-sizing: border-box;
+	   box-sizing: border-box;
+	}
+	img {
+		display: block;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+	}
+	iframe {
+		display: none;
+		width: 100%;
+		height: 100%;
+	}
 }
 .video__main {
-    position: relative;
-    margin-bottom: 20px;
-    overflow: hidden;
-    height: 287px; 
-    @include respond-to(med) { 
-       height: 230px; 
-    }
-    @include respond-to(pda) { 
-       height: 330px !important; 
-    }
-    @include respond-to(pda) { 
-       height: 270px; 
-    }
+	position: relative;
+	margin-bottom: 20px;
+	overflow: hidden;
+	height: 287px; 
+	@include respond-to(med) { 
+	   height: 230px; 
+	}
+	@include respond-to(pda) { 
+	   height: 330px !important; 
+	}
+	@include respond-to(pda) { 
+	   height: 270px; 
+	}
 }
 .video__play {
-    position: absolute;
-    z-index: 3;
-    top: 50%;
-    left: 50%;
-    margin: -82px 0 0 -82px;
-    border: 0;
-    cursor: pointer;
-    @include sized-sprite($logos, play); 
-    @include respond-to(pda) { 
-       margin-top: -84px;
-    }
+	position: absolute;
+	z-index: 3;
+	top: 50%;
+	left: 50%;
+	margin: -82px 0 0 -82px;
+	border: 0;
+	cursor: pointer;
+	@include sized-sprite($logos, play); 
+	@include respond-to(pda) { 
+	   margin-top: -84px;
+	}
 }
 .video__name {
-    @include hel_r();
-    font-size: 14px;
+	@include hel_r();
+	font-size: 14px;
 }
 .quant {
-    position: relative;
-    margin: 32px auto 2px;
-    height: 1px;
-    width: 24%;
-    background: #96c6d9;
-    text-align: center;
+	position: relative;
+	margin: 32px auto 2px;
+	height: 1px;
+	width: 24%;
+	background: #96c6d9;
+	text-align: center;
 }
 .quant__number {
-    position: relative;
-    top: -9px;
-    font-size: 16px;
-    @include pfd_m();
-    background: white;
-    padding: 0 10%; 
+	position: relative;
+	top: -9px;
+	font-size: 16px;
+	@include pfd_m();
+	background: white;
+	padding: 0 10%; 
 }
 .quant__sep {
-    padding: 0 4px;
-    color: #989898;
-    font-style: normal;
+	padding: 0 4px;
+	color: #989898;
+	font-style: normal;
 } 
 .quant__all {
-    color: #989898;
+	color: #989898;
 }
 
 /* aricles */
 .wrap_article {
-    overflow: hidden;
-    margin: 0 -20% 35px 0;
-    @include respond-to(mob-lan) { 
-       margin: 0 0 20px 0;
-    }
-    .item {
-        float: none;
-        display: inline-block;
-        vertical-align: top;
-        width: 20.1%;
-        padding-left: 0;
-        margin: 0 0.7% 1% 0;
-        @include respond-to(med) { 
-           width: 27%;
-        }
-        @include respond-to(pda) { 
-           width: 41%;
-           margin-bottom: 3%;
-        }
-        @include respond-to(mob-lan) { 
-           width: 48%;
-           margin-bottom: 5%; 
-        }
-    }
-    .item__title {
-        line-height: 20px;
-        font-size: 20px;
-        margin: -7px 0 0 0;
-        padding-top: 2px;
-        @include respond-to(med) { 
-           font-size: 18px;
-        }
-        @include respond-to(pda) { 
-           display: block;
-        }
-        @include respond-to(mob-lan) { 
-           text-align: left;
-           font-size: 16px;
-           line-height: 16px;
-        }
-    }
+	overflow: hidden;
+	margin: 0 -20% 35px 0;
+	@include respond-to(mob-lan) { 
+	   margin: 0 0 20px 0;
+	}
+	.item {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 20.1%;
+		padding-left: 0;
+		margin: 0 0.7% 1% 0;
+		@include respond-to(med) { 
+		   width: 27%;
+		}
+		@include respond-to(pda) { 
+		   width: 41%;
+		   margin-bottom: 3%;
+		}
+		@include respond-to(mob-lan) { 
+		   width: 48%;
+		   margin-bottom: 5%; 
+		}
+	}
+	.item__title {
+		line-height: 20px;
+		font-size: 20px;
+		margin: -7px 0 0 0;
+		padding-top: 2px;
+		@include respond-to(med) { 
+		   font-size: 18px;
+		}
+		@include respond-to(pda) { 
+		   display: block;
+		}
+		@include respond-to(mob-lan) { 
+		   text-align: left;
+		   font-size: 16px;
+		   line-height: 16px;
+		}
+	}
 }
 
 
 .wrap_article{
-    &.trademarks {
-        margin-left:3.4%;
-    }
+	&.trademarks {
+		margin-left:3.4%;
+	}
 }
 
 
 
 /* News */
 .wrap_news {
-    margin: 25px -20% 0 0;
-    @include respond-to(pda) { 
-        margin-top: 0;
-    }
+	margin: 25px -20% 0 0;
+	@include respond-to(pda) { 
+		margin-top: 0;
+	}
 }
 .action-slider-wrap {
-    margin-bottom: 40px;
-    @include clr();
-    .banner {
-        float: left;
-        width: 24.4%;
-        @include respond-to(med) { 
-           display: none;
-        }
-    }
-    @include respond-to(pda) { 
-      display: none;
-    }
+	margin-bottom: 40px;
+	@include clr();
+	.banner {
+		float: left;
+		width: 24.4%;
+		@include respond-to(med) { 
+		   display: none;
+		}
+	}
+	@include respond-to(pda) { 
+	  display: none;
+	}
 }
 .slider-action {
-    position: relative;
-    width: 73.8%;
-    padding-left: 7px;
-    float: right;
-    height: 200px;
-    .next {
-        top:50%;
-    }
-    .prev {
-        top:50%;
-    }
-    @include respond-to(med) { 
-       width: 100%;
-    }
+	position: relative;
+	width: 73.8%;
+	padding-left: 7px;
+	float: right;
+	height: 200px;
+	.next {
+		top:50%;
+	}
+	.prev {
+		top:50%;
+	}
+	@include respond-to(med) { 
+	   width: 100%;
+	}
 }
 .slider-action_mod {
-    width: 100%;
-    float: none;
+	width: 100%;
+	float: none;
 }
 .slider_actions {
-    position:relative;
-    float: right;
-    height: 200px;
-    overflow: hidden;
-    .slider__item {
-        position: absolute;
-        width: 2000em !important;
-        height: 200px;
-        overflow: hidden;
-    }
-    .slider__item-wrap {
-        float: left;
-        margin-right: 15px;
-        padding-left: 6px;
-        height: 200px;
-        width: 945px;
-        overflow: visible;
-    }
-    .slider__capt {
-        width: 945px;
-        left: 6px;
-    }
-    .stamp {
-        left: 0;
-    }
+	position:relative;
+	float: right;
+	height: 200px;
+	overflow: hidden;
+	.slider__item {
+		position: absolute;
+		width: 2000em !important;
+		height: 200px;
+		overflow: hidden;
+	}
+	.slider__item-wrap {
+		float: left;
+		margin-right: 15px;
+		padding-left: 6px;
+		height: 200px;
+		width: 945px;
+		overflow: visible;
+	}
+	.slider__capt {
+		width: 945px;
+		left: 6px;
+	}
+	.stamp {
+		left: 0;
+	}
 }
 .prev_action {
-    left: -3px;
-    @include respond-to(med) { 
-       display: block;
-    }
+	left: -3px;
+	@include respond-to(med) { 
+	   display: block;
+	}
 }
 .next_action {
-    right: -13px;
-    @include respond-to(med) { 
-       display: block;
-    }
+	right: -13px;
+	@include respond-to(med) { 
+	   display: block;
+	}
 }
 .news-date {
-    display: block;
-    margin-bottom: 4px;
+	display: block;
+	margin-bottom: 4px;
 }
 .link-box_back {
-    float:left;
-    clear: both;
-    margin: 10px 26.5% 20px 0;
-    padding: 0 14px;
-    height: 28px;
-    line-height: 28px;
-    font-size: 17px;
-    @include respond-to(med) { 
-       float: none;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        left: -9px;
-        top: 50%;
-        margin-top: -7px;
-        @include sized-sprite($icons, arrow-r);
-    }
+	float:left;
+	clear: both;
+	margin: 10px 26.5% 20px 0;
+	padding: 0 14px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 17px;
+	@include respond-to(med) { 
+	   float: none;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: -9px;
+		top: 50%;
+		margin-top: -7px;
+		@include sized-sprite($icons, arrow-r);
+	}
 }
 /* Report */
 .report-item {
-    margin-bottom: 64px;
-    @include respond-to(pda) {
-        margin-bottom: 30px;
-    }
-    @include respond-to(pda) {
-        margin: 15px 0;
-    }
+	margin-bottom: 64px;
+	@include respond-to(pda) {
+		margin-bottom: 30px;
+	}
+	@include respond-to(pda) {
+		margin: 15px 0;
+	}
 }
 .report-year {
-    padding: 0 0 12px 2.2%;
-    margin: 0 3.1% 0 0 !important;
-    @include pfd_b();
-    font-size: 26px;
-    line-height: 26px;
-    border-bottom: 2px solid;
+	padding: 0 0 12px 2.2%;
+	margin: 0 3.1% 0 0 !important;
+	@include pfd_b();
+	font-size: 26px;
+	line-height: 26px;
+	border-bottom: 2px solid;
 }
 .wrap-text-rows {
-    overflow: hidden;
-    padding-right: 2px;
-    margin-bottom: -2px;
-    .text-rows  {
-        overflow: hidden;
-        padding-bottom: 2px;
-        padding-right: 1px;
-    }
+	overflow: hidden;
+	padding-right: 2px;
+	margin-bottom: -2px;
+	.text-rows  {
+		overflow: hidden;
+		padding-bottom: 2px;
+		padding-right: 1px;
+	}
 }
 
 .text-rows-title {
-    float: left;
-    padding-top: 12px;
-    padding-bottom:10px;
-    width: 12%;
-    overflow: hidden;
-    //white-space: nowrap;
-    //text-overflow: ellipsis;
-    padding-right: 1%;
-    font-weight: bold;
-    font-size: 14px;
-    border-top: 1px solid #d4d4d4;
-    //word-wrap: break-word;
-    @include respond-to(med) {
-        font-size: 12px;
-        width: 15%;
-    }
-    @include respond-to(mob-lan) {
-        float: none;
-        padding: 15px 0 10px;
-        font-size: 14px;
-        width: 100%;
-        //border-top: 0;
-    }
+	float: left;
+	padding-top: 12px;
+	padding-bottom:10px;
+	width: 12%;
+	overflow: hidden;
+	//white-space: nowrap;
+	//text-overflow: ellipsis;
+	padding-right: 1%;
+	font-weight: bold;
+	font-size: 14px;
+	border-top: 1px solid #d4d4d4;
+	//word-wrap: break-word;
+	@include respond-to(med) {
+		font-size: 12px;
+		width: 15%;
+	}
+	@include respond-to(mob-lan) {
+		float: none;
+		padding: 15px 0 10px;
+		font-size: 14px;
+		width: 100%;
+		//border-top: 0;
+	}
 }
 
 
 .text-rows {
-    padding: 0 3.1% 0 0; 
-    li {
-        padding: 7px 2.6% 7px 2.2%;
-        line-height: 15px;
-        border: 1px solid transparent;
-        border-bottom: 1px solid #d4d4d4;
-        color: #2D8DB4;
-        clear: both;
-        overflow: hidden;
-        @include respond-to(mob-lan) {
-            padding: 0 2.6% 4px 0;
-            line-height: 15px;
-        }
-        div {
-            float: left;
-            width: 80%;
-            overflow: hidden;
-            padding-top: 7px;
-            padding-bottom: 7px;
-            @include respond-to(pda) {
-                width: 65%;
-            }
-            @include respond-to(mob-lan) {
-                padding-top: 12px;
-            }
-        } 
-    }
-    ol {
-        padding-top: 15px;
-    }
-    a {
-        color: #2D8DB4;
-        font-size: 14px;
-        &:hover{
-            color:#000;
-        }
-        @include respond-to(pda) {
-            font-size: 12px;
-        }
-    }
+	padding: 0 3.1% 0 0; 
+	li {
+		padding: 7px 2.6% 7px 2.2%;
+		line-height: 15px;
+		border: 1px solid transparent;
+		border-bottom: 1px solid #d4d4d4;
+		color: #2D8DB4;
+		clear: both;
+		overflow: hidden;
+		@include respond-to(mob-lan) {
+			padding: 0 2.6% 4px 0;
+			line-height: 15px;
+		}
+		div {
+			float: left;
+			width: 80%;
+			overflow: hidden;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			@include respond-to(pda) {
+				width: 65%;
+			}
+			@include respond-to(mob-lan) {
+				padding-top: 12px;
+			}
+		} 
+	}
+	ol {
+		padding-top: 15px;
+	}
+	a {
+		color: #2D8DB4;
+		font-size: 14px;
+		&:hover{
+			color:#000;
+		}
+		@include respond-to(pda) {
+			font-size: 12px;
+		}
+	}
 }
 .text-rows_bold {
-    margin-bottom: 40px;
-    li {
-        padding-left: 4%;
-        border: 1px solid transparent;
-        border-top: 1px solid #d4d4d4;
-        a {
-            text-decoration: none;
-            position: relative;
-            &:before {
-                content: "";
-                position: absolute;
-                left: -20px;
-                top: 6px;
-                @include sized-sprite($icons, rhomb-s); 
-            }  
-        }
-    }
+	margin-bottom: 40px;
+	li {
+		padding-left: 4%;
+		border: 1px solid transparent;
+		border-top: 1px solid #d4d4d4;
+		a {
+			text-decoration: none;
+			position: relative;
+			&:before {
+				content: "";
+				position: absolute;
+				left: -20px;
+				top: 6px;
+				@include sized-sprite($icons, rhomb-s); 
+			}  
+		}
+	}
 }
 .text-rows_download {
-    li {
-        a {
-            &:hover {
-                color:#000;
-            }
-        }
-    }
+	li {
+		a {
+			&:hover {
+				color:#000;
+			}
+		}
+	}
 }
 .report__download {
-    float: right;
-    margin-top: 5px;
-    margin-bottom: 4px;
-    color: #898989;
-    @include pfd_b();
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-    @include respond-to(mob-lan) {
-        margin-top: 8px;
-    }
-    i {
-        display: inline-block;
-        vertical-align: middle;
-        @include sized-sprite($icons, pdf);
-    }
-    span {
-        margin-right: 20px;
-        padding-top: 4px;
-        display: inline-block;
-        vertical-align: middle;
-    }
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 4px;
+	color: #898989;
+	@include pfd_b();
+	font-size: 12px;
+	text-decoration: none;
+	text-transform: uppercase;
+	@include respond-to(mob-lan) {
+		margin-top: 8px;
+	}
+	i {
+		display: inline-block;
+		vertical-align: middle;
+		@include sized-sprite($icons, pdf);
+	}
+	span {
+		margin-right: 20px;
+		padding-top: 4px;
+		display: inline-block;
+		vertical-align: middle;
+	}
 }
 .text-rows.text-rows_trademarks {
-    //margin-top: -30px;
-    padding-right: 0!important;
-    li{
-        padding-left: 3.4%;
-        &:last-child{
-            border-bottom: 1px solid #d4d4d4;
-        }
-        &:hover{
-            border-bottom: 1px solid #000;
-        }
-    }
+	//margin-top: -30px;
+	padding-right: 0!important;
+	li{
+		padding-left: 3.4%;
+		&:last-child{
+			border-bottom: 1px solid #d4d4d4;
+		}
+		&:hover{
+			border-bottom: 1px solid #000;
+		}
+	}
 }
 /* Vacancy */
 .person-policy {
-    overflow: hidden;
-    margin-bottom: 27px;
-    p {
-        float: left;
-        width: 70%;
-        margin-bottom: 0;
-        @include respond-to(pda) {
-            width: 100%;
-        }
-    }
-    a {
-        position: relative;
-        float: right;
-        width: 19.5%;
-        height: 48px;
-        line-height: 48px;
-        color: #000;
-        border: 2px solid #000;
-        font-size: 19px;
-        @include pfd_m();
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        @include respond-to(pda) {
-            display: none;
-        }
-        &:hover {
-            color: #2D8DB4;
-        }
-        i {
-            position: absolute;
-            top: 50%;
-            left: -9px;
-            margin-top: -7px;
-            @include sized-sprite($icons, arrow-r);
-        }
-    }
+	overflow: hidden;
+	margin-bottom: 27px;
+	p {
+		float: left;
+		width: 70%;
+		margin-bottom: 0;
+		@include respond-to(pda) {
+			width: 100%;
+		}
+	}
+	a {
+		position: relative;
+		float: right;
+		width: 19.5%;
+		height: 48px;
+		line-height: 48px;
+		color: #000;
+		border: 2px solid #000;
+		font-size: 19px;
+		@include pfd_m();
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include respond-to(pda) {
+			display: none;
+		}
+		&:hover {
+			color: #2D8DB4;
+		}
+		i {
+			position: absolute;
+			top: 50%;
+			left: -9px;
+			margin-top: -7px;
+			@include sized-sprite($icons, arrow-r);
+		}
+	}
 }
 .l-col-wrap {
-    margin-right: -20%;
-    overflow: hidden;
-    @include respond-to(pda) {
-        margin-right: 0;
-    }
+	margin-right: -20%;
+	overflow: hidden;
+	@include respond-to(pda) {
+		margin-right: 0;
+	}
 }
 .l-col-wrap_contacts {
-    .l-col,
-    .cont-gallery {
-        margin-bottom: 0;
-    }
+	.l-col,
+	.cont-gallery {
+		margin-bottom: 0;
+	}
 }
 .l-col {
-    float: left;
-    margin: 0 1.5% 26px 0;
-    width: 40.9%;
-    @include respond-to(pda) {
-        float: none;
-        width: 100%;
-    }
+	float: left;
+	margin: 0 1.5% 26px 0;
+	width: 40.9%;
+	@include respond-to(pda) {
+		float: none;
+		width: 100%;
+	}
 }
 .vacancy {
-    position: relative;
-    margin-bottom: 15px;
-    padding: 18px 10% 14px 5.5%;
-    border: 1px solid #d4d4d4;
-    &:hover {
-        border: 1px solid #000; 
-        @include box-shadow(inset 0 0 0 1px #000);
-        .send-cv {
-            display: block;
-        }
-    } 
-    div {
-        
-    }
-    h2 {
+	position: relative;
+	margin-bottom: 15px;
+	padding: 18px 10% 14px 5.5%;
+	border: 1px solid #d4d4d4;
+	&:hover {
+		border: 1px solid #000; 
+		@include box-shadow(inset 0 0 0 1px #000);
+		.send-cv {
+			display: block;
+		}
+	} 
+	div {
+		
+	}
+	h2 {
 //         padding-bottom: 20px;
-        font-size: 24px;
-        @include pfd_m();
-        text-transform: uppercase;
-        line-height: 1.2;
-        margin-top: 0px;
-        margin-right: 24px;
-    }
-    h6 {
-        color: #818181;
-        font-size: 12px;
-        @include pfd_m();
-        text-transform: uppercase;
-        margin-top: 30px;
-    }
-    ul {
-        margin-top: 6px;
-        li {
-            position: relative;
-            padding-left: 13px;
-            margin-bottom: 2px;
-            &:before {
-                content: "";
-                position: absolute;
-                top: 4px;
-                left: 0;
-                @include sized-sprite($icons, rhomb-s);
-            }
-        }
-    }  
-    a {
-        display: none;
-        position: absolute;
-        height: 50px;
-        width: 43px;
-        top: 19px;
-        right: 17px;
-        text-decoration: none;
-        @include respond-to(pda) {
-            right: 10px;
-            top: 55px;
-        }
-        i {
-            display: block;
-            margin-bottom: 4px;
-            @include sized-sprite($icons, latter);
-        }
-        span {
-            @include pfd_m();
-            line-height: 12px;
-            text-transform: uppercase;
-        }
-    }
+		font-size: 24px;
+		@include pfd_m();
+		text-transform: uppercase;
+		line-height: 1.2;
+		margin-top: 0px;
+		margin-right: 24px;
+	}
+	h6 {
+		color: #818181;
+		font-size: 12px;
+		@include pfd_m();
+		text-transform: uppercase;
+		margin-top: 30px;
+	}
+	ul {
+		margin-top: 6px;
+		li {
+			position: relative;
+			padding-left: 13px;
+			margin-bottom: 2px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 4px;
+				left: 0;
+				@include sized-sprite($icons, rhomb-s);
+			}
+		}
+	}  
+	a {
+		display: none;
+		position: absolute;
+		height: 50px;
+		width: 43px;
+		top: 19px;
+		right: 17px;
+		text-decoration: none;
+		@include respond-to(pda) {
+			right: 10px;
+			top: 55px;
+		}
+		i {
+			display: block;
+			margin-bottom: 4px;
+			@include sized-sprite($icons, latter);
+		}
+		span {
+			@include pfd_m();
+			line-height: 12px;
+			text-transform: uppercase;
+		}
+	}
 }
 /* Add service */
 .galleries-wrap {
-    overflow: hidden;
-    margin-bottom: -10px;
-    clear: both;
-    .title-media {
-        margin: 13px 0 37px;
-    }
+	overflow: hidden;
+	margin-bottom: -10px;
+	clear: both;
+	.title-media {
+		margin: 37px 0;
+		@include respond-to(mob-lan) {
+			margin-top: 22px;
+		}
+	}
 }
 .short-gallery {
-    padding-left: 3.4%;
-    @include clr;
-    margin-bottom: 12px;
-    @include respond-to(mob-lan) {
-        text-align: center;
-    }
-    a {
-        width: 18.6%;
-        height: 130px;
-        float: left;
-        margin: 0 6px 6px 0;
-        border: 2px solid #fff;
-        overflow: hidden;
-        @include respond-to(med) {
-            width: 23%;
-        }
-        @include respond-to(pda) {
-            width: 30%;
-        }
-        @include respond-to(mob-lan) {
-            width: 45%;
-        }
-        &:hover {
-            @include box-shadow(0 0 0 2px #000);
-        }
-        img {
-            height: 130px;
-            display: block;
-        }
-    }
-    .more-photos {
-        line-height: 126px;
-        border: 1px solid #d4d4d4;
-        font-size: 12px;
-        @include pfd_m;
-        color: #000;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        @include respond-to(pda) {
-            font-size: 10px;
-        }
-        @include respond-to(mob-lan) {
-            font-size: 8px;
-        }
-    }
+	padding-left: 3.4%;
+	@include clr;
+	margin-bottom: 12px;
+	@include respond-to(mob-lan) {
+		text-align: center;
+	}
+	a {
+		width: 18.6%;
+		height: 130px;
+		float: left;
+		margin: 0 6px 6px 0;
+		border: 2px solid #fff;
+		overflow: hidden;
+		@include respond-to(med) {
+			width: 23%;
+			height: auto;
+		}
+		@include respond-to(pda) {
+			width: 30%;
+		}
+		@include respond-to(mob-lan) {
+			width: 45%;
+		}
+		&:hover {
+			@include box-shadow(0 0 0 2px #000);
+		}
+		img {
+			height: 130px;
+			display: block;
+			@include respond-to(med){
+				height: 100px;
+			}
+		}
+	}
+	.more-photos {
+		line-height: 126px;
+		border: 1px solid #d4d4d4;
+		font-size: 12px;
+		@include pfd_m;
+		color: #000;
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include respond-to(pda) {
+			font-size: 10px;
+		}
+		@include respond-to(mob-lan) {
+			font-size: 8px;
+		}
+	}
 }
 .align-center {
-    text-align: center;
+	text-align: center;
 }
 
 /* Add restaurant */
 .wrap_img-link {
-    margin: 0 -20% 34px 0;
-    overflow: hidden;
-    @include respond-to(mob-lan) {
-        margin: 15px 0 10px;
-    }
+	margin: 0 -20% 34px 0;
+	overflow: hidden;
+	@include respond-to(mob-lan) {
+		margin: 15px 0 10px;
+	}
 }
 a.img-link{
-    &:hover{
-        border: 1px solid #000;
-        @include box-shadow(inset 0 0 0 1px #000);   
-    }
+	&:hover{
+		border: 1px solid #000;
+		@include box-shadow(inset 0 0 0 1px #000);   
+	}
 }
 .img-link {
-    display: inline-block;
-    margin: 0 0.6% 1% 0;
-    width: 18.8% + 1%;
-    background: #fff;
-    text-align: center;
-    border: 1px solid #d4d4d4;
-    text-decoration: none;
-    overflow: hidden;
-    vertical-align: top;
-    @include respond-to(med) {
-       margin: 0 3% 3% 0;
-       width: 38%;
-    }
-    @include respond-to(mob-lan) {
-        float: none;
-        display: inline-block;
-        vertical-align: top;
-    }
+	display: inline-block;
+	margin: 0 0.6% 1% 0;
+	width: 18.8% + 1%;
+	background: #fff;
+	text-align: center;
+	border: 1px solid #d4d4d4;
+	text-decoration: none;
+	overflow: hidden;
+	vertical-align: top;
+	@include respond-to(med) {
+	   margin: 0 3% 3% 0;
+	   width: 25%;
+	}
+	@include respond-to(mob-lan) {
+		float: none;
+		display: inline-block;
+		vertical-align: top;
+		width: 38%;
+	}
 
-    .img-link__img{
-       display: block;
-       width: auto;
-       line-height: auto;
-       height: auto;
-       padding: 4px;
-    }
-    img {
-        display: block;
-        width: 100%;
-    }
-    div {
-        margin: 0 auto;
-        width: 65%;
-        height: 42px;
-        line-height: 42px;
-        @include respond-to(mob-lan) {
-           min-height: 45px;
-           height: auto;
-           width: 100%;
-        }
-    }
-    strong {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1;
-        @include pfd_b;
-        color: #000;
-        font-size: 17px;
-        text-transform: uppercase;
-        @include respond-to(med) {
-           font-size: 20px; 
-        }
-        @include respond-to(mob-lan) {
-           font-size: 18px; 
-        }
-        &:before,
-        &:after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            margin-top: -3px;
-            right: -15%;
-            @include sized-sprite($icons, rhomb-m);
-            @include respond-to(mob-lan) {
-               display: none;
-            }
-        }
-        &:before {
-            content: "";
-            left: -15%;
-        }
-    }
+	.img-link__img{
+	   display: block;
+	   width: auto;
+	   line-height: auto;
+	   height: auto;
+	   padding: 4px;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	div {
+		margin: 0 auto;
+		width: 65%;
+		height: 42px;
+		line-height: 42px;
+		@include respond-to(mob-lan) {
+		   min-height: 45px;
+		   height: auto;
+		   width: 100%;
+		}
+	}
+	strong {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		@include pfd_b;
+		color: #000;
+		font-size: 17px;
+		text-transform: uppercase;
+		@include respond-to(med) {
+		   font-size: 20px; 
+		}
+		@include respond-to(mob-lan) {
+		   font-size: 18px; 
+		}
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			margin-top: -3px;
+			right: -15%;
+			@include sized-sprite($icons, rhomb-m);
+			@include respond-to(mob-lan) {
+			   display: none;
+			}
+		}
+		&:before {
+			content: "";
+			left: -15%;
+		}
+	}
 }
 .img-link_mod {
-    position: relative;
-    padding: 2.7% 0.5%;
-    overflow: visible;
-    width: 18.8%;
-    @include respond-to(med) {
-       margin: 0 3% 3% 0;
-       width: 38%;
-    }
-    @include respond-to(mob-lan) {
-       margin: 0 0 10px;
-       -moz-box-sizing: border-box;
-       box-sizing: border-box;
-       width: 100%; 
-    }
+	position: relative;
+	padding: 2.7% 0.5%;
+	overflow: visible;
+	width: 18.8%;
+	@include respond-to(med) {
+	   margin: 0 3% 3% 0;
+	   width: 38%;
+	}
+	@include respond-to(mob-lan) {
+	   margin: 0 0 10px;
+	   -moz-box-sizing: border-box;
+	   box-sizing: border-box;
+	   width: 100%; 
+	}
 }
 .img-link-active {
-    border: 1px solid #000;
-    @include box-shadow(inset 0 0 0 1px #000);  
-    &:after {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        margin-left: -7px;
-        @include sized-sprite($icons, arrow-b);
-    }
+	border: 1px solid #000;
+	@include box-shadow(inset 0 0 0 1px #000);  
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: -8px;
+		left: 50%;
+		margin-left: -7px;
+		@include sized-sprite($icons, arrow-b);
+	}
 }
 
 /* Contacts */
 .banner-single {
-    width: 74.4%;
-    float: right;
-    height: 200px;
-    img {
-        height: 100%;
-    }
-    @include respond-to(med) {
-       width: 100%;
-    }
+	width: 74.4%;
+	float: right;
+	height: 200px;
+	img {
+		height: 100%;
+	}
+	@include respond-to(med) {
+	   width: 100%;
+	}
 }
 .filter_map {
-    margin: 10px 0 9px 0;
-    @include respond-to(mob-lan) {
-       height: auto;
-       line-height: 1;
-    }
+	margin: 10px 0 9px 0;
+	@include respond-to(mob-lan) {
+	   height: auto;
+	   line-height: 1;
+	}
 }
 .filter_map-cities {
-    .filter-map {
-        overflow: visible;
-        @include clr;
-    }
-    .select-region {
-        position: relative;
-        z-index: 5000;
-        margin: -1px 0 0 1px;
-        @include respond-to(mob-lan) {
-            margin: 0;
-        }
-    }
-    .select-list_ukr {
-        border: 0;
-        border-right: 1px solid #d4d4d4;
-        @include respond-to(mob-lan) {
-            border-right: #000;
-            width: 100%;
-        }
-    }
+	.filter-map {
+		overflow: visible;
+		@include clr;
+	}
+	.select-region {
+		position: relative;
+		z-index: 5000;
+		margin: -1px 0 0 1px;
+		@include respond-to(mob-lan) {
+			margin: 0;
+		}
+	}
+	.select-list_ukr {
+		border: 0;
+		border-right: 1px solid #d4d4d4;
+		@include respond-to(mob-lan) {
+			border-right: #000;
+			width: 100%;
+		}
+	}
 }
 .filter-map {
-    overflow: hidden;
-    .label {
-        float: left;
-        height: 47px;
-        border-right: 1px solid #d4d4d4;
-        @include respond-to(mob-lan) {
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            width: 33.3%;
-            height: auto;
-            border: 0;
-        }
-    }
+	overflow: hidden;
+	.label {
+		float: left;
+		height: 47px;
+		border-right: 1px solid #d4d4d4;
+		@include respond-to(mob-lan) {
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			width: 33.3%;
+			height: auto;
+			border: 0;
+		}
+	}
 }
 .filter-map__cities {
-    float: left;
-    padding: 1px 0;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    @include respond-to(mob-lan) {
-        float: none;
-        height: 18px;
-        margin-bottom: 34px;
-        padding: 1px 0 13px;
-        @include clr;
-    }
+	float: left;
+	padding: 1px 0;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	@include respond-to(mob-lan) {
+		float: none;
+		height: 18px;
+		margin-bottom: 34px;
+		padding: 1px 0 13px;
+		@include clr;
+	}
 }
 .label {
-    padding: 0 22px;
-    display: block;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    user-select: none;
-    * {
-        display: inline-block;
-        vertical-align: middle;
-    }
-    @include respond-to(med) {
-        padding: 0 7px;
-    }
-    @include respond-to(pda) {
-        padding: 0 3px;
-    }
+	padding: 0 22px;
+	display: block;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	* {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	@include respond-to(med) {
+		padding: 0 7px;
+	}
+	@include respond-to(pda) {
+		padding: 0 3px;
+	}
 }
 .label__text {
-    position: relative; 
-    padding-left: 10px;
-    font-size: 16px;
-    @include pfd_m;
-    color: #c0c0c0;
-    cursor: pointer;
-    text-transform: uppercase;
-    @include respond-to(med) {
-        font-size: 15px;
-    }
-    @include respond-to(pda) {
-        font-size: 14px;
-    }
-    @include respond-to(mob-lan) {
-        font-size: 12px;
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        left: -19px;
-        top: 44%;
-        margin-top: -9px;
-        width: 19px;
-        height: 19px;
-        background: #d0e6ef;
-        @include respond-to(pda) {
-            left: -12px;
-        }
-    }
-    &:after {
-        content: "";
-        display: none;
-        position: absolute;
-        @include respond-to(pda) {
-            left: -6px;
-        }
-    }
+	position: relative; 
+	padding-left: 10px;
+	font-size: 16px;
+	@include pfd_m;
+	color: #c0c0c0;
+	cursor: pointer;
+	text-transform: uppercase;
+	@include respond-to(med) {
+		font-size: 15px;
+	}
+	@include respond-to(pda) {
+		font-size: 14px;
+	}
+	@include respond-to(mob-lan) {
+		font-size: 12px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: -19px;
+		top: 44%;
+		margin-top: -9px;
+		width: 19px;
+		height: 19px;
+		background: #d0e6ef;
+		@include respond-to(pda) {
+			left: -12px;
+		}
+	}
+	&:after {
+		content: "";
+		display: none;
+		position: absolute;
+		@include respond-to(pda) {
+			left: -6px;
+		}
+	}
 }
 .label__input {
-    position: relative;
-    z-index: 2;
-    margin-top: -3px;
-    opacity: 0;
+	position: relative;
+	z-index: 2;
+	margin-top: -3px;
+	opacity: 0;
 }
 .label__input:checked + span {
-    color: #000;
+	color: #000;
 }
 .label__input:checked + span:after {
-    display: block;
+	display: block;
 }
 .label_radio {
-    .label__text {
-        &:before {
-            content: "";
-            @include border-radius(18px);
-        }
-        &:after {
-            content: "";
-            left: -13px;
-            top: 20px;
-            width: 6px;
-            height: 6px;
-            background: #000;
-            @include border-radius(6px);
-            @include box-shadow(1px 1px 2px rgba(0,0,0,0.2));
-            @include respond-to(pda) {
-                left: -6px;
-                top: 20px;
-            }
-            @include respond-to(mob-lan) {
-                top: 2px;
-            }
+	.label__text {
+		&:before {
+			content: "";
+			@include border-radius(18px);
+		}
+		&:after {
+			content: "";
+			left: -13px;
+			top: 20px;
+			width: 6px;
+			height: 6px;
+			background: #000;
+			@include border-radius(6px);
+			@include box-shadow(1px 1px 2px rgba(0,0,0,0.2));
+			@include respond-to(pda) {
+				left: -6px;
+				top: 20px;
+			}
+			@include respond-to(mob-lan) {
+				top: 2px;
+			}
 
-        }
-    }
+		}
+	}
 }
 .label_check {
-    .label__text {
-        &:after {
-            content: "";
-            top: 9px;
-            left: -16px;
-            @include sized-sprite($icons, check);
-            @include respond-to(pda) {
-                left: -9px;
-                top: 3px;
-            }
-            @include respond-to(mob-lan) {
-                top: 2px; 
-            }
-        }
-    }
+	.label__text {
+		&:after {
+			content: "";
+			top: 9px;
+			left: -16px;
+			@include sized-sprite($icons, check);
+			@include respond-to(pda) {
+				left: -9px;
+				top: 3px;
+			}
+			@include respond-to(mob-lan) {
+				top: 2px; 
+			}
+		}
+	}
 }
 .filter-map__obj {
-    float: right;
-    height: 49px;
-    border-left: 2px solid #000;
-    @include respond-to(pda) {
-        border-left: 0;
-    }
-    @include respond-to(mob-lan) {
-        float: none;
-        height: auto;
-        padding: 0 0 13px;
-        @include clr;
-    }
+	float: right;
+	height: 49px;
+	border-left: 2px solid #000;
+	@include respond-to(pda) {
+		border-left: 0;
+	}
+	@include respond-to(mob-lan) {
+		float: none;
+		height: auto;
+		padding: 0 0 13px;
+		@include clr;
+	}
 }
 .map-wrap {
-    position: relative;
-    margin-bottom: 41px;
-    overflow: hidden;
-    clear: both;
+	position: relative;
+	margin-bottom: 41px;
+	overflow: hidden;
+	clear: both;
 }
 .map_small {
-    padding: 0 3.4%;
+	padding: 0 3.4%;
 }
 .map-wrap_shop {
-    width: 92.5%;
-    margin: 0 auto;
-    @include respond-to(mob-lan) {
-        margin-bottom: 20px;
-    }
+	width: 92.5%;
+	margin: 0 auto;
+	@include respond-to(mob-lan) {
+		margin-bottom: 0;
+	}
 }  
 .map_shop {
-    @include respond-to(mob-lan) {
-        height: 250px;
-        #map_canvas {
-            height: 250px !important;
-        }
-    }
+	@include respond-to(mob-lan) {
+		height: 250px;
+		#map_canvas {
+			height: 250px !important;
+		}
+	}
 }
 .map {
-    @include respond-to(mob-lan) {
-        height: 250px;
-        #map_canvas {
-            height: 250px !important;
-        }
-    }
+	@include respond-to(mob-lan) {
+		height: 250px;
+		#map_canvas {
+			height: 250px !important;
+		}
+	}
 }
 // .map-point {
 //     position: relative;
@@ -1524,668 +1539,668 @@ a.img-link{
 //     }
 // }
 .popup {
-    z-index: 1000;
-    position: absolute;
-    background: #fff;
-    @include respond-to(mob-lan) {
-        position: relative;
-        width: auto;
-    }
+	z-index: 1000;
+	position: absolute;
+	background: #fff;
+	@include respond-to(mob-lan) {
+		position: relative;
+		width: auto;
+	}
 }
 .popup_cont {
-    top: 30px;
-    bottom: 30px;
-    right: 30px;
-    width: 245px;
-    @include respond-to(mob-lan) {
-        top: auto;
-        bottom: auto;
-        right: auto;
-        margin: 15px auto 0;
-        width: auto;
-        border: 2px solid #000;
-    }
-    h2{
-       @include respond-to(mob-lan) {
-          font-size: 24px;
-       }
-    }
+	top: 30px;
+	bottom: 30px;
+	right: 30px;
+	width: 245px;
+	@include respond-to(mob-lan) {
+		top: auto;
+		bottom: auto;
+		right: auto;
+		margin: 15px auto 0;
+		width: auto;
+		border: 2px solid #000;
+	}
+	h2{
+	   @include respond-to(mob-lan) {
+		  font-size: 24px;
+	   }
+	}
 }
 .popup__body {
-    padding: 22px 30px;
-    @include respond-to(mob-lan) {
-        padding: 22px 30px 15px;
-    }
+	padding: 22px 30px;
+	@include respond-to(mob-lan) {
+		padding: 22px 30px 15px;
+	}
 }
 .popup__title {
-    @include pfd_m;
-    font-size: 24px;
-    line-height: 30px;
-    text-transform: uppercase;
+	@include pfd_m;
+	font-size: 24px;
+	line-height: 30px;
+	text-transform: uppercase;
 
 }
 .popup__main {
-    margin: 15px 0 29px;
-    @include respond-to(mob-lan) {
-        margin: 15px 0;
-    }
+	margin: 15px 0 29px;
+	@include respond-to(mob-lan) {
+		margin: 15px 0;
+	}
 }
 .popup__close {
-    position: absolute;
-    right: -12px;
-    top: -12px;
-    cursor: pointer;
-    @include sized-sprite($icons, close);
-    @include respond-to(mob-lan) {
-        display: none;
-    }
+	position: absolute;
+	right: -12px;
+	top: -12px;
+	cursor: pointer;
+	@include sized-sprite($icons, close);
+	@include respond-to(mob-lan) {
+		display: none;
+	}
 }
 .shop-info {
-    padding: 20px 0;
-    font-size: 13px;
-    @include respond-to(mob-lan) {
-        padding: 15px 0;
-    }
+	padding: 20px 0;
+	font-size: 13px;
+	@include respond-to(mob-lan) {
+		padding: 15px 0;
+	}
 }
 .shop-info__shed {
-    line-height: 1.4;
-    span {
-        float: left;
-        width: 70px;
-    }
-    b {
-        color: #2d8db4;
-        @include hel_b;
-    }
+	line-height: 1.4;
+	span {
+		float: left;
+		width: 70px;
+	}
+	b {
+		color: #2d8db4;
+		@include hel_b;
+	}
 }
 .shop-info__tel {
-    margin-top: 17px;
-    span {
-        float: left;
-        width: 35px;
-    }
-    div {
-        overflow: hidden;
-    }
-    strong {
-        display: block;
-        font-weight: normal;
-    }
+	margin-top: 17px;
+	span {
+		float: left;
+		width: 35px;
+	}
+	div {
+		overflow: hidden;
+	}
+	strong {
+		display: block;
+		font-weight: normal;
+	}
 }
 .shop-info__addr {
-    font-style: normal;
-    margin-top: 17px;
+	font-style: normal;
+	margin-top: 17px;
 }
 .wrap_shop-addr {
-    margin: 0px -40px 25px 0; 
-    @include respond-to(mob-lan) {
-        margin-top: 0px;
-    }
+	margin: 0px -40px 25px 0; 
+	@include respond-to(mob-lan) {
+		margin-top: 0px;
+	}
 }
 .inner{
-    margin-top: 6px;
-    .shop-addr {
-        width: 22%;
-    }
+	margin-top: 6px;
+	.shop-addr {
+		width: 22%;
+	}
 }
 .shop-addr {
-    display: inline-block;
-    margin: 0 0.8% 0.8% 0;
-    padding: 1px;
-    width: 17.8%;
-    vertical-align: top;
-    min-height: 100px;
-    border: 1px solid #d4d4d4;
-    text-decoration: none;
-    color: #000;
-    
-    @include respond-to(med) {
-        width: 22.1%;
-        margin-bottom: 1.5%;
-    }
-    @include respond-to(pda) {
-        width: 44.2%;
-    }
-    @include respond-to(mob-lan) {
-        width: 42%;
-        margin-bottom: 1.8%;
+	display: inline-block;
+	margin: 0 0.8% 0.8% 0;
+	padding: 1px;
+	width: 17.8%;
+	vertical-align: top;
+	min-height: 100px;
+	border: 1px solid #d4d4d4;
+	text-decoration: none;
+	color: #000;
+	
+	@include respond-to(med) {
+		width: 22.1%;
+		margin-bottom: 1.5%;
+	}
+	@include respond-to(pda) {
+		width: 44.2%;
+	}
+	@include respond-to(mob-lan) {
+		width: 42%;
+		margin-bottom: 1.8%;
 
-    }
-    .title-l-3 {
-        margin: 3px 0 9px;
-        line-height: 24px;
-        display: block; 
-        @include pfd_b;
-        @include respond-to(pda) {
-            font-size: 18px;
-            line-height: 18px;
-        }
-        @include respond-to(mob-lan) {
-            font-size: 18px;
-            line-height: 18px;
-        }
-    }
-    .empty {
-        cursor: default;
-        &:hover {
-            @include box-shadow(none);
-        }
-    }
-    .shop-addr__link {
-        display: block;
-        color: #000;
-        text-decoration: none;
-        @include respond-to(mob-lan) {
-            height: 150px;
-            line-height: 150px;
-        }
-    }
-    a.shop-addr__link {
-        &:hover {
-            @include box-shadow(0 0 0 2px #000);
-        }
-    }
+	}
+	.title-l-3 {
+		margin: 3px 0 9px;
+		line-height: 24px;
+		display: block; 
+		@include pfd_b;
+		@include respond-to(pda) {
+			font-size: 18px;
+			line-height: 18px;
+		}
+		@include respond-to(mob-lan) {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
+	.empty {
+		cursor: default;
+		&:hover {
+			@include box-shadow(none);
+		}
+	}
+	.shop-addr__link {
+		display: block;
+		color: #000;
+		text-decoration: none;
+		@include respond-to(mob-lan) {
+			height: 150px;
+			line-height: 150px;
+		}
+	}
+	a.shop-addr__link {
+		&:hover {
+			@include box-shadow(0 0 0 2px #000);
+		}
+	}
 }
 .shop-addr_active,.shop-addr_active:hover{
    border-color: #99f;
 }
 
 .shop-addr__wrap {
-    position: relative;
-    min-height: 110px;
-    padding: 4% 5% 20%;
-    @include respond-to(mob-lan) {
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1;
-        padding: 4% 5% 0;
-    }
+	position: relative;
+	min-height: 110px;
+	padding: 4% 5% 20%;
+	@include respond-to(mob-lan) {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+		padding: 4% 5% 0;
+	}
 }
 .shop-addr__cont {
-    position: absolute;
-    bottom: 8px;
-    left: auto;
-    font-size: 12px;
-    @include respond-to(mob-lan) {
-        position: static;
-        line-height: 16px;
-        text-align: center;
-        font-size: 11px;
-    }
-    span {
-        display: block;
-    }
+	position: absolute;
+	bottom: 8px;
+	left: auto;
+	font-size: 12px;
+	@include respond-to(mob-lan) {
+		position: static;
+		line-height: 16px;
+		text-align: center;
+		font-size: 11px;
+	}
+	span {
+		display: block;
+	}
 }
 .shop-addr_office {
-    .title-l-3 { 
-        @include respond-to(pda) {
-            font-size: 18px;
-            line-height: 18px;
-        }
-    }
+	.title-l-3 { 
+		@include respond-to(pda) {
+			font-size: 18px;
+			line-height: 18px;
+		}
+	}
 }
 .feedback {
-    margin: 0 auto -11px;
-    padding: 15px 0;
-    width: 46.1%;
-    @include respond-to(pda) {
-        width: 80%;
-    }
-    @include respond-to(mob-lan) {
-        width: 100%;
-    }
+	margin: 0 auto -11px;
+	padding: 15px 0;
+	width: 46.1%;
+	@include respond-to(pda) {
+		width: 80%;
+	}
+	@include respond-to(mob-lan) {
+		width: 100%;
+	}
 }
 .wrap_input {
-    @include clr;
-    margin-right: -16%;
-    @include respond-to(mob-lan) {
-        margin-right: 0;
-    }
+	@include clr;
+	margin-right: -16%;
+	@include respond-to(mob-lan) {
+		margin-right: 0;
+	}
 }
 
 
 /* Newspaper */
 .wrap_newspaper {
-    margin-bottom: 45px;
-    text-align: center;
-    @include respond-to(mob-lan) {
-        text-align: center;
-        margin-bottom: 0;
-    }
+	margin-bottom: 45px;
+	text-align: center;
+	@include respond-to(mob-lan) {
+		text-align: center;
+		margin-bottom: 0;
+	}
 }
 .newspaper {
-    display: inline-block;
-    width: 181px;
-    margin: 0 4.4% 4% 0;
-    text-decoration: none;
+	display: inline-block;
+	width: 181px;
+	margin: 0 4.4% 4% 0;
+	text-decoration: none;
 
-    @include respond-to(mob-lan) {
-        float: none;
-        display: inline-block;
-        text-align: left;
-        margin: 0 2.4% 10% 0;
-    }
+	@include respond-to(mob-lan) {
+		float: none;
+		display: inline-block;
+		text-align: left;
+		margin: 0 2.4% 10% 0;
+	}
 
-    &.downloadActionsCatalog {
-        background-color: #02abe6;
-        padding: 10px;
-        margin: 0 15px -10px;
+	&.downloadActionsCatalog {
+		background-color: #02abe6;
+		padding: 10px;
+		margin: 0 15px -10px;
 
-        .newspaper__title {
-            color: #fff;
-        }
+		.newspaper__title {
+			color: #fff;
+		}
 
-        &:hover {
-            .newspaper__title {
-                color: #313131;
-            }
-        }
+		&:hover {
+			.newspaper__title {
+				color: #313131;
+			}
+		}
 
-        .newspaper__dwnld {
-            color: #313131;
-            i {
-                background: url('../_img/icons-sf089a82f61(v2).png') 0 -440px no-repeat; 
-            }
-        }
-    }
+		.newspaper__dwnld {
+			color: #313131;
+			i {
+				background: url('../_img/icons-sf089a82f61(v2).png') 0 -440px no-repeat; 
+			}
+		}
+	}
 
-    &:hover {
-        img {
-            opacity: 1;
-            border: 1px solid #000;
-            @include box-shadow(0 0 0 1px #000);
-            @include gray_none;
-        }
-        .newspaper__title {
-            color: #2D8DB4;
-        }
-    }
-    img {
-        display: block; 
-        margin-bottom: 15px;
-        border: 1px solid #d4d4d4;
-        opacity: 0.7;
-        @include gray;
-        @include respond-to(mob-lan) {
-            margin-bottom: 5px;
-        }
-    }
-    .newspaper__title {
-        @include pfd_b;
-        font-size: 18px;
-        line-height: 18px; 
-        color: #000;
-        text-transform: uppercase;
-        text-align: left;
+	&:hover {
+		img {
+			opacity: 1;
+			border: 1px solid #000;
+			@include box-shadow(0 0 0 1px #000);
+			@include gray_none;
+		}
+		.newspaper__title {
+			color: #2D8DB4;
+		}
+	}
+	img {
+		display: block; 
+		margin-bottom: 15px;
+		border: 1px solid #d4d4d4;
+		opacity: 0.7;
+		@include gray;
+		@include respond-to(mob-lan) {
+			margin-bottom: 5px;
+		}
+	}
+	.newspaper__title {
+		@include pfd_b;
+		font-size: 18px;
+		line-height: 18px; 
+		color: #000;
+		text-transform: uppercase;
+		text-align: left;
 
-        @include respond-to(mob-lan) {
-            font-size: 15px;
-            margin-bottom: 0;
-            text-align: center;
-        }
-    }
+		@include respond-to(mob-lan) {
+			font-size: 15px;
+			margin-bottom: 0;
+			text-align: center;
+		}
+	}
 }
 
 .newspaper__dwnld {
-    display: inline-block;
-    margin-top: -3px;
-    color: #898989;
-    font-size: 14px;
-    line-height: 14px;
+	display: inline-block;
+	margin-top: -3px;
+	color: #898989;
+	font-size: 14px;
+	line-height: 14px;
 
-    @include pfd_b;
-    text-transform: uppercase;
-    text-decoration: none;
-    @include respond-to(mob-lan) {
-        font-size: 12px;
-    }
-    i {
-        display: inline-block;
-        position: relative;
-        top: 5px;
-        margin-left: 11px;
-        @include sized-sprite($icons, pdf);
-    }
+	@include pfd_b;
+	text-transform: uppercase;
+	text-decoration: none;
+	@include respond-to(mob-lan) {
+		font-size: 12px;
+	}
+	i {
+		display: inline-block;
+		position: relative;
+		top: 5px;
+		margin-left: 11px;
+		@include sized-sprite($icons, pdf);
+	}
 }
 
 /* Shopes */
 .wrap_shopes {
-    margin: 0 -20px 0 -16px;
-    @include respond-to(pda) {
-        margin: 0 -20% 0 0;
-        padding-bottom: 15px;
-    }
+	margin: 0 -20px 0 -16px;
+	@include respond-to(pda) {
+		margin: 0 -20% 0 0;
+		padding-bottom: 15px;
+	}
 }
 .shop-item {
-    position: relative;
-    float: left;
-    margin: 0 1% 40px 0;
-    width: 31.8%;
-    height: 310px;
-    overflow: hidden;
-    @include respond-to(med) {
-       width: 46%;
-        margin-right: 4%;
-    }
-    @include respond-to(pda) {
-        height: 180px;
-        margin: 0 1% 1% 0;
-        width: 40.8%;
-    }
-    @include respond-to(mob-lan) {
-        min-height: 106px;
-        height: auto;
-    }
-    &:hover {
-        .shop-item__main {
-            //top: 23%;
-            //right: 22%;
-            //bottom: 24%;
-            //left: 22%;
-            @include respond-to(pda) {
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-            a {
-                color: #000;
-             } 
-        }
-    }
-    img {
-        width: 298px;
-        @include respond-to(med) {
-            width: 100%;
-            //height: 100%;
-        }
-        @include respond-to(pda) {
-            display: none;
-        }
-    }
-    .watch-more {
-        position: absolute;
-        top: 21%;
-        right: 20%;
-        bottom: 22%;
-        left: 20%;
-        padding: 35px 40px;
-        line-height: 25px;
-        @include respond-to(pda) {
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-        @include respond-to(mob-lan) {
-            margin-bottom: 10px;
-        }
-        a {
-            @include respond-to(pda) {
-                margin-top: 62px;
-                 &:before, &:after {
-                    content: "";
-                    top: 50%;
-                    width: 8%;
-                }
-            }
-            @include respond-to(mob-lan) {
-                width: 100%;
-                margin: 63px auto 0;
-                font-size: 17px;
-                &:before, &:after {
-                    content: "";
-                    display: none;
-                }
-                &:after {
-                    content: "";
-                    right: -25%;
-                    left: auto;
-                }
-            }
-        }
-    }
+	position: relative;
+	float: left;
+	margin: 0 1% 40px 0;
+	width: 31.8%;
+	height: 310px;
+	overflow: hidden;
+	@include respond-to(med) {
+	   width: 46%;
+		margin-right: 4%;
+	}
+	@include respond-to(pda) {
+		height: 180px;
+		margin: 0 1% 1% 0;
+		width: 40.8%;
+	}
+	@include respond-to(mob-lan) {
+		min-height: 106px;
+		height: auto;
+	}
+	&:hover {
+		.shop-item__main {
+			//top: 23%;
+			//right: 22%;
+			//bottom: 24%;
+			//left: 22%;
+			@include respond-to(pda) {
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+			}
+			a {
+				color: #000;
+			 } 
+		}
+	}
+	img {
+		width: 298px;
+		@include respond-to(med) {
+			width: 100%;
+			//height: 100%;
+		}
+		@include respond-to(pda) {
+			display: none;
+		}
+	}
+	.watch-more {
+		position: absolute;
+		top: 21%;
+		right: 20%;
+		bottom: 22%;
+		left: 20%;
+		padding: 35px 40px;
+		line-height: 25px;
+		@include respond-to(pda) {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+		@include respond-to(mob-lan) {
+			margin-bottom: 10px;
+		}
+		a {
+			@include respond-to(pda) {
+				margin-top: 62px;
+				 &:before, &:after {
+					content: "";
+					top: 50%;
+					width: 8%;
+				}
+			}
+			@include respond-to(mob-lan) {
+				width: 100%;
+				margin: 63px auto 0;
+				font-size: 17px;
+				&:before, &:after {
+					content: "";
+					display: none;
+				}
+				&:after {
+					content: "";
+					right: -25%;
+					left: auto;
+				}
+			}
+		}
+	}
 }
 .shop-item__main {
-    //position: absolute;
-    //top: 24%;
-    //right: 20%;
-    //bottom: 26%;
-    //left: 20%;
-    background: #fff;
-    opacity: 1;
-    margin-top: 10px;
-    //overflow: hidden;
-    //height: 120px;
-    //line-height: 120px;
-    @include respond-to(pda) {
-        //top: 0;
-        //right: 0;
-        //bottom: 0;
-        //left: 0;
-        border: 2px solid #000;
-        height: 160px;
-        line-height: 160px;
-    }
-    @include respond-to(mob-lan) {
-        height: 100px;
-        line-height: 100px;
-    }
-    .shop-item__title {
-        padding: 0 3px;
-        text-align: center;
-        @include pfd_b();
-        font-size: 22px;
-        text-transform: uppercase;
-        line-height: 22px;
-        display: block;
-        overflow: hidden;
-        -o-text-overflow: ellipsis;
-        text-overflow: ellipsis;
-        color: #000;
-        span {
-            display: block;
-        }
-        
-    }
+	//position: absolute;
+	//top: 24%;
+	//right: 20%;
+	//bottom: 26%;
+	//left: 20%;
+	background: #fff;
+	opacity: 1;
+	margin-top: 10px;
+	//overflow: hidden;
+	//height: 120px;
+	//line-height: 120px;
+	@include respond-to(pda) {
+		//top: 0;
+		//right: 0;
+		//bottom: 0;
+		//left: 0;
+		border: 2px solid #000;
+		height: 160px;
+		line-height: 160px;
+	}
+	@include respond-to(mob-lan) {
+		height: 100px;
+		line-height: 100px;
+	}
+	.shop-item__title {
+		padding: 0 3px;
+		text-align: center;
+		@include pfd_b();
+		font-size: 22px;
+		text-transform: uppercase;
+		line-height: 22px;
+		display: block;
+		overflow: hidden;
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		color: #000;
+		span {
+			display: block;
+		}
+		
+	}
 }
 .shop-item__wrap {
-    display: inline-block;
-    width: 100%;
-    line-height: 1px;
-    vertical-align: middle;
+	display: inline-block;
+	width: 100%;
+	line-height: 1px;
+	vertical-align: middle;
 }
 .shop-item__adr {
-    color: #727272;
-    font-size: 12px;
-    @include hel_r();
-    text-align: center;
-    margin-top: 11px;
+	color: #727272;
+	font-size: 12px;
+	@include hel_r();
+	text-align: center;
+	margin-top: 11px;
 } 
 .watch-more {
-    border: 2px solid #d4d4d4;
-    a {
-        position: relative;
-        display: block;
-        margin-top: 5px;
-        font-size: 24px;
-        @include pfd_b();
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-        @include respond-to(med) {
-            font-size: 22px;
-        }
-        &:before, &:after {
-            content: "";
-            position: absolute;
-            top: 75%;
-            left: -7%;
-            width: 17%;
-            height: 1px;
-            background: #96c6d9;
-            @include respond-to(med) {
-                left: 0;
-            }
-        }
-        &:after {
-            content: "";
-            left: auto;
-            right: -7%;
-            @include respond-to(med) {
-                right: 0;
-            }
-        }
-    }
+	border: 2px solid #d4d4d4;
+	a {
+		position: relative;
+		display: block;
+		margin-top: 5px;
+		font-size: 24px;
+		@include pfd_b();
+		text-align: center;
+		text-decoration: none;
+		text-transform: uppercase;
+		@include respond-to(med) {
+			font-size: 22px;
+		}
+		&:before, &:after {
+			content: "";
+			position: absolute;
+			top: 75%;
+			left: -7%;
+			width: 17%;
+			height: 1px;
+			background: #96c6d9;
+			@include respond-to(med) {
+				left: 0;
+			}
+		}
+		&:after {
+			content: "";
+			left: auto;
+			right: -7%;
+			@include respond-to(med) {
+				right: 0;
+			}
+		}
+	}
 }
 
 .plan {
-    position: relative;
-    padding-bottom: 58px;
-    overflow: hidden;
-    img {
-        border: 1px solid #d4d4d4;
-        display: block;
-        width: 872px;
-        margin: 0 auto;
-    }
-    .link-box {
-        position: absolute;
-        bottom: 32px;
-        left: 50%;
-        margin-left: -80px;
-        font-size: 20px;
-    }
+	position: relative;
+	padding-bottom: 58px;
+	overflow: hidden;
+	img {
+		border: 1px solid #d4d4d4;
+		display: block;
+		width: 872px;
+		margin: 0 auto;
+	}
+	.link-box {
+		position: absolute;
+		bottom: 32px;
+		left: 50%;
+		margin-left: -80px;
+		font-size: 20px;
+	}
 }
 
 /* wholesale */
 .link-box_order {
-    position: relative;
-    float: right;
-    margin: 10px 0 10px 10px;
-    @include respond-to(mob) {
-        width: 100%;
-        margin: 0 0 15px;
-        padding: 0; 
-    }
-    &:before {
-        content: "";
-        position: absolute;
-        left: -9px;
-        top: 50%;
-        margin-top: -7px;
-        @include sized-sprite($icons, arrow-r);
-    }
+	position: relative;
+	float: right;
+	margin: 10px 0 10px 10px;
+	@include respond-to(mob) {
+		width: 100%;
+		margin: 0 0 15px;
+		padding: 0; 
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		left: -9px;
+		top: 50%;
+		margin-top: -7px;
+		@include sized-sprite($icons, arrow-r);
+	}
 }
 .wrap_item-cont {
-    margin: 0 -15% 50px 0;
-    overflow: hidden;
+	margin: 0 -15% 50px 0;
+	overflow: hidden;
 }
 .item-cont {
-    position: relative;
-    float: left;
-    margin-right: 1.1%;
-    width: 83%;
-    padding: 1.2% 1.5% 1.2% 2%; 
-    border: 2px solid #d4d4d4;
-    @include respond-to(med) {
-        width: 82%;
-        margin-right: 2%;
-        padding: 1.1% 1.5% 0.9% 2%; 
-    }
-    @include respond-to(pda) {
-        padding: 1.1% 1.5% 0.9% 2%; 
-    }
-    @include respond-to(mob-lan) {
-        width: 86%;
-        padding: 0;
-        line-height: 69px;
-    }
-    .item-cont__url{
-       text-decoration: underline;
-    }
-    &:hover{
-       border-color: #333;
-    }
+	position: relative;
+	float: left;
+	margin-right: 1.1%;
+	width: 83%;
+	padding: 1.2% 1.5% 1.2% 2%; 
+	border: 2px solid #d4d4d4;
+	@include respond-to(med) {
+		width: 82%;
+		margin-right: 2%;
+		padding: 1.1% 1.5% 0.9% 2%; 
+	}
+	@include respond-to(pda) {
+		padding: 1.1% 1.5% 0.9% 2%; 
+	}
+	@include respond-to(mob-lan) {
+		width: 86%;
+		padding: 0;
+		line-height: 69px;
+	}
+	.item-cont__url{
+	   text-decoration: underline;
+	}
+	&:hover{
+	   border-color: #333;
+	}
 }
 .item-cont__main {
-    float: left;
-    width: 55%;
-    @include respond-to(med) {
-        width: 50%;
-    }
-    @include respond-to(mob-lan) {
-        float: none;
-        width: 100%;
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1;
-    }
-    .item-cont__title {
-        margin-bottom: 0;
-        @include pfd_b();
-        font-size: 22px;
-        line-height: 23px;
-        text-transform: uppercase;
-        color: #222;
-        @include respond-to(med) {
-            font-size: 18px;
-        }
-        @include respond-to(mob-lan) {
-            font-size: 18px !important;
-            margin-bottom: 0;
-        }
-    }
+	float: left;
+	width: 55%;
+	@include respond-to(med) {
+		width: 50%;
+	}
+	@include respond-to(mob-lan) {
+		float: none;
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		line-height: 1;
+	}
+	.item-cont__title {
+		margin-bottom: 0;
+		@include pfd_b();
+		font-size: 22px;
+		line-height: 23px;
+		text-transform: uppercase;
+		color: #222;
+		@include respond-to(med) {
+			font-size: 18px;
+		}
+		@include respond-to(mob-lan) {
+			font-size: 18px !important;
+			margin-bottom: 0;
+		}
+	}
 }
 .item-cont__link {
-    position: absolute;
-    bottom: 11px;
-    /*left: 16px;*/
-    width: 100%;
-    @include respond-to(med) {
-        /*left: 11px;*/
-    }
-    @include respond-to(pda) {
-        bottom: 6px;
-    }
-    @include respond-to(mob-lan) {
-        display: none;
-    }
+	position: absolute;
+	bottom: 11px;
+	/*left: 16px;*/
+	width: 100%;
+	@include respond-to(med) {
+		/*left: 11px;*/
+	}
+	@include respond-to(pda) {
+		bottom: 6px;
+	}
+	@include respond-to(mob-lan) {
+		display: none;
+	}
 }
 .item-cont__img {
-    float: right;
-    width: 20%;
-    overflow: hidden;
-    @include respond-to(mob-lan) {
-        display: none;
-    }
+	float: right;
+	width: 20%;
+	overflow: hidden;
+	@include respond-to(mob-lan) {
+		display: none;
+	}
 }
 
 .text-rows_width {
-    padding: 0;
-    li {
-        border: 1px solid transparent;
-        border-top: 1px solid #d4d4d4; 
-        &:hover {
-            border: 1px solid #000; 
-            //margin: 0 0 -1px;
-            //padding-bottom: 8px;
-            position: relative;
-            @include respond-to(mob-lan) {
-                //padding-bottom: 5px;
-            }
-            div {
-                //padding-top: 4px;
-                float: left;
-            }
-            .report__download {
-                //margin-top: 5px;
-                @include respond-to(mob-lan) {
-                    //margin-bottom: 8px;
-                }
-            }
-        }
-    }
+	padding: 0;
+	li {
+		border: 1px solid transparent;
+		border-top: 1px solid #d4d4d4; 
+		&:hover {
+			border: 1px solid #000; 
+			//margin: 0 0 -1px;
+			//padding-bottom: 8px;
+			position: relative;
+			@include respond-to(mob-lan) {
+				//padding-bottom: 5px;
+			}
+			div {
+				//padding-top: 4px;
+				float: left;
+			}
+			.report__download {
+				//margin-top: 5px;
+				@include respond-to(mob-lan) {
+					//margin-bottom: 8px;
+				}
+			}
+		}
+	}
 }
 
 /* trademarks */
@@ -2193,1343 +2208,1343 @@ a.img-link{
 .trademarks_disabled {
    //position: relative;
    // * {
-        opacity: 0.3;
-    //}
+		opacity: 0.3;
+	//}
 }
 .trademarks__off-the-marlet {
-    position: absolute;
-    //top: 30%;
-    left: 25%;
-    display: block;
-    border: 5px solid #2d8db4;
-    padding: 25px 30px;
-    width: 400px;
-    z-index: 1000;
-    background-color: #fff;
-    @include pfd_m();
-    font-size: 30px;
-    line-height: 34px;
-    text-align: center;
-    opacity: 1;
-    text-transform: none;
-    margin-top: 75px;
-    strong {
-        white-space: nowrap;
-        opacity: 1;
-        @include pfd_b();
-    }
-    @include respond-to(pda) {
-        width: 40%;
-        left: 25%;
-        margin-top: 50%;
-        margin-top: 50%;
-    }
-    @include respond-to(mob-lan) {
-        width: 76%;
-        left: 0;
-    }
+	position: absolute;
+	//top: 30%;
+	left: 25%;
+	display: block;
+	border: 5px solid #2d8db4;
+	padding: 25px 30px;
+	width: 400px;
+	z-index: 1000;
+	background-color: #fff;
+	@include pfd_m();
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	opacity: 1;
+	text-transform: none;
+	margin-top: 75px;
+	strong {
+		white-space: nowrap;
+		opacity: 1;
+		@include pfd_b();
+	}
+	@include respond-to(pda) {
+		width: 40%;
+		left: 25%;
+		margin-top: 50%;
+		margin-top: 50%;
+	}
+	@include respond-to(mob-lan) {
+		width: 76%;
+		left: 0;
+	}
 }
 .link-box_shop {
-    margin: 15px 0 35px;
-    &:before {
-        content: "";
-        position: absolute;
-        top: -9px;
-        left: 18px;
-        @include sized-sprite($icons, arrow-t);
-    }
+	margin: 15px 0 35px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: -9px;
+		left: 18px;
+		@include sized-sprite($icons, arrow-t);
+	}
 }
 .tm-website {
-    float: right;
-    text-align: center;
-    margin: 0 0 20px 45px;
-    @include respond-to(pda) {
-        width: 100%;
-        float: none !important;
-        margin: 0 auto 10px !important;
-    }
+	float: right;
+	text-align: center;
+	margin: 0 0 20px 45px;
+	@include respond-to(pda) {
+		width: 100%;
+		float: none !important;
+		margin: 0 auto 10px !important;
+	}
 }
 .shop-logo {
-    margin-bottom: 10px;
-    line-height: 184px;
-    border: 1px solid #d4d4d4; 
-    text-align: center;
-    img {
-        line-height: 1;
-        vertical-align: middle;
-    }
-    @include respond-to(pda) {
-        display: block;
-        float: none;
-        margin: 0 auto 15px;
-    }
-    @include respond-to(mob-lan) {
-        display: block;
-        margin: 0 auto 15px;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    }
+	margin-bottom: 10px;
+	line-height: 184px;
+	border: 1px solid #d4d4d4; 
+	text-align: center;
+	img {
+		line-height: 1;
+		vertical-align: middle;
+	}
+	@include respond-to(pda) {
+		display: block;
+		float: none;
+		margin: 0 auto 15px;
+	}
+	@include respond-to(mob-lan) {
+		display: block;
+		margin: 0 auto 15px;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
 }
 .colections {
-    overflow: hidden;
+	overflow: hidden;
 }
 .wrap_collect {
-    margin-right: -20%;
-    @include respond-to(med) {
-        margin-bottom: 15px;
-    }
+	margin-right: -20%;
+	@include respond-to(med) {
+		margin-bottom: 15px;
+	}
 }
 .collect {
-    float: left;
-    width: 26.3%;
-    margin: 0 1.6% 8px 0;
-    overflow: hidden;
-    border: 2px solid #d4d4d4;
-    @include respond-to(med) {
-        -moz-box-sizing:border-box;
-        box-sizing:border-box;
-        padding: 2%;
-        width: 26%;
-    }
-    @include respond-to(pda) {
-        width: 40.3%;
-    }
-    @include respond-to(mob-lan) {
-        width: 40.5%;
-    }
+	float: left;
+	width: 26.3%;
+	margin: 0 1.6% 8px 0;
+	overflow: hidden;
+	border: 2px solid #d4d4d4;
+	@include respond-to(med) {
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+		padding: 2%;
+		width: 26%;
+	}
+	@include respond-to(pda) {
+		width: 40.3%;
+	}
+	@include respond-to(mob-lan) {
+		width: 40.5%;
+	}
 }
 .collect__img {
-    float: left;
-    //width: 40%;
-    //overflow: hidden;
-    margin: 4px 12px 4px 4px;
-    img {
-        display: block;
-        max-width: 120px;
-    }
-    @include respond-to(med) {
-        display: none;
-    }
+	float: left;
+	//width: 40%;
+	//overflow: hidden;
+	margin: 4px 12px 4px 4px;
+	img {
+		display: block;
+		max-width: 120px;
+	}
+	@include respond-to(med) {
+		display: none;
+	}
 }
 .collect__main {
-    position: relative;
-    overflow: hidden;
-    height: 98px;
-    padding-bottom: 10px;
-    @include respond-to(mob-lan) {
-        text-align: center;
-    }
-    span {
-        position: absolute;
-        bottom: 0px;
-        font-size: 12px;
-        color: #626262;
-        @include respond-to(mob-lan) {
-            position: static;
-        }
-    }
-    strong {
-        display: inline-block;
-        width: 19px;
-        height: 19px;
-        line-height: 19px;
-        text-align: center;
-        font-size: 14px;
-        @include pfd_m;
-        color: #000;
-        background: #f1f1f1;
-        text-transform: uppercase;
-    }
+	position: relative;
+	overflow: hidden;
+	height: 98px;
+	padding-bottom: 10px;
+	@include respond-to(mob-lan) {
+		text-align: center;
+	}
+	span {
+		position: absolute;
+		bottom: 0px;
+		font-size: 12px;
+		color: #626262;
+		@include respond-to(mob-lan) {
+			position: static;
+		}
+	}
+	strong {
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		line-height: 19px;
+		text-align: center;
+		font-size: 14px;
+		@include pfd_m;
+		color: #000;
+		background: #f1f1f1;
+		text-transform: uppercase;
+	}
 }
 
 .collect__title {
-    padding-top: 7px;
-    font-size: 20px;
-    line-height: 24px;
-    @include pfd_b;
-    text-transform: uppercase;
-    @include respond-to(med) {
-        font-size: 20px;
-        text-align: center;
-        line-height: 30px;
-    }
-    @include respond-to(mob-lan) {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-    a {
-        color: #000;
-        text-decoration: none;
-        &:hover {
-            color: #2D8DB4;
-        }
-    }
+	padding-top: 7px;
+	font-size: 20px;
+	line-height: 24px;
+	@include pfd_b;
+	text-transform: uppercase;
+	@include respond-to(med) {
+		font-size: 20px;
+		text-align: center;
+		line-height: 30px;
+	}
+	@include respond-to(mob-lan) {
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+	a {
+		color: #000;
+		text-decoration: none;
+		&:hover {
+			color: #2D8DB4;
+		}
+	}
 }
 
 .filter_marks {
-    @include clr;
-    position: relative;
-    top: -7px;
-    height: auto;
-    line-height: 30px;
-    // @include respond-to(pda) {
-    //     z-index: 2;
-    //     margin-top: 5px;
-    //     margin-bottom: 51px;
-    // }
-    @include respond-to(pda) {
-        height: auto;
-        line-height: 1;
-        margin-bottom: 20px;
-    }
-    label {
-        float: left;
-        @include respond-to(med) {
-            padding: 0 10px;
-        }
-        @include respond-to(pda) {
-            padding: 0 9px; 
-            //float: right;
-            margin: 15px 0 0;
-            width: 30%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-            &:nth-child(2n-1) {
-                float: left;
-            } 
-        }
-        @include respond-to(mob-lan) {
-            width: 50%;
-            padding: 0 5px;
-        }
-    }
-    .label__text {
-        @include respond-to(mob-lan) {
-            font-size: 12px; 
-        }
-    }
-    .select-list {
-        float: right;
-        right: -2px;
-        top: 0;
-        border-top: 0;
-        -moz-user-select: none;
-        -webkit-user-select: none;
-        user-select: none;
-        @include respond-to(pda) {
-            float: none;
-            right: 0;
-            width: 100%;     
-            border: 0;
-            border-top: 2px solid;
-            ul {
-                width: 100%;
-                padding: 0;
-            }
-            li {
-                -moz-box-sizing: border-box;
-                -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-                float: left;
-                width: 50%;
-                &:nth-child(2n) {
-                    float: right;
-                }
-            }
-        }
-    }
+	@include clr;
+	position: relative;
+	top: -7px;
+	height: auto;
+	line-height: 30px;
+	// @include respond-to(pda) {
+	//     z-index: 2;
+	//     margin-top: 5px;
+	//     margin-bottom: 51px;
+	// }
+	@include respond-to(pda) {
+		height: auto;
+		line-height: 1;
+		margin-bottom: 20px;
+	}
+	label {
+		float: left;
+		@include respond-to(med) {
+			padding: 0 10px;
+		}
+		@include respond-to(pda) {
+			padding: 0 9px; 
+			//float: right;
+			margin: 15px 0 0;
+			width: 30%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			&:nth-child(2n-1) {
+				float: left;
+			} 
+		}
+		@include respond-to(mob-lan) {
+			width: 50%;
+			padding: 0 5px;
+		}
+	}
+	.label__text {
+		@include respond-to(mob-lan) {
+			font-size: 12px; 
+		}
+	}
+	.select-list {
+		float: right;
+		right: -2px;
+		top: 0;
+		border-top: 0;
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		user-select: none;
+		@include respond-to(pda) {
+			float: none;
+			right: 0;
+			width: 100%;     
+			border: 0;
+			border-top: 2px solid;
+			ul {
+				width: 100%;
+				padding: 0;
+			}
+			li {
+				-moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+				float: left;
+				width: 50%;
+				&:nth-child(2n) {
+					float: right;
+				}
+			}
+		}
+	}
 }
 .filter__col {
-    float: left;
-    width: 80%;
-    padding: 5px;
-    @include respond-to(med) {
-        width: 70%;
-    }
-    @include respond-to(pda) {
-        float: none;
-        overflow: hidden;
-        width: 100%;
-        padding: 5px 0 15px;
-    }
+	float: left;
+	width: 80%;
+	padding: 5px;
+	@include respond-to(med) {
+		width: 70%;
+	}
+	@include respond-to(pda) {
+		float: none;
+		overflow: hidden;
+		width: 100%;
+		padding: 5px 0 15px;
+	}
 }
 .select-list {
-    position: relative;
-    width: 180px;
-    border: 2px solid;
-    color: #000;
-    font-size: 16px;
-    @include pfd_m;
-    text-transform: uppercase;
-    &:hover{
-        div {
-            color:#2d8db4;
-        }
-        .select-list_caption {
-            color:#2d8db4;
-        }
-    }
-    div {
-        position: relative;
-        height: 49px;
-        line-height: 49px;
-        padding-left: 16px;
-        cursor: pointer;
-        font-weight: normal;
-        b {
-            font-weight: normal;
-        }
-        i {
-            position: absolute;
-            right: 14px;
-            top: 50%;
-            margin-top: -3px;
-            @include sized-sprite($icons, select2);
-        }
-        &:after {
-            content: "";
-            position: absolute;
-            right: 33px;
-            top: 50%;
-            margin-top: -15px;
-            z-index: -1;
-            @include sized-sprite($icons, world-map);
-        }
-    }
-    ul {
-        display: none;
-        position: absolute;
-        top: 49px;
-        left: -2px;
-        z-index: 1000;
-        width: 178px;
-        padding: 0 1px;
-        border: 2px solid;
-        background: #fff;
-    }
-    li {
-        position: relative;
-        padding-left: 15px;
-        height: 29px;
-        line-height: 29px;
-        border-top: 1px solid #d4d4d4;
-        cursor: pointer;
-        &:first-child {
-            border-top: 0;
-        }
-        &:hover {
-            color: #2D8DB4;
-            &:after {
-                content: "";
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                margin-top: -3px;
-                @include sized-sprite($icons, rhomb-s);
-            }
-        }
-    }
+	position: relative;
+	width: 180px;
+	border: 2px solid;
+	color: #000;
+	font-size: 16px;
+	@include pfd_m;
+	text-transform: uppercase;
+	&:hover{
+		div {
+			color:#2d8db4;
+		}
+		.select-list_caption {
+			color:#2d8db4;
+		}
+	}
+	div {
+		position: relative;
+		height: 49px;
+		line-height: 49px;
+		padding-left: 16px;
+		cursor: pointer;
+		font-weight: normal;
+		b {
+			font-weight: normal;
+		}
+		i {
+			position: absolute;
+			right: 14px;
+			top: 50%;
+			margin-top: -3px;
+			@include sized-sprite($icons, select2);
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			right: 33px;
+			top: 50%;
+			margin-top: -15px;
+			z-index: -1;
+			@include sized-sprite($icons, world-map);
+		}
+	}
+	ul {
+		display: none;
+		position: absolute;
+		top: 49px;
+		left: -2px;
+		z-index: 1000;
+		width: 178px;
+		padding: 0 1px;
+		border: 2px solid;
+		background: #fff;
+	}
+	li {
+		position: relative;
+		padding-left: 15px;
+		height: 29px;
+		line-height: 29px;
+		border-top: 1px solid #d4d4d4;
+		cursor: pointer;
+		&:first-child {
+			border-top: 0;
+		}
+		&:hover {
+			color: #2D8DB4;
+			&:after {
+				content: "";
+				position: absolute;
+				right: 10px;
+				top: 50%;
+				margin-top: -3px;
+				@include sized-sprite($icons, rhomb-s);
+			}
+		}
+	}
 }
 .opt {
-    .select-list_caption {
-        float: left;
-        display: block;
-        margin: 16px 12px;
-        @include pfd_m;
-        text-transform: uppercase;
-        @include respond-to(pda) {
-            padding-left: 3px;
-        }
-        @include respond-to(mob-lan) {
-            //border-bottom: 2px solid #000;
-            float: none;
-            margin: 10px 12px 0;
-        }
-    }
-    .select-list_ukr {
-        width: 453px;
-        @include respond-to(mob-lan) {
-            width: auto;
-        }
-    }
+	.select-list_caption {
+		float: left;
+		display: block;
+		margin: 16px 12px;
+		@include pfd_m;
+		text-transform: uppercase;
+		@include respond-to(pda) {
+			padding-left: 3px;
+		}
+		@include respond-to(mob-lan) {
+			//border-bottom: 2px solid #000;
+			float: none;
+			margin: 10px 12px 0;
+		}
+	}
+	.select-list_ukr {
+		width: 453px;
+		@include respond-to(mob-lan) {
+			width: auto;
+		}
+	}
 }
 
 .select-list_ukr {
-    border:1px solid #d4d4d4;
-    @include respond-to(mob-lan){
-        width: 100%;
-        div {
-            height: 25px;
-            line-height: 20px;
-            &:after {
-                margin-top: -26px;
-            }
-            i {
-                top: 0;
-            }
-        }
-    }
-    div {
-        &:after {
-            content: "";
-            @include sized-sprite($icons, ukr-map);
-        }
+	border:1px solid #d4d4d4;
+	@include respond-to(mob-lan){
+		width: 100%;
+		div {
+			height: 25px;
+			line-height: 20px;
+			&:after {
+				margin-top: -26px;
+			}
+			i {
+				top: 0;
+			}
+		}
+	}
+	div {
+		&:after {
+			content: "";
+			@include sized-sprite($icons, ukr-map);
+		}
 
-    }
-    ul {
-        width: auto;
-        left: -1px;
-        top: 48px;
-        border: 1px solid #d4d4d4;
-        border-width: 0 0 1px 1px;
-        padding: 0;
-        margin-right: -1px;
-        @include respond-to(mob-lan) {
-            left: auto;
-            right: 0;
-            width: 211px;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            top:54px;
-            //margin:0 -3px 0 -1px
-        }
-        li {
-            float: left;
-            width: 211px;
-            border: 1px solid #d4d4d4;
-            border-width: 1px 1px 0 0;
-            &:first-child {
-                border-top: 1px solid #d4d4d4;;
-            }
-            @include respond-to(mob-lan) {
-                float: none;
-                width: auto;
-                border-width: 1px 1px 0 0;
-            }
-        }
-    }
+	}
+	ul {
+		width: auto;
+		left: -1px;
+		top: 48px;
+		border: 1px solid #d4d4d4;
+		border-width: 0 0 1px 1px;
+		padding: 0;
+		margin-right: -1px;
+		@include respond-to(mob-lan) {
+			left: auto;
+			right: 0;
+			width: 211px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			top:54px;
+			//margin:0 -3px 0 -1px
+		}
+		li {
+			float: left;
+			width: 211px;
+			border: 1px solid #d4d4d4;
+			border-width: 1px 1px 0 0;
+			&:first-child {
+				border-top: 1px solid #d4d4d4;;
+			}
+			@include respond-to(mob-lan) {
+				float: none;
+				width: auto;
+				border-width: 1px 1px 0 0;
+			}
+		}
+	}
 }
 .wrap_mark {
-    margin: 0 -10% 45px 0;
-    overflow: hidden;
+	margin: 0 -10% 45px 0;
+	overflow: hidden;
 }
 .mark {
-    float: left;
-    overflow: hidden;
-    margin: 0 0.8% 0.8% 0;
-    width: 17.2%;
-    height: 198px;
-    border: 1px solid #d4d4d4;
-    text-align: center;
-    text-decoration: none;
-    color: #000;
-    @include respond-to(med) {
-        width: 21.8%;
-    }
-    @include respond-to(pda) {
-        width: 29.3%;
-    }
-    @include respond-to(mob-lan) {
-        width: 44.4%;
-    }
-    &:hover {
-        border-color: #000;
-        @include box-shadow(inset 0 0 0 1px #000);
-    }
+	float: left;
+	overflow: hidden;
+	margin: 0 0.8% 0.8% 0;
+	width: 17.2%;
+	height: 198px;
+	border: 1px solid #d4d4d4;
+	text-align: center;
+	text-decoration: none;
+	color: #000;
+	@include respond-to(med) {
+		width: 21.8%;
+	}
+	@include respond-to(pda) {
+		width: 29.3%;
+	}
+	@include respond-to(mob-lan) {
+		width: 44.4%;
+	}
+	&:hover {
+		border-color: #000;
+		@include box-shadow(inset 0 0 0 1px #000);
+	}
 }
 .mark__img {
-    height: 198px;
-    line-height: 198px;
-    text-align: center;
-    img {
-        vertical-align: middle;
-        line-height: 1;
-        width: auto;
-        max-width: 100%;
-        height: auto;
-    }
-    @include respond-to(mob-lan) {
-        display: none;
-    }
+	height: 198px;
+	line-height: 198px;
+	text-align: center;
+	img {
+		vertical-align: middle;
+		line-height: 1;
+		width: auto;
+		max-width: 100%;
+		height: auto;
+	}
+	@include respond-to(mob-lan) {
+		display: none;
+	}
 }
 .mark__main {
-    display: none;
-    padding: 9% 13% 2%;
-    max-height: 158px;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    @include respond-to(mob-lan) {
-        display: block;
-    }
-    p {
-        margin: 12px 0 0;
-        color: #727272;
-        font-size: 12px;
-        @include hel_r;
-        line-height: 15px;
-    }
-    .mark__title {
-        padding-bottom: 13px;
-        margin-bottom: 0; 
-        font-size: 25px;
-        @include pfd_b;
-        text-transform: uppercase;
-    }
+	display: none;
+	padding: 9% 13% 2%;
+	max-height: 158px;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	@include respond-to(mob-lan) {
+		display: block;
+	}
+	p {
+		margin: 12px 0 0;
+		color: #727272;
+		font-size: 12px;
+		@include hel_r;
+		line-height: 15px;
+	}
+	.mark__title {
+		padding-bottom: 13px;
+		margin-bottom: 0; 
+		font-size: 25px;
+		@include pfd_b;
+		text-transform: uppercase;
+	}
 }
 
 
 /* FAQ */
 .faq-wrap {
-    margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .pagin_faq {
-    margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 .faq {
-    position: relative;
-    padding-bottom: 23px;
-    margin-bottom: 22px;
-    border-bottom: 1px solid #d4d4d4;
-    .counter {
-        position: absolute;
-        top: 6px;
-        right: 0;
-        color: #000;
-        text-decoration: none;
-        @include respond-to(mob-lan) {
-            top: -2px;
-        }
-    }
-    &:last-child {
-        border-bottom: 0;
-    }
-    ul {
-        margin-top: -11px;
-        width: 90%;
-        line-height: 18px;
-        @include respond-to(med) {
-            width: 83%;
-        }
-    }
-    .faq__list{
-       li{
-          margin-bottom: 15px;
-          a{
-             &:hover{
-                color: #000;
-             }
-          }
-       }
-    }
-    .title-l-2 {
-        @include respond-to(mob-lan) {
-            text-align: left;
-        }
-    }
+	position: relative;
+	padding-bottom: 23px;
+	margin-bottom: 22px;
+	border-bottom: 1px solid #d4d4d4;
+	.counter {
+		position: absolute;
+		top: 6px;
+		right: 0;
+		color: #000;
+		text-decoration: none;
+		@include respond-to(mob-lan) {
+			top: -2px;
+		}
+	}
+	&:last-child {
+		border-bottom: 0;
+	}
+	ul {
+		margin-top: -11px;
+		width: 90%;
+		line-height: 18px;
+		@include respond-to(med) {
+			width: 83%;
+		}
+	}
+	.faq__list{
+	   li{
+		  margin-bottom: 15px;
+		  a{
+			 &:hover{
+				color: #000;
+			 }
+		  }
+	   }
+	}
+	.title-l-2 {
+		@include respond-to(mob-lan) {
+			text-align: left;
+		}
+	}
 }
 .faq__all {
-    position: absolute;
-    right: 0;
-    bottom: 32px;
-    @include respond-to(pda) {
-        position: static;
-        margin-top: 15px;
-        display: inline-block;
-    }
+	position: absolute;
+	right: 0;
+	bottom: 32px;
+	@include respond-to(pda) {
+		position: static;
+		margin-top: 15px;
+		display: inline-block;
+	}
 }
 .counter {
-    position: relative;
-    display: block;
-    width: 26px;
-    height: 26px;
-    font-size: 20px;
-    @include pfd_m;
-    color: #000;
-    line-height: 26px;
-    text-align: center;
-    border: 2px solid;
-    &:after {
-        content: "";
-        position: absolute;
-        left: 4px;
-        bottom: -8px;
-        @include sized-sprite($icons, counter-corner);
-    }
+	position: relative;
+	display: block;
+	width: 26px;
+	height: 26px;
+	font-size: 20px;
+	@include pfd_m;
+	color: #000;
+	line-height: 26px;
+	text-align: center;
+	border: 2px solid;
+	&:after {
+		content: "";
+		position: absolute;
+		left: 4px;
+		bottom: -8px;
+		@include sized-sprite($icons, counter-corner);
+	}
 }
 
 .feedback_faq {
-    width: 64%;
-    padding-bottom: 15px;
-    @include respond-to(mob-lan) {
-        width: 100%;
-    }
-    .valid-error { 
-        right: -130px;
-        width: 115px;
-        @include respond-to(med) {
-            right: 0;
-            top: 30px;
-        }
-        @include respond-to(mob-lan) {
-            top: 6px;
-        }
-    }
+	width: 64%;
+	padding-bottom: 15px;
+	@include respond-to(mob-lan) {
+		width: 100%;
+	}
+	.valid-error { 
+		right: -130px;
+		width: 115px;
+		@include respond-to(med) {
+			right: 0;
+			top: 30px;
+		}
+		@include respond-to(mob-lan) {
+			top: 6px;
+		}
+	}
 }
 
 .question_width {
-    width: 98%;
-    @include respond-to(med) {
-        display: block;
+	width: 98%;
+	@include respond-to(med) {
+		display: block;
    }
-    .question__body {
-        font-size: 18px;
-        font-weight: normal;
-        //font-family: 'helveticaneuecyrroman', sans-serif;
-        text-transform: none;
-        text-decoration: none;
-        @include respond-to(mob-lan) {
-            font-size: 15px;
-            line-height: 20px;
-        }
-    }
+	.question__body {
+		font-size: 18px;
+		font-weight: normal;
+		//font-family: 'helveticaneuecyrroman', sans-serif;
+		text-transform: none;
+		text-decoration: none;
+		@include respond-to(mob-lan) {
+			font-size: 15px;
+			line-height: 20px;
+		}
+	}
 }
 .question__answer {
-    .label-t {
-        float: left;
-    }
+	.label-t {
+		float: left;
+	}
 }
 .question__answer-link {
-    position: relative;
-    float: right;
-    font-size: 12px;
-    padding-right: 15px;
-    /*
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 50%;
-        margin-top: -2px;
-        @include sized-sprite($icons, arr1);
-    }
-    */
+	position: relative;
+	float: right;
+	font-size: 12px;
+	padding-right: 15px;
+	/*
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -2px;
+		@include sized-sprite($icons, arr1);
+	}
+	*/
 }
 .question__answer-link-act {
-    &:after {
-        content: "";
-        @include sized-sprite($icons, arr2);
-    }
+	&:after {
+		content: "";
+		@include sized-sprite($icons, arr2);
+	}
 }
 .question__ext {
-    padding: 8px 3% 15px;
-    background: #F6F6F6;
-    color: #257899;
-    font-size: 14px;
+	padding: 8px 3% 15px;
+	background: #F6F6F6;
+	color: #257899;
+	font-size: 14px;
 }
 .question__cons {
-    @include clr();
-    height: 49px;
-    padding-top: 15px;
+	@include clr();
+	height: 49px;
+	padding-top: 15px;
 }
 .question__cons-img {
-    position: relative;
-    float: left;
-    margin: 0 13px 0 0;
-    //border: 3px solid #fff;
-    /*
-    // уголок на фотке
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        width: 0;
-        border-top: 7px solid transparent;
-        border-right: 7px solid #fff;
-        border-bottom: 7px solid #fff;
-        border-left: 7px solid transparent;
-    }
-    */
-    img {
-        display: block;
-    }
+	position: relative;
+	float: left;
+	margin: 0 13px 0 0;
+	//border: 3px solid #fff;
+	/*
+	// уголок на фотке
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 0;
+		width: 0;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #fff;
+		border-bottom: 7px solid #fff;
+		border-left: 7px solid transparent;
+	}
+	*/
+	img {
+		display: block;
+	}
 }
 .question__cons-inf {
-    float: left;
-    padding-top: 6px;
-    strong {
-        display: block;
-        font-weight: normal;
-        font-size: 16px;
-    }
-    span {
-        color: #2d8db4;
-        font-size: 12px;
-    }
+	float: left;
+	padding-top: 6px;
+	strong {
+		display: block;
+		font-weight: normal;
+		font-size: 16px;
+	}
+	span {
+		color: #2d8db4;
+		font-size: 12px;
+	}
 }
 .question_act {
-    &:hover {
-        &:after {
-            content: "";
-            @include sized-sprite($icons, question-corner-h2);   
-        }   
-    }
-    &:after {
-        content: "";
-        @include sized-sprite($icons, question-corner2);   
-    }
+	&:hover {
+		&:after {
+			content: "";
+			@include sized-sprite($icons, question-corner-h2);   
+		}   
+	}
+	&:after {
+		content: "";
+		@include sized-sprite($icons, question-corner2);   
+	}
 }
 
 /* Actions */
 .wrap_action {
-    margin-right: -20%;
+	margin-right: -20%;
 }
 .action {
-    float: left;
-    margin: 20px 1% 1% 0;
-    padding: 1px;
-    width: 40.5%;
-    border: 1px solid #d4d4d4;
-    @include respond-to(mob-lan) {
-        float: none;
-        width: 81%;
-    }
-    &:hover {
-        border: 1px solid #000;
-        @include box-shadow(inset 0 0 0 1px #000);
-    }
-    .action__title {
-        margin: 16px 0 9px;
-        font-size: 30px;
-        line-height: 30px;
-        @include pfd_b;
-        @include respond-to(med) {
-            font-size: 20px;
-        }
-        @include respond-to(mob-lan) {
-            font-size: 17px;
-            line-height: 20px;
-        }
-        a {
-            color: #000;
-            text-decoration: none;
-            &:hover {
-                color: #2D8DB4;
-            }
-        }
-    }
-    p {
-        font-size: 14px;
-        color: #727272;
-        @include respond-to(mob-lan) {
-            font-size: 12px;
-        }
-    }
+	float: left;
+	margin: 20px 1% 1% 0;
+	padding: 1px;
+	width: 40.5%;
+	border: 1px solid #d4d4d4;
+	@include respond-to(mob-lan) {
+		float: none;
+		width: 81%;
+	}
+	&:hover {
+		border: 1px solid #000;
+		@include box-shadow(inset 0 0 0 1px #000);
+	}
+	.action__title {
+		margin: 16px 0 9px;
+		font-size: 30px;
+		line-height: 30px;
+		@include pfd_b;
+		@include respond-to(med) {
+			font-size: 20px;
+		}
+		@include respond-to(mob-lan) {
+			font-size: 17px;
+			line-height: 20px;
+		}
+		a {
+			color: #000;
+			text-decoration: none;
+			&:hover {
+				color: #2D8DB4;
+			}
+		}
+	}
+	p {
+		font-size: 14px;
+		color: #727272;
+		@include respond-to(mob-lan) {
+			font-size: 12px;
+		}
+	}
 }
 .action__img {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    margin-top: 9px;
-    @include respond-to(mob-lan) {
-        img{
-            width: 100%;
-        }
-    }
+	display: block;
+	text-align: center;
+	overflow: hidden;
+	margin-top: 9px;
+	@include respond-to(mob-lan) {
+		img{
+			width: 100%;
+		}
+	}
 
 }
 .action__main {
-    padding: 1.6% 2.6% 0;
-    overflow: hidden;
+	padding: 1.6% 2.6% 0;
+	overflow: hidden;
 }
 .action__link {
-    padding: 11px 0 12px 13px;
-    border-top: 1px solid #d4d4d4;
-    background: #f6f6f6;
+	padding: 11px 0 12px 13px;
+	border-top: 1px solid #d4d4d4;
+	background: #f6f6f6;
 }
 
 /* Contact shop */
 .contact_page {
-    .contacts_page_block {
-        display: inline-block;
-        margin: 30px 0.8% 0.8% 0;
-        padding: 10px 20px;
-        width: 44%;
-        vertical-align: top;
-        min-height: 100px;
-        border: 1px solid #d4d4d4;
-        text-decoration: none;
-        color: #000;
+	.contacts_page_block {
+		display: inline-block;
+		margin: 30px 0.8% 0.8% 0;
+		padding: 10px 20px;
+		width: 44%;
+		vertical-align: top;
+		min-height: 100px;
+		border: 1px solid #d4d4d4;
+		text-decoration: none;
+		color: #000;
 
-        @include respond-to(med) {
-            width: 22.1%;
-            margin-bottom: 1.5%;
-        }
-        @include respond-to(pda) {
-            width: 44.2%;
-        }
-        @include respond-to(mob-lan) {
-            width: 42%;
-            margin-bottom: 1.8%;
+		@include respond-to(med) {
+			width: 22.1%;
+			margin-bottom: 1.5%;
+		}
+		@include respond-to(pda) {
+			width: 44.2%;
+		}
+		@include respond-to(mob-lan) {
+			width: 42%;
+			margin-bottom: 1.8%;
 
-        }
-        h3 {
-            margin: 3px 0 9px;
-            line-height: 22px;
-            font-size: 20px;
-            display: block; 
-            @include pfd_b;
-            @include respond-to(pda) {
-                font-size: 18px;
-                line-height: 18px;
-            }
-            @include respond-to(mob-lan) {
-                font-size: 18px;
-                line-height: 18px;
-            }
-        }
-        .empty {
-            cursor: default;
-            &:hover {
-                @include box-shadow(none);
-            }
-        }
-        .shop-addr__link {
-            display: block;
-            color: #000;
-            text-decoration: none;
-            @include respond-to(mob-lan) {
-                height: 150px;
-                line-height: 150px;
-            }
-        }
-        a.shop-addr__link {
-            &:hover {
-                @include box-shadow(0 0 0 2px #000);
-            }
-        }
-    }
-    
+		}
+		h3 {
+			margin: 3px 0 9px;
+			line-height: 22px;
+			font-size: 20px;
+			display: block; 
+			@include pfd_b;
+			@include respond-to(pda) {
+				font-size: 18px;
+				line-height: 18px;
+			}
+			@include respond-to(mob-lan) {
+				font-size: 18px;
+				line-height: 18px;
+			}
+		}
+		.empty {
+			cursor: default;
+			&:hover {
+				@include box-shadow(none);
+			}
+		}
+		.shop-addr__link {
+			display: block;
+			color: #000;
+			text-decoration: none;
+			@include respond-to(mob-lan) {
+				height: 150px;
+				line-height: 150px;
+			}
+		}
+		a.shop-addr__link {
+			&:hover {
+				@include box-shadow(0 0 0 2px #000);
+			}
+		}
+	}
+	
 }
 
 .contact-col {
-    float: left;
-    margin: 20px 42px 20px 0;
-    font-size: 14px;
-    @include respond-to(mob-lan) {
-        float: none;
-        margin: 0;
-    }
-    dt {
-        margin-bottom: 7px;
-    }
-    dd {
-        position: relative;
-        padding-left: 15px;
-        margin-bottom: 8px;
-        &:before {
-            content: "";
-            position: absolute;
-            top: 6px;
-            left: 0;
-            @include sized-sprite($icons, rhomb-s);
-        }
-    }
+	float: left;
+	margin: 20px 42px 20px 0;
+	font-size: 14px;
+	@include respond-to(mob-lan) {
+		float: none;
+		margin: 0;
+	}
+	dt {
+		margin-bottom: 7px;
+	}
+	dd {
+		position: relative;
+		padding-left: 15px;
+		margin-bottom: 8px;
+		&:before {
+			content: "";
+			position: absolute;
+			top: 6px;
+			left: 0;
+			@include sized-sprite($icons, rhomb-s);
+		}
+	}
 }
 .wrap_depart {
-    margin-right: -20%;
-    padding: 18px 0 0 3.4%;
-    .shop-addr {
-        width: 24.8%;
-        margin: 0 1.8% 1.8% 0;
-        @include respond-to(med) {
-            width: 23.2%;
-            min-height: 126px;
-        }
-        @include respond-to(pda) {
-            width: 36.5%;
-        }
-        @include respond-to(mob-lan) {
-            width: 80%;
-            min-height: 100px;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
-    } 
-    .title-l-3 {
-        font-size: 20px;
-        @include respond-to(med) {
-            font-size: 18px;
-        }
-        @include respond-to(mob-lan) {
-            margin: 7px 0 9px;
-        }
-    }
+	margin-right: -20%;
+	padding: 18px 0 0 3.4%;
+	.shop-addr {
+		width: 24.8%;
+		margin: 0 1.8% 1.8% 0;
+		@include respond-to(med) {
+			width: 23.2%;
+			min-height: 126px;
+		}
+		@include respond-to(pda) {
+			width: 36.5%;
+		}
+		@include respond-to(mob-lan) {
+			width: 80%;
+			min-height: 100px;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+	} 
+	.title-l-3 {
+		font-size: 20px;
+		@include respond-to(med) {
+			font-size: 18px;
+		}
+		@include respond-to(mob-lan) {
+			margin: 7px 0 9px;
+		}
+	}
 }
 .workers {
-    margin-bottom: 37px;
+	margin-bottom: 37px;
 }
 .worker {
-    overflow: hidden;
-    position: relative;
-    clear: both;
-    border: 1px solid #d4d4d4;
-    margin-bottom: -1px;
+	overflow: hidden;
+	position: relative;
+	clear: both;
+	border: 1px solid #d4d4d4;
+	margin-bottom: -1px;
 }
 .worker__main {
-    float: left;
-    width: 66%;
-    overflow: hidden;
-    padding: 1%;
-    @include respond-to(mob-lan) {
-        width: 100%;
-        float:none;
-        overflow: none;
-        padding:12px 10px 5px 10px;
-    }
+	float: left;
+	width: 66%;
+	overflow: hidden;
+	padding: 1%;
+	@include respond-to(mob-lan) {
+		width: 100%;
+		float:none;
+		overflow: none;
+		padding:12px 10px 5px 10px;
+	}
 }
 .worker__img {
-    position: relative;
-    float: left;
-    margin: 0 10px 0 0;
-    border: 3px solid #fff;
-    @include respond-to(mob-lan){
-        display: none;
-    }
-    /*
-    &:after {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        width: 0;
-        border-top: 7px solid transparent;
-        border-right: 7px solid #fff;
-        border-bottom: 7px solid #fff;
-        border-left: 7px solid transparent;
-    }
-    */
-    img {
-        display: block;
-    }
+	position: relative;
+	float: left;
+	margin: 0 10px 0 0;
+	border: 3px solid #fff;
+	@include respond-to(mob-lan){
+		display: none;
+	}
+	/*
+	&:after {
+		content: "";
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		height: 0;
+		width: 0;
+		border-top: 7px solid transparent;
+		border-right: 7px solid #fff;
+		border-bottom: 7px solid #fff;
+		border-left: 7px solid transparent;
+	}
+	*/
+	img {
+		display: block;
+	}
 } 
 .worker__info {
-    float: left;
-    @include respond-to(med) {
-        width: 50%;
-    }
-    @include respond-to(mob-lan) {
-        width: 100%;
-        float:none;
-        overflow: none;
-    }
-    .worker__name {
-        display: block;
-        margin: 3px 0 0;
-        font-size: 20px;
-        width: 250px;
-        @include pfd_m;
-        line-height: 21px;
-        @include respond-to(med) {
-            font-size: 18px;
-            line-height: 17px;
-            margin:0;
-        }
-        @include respond-to(mob-lan) {
-            text-align: left;
-        }
-    }
-    @include respond-to(mob-lan) {
-        width: 100%;
-    }
-    .label-t {
-        font-size: 14px;
-        @include pfd_r();
-        text-transform: none;
-        @include respond-to(mob-lan) {
-            text-align: left;
-        }
-    }
+	float: left;
+	@include respond-to(med) {
+		width: 50%;
+	}
+	@include respond-to(mob-lan) {
+		width: 100%;
+		float:none;
+		overflow: none;
+	}
+	.worker__name {
+		display: block;
+		margin: 3px 0 0;
+		font-size: 20px;
+		width: 250px;
+		@include pfd_m;
+		line-height: 21px;
+		@include respond-to(med) {
+			font-size: 18px;
+			line-height: 17px;
+			margin:0;
+		}
+		@include respond-to(mob-lan) {
+			text-align: left;
+		}
+	}
+	@include respond-to(mob-lan) {
+		width: 100%;
+	}
+	.label-t {
+		font-size: 14px;
+		@include pfd_r();
+		text-transform: none;
+		@include respond-to(mob-lan) {
+			text-align: left;
+		}
+	}
 }
 .worker__cont {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 27%;
-    padding: 20px 0 0 2%;
-    background: #f6f6f6;
-    @include respond-to(med) {
-        width: 45%;
-    }
-    @include respond-to(mob-lan) {
-        position:static;
-        width: 100%;
-        padding:5px 10px 12px 10px;
-        font-size: 12px;
-    }
-    span {
-        display: block;
-    }
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 27%;
+	padding: 20px 0 0 2%;
+	background: #f6f6f6;
+	@include respond-to(med) {
+		width: 45%;
+	}
+	@include respond-to(mob-lan) {
+		position:static;
+		width: 100%;
+		padding:5px 10px 12px 10px;
+		font-size: 12px;
+	}
+	span {
+		display: block;
+	}
 }
 .no-img {
-    &:after {
-        content: "";
-        display: none;
-    }
+	&:after {
+		content: "";
+		display: none;
+	}
 }
 .workers-wrap {
-    padding: 23px 3.4% 0;
-    border-top: 2px solid #000;
+	padding: 23px 3.4% 0;
+	border-top: 2px solid #000;
 }
 .workers__dep-title {
-    width: 73%;
-    float: left;
-    margin-bottom: 20px;
-    @include respond-to(pda) {
-        width: 55%;
-        font-size: 25px;
-    }
-    @include respond-to(mob-lan) {
-        width: 100%;
-        font-size: 18px;
-        margin:0 0 5px 10px;
-    }
-    h2 {
-        @include pfd_b;
-        font-size: 30px;
-        line-height: 26px;
-        text-transform: uppercase;
-        @include respond-to(mob-lan) {
-            font-size: 22px;
-        }
-    }
-    span {
-        font-size: 14px;
-    }
+	width: 73%;
+	float: left;
+	margin-bottom: 20px;
+	@include respond-to(pda) {
+		width: 55%;
+		font-size: 25px;
+	}
+	@include respond-to(mob-lan) {
+		width: 100%;
+		font-size: 18px;
+		margin:0 0 5px 10px;
+	}
+	h2 {
+		@include pfd_b;
+		font-size: 30px;
+		line-height: 26px;
+		text-transform: uppercase;
+		@include respond-to(mob-lan) {
+			font-size: 22px;
+		}
+	}
+	span {
+		font-size: 14px;
+	}
 }
 .workers__dep-cont {
-    float: left;
-    strong {
-        display: block;
-        font-size: 14px;
-    }
-    @include respond-to(mob-lan){
-        margin:0 0 10px 10px;
-        float: none;
-    }
+	float: left;
+	strong {
+		display: block;
+		font-size: 14px;
+	}
+	@include respond-to(mob-lan){
+		margin:0 0 10px 10px;
+		float: none;
+	}
 }
 .select-region {
-    position: relative;
-    z-index: 1000;
-    margin: 0 0 -1px;
-    @include clr;
-    .select-list {
-        border-bottom: 0;
-        @include respond-to(mob-lan) {
-            border-bottom: 1px solid #d4d4d4;
-        }
-    }
-    .select-list_ukr {
-        @include respond-to(mob-lan) {
-            border-bottom: 2px solid #000;
-        }
-    }
+	position: relative;
+	z-index: 1000;
+	margin: 0 0 -1px;
+	@include clr;
+	.select-list {
+		border-bottom: 0;
+		@include respond-to(mob-lan) {
+			border-bottom: 1px solid #d4d4d4;
+		}
+	}
+	.select-list_ukr {
+		@include respond-to(mob-lan) {
+			border-bottom: 2px solid #000;
+		}
+	}
 }
 .select-region__wrap {
-    width: 100%;
-    //float: right;
-    //width: 73%;
-    @include respond-to(mob-lan) {
-        float: none;
-        width: 100%;
-    }
+	width: 100%;
+	//float: right;
+	//width: 73%;
+	@include respond-to(mob-lan) {
+		float: none;
+		width: 100%;
+	}
 }
 .region-name {
-    display: block;
-    margin:0 0 15px 0;
-    font-size: 18px;
-    @include pfd_b;
-    //color: #2d8db4;
-    text-transform: uppercase;
-    @include respond-to(pda) {
-        font-size: 18px;
-        margin: 10px 0;
-        padding-left: 16px;
-    }
+	display: block;
+	margin:0 0 15px 0;
+	font-size: 18px;
+	@include pfd_b;
+	//color: #2d8db4;
+	text-transform: uppercase;
+	@include respond-to(pda) {
+		font-size: 18px;
+		margin: 10px 0;
+		padding-left: 16px;
+	}
 }
 
 // Page 404
 
 .error-page {
-    .header__logo {
-        margin: 92px 0 110px;
-        @include respond-to(mob-lan) {
-           margin-bottom: 40px; 
-        }
-    }
+	.header__logo {
+		margin: 92px 0 110px;
+		@include respond-to(mob-lan) {
+		   margin-bottom: 40px; 
+		}
+	}
 }
 .error-img {
-    position: relative;
-    //left: 5.7%;
-    //margin: 0 auto 65px; 
-    //width: 58%;
-    height: 367px;
-    background: url(../_img/404.jpg) 63% 0 no-repeat;
-    -webkit-background-size: 100% auto;
-    -o-background-size: 100% auto;
-    background-size: 100% auto;
-    @include respond-to(pda) {
-        margin-bottom: 0;
-    }
-    @include respond-to(mob-lan) {
-       margin-bottom: -160px;
-    }
-    div {
-        position: absolute;
-        bottom: 0;
-        width: 84%;
-        text-align: center;
-        color: #818181;
-        font-size: 22px;
-        @include pfd_m;
-        text-transform: uppercase;
-        @include transition(all, 0.5s, linear);
-        @include respond-to(med) {
-            bottom: 73px;
-        }
-        @include respond-to(pda) {
-            bottom: 130px;
-            font-size: 18px;
-        }
-        @include respond-to(mob-lan) {
-            bottom: 210px;
-            font-size: 14px;
-        }
-    }
+	position: relative;
+	//left: 5.7%;
+	//margin: 0 auto 65px; 
+	//width: 58%;
+	height: 367px;
+	background: url(../_img/404.jpg) 63% 0 no-repeat;
+	-webkit-background-size: 100% auto;
+	-o-background-size: 100% auto;
+	background-size: 100% auto;
+	@include respond-to(pda) {
+		margin-bottom: 0;
+	}
+	@include respond-to(mob-lan) {
+	   margin-bottom: -160px;
+	}
+	div {
+		position: absolute;
+		bottom: 0;
+		width: 84%;
+		text-align: center;
+		color: #818181;
+		font-size: 22px;
+		@include pfd_m;
+		text-transform: uppercase;
+		@include transition(all, 0.5s, linear);
+		@include respond-to(med) {
+			bottom: 73px;
+		}
+		@include respond-to(pda) {
+			bottom: 130px;
+			font-size: 18px;
+		}
+		@include respond-to(mob-lan) {
+			bottom: 210px;
+			font-size: 14px;
+		}
+	}
 }
 
 // Text page
 
 .likesocial{
-    clear:left;
-    padding-bottom: 20px;
-    li{
-        float:left;
-        list-style: none;
-        width: 22%;
-        padding-left:0px;
-        height: 25px;
-        &:before {
-            display: none;
-        }
-        /*&:last-child {
-            float: none;
-        }*/
-        @include respond-to(mob-lan){
-            width: 45%;
-        }
-    }
+	clear:left;
+	padding-bottom: 20px;
+	li{
+		float:left;
+		list-style: none;
+		width: 22%;
+		padding-left:0px;
+		height: 25px;
+		&:before {
+			display: none;
+		}
+		/*&:last-child {
+			float: none;
+		}*/
+		@include respond-to(mob-lan){
+			width: 45%;
+		}
+	}
 }
 
 .thanks {
-    position: relative;
-    padding: 20px 144px 45px;
-    margin-bottom: 30px;
-    width: 288px;
-    margin: 0 auto;
-    border: 2px solid #000;
-    text-align: center;
-    font-size: 11px;
-    .btn-rhomb {
-        position: absolute;
-        bottom: -32px;
-        left: 50%;
-        margin-left: -75px;
-    }
-    p {
-       color: #707070; 
-    }
+	position: relative;
+	padding: 20px 144px 45px;
+	margin-bottom: 30px;
+	width: 288px;
+	margin: 0 auto;
+	border: 2px solid #000;
+	text-align: center;
+	font-size: 11px;
+	.btn-rhomb {
+		position: absolute;
+		bottom: -32px;
+		left: 50%;
+		margin-left: -75px;
+	}
+	p {
+	   color: #707070; 
+	}
 }
 
 // replace table cell
 .cell {
-    float: left;
-    margin: 0 -2px -2px 0;
-    max-height: 326px;
-    width: 33.3%;
-    border: 2px solid #d4d4d4;
-    text-align: center;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    overflow: hidden;
-    @include respond-to(pda) {
-        width: 50%;
-    }
-    img {
-        margin-bottom: -3px;
-        @include respond-to(mob-lan) {
-            height: 100%;
-        }
-    }
+	float: left;
+	margin: 0 -2px -2px 0;
+	max-height: 326px;
+	width: 33.3%;
+	border: 2px solid #d4d4d4;
+	text-align: center;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	@include respond-to(pda) {
+		width: 50%;
+	}
+	img {
+		margin-bottom: -3px;
+		@include respond-to(mob-lan) {
+			height: 100%;
+		}
+	}
 }
 .cell__main {
-    padding: 15px 5px;
-    overflow: hidden; 
-    @include respond-to(mob-lan) {
-        padding: 5px;
-        height: 150px;
-    }
+	padding: 15px 5px;
+	overflow: hidden; 
+	@include respond-to(mob-lan) {
+		padding: 5px;
+		height: 150px;
+	}
 }
 .cell__wrap {
-    overflow: hidden;
+	overflow: hidden;
 }
 .cell__footer {
-    padding: 18px 5px;
-    border-top: 2px solid #d4d4d4;
-    @include respond-to(mob-lan) {
-        padding: 5px;
-    }
+	padding: 18px 5px;
+	border-top: 2px solid #d4d4d4;
+	@include respond-to(mob-lan) {
+		padding: 5px;
+	}
 }
 .faq__full{
-    h1{
-        text-transform:none;
-        @include pfd_r;
-        line-height: 34px;
-    }
-    .question {
-        padding:15px 20px 0 20px;
-        line-height:22px;
-        //overflow: hidden;
-        .cont-gallery{
-            float: right;
-            margin-left: 20px;
-        }
-        &:after {
-            @include sized-sprite($icons, question-corner2); 
-        }
-    }
+	h1{
+		text-transform:none;
+		@include pfd_r;
+		line-height: 34px;
+	}
+	.question {
+		padding:15px 20px 0 20px;
+		line-height:22px;
+		//overflow: hidden;
+		.cont-gallery{
+			float: right;
+			margin-left: 20px;
+		}
+		&:after {
+			@include sized-sprite($icons, question-corner2); 
+		}
+	}
 }
 
 
 .wholesale{
-    .tab{
-        margin-top: -20px;
-        @include respond-to(mob-lan) {
-            font-size: 18px;
-            ul{
-                padding-left: 0px;
-                margin-top: 10px;
-                height: 39px;
-                li {
-                    padding: 0 12px;
-                    height: 37px;
-                    line-height: 39px;
-                }
-                .tab__active {
-                    height: 39px;
-                }
-            }
-            .tab__title {
-                font-size: 18px;
-                position: static;
-                font-weight: normal;
-            }
-        }
-    }
-    h2 {
-        @include respond-to(med) {
-            text-align: left;
-        }
-        @include respond-to(pda) {
-            display: block;
-        }
-    }
+	.tab{
+		margin-top: -20px;
+		@include respond-to(mob-lan) {
+			font-size: 18px;
+			ul{
+				padding-left: 0px;
+				margin-top: 10px;
+				height: 39px;
+				li {
+					padding: 0 12px;
+					height: 37px;
+					line-height: 39px;
+				}
+				.tab__active {
+					height: 39px;
+				}
+			}
+			.tab__title {
+				font-size: 18px;
+				position: static;
+				font-weight: normal;
+			}
+		}
+	}
+	h2 {
+		@include respond-to(med) {
+			text-align: left;
+		}
+		@include respond-to(pda) {
+			display: block;
+		}
+	}
 }
 
 .top_message {
-    border: 2px solid #ed1c24;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    overflow: hidden;
-    h3{
-        float: left;
-        width: 50%;
-        color: #ed1c24;
-        //white-space: nowrap;
-        margin: 8px 20px 30px 0;
-        height: 40px;
-        font-size: 30px;
-        line-height: 34px;
-    }
-    .top__message_info {
-        //width: 50%;
-        overflow: hidden;
-        //@include pfd_m;
-        font-size: 16px;
-        //text-transform: uppercase;
-        margin: 13px 0 0;
-        ul{
-            margin-bottom: 0;
-        }
-    }
-    ul {
-        li {
-            &.red {
-                color: #ed1c24;
-            }
-        }
-    }
+	border: 2px solid #ed1c24;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	h3{
+		float: left;
+		width: 50%;
+		color: #ed1c24;
+		//white-space: nowrap;
+		margin: 8px 20px 30px 0;
+		height: 40px;
+		font-size: 30px;
+		line-height: 34px;
+	}
+	.top__message_info {
+		//width: 50%;
+		overflow: hidden;
+		//@include pfd_m;
+		font-size: 16px;
+		//text-transform: uppercase;
+		margin: 13px 0 0;
+		ul{
+			margin-bottom: 0;
+		}
+	}
+	ul {
+		li {
+			&.red {
+				color: #ed1c24;
+			}
+		}
+	}
 }
 
 
 /* Export Sales */
 .exportSales{
-    width: 100%;
-    height: 80px;
-    box-sizing: border-box;
-    background-color: #2c8db7;
-    padding: 10px;
-    a{
-        color: white;
-        text-decoration: none;
-        display: block;
-        letter-spacing: -1px;
-        width: 100%;
-        font-size: 36px;
-        border: 1px solid #c0ddea;
-        padding: 8px 0;
-        text-align: center;
-        @include respond-to(pda) {
-            font-size: 24px;
-            padding: 16px 0;
-        }
-        @include respond-to(mob-lan) {
-            font-size: 22px;
-            
-        }
+	width: 100%;
+	height: 80px;
+	box-sizing: border-box;
+	background-color: #2c8db7;
+	padding: 10px;
+	a{
+		color: white;
+		text-decoration: none;
+		display: block;
+		letter-spacing: -1px;
+		width: 100%;
+		font-size: 36px;
+		border: 1px solid #c0ddea;
+		padding: 8px 0;
+		text-align: center;
+		@include respond-to(pda) {
+			font-size: 24px;
+			padding: 16px 0;
+		}
+		@include respond-to(mob-lan) {
+			font-size: 22px;
+			
+		}
 
-        @include respond-to(mob) {
-            font-size: 20px;
-        }
+		@include respond-to(mob) {
+			font-size: 20px;
+		}
 
-        &:after{
-            content: "";
-            display: inline-block;
-            background: url("/_img/arr-w.png");/*D:/Projects/agromat.ua/Frontend/_img/arr-w.png*/
-            height: 15px;
-            width: 36px;
-            position: relative;
-            top: 0px;
-            margin-left: 10px;
-        }
-    }
+		&:after{
+			content: "";
+			display: inline-block;
+			background: url("/_img/arr-w.png");
+			height: 15px;
+			width: 36px;
+			position: relative;
+			top: 0px;
+			margin-left: 10px;
+		}
+	}
 }

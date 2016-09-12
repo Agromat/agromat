@@ -248,6 +248,9 @@ a{
 	background: #000;
 	text-align: center;
 	clear: both;
+	@include respond-to(med) {
+		margin: 10px 0;
+	}
 	@include respond-to(mob-lan) {
 		margin-bottom: 0 !important;
 		height: auto;
@@ -273,7 +276,6 @@ a{
 			left: 13px;
 		}
 	}
-	
 }
 .title-l-1.title-media {
 	font-size: 16px !important;
@@ -281,6 +283,10 @@ a{
 	margin: 30px 0;
 	display: block;
 	clear: left;
+	@include respond-to (med){
+		margin-top: 0;
+		margin-bottom:35px;
+	}
 	span {
 		letter-spacing: 3px;
 		padding: 0 23px;
@@ -306,6 +312,9 @@ a{
 	font-size: 31px !important;
 	text-transform: uppercase;
 	line-height: 38px !important;
+	@include respond-to(med){
+		font-size: 25px !important;
+	}
 	@include respond-to(mob-lan) { 
 		font-size: 20px;
 		line-height: 20px;
@@ -813,9 +822,12 @@ a{
 	margin: 25px 0;
 	clear: both;
 	@include respond-to(med) {
-		width: 100%;
+		width: 31%;
 		display: block;
-		height: 92px;
+		height: 150px;
+		position: absolute;
+    left: -33.3333%;
+    top: 15%;
 		.separator-blue_bot {
 			display: block;
 		}
@@ -925,11 +937,11 @@ a{
 		}
 		li {
 			border: 0;
-			line-height: 23px;
+			line-height: 1;
+			margin: 5px 0;
 			&:before {
 				content: "";
 				display: none;
-
 			}
 			a {
 				color: #898989;
@@ -940,7 +952,7 @@ a{
 					font-size: 14px;
 				}
 				@include respond-to(pda) { 
-					font-size: 16px;
+					font-size: 15px;
 				}
 			}
 		}
@@ -962,7 +974,8 @@ a{
 			padding-left: 20px;
 		}
 		@include respond-to(pda) { 
-			padding-left: 37px;
+			// padding-left: 37px;
+	    padding-left: 10px;
 			font-size: 20px;
 		}
 		&:hover {
@@ -982,15 +995,18 @@ a{
 			@include respond-to(pda) { 
 				display: none;
 			}
-
 		}
 		a {
 			color: #2c8db7;
 		}
-		li a {
-			color: #898989;
-			&:hover {
-				color: #2c8db7;
+		ul{	
+			li {
+				a {
+					color: #898989;
+					&:hover {
+						color: #2c8db7;
+					}
+				}
 			}
 		}
 	}
@@ -1717,16 +1733,16 @@ a{
 	margin: 0 auto;
 	max-width: 1280px;
 	padding: 0 0 24px; 
+	top: -20px;
 	@include clr(); 
 	@include respond-to(pda) {
 		padding: 0;
 		overflow: hidden;
+		margin-top: 20px;
+		top: 0;
 	}
 	@include respond-to(mob-lan) {
 		padding-top: 8px;
-	}
-	@include respond-to(mob) {
-		
 	}
 }
 .footer__main {
@@ -1742,6 +1758,7 @@ a{
 		font-size: 16px;
 		font-weight: normal;
 		text-transform: uppercase;
+		margin-top: 9px;
 	}
 	span {
 		position: relative;
