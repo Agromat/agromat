@@ -821,10 +821,7 @@ a{
 	@include respond-to(med) {
 		width: 31%;
 		display: block;
-		height: 150px;
-		position: absolute;
-    left: -33.3333%;
-    top: 15%;
+		height: 92px;
 		.separator-blue_bot {
 			display: block;
 		}
@@ -882,8 +879,8 @@ a{
 		position:relative;
 		line-height: 47px;
 		border-top: 1px solid #d4d4d4;
-		&:first-child {
-			border-top: 0;
+		&:first-child{
+			border-top: 0 !important;
 		}
 		@include respond-to(med) { 
 			line-height: 40px;
@@ -894,15 +891,18 @@ a{
 			width: 50%;
 			-moz-box-sizing: border-box;
 			box-sizing: border-box;
-			// &:nth-child(2) {
-			//     border-top: 0;
-			// }
+			&:first-child + li{
+				border-top: 0;
+			}
 		}
 		@include respond-to(mob-lan) { 
 			line-height: 47px;
 			float: none;
 			width: 100%;
-		}
+			&:first-child + li{
+				border-top: 1px solid #d4d4d4;
+			}
+		}		
 		&:before {
 			content: "";
 			position: absolute;
@@ -919,7 +919,7 @@ a{
 		}
 		ul {
 			padding: 12px 0;
-			border-top: 1px solid #d4d4d4;
+			border-top: 0;
 			@include respond-to(med) { 
 				padding: 5px 0;
 			}
@@ -933,7 +933,7 @@ a{
 			}
 		}
 		li {
-			border: 0;
+			border: 0 !important;
 			line-height: 1;
 			margin: 5px 0;
 			&:before {
