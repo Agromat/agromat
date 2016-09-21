@@ -430,7 +430,6 @@
     text-transform: uppercase;
     color: #000;
     @include respond-to(med) {
-        width: 100%;
         span {
             position: relative;
             &:before,
@@ -447,7 +446,6 @@
         }
     }
     @include respond-to(pda) {
-        width: 100%;
         font-size: 25px;
         margin-top: 27px;
         line-height: 26px;
@@ -462,7 +460,6 @@
     @include respond-to(mob-lan) {
         font-size: 20px!important;
         line-height: 20px!important;
-        width: 59%!important;
     }   
 }
 .banner_wide_index{
@@ -580,7 +577,7 @@
             margin-top: 15px;
         }
         @include respond-to(pda) {
-            width: 42%;
+            // width: 42%;
             margin: 8px auto 0;
         }
         &:before,
