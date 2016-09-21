@@ -248,6 +248,9 @@ a{
 	background: #000;
 	text-align: center;
 	clear: both;
+	@include respond-to(med) {
+		margin: 10px 0;
+	}
 	@include respond-to(mob-lan) {
 		margin-bottom: 0 !important;
 		height: auto;
@@ -902,7 +905,7 @@ a{
 			&:first-child + li{
 				border-top: 1px solid #d4d4d4;
 			}
-		}	
+		}
 		&:before {
 			content: "";
 			position: absolute;
