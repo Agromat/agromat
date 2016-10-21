@@ -446,6 +446,7 @@ a{
 	}
 	@include respond-to(pda) { 
 		padding: 0 10px;
+		margin-bottom: 20px;
 	}
 	a {
 		position: absolute;
