@@ -1874,7 +1874,8 @@ a.img-link{
 .shop-item {
 	position: relative;
 	float: left;
-	margin: 0 1% 40px 0;
+	margin-right: 1%;
+	padding-bottom: 40px;
 	width: 31.8%;
 	overflow: hidden;
 	@include respond-to(med) {
