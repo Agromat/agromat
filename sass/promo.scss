@@ -2,8 +2,6 @@
 
 /* Акция */
 
-
-
 ul.promo-items-list,
 ul.promo-items-list * {
     margin: 0;
@@ -953,4 +951,84 @@ ul.promo-list.table {
     background: #ed1c24;
     padding: 15px 30px;
     text-align: center;
+}
+
+
+// Стили оформления новогодней акции 2016-2017: https://www.agromat.ua/actions/novogodnie-skidki-v-agromat
+.ny2017-container {
+    margin: 30px 0;
+    clear: left;
+    h2 {
+        margin-top: 0;
+        @include pfd_r;
+        font-size: 35px;
+        line-height: 35px;
+    }
+    div {
+        &:last-child {
+            overflow: hidden;
+        }
+    }
+    .ny2017-link {
+        width: 40%;
+        float: left;
+        margin-right: 30px;
+        a.link {
+            border: 15px solid #004e9a;
+            font-family: 'pf_din_text_comp_proregular', sans-serif;
+            line-height: 40px;
+            font-size: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: #004e9a;
+            text-transform: uppercase;
+            height: 70px;
+            padding: 50px 20px;
+            display: block;
+        }
+        .text-rows {
+            padding: 10px 0 0 0;
+            border-top: 1px solid #d4d4d4;
+            text-align: left;
+            li {
+                a.report__download {
+                float: none;
+                    span:first-child {
+                        width: 60%;
+                        margin-right: 0;
+                        padding-top: 0;
+                        font-size: 16px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include respond-to(mob-lan) {
+        .ny2017-link {
+            width: auto;
+            margin-right: 0;
+            float: none;
+            a.link {
+                border: 12px solid #004e9a;
+                height: auto;
+                padding: 25px 20px;
+            }
+        }
+        h2 {
+            margin-top: 30px;
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+    @include respond-to(pda) {
+        .ny2017-link {
+            width: 25%;
+            height: auto;
+            a.link { 
+                padding: 35px 20px;
+            }
+        }
+    }
 }

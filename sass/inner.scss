@@ -298,7 +298,7 @@
 			&:before {
 				content: "";
 				position: absolute;
-				top: 5px;
+				top: 8px;
 				left: 0;
 				@include sized-sprite($icons, rhomb-s);
 			}
