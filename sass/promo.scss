@@ -15,8 +15,8 @@ ul.promo-items-list>li {
     position: relative;
     border: 1px solid #d4d4d4;
     padding: 0;
-    text-align: right;
-    font-size: 0;
+    //text-align: right;
+    //font-size: 0;
     margin-right: 16px;
     margin-bottom: 10px;
     padding: 0 220px 0 0;
@@ -95,10 +95,9 @@ ul.promo-items-list li div.promo-text {
       width: 100%;
       padding: 0 15px 15px;
     }
-}
-
-ul.promo-items-list.promo201306 li div.promo-text {
-    //width: 40%;
+    p {
+        margin: 0 0 20px 0;
+    }
 }
 
 ul.promo-items-list li div.promo-text  ul {
@@ -163,11 +162,6 @@ ul.promo-items-list li div.promo-price p {
     }
 }
 
-ul.promo-items-list.promo201306 li div.promo-price {
-    //width: 204px;
-	//height:270px;
-}
-
 ul.promo-items-list li div.promo-price p.old span,
 ul.promo-items-list li div.promo-price p.new span {
     font-size: 26px;
@@ -175,39 +169,32 @@ ul.promo-items-list li div.promo-price p.new span {
 }
 
 ul.promo-items-list li div.promo-price p.old {
-    position: absolute;
+    //position: absolute;
+    //background: url(/_img/promo/febline.png) repeat-x 0 50%;
+    position:static;
     bottom: 78px;
     left: 19px;
     color: #bdbdbd;
     font-size: 48px;
-    background: url(/_img/promo/febline.png) repeat-x 0 50%;
-    
+    background:none;
+    text-decoration: line-through;
+    margin: 0;
+
     @include respond-to(iphone5) {
       font-size: 40px;
       padding-right: 30px;
     }
 }
 
-ul.promo-items-list.promo201306 li div.promo-price p.old {
-    position:static;
-	text-decoration: line-through;
-	background:none;
-	margin: 0;
-}
-
 ul.promo-items-list li div.promo-price p.new {
-    
-    color: #2b88ae;
+    position:static;
+    color: #ed1c24;
+    //color: #2b88ae;
     font-size: 48px;
     
     @include respond-to(iphone5) {
       font-size: 40px;
     }
-}
-
-ul.promo-items-list.promo201306 li div.promo-price p.new {
-    position:static;
-    color: #ed1c24;
 }
 
 ul.promo-items-list li div.promo-price.promo-last p.old {
@@ -892,12 +879,14 @@ ul.promo-list.table {
         margin: 0;
         text-transform: uppercase;
         &:before, &:after {
-            content: "■";
+            content: "";
             color: #96c6d9;
             font-size: 18px;
             vertical-align: middle;
+            @include sized-sprite($icons, rhomb-s);
             margin: 0 15px;
             display: inline-block;
+            z-index: 2;
   -webkit-transform: rotate(-45deg); 
      -moz-transform: rotate(-45deg); 
       -ms-transform: rotate(-45deg); 
@@ -986,23 +975,6 @@ ul.promo-list.table {
             padding: 50px 20px;
             display: block;
         }
-        .text-rows {
-            padding: 10px 0 0 0;
-            border-top: 1px solid #d4d4d4;
-            text-align: left;
-            li {
-                a.report__download {
-                float: none;
-                    span:first-child {
-                        width: 60%;
-                        margin-right: 0;
-                        padding-top: 0;
-                        font-size: 16px;
-                        margin-left: 10px;
-                    }
-                }
-            }
-        }
     }
 
     @include respond-to(mob-lan) {
@@ -1028,6 +1000,28 @@ ul.promo-list.table {
             height: auto;
             a.link { 
                 padding: 35px 20px;
+            }
+        }
+    }
+}
+
+.text-rows {
+    padding: 10px 0 0 0;
+    border-top: none;
+    text-align: left;
+    margin: 20px 0 0 0;
+    ul {
+        padding-left: 0;
+        li {
+            a.report__download {
+            float: none;
+                span:first-child {
+                    width: 60%;
+                    margin-right: 0;
+                    padding-top: 0;
+                    font-size: 16px;
+                    margin-left: 10px;
+                }
             }
         }
     }
