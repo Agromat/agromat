@@ -162,7 +162,7 @@ input[type='submit']::-moz-focus-inner{
 			.shop-item__main {
 				.shop-item__wrap {
 					.shop-item__title {
-						color: #2C8DB7;
+						color: $blue-main;
 					}
 				}
 				//@include transition(all,  0.5s, ease-in-out);
@@ -207,7 +207,7 @@ body{
 }
 
 a{
-	color:#2d8db4;
+	color:$blue-main;
 }
 .l-wrapper {
 	max-width: 1260px;
@@ -240,7 +240,7 @@ a{
 	overflow: hidden;
 }*/
 .title-l-1 {
-	@include pfd_m();
+	@include m-font_med();
 	font-size: 24px !important;
 	line-height: 24px !important;
 	height: 1px;
@@ -308,7 +308,7 @@ a{
 }
 .title-l-2 {
 	margin-bottom: 15px;
-	@include pfd_m();
+	@include m-font_med();
 	font-size: 31px !important;
 	text-transform: uppercase;
 	line-height: 38px !important;
@@ -323,7 +323,7 @@ a{
 .title-l-3 {
 	display: inline-block;
 	margin-bottom: 15px;
-	@include pfd_m();
+	@include m-font_med();
 	font-size: 24px;
 	text-transform: uppercase;
 	line-height: 38px;
@@ -339,7 +339,7 @@ a{
 }
 .header-top {
 	overflow: hidden;
-	padding: 62px 0 13px;
+	padding: 25px 0 0;
 	line-height: 17px;
 	font-size: 11px;
 	@include respond-to(med) { 
@@ -402,7 +402,7 @@ a{
 			margin: 0 10px;
 		}
 		&:hover {
-			color:#2d8db4;
+			color:$blue-main;
 			text-decoration: underline;
 		}
 	}
@@ -436,46 +436,45 @@ a{
 	}
 }
 .header__logo {
+	margin: 25px 0 25px;
 	position: relative;
 	.header__logo-main {
-		height: 3px;
-		background: #000;
 		@include respond-to(pda) { 
-			margin: 83px 0 -14px;
+			margin: 14px 0 14px;
 		}
 	}
 	@include respond-to(pda) { 
 		padding: 0 10px;
 		margin-bottom: 20px;
 	}
-	a {
-		position: absolute;
-		top: -47px;
-		left: 50%;
-		margin-left: -183px;
-		width: 410px;
-		height: 91px;
-		color: #818181;
-		font-size: 12px;
-		@include pfd_m;
-		letter-spacing: 2px;
-		text-decoration: none;
-		text-transform: uppercase;
+	div.header__logo-main_img {
+		//position: absolute;
+		//top: -47px;
+		//left: 50%;
+		//margin-left: -183px;
+		width: 317px;
+		height: 34px;
+		//color: #818181;
+		//font-size: 12px;
+		//@include m-font_med;
+		//letter-spacing: 2px;
+		//text-decoration: none;
+		//text-transform: uppercase;
 		background: url(../_img/logo.png) 0 0 no-repeat;
 		@include respond-to(pda) { 
-			top: -33px;
-			margin-left: -128px;
-			width: 240px;
-			height: 65px;
-			letter-spacing: 0;
-			font-size: 11px;
+			//top: -33px;
+			//margin-left: -128px;
+			//width: 240px;
+			//height: 65px;
+			//letter-spacing: 0;
+			//font-size: 11px;
 			@include background-size(300px, auto);
 		}
 		strong {
 			position: absolute;
 			bottom: 13px;
 			left: 0;
-			font-weight: normal;
+			//font-weight: normal;
 			@include respond-to(pda) {
 				top: -30px;
 				left: 50%;
@@ -492,7 +491,7 @@ a{
 }
 .menu {
 	position: relative;
-	margin-top: 55px;
+	margin-top: 25px;
 	@include respond-to(pda) { 
 		padding: 0 10px;
 	}
@@ -517,6 +516,7 @@ a{
 		position: relative;
 		overflow: hidden;
 		background: #fff;
+		border-bottom: 1px solid #000;
 		@include respond-to(mob-lan) { 
 			display: none;
 			padding: 0 1px;
@@ -534,13 +534,13 @@ a{
 	li {
 		float: left;
 		padding-bottom: 11px;
-		text-align: center;
-		border-bottom: 1px solid #000;
+		//text-align: center;
 		line-height: 1.6em;
+		margin: 0 5% 0 0;
 		@include respond-to(pda) { 
 			float: none;
 			display: inline-block;
-			margin-right: -3px;
+			margin-right: 3%;
 		}
 		@include respond-to(mob-lan) { 
 			display: block;
@@ -553,6 +553,7 @@ a{
 			border-bottom: 0;
 			border-top: 1px solid #d7d7d7;
 		}
+		/*
 		&:before {
 			content: "";
 			float: right;
@@ -562,11 +563,12 @@ a{
 				display: none;
 			}
 		}
+		*/
 		a {
 			display: block;
 			position: relative;
 			color: #000;
-			@include pfd_m;
+			@include m-font_med;
 			font-size: 20px;
 			text-transform: uppercase;
 			text-decoration: none;
@@ -579,7 +581,8 @@ a{
 				line-height: 47px;
 			}
 			&:hover {
-				color: #2c8db7;
+				//color: #fff;
+				color: $blue-main;
 			}
 			span {
 				position: relative;
@@ -602,14 +605,14 @@ a{
 	a {
 		display: block;
 		position: relative;
-		color: #2c8db7;
+		color: $blue-main;
 		@include respond-to(mob-lan) { 
 			border-bottom: 0;
 		}
 		span {
-			color: #2c8db7;
+			color: $blue-main;
 			padding-bottom: 11px;
-			border-bottom: 3px solid #2c8db7;
+			border-bottom: 3px solid $blue-main;
 		}
 	}
 }
@@ -843,7 +846,7 @@ a{
 	color: #818181;
 	font-weight: normal;
 	font-size: 12px;
-	@include pfd_m();
+	@include m-font_med();
 	text-transform: uppercase;
 	@include respond-to(mob-lan){
 		display: block;
@@ -966,7 +969,7 @@ a{
 		line-height: 1;
 		vertical-align: middle;
 		color: #000;
-		@include pfd_m();
+		@include m-font_med();
 		font-size: 20px;
 		text-transform: uppercase;
 		text-decoration: none;
@@ -980,7 +983,7 @@ a{
 			font-size: 20px;
 		}
 		&:hover {
-			color: #2c8db7;
+			color: $blue-main;
 		}
 	}
 	.submenu__active {
@@ -998,14 +1001,14 @@ a{
 			}
 		}
 		a {
-			color: #2c8db7;
+			color: $blue-main;
 		}
 		ul{	
 			li {
 				a {
 					color: #898989;
 					&:hover {
-						color: #2c8db7;
+						color: $blue-main;
 					}
 				}
 			}
@@ -1013,7 +1016,7 @@ a{
 	}
 	.submenu__active2 {
 		a {
-			color: #2c8db7 !important;
+			color: $blue-main !important;
 		} 
 	}
 }
@@ -1026,7 +1029,7 @@ a{
 .pagin {
 	margin: 20px auto;
 	height: 1px;
-	background: #96c6d9;
+	background: $blue-light;
 	width: 65%;
 	text-align: center;
 	@include respond-to(med) { 
@@ -1046,7 +1049,7 @@ a{
 		text-align: center;
 		color: #000;
 		font-size: 17px;
-		@include pfd_m();
+		@include m-font_med();
 		border: 2px solid transparent;
 		text-decoration: none;
 		@include respond-to(pda) { 
@@ -1073,7 +1076,7 @@ a{
 	padding: 0 6% 0 0;
 	color: #9f9f9f;
 	font-size: 15px;
-	@include pfd_m;
+	@include m-font_med;
 	text-transform: uppercase;
 	@include respond-to(pda) { 
 		display: none;
@@ -1192,7 +1195,7 @@ a{
 	span {
 		font-size: 14px;
 		cursor: pointer;
-		color: #2d8db4;
+		color: $blue-main;
 		text-decoration: underline;
 	}
 }
@@ -1220,7 +1223,7 @@ a{
 		text-align: center;
 		color: #ccc;
 		font-size: 30px;
-		@include pfd_b();
+		@include m-font_bld();
 		text-decoration: none;
 		border-left: 1px solid #ccc;
 		border-right: 1px solid #ccc;
@@ -1242,7 +1245,7 @@ a{
 			}
 		}
 		&:hover {
-			color: #2C8DB7;
+			color: $blue-main;
 		}
 	}
 	.filter_year__active {
@@ -1310,19 +1313,19 @@ a{
 		text-align: center;
 		color: #555;
 		font-size: 20px;
-		@include pfd_b;
+		@include m-font_bld;
 		text-decoration: none;
 		border-left: 1px solid #ccc;
 		border-right: 1px solid #ccc;
 		text-transform: uppercase;
 		@include respond-to(med) {
 			font-size: 20px;
-			@include pfd_m;  
+			@include m-font_med;  
 			width: 7.95%;
 		}
 		@include respond-to(pda) {
 			font-size: 20px;
-			@include pfd_m;
+			@include m-font_med;
 			width: 7.82%;
 		}
 		@include respond-to(mob-lan) {
@@ -1332,7 +1335,7 @@ a{
 			border-left: 0;
 		} 
 		&:hover {
-			color: #2D8DB4;
+			color: $blue-main;
 			background: #f1f1f1;
 			@include box-shadow(inset 0 0 0 1px #fff);
 		}
@@ -1550,7 +1553,7 @@ a{
 	margin: -35px auto 0;
 	line-height: 63px;
 	color: #fff;
-	@include pfd_b;
+	@include m-font_bld;
 	font-size: 20px; 
 	text-transform: uppercase;
 	@include sized-sprite($logos, submit);
@@ -1559,7 +1562,7 @@ a{
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
-	@include pfd_m;
+	@include m-font_med;
 	font-size: 15px;
 }
 
@@ -1569,7 +1572,7 @@ a{
 .tab, .tab-static {
 	position: relative;
 	font-size: 18px;
-	@include pfd_m();
+	@include m-font_med();
 	text-transform: uppercase;
 	padding-bottom: 2px;
 	overflow: hidden;
@@ -1666,13 +1669,13 @@ a{
 }
 .bloc__title {
 	font-size: 20px;
-	@include pfd_b();
+	@include m-font_bld();
 	text-transform: uppercase; 
 	a {
 		color: #000;
 		text-decoration: none;
 		&:hover {
-			color: #2D8DB4;
+			color: $blue-main;
 		}
 	}
 }
@@ -1693,14 +1696,14 @@ a{
 	line-height: 48px;
 	color: #000;
 	font-size: 20px;
-	@include pfd_m();
+	@include m-font_med();
 	text-align: center;
 	border: 2px solid #000;
 	background: #fff;
 	text-decoration: none;
 	text-transform: uppercase;
 	&:hover {
-		color: #2C8DB7;
+		color: $blue-main;
 	}
 }
 
@@ -1753,7 +1756,7 @@ a{
 	height: 3px;
 	background: #000;
 	@include respond-to(pda) { 
-		@include pfd_m();
+		@include m-font_med();
 		color: #000;
 		text-align: center;
 		font-size: 16px;
@@ -1880,13 +1883,13 @@ a{
 		font-size: 11px;
 		text-decoration: none;
 		&:hover {
-			color: #2d8db4;
+			color: $blue-main;
 		}
 	}
 }
 .separator-blue {
 	height: 1px;
-	background: #96c6d9;
+	background: $blue-light;
 	text-align: center;
 	span {
 		position: relative;
@@ -1912,7 +1915,7 @@ a{
 		text-transform: uppercase;
 		color: #2d8db5;
 		font-size: 11px;
-		@include pfd_m();
+		@include m-font_med();
 	}
 }
 .separator-blue_mod {

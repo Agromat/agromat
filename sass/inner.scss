@@ -13,7 +13,7 @@
 		margin-bottom: 16px;
 		font-size: 31px;
 		line-height: 38px;
-		@include pfd_m;
+		@include m-font_med;
 		text-transform: uppercase;
 		@include respond-to(mob-lan) {
 		   text-align: center;
@@ -75,7 +75,7 @@
 			position: absolute;
 			left: 13px;
 			top: 29px;
-			color: #2d8db4;
+			color: $blue-main;
 			@include sized-sprite($icons, quote);
 		}
 		i {
@@ -115,7 +115,7 @@
 			padding: 1.1% 0 1.7%;
 			strong {
 				font-size: 24px;
-				@include pfd_m;
+				@include m-font_med;
 				text-align: center;
 				text-transform: uppercase;
 				@include respond-to(mob-lan) {
@@ -151,7 +151,7 @@
 					height: 1px;
 					width: 20%;
 					left: 15%;
-					background: #2d8db4;
+					background: $blue-main;
 					@include respond-to(mob-lan) {
 						display: none;
 					}
@@ -168,7 +168,7 @@
 				border-top: 0;
 				border-bottom: 0;
 				strong {
-					color: #2d8db4;
+					color: $blue-main;
 				}
 			}
 			td {
@@ -207,7 +207,7 @@
 	}
 	h2 {
 		margin-top: 17px;
-		@include pfd_m();
+		@include m-font_med();
 		font-size: 31px;
 		text-transform: uppercase;
 		line-height: 38px;
@@ -220,7 +220,7 @@
 	h3 {
 		margin-top: 12px;
 		display: inline-block;
-		@include pfd_m();
+		@include m-font_med();
 		font-size: 24px;
 		text-transform: uppercase;
 		line-height: 38px;
@@ -246,7 +246,7 @@
 	h1,h2,h3,h4,h5,h6 {
 		display: block;
 		margin: 23px 0 10px;
-		@include pfd_m;
+		@include m-font_med;
 		text-transform: uppercase;
 		@include respond-to(mob-lan) {
 			text-align: center;
@@ -372,7 +372,7 @@
 			line-height: 1.3; 
 			border: 1px solid transparent;
 			border-bottom: 1px solid #d4d4d4;
-			color: #2D8DB4;
+			color: $blue-main;
 			clear: both;
 			margin-bottom: 0;
 			@include respond-to(mob-lan) {
@@ -387,7 +387,7 @@
 			margin-bottom: 0;
 		}
 		a {
-			color: #2D8DB4;
+			color: $blue-main;
 			font-size: 14px;
 			&:hover{
 				color:#000;
@@ -616,14 +616,14 @@
 	margin: 32px auto 2px;
 	height: 1px;
 	width: 24%;
-	background: #96c6d9;
+	background: $blue-light;
 	text-align: center;
 }
 .quant__number {
 	position: relative;
 	top: -9px;
 	font-size: 16px;
-	@include pfd_m();
+	@include m-font_med();
 	background: white;
 	padding: 0 10%; 
 }
@@ -807,7 +807,7 @@
 .report-year {
 	padding: 0 0 12px 2.2%;
 	margin: 0 3.1% 0 0 !important;
-	@include pfd_b();
+	@include m-font_bld();
 	font-size: 26px;
 	line-height: 26px;
 	border-bottom: 2px solid;
@@ -857,7 +857,7 @@
 		line-height: 15px;
 		border: 1px solid transparent;
 		border-bottom: 1px solid #d4d4d4;
-		color: #2D8DB4;
+		color: $blue-main;
 		clear: both;
 		overflow: hidden;
 		@include respond-to(mob-lan) {
@@ -882,7 +882,7 @@
 		padding-top: 15px;
 	}
 	a {
-		color: #2D8DB4;
+		color: $blue-main;
 		font-size: 14px;
 		&:hover{
 			color:#000;
@@ -925,7 +925,7 @@
 	margin-top: 5px;
 	margin-bottom: 4px;
 	color: #898989;
-	@include pfd_b();
+	@include m-font_bld();
 	font-size: 12px;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -978,7 +978,7 @@
 		color: #000;
 		border: 2px solid #000;
 		font-size: 19px;
-		@include pfd_m();
+		@include m-font_med();
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -986,7 +986,7 @@
 			display: none;
 		}
 		&:hover {
-			color: #2D8DB4;
+			color: $blue-main;
 		}
 		i {
 			position: absolute;
@@ -1037,7 +1037,7 @@
 	h2 {
 //         padding-bottom: 20px;
 		font-size: 24px;
-		@include pfd_m();
+		@include m-font_med();
 		text-transform: uppercase;
 		line-height: 1.2;
 		margin-top: 0px;
@@ -1046,7 +1046,7 @@
 	h6 {
 		color: #818181;
 		font-size: 12px;
-		@include pfd_m();
+		@include m-font_med();
 		text-transform: uppercase;
 		margin-top: 30px;
 	}
@@ -1083,7 +1083,7 @@
 			@include sized-sprite($icons, latter);
 		}
 		span {
-			@include pfd_m();
+			@include m-font_med();
 			line-height: 12px;
 			text-transform: uppercase;
 		}
@@ -1140,7 +1140,7 @@
 		line-height: 126px;
 		border: 1px solid #d4d4d4;
 		font-size: 12px;
-		@include pfd_m;
+		@include m-font_med;
 		color: #000;
 		text-align: center;
 		text-decoration: none;
@@ -1219,7 +1219,7 @@ a.img-link{
 		display: inline-block;
 		vertical-align: middle;
 		line-height: 1;
-		@include pfd_b;
+		@include m-font_bld;
 		color: #000;
 		font-size: 17px;
 		text-transform: uppercase;
@@ -1367,7 +1367,7 @@ a.img-link{
 	position: relative; 
 	padding-left: 10px;
 	font-size: 16px;
-	@include pfd_m;
+	@include m-font_med;
 	color: #c0c0c0;
 	cursor: pointer;
 	text-transform: uppercase;
@@ -1514,7 +1514,7 @@ a.img-link{
 //     border: 2px solid;
 //     font-size: 16px;
 //     background: #fff;
-//     @include pfd_m;
+//     @include m-font_med;
 //     font-style: normal;
 //     text-transform: uppercase;
 //     @include box-shadow(0 2px 5px rgba(0,0,0,0.3));
@@ -1528,7 +1528,7 @@ a.img-link{
 //     }
 // }
 // .map-point-act  { 
-//     color: #2d8db4; 
+//     color: $blue-main; 
 //     &:after {
 //         content: "";
 //         position: absolute;
@@ -1573,7 +1573,7 @@ a.img-link{
 	}
 }
 .popup__title {
-	@include pfd_m;
+	@include m-font_med;
 	font-size: 24px;
 	line-height: 30px;
 	text-transform: uppercase;
@@ -1609,7 +1609,7 @@ a.img-link{
 		width: 70px;
 	}
 	b {
-		color: #2d8db4;
+		color: $blue-main;
 		@include hel_b;
 	}
 }
@@ -1670,7 +1670,7 @@ a.img-link{
 		margin: 3px 0 9px;
 		line-height: 24px;
 		display: block; 
-		@include pfd_b;
+		@include m-font_bld;
 		@include respond-to(pda) {
 			font-size: 18px;
 			line-height: 18px;
@@ -1812,7 +1812,7 @@ a.img-link{
 			@include gray_none;
 		}
 		.newspaper__title {
-			color: #2D8DB4;
+			color: $blue-main;
 		}
 	}
 	img {
@@ -1826,7 +1826,7 @@ a.img-link{
 		}
 	}
 	.newspaper__title {
-		@include pfd_b;
+		@include m-font_bld;
 		font-size: 18px;
 		line-height: 18px; 
 		color: #000;
@@ -1848,7 +1848,7 @@ a.img-link{
 	font-size: 14px;
 	line-height: 14px;
 
-	@include pfd_b;
+	@include m-font_bld;
 	text-transform: uppercase;
 	text-decoration: none;
 	@include respond-to(mob-lan) {
@@ -1989,7 +1989,7 @@ a.img-link{
 	.shop-item__title {
 		padding: 0 3px;
 		text-align: center;
-		@include pfd_b();
+		@include m-font_bld();
 		font-size: 22px;
 		text-transform: uppercase;
 		line-height: 22px;
@@ -2024,7 +2024,7 @@ a.img-link{
 		display: block;
 		margin-top: 5px;
 		font-size: 24px;
-		@include pfd_b();
+		@include m-font_bld();
 		text-align: center;
 		text-decoration: none;
 		text-transform: uppercase;
@@ -2038,7 +2038,7 @@ a.img-link{
 			left: -7%;
 			width: 17%;
 			height: 1px;
-			background: #96c6d9;
+			background: $blue-light;
 			@include respond-to(med) {
 				left: 0;
 			}
@@ -2138,7 +2138,7 @@ a.img-link{
 	}
 	.item-cont__title {
 		margin-bottom: 0;
-		@include pfd_b();
+		@include m-font_bld();
 		font-size: 22px;
 		line-height: 23px;
 		text-transform: uppercase;
@@ -2216,12 +2216,12 @@ a.img-link{
 	//top: 30%;
 	left: 25%;
 	display: block;
-	border: 5px solid #2d8db4;
+	border: 5px solid $blue-main;
 	padding: 25px 30px;
 	width: 400px;
 	z-index: 1000;
 	background-color: #fff;
-	@include pfd_m();
+	@include m-font_med();
 	font-size: 30px;
 	line-height: 34px;
 	text-align: center;
@@ -2231,7 +2231,7 @@ a.img-link{
 	strong {
 		white-space: nowrap;
 		opacity: 1;
-		@include pfd_b();
+		@include m-font_bld();
 	}
 	@include respond-to(pda) {
 		width: 40%;
@@ -2352,7 +2352,7 @@ a.img-link{
 		line-height: 19px;
 		text-align: center;
 		font-size: 14px;
-		@include pfd_m;
+		@include m-font_med;
 		color: #000;
 		background: #f1f1f1;
 		text-transform: uppercase;
@@ -2363,7 +2363,7 @@ a.img-link{
 	padding-top: 7px;
 	font-size: 20px;
 	line-height: 24px;
-	@include pfd_b;
+	@include m-font_bld;
 	text-transform: uppercase;
 	@include respond-to(med) {
 		font-size: 20px;
@@ -2378,7 +2378,7 @@ a.img-link{
 		color: #000;
 		text-decoration: none;
 		&:hover {
-			color: #2D8DB4;
+			color: $blue-main;
 		}
 	}
 }
@@ -2477,14 +2477,14 @@ a.img-link{
 	border: 2px solid;
 	color: #000;
 	font-size: 16px;
-	@include pfd_m;
+	@include m-font_med;
 	text-transform: uppercase;
 	&:hover{
 		div {
-			color:#2d8db4;
+			color:$blue-main;
 		}
 		.select-list_caption {
-			color:#2d8db4;
+			color:$blue-main;
 		}
 	}
 	div {
@@ -2536,7 +2536,7 @@ a.img-link{
 			border-top: 0;
 		}
 		&:hover {
-			color: #2D8DB4;
+			color: $blue-main;
 			&:after {
 				content: "";
 				position: absolute;
@@ -2553,7 +2553,7 @@ a.img-link{
 		float: left;
 		display: block;
 		margin: 16px 12px;
-		@include pfd_m;
+		@include m-font_med;
 		text-transform: uppercase;
 		@include respond-to(pda) {
 			padding-left: 3px;
@@ -2692,7 +2692,7 @@ a.img-link{
 		padding-bottom: 13px;
 		margin-bottom: 0; 
 		font-size: 25px;
-		@include pfd_b;
+		@include m-font_bld;
 		text-transform: uppercase;
 	}
 }
@@ -2763,7 +2763,7 @@ a.img-link{
 	width: 26px;
 	height: 26px;
 	font-size: 20px;
-	@include pfd_m;
+	@include m-font_med;
 	color: #000;
 	line-height: 26px;
 	text-align: center;
@@ -2884,7 +2884,7 @@ a.img-link{
 		font-size: 16px;
 	}
 	span {
-		color: #2d8db4;
+		color: $blue-main;
 		font-size: 12px;
 	}
 }
@@ -2923,7 +2923,7 @@ a.img-link{
 		margin: 16px 0 9px;
 		font-size: 30px;
 		line-height: 30px;
-		@include pfd_b;
+		@include m-font_bld;
 		@include respond-to(med) {
 			font-size: 20px;
 		}
@@ -2935,7 +2935,7 @@ a.img-link{
 			color: #000;
 			text-decoration: none;
 			&:hover {
-				color: #2D8DB4;
+				color: $blue-main;
 			}
 		}
 	}
@@ -2999,7 +2999,7 @@ a.img-link{
 			line-height: 22px;
 			font-size: 20px;
 			display: block; 
-			@include pfd_b;
+			@include m-font_bld;
 			@include respond-to(pda) {
 				font-size: 18px;
 				line-height: 18px;
@@ -3150,7 +3150,7 @@ a.img-link{
 		margin: 3px 0 0;
 		font-size: 20px;
 		width: 250px;
-		@include pfd_m;
+		@include m-font_med;
 		line-height: 21px;
 		@include respond-to(med) {
 			font-size: 18px;
@@ -3166,7 +3166,7 @@ a.img-link{
 	}
 	.label-t {
 		font-size: 14px;
-		@include pfd_r();
+		@include m-font_reg();
 		text-transform: none;
 		@include respond-to(mob-lan) {
 			text-align: left;
@@ -3218,7 +3218,7 @@ a.img-link{
 		margin:0 0 5px 10px;
 	}
 	h2 {
-		@include pfd_b;
+		@include m-font_bld;
 		font-size: 30px;
 		line-height: 26px;
 		text-transform: uppercase;
@@ -3271,8 +3271,8 @@ a.img-link{
 	display: block;
 	margin:0 0 15px 0;
 	font-size: 18px;
-	@include pfd_b;
-	//color: #2d8db4;
+	@include m-font_bld;
+	//color: $blue-main;
 	text-transform: uppercase;
 	@include respond-to(pda) {
 		font-size: 18px;
@@ -3314,7 +3314,7 @@ a.img-link{
 		text-align: center;
 		color: #818181;
 		font-size: 22px;
-		@include pfd_m;
+		@include m-font_med;
 		text-transform: uppercase;
 		@include transition(all, 0.5s, linear);
 		@include respond-to(med) {
@@ -3417,7 +3417,7 @@ a.img-link{
 .faq__full{
 	h1{
 		text-transform:none;
-		@include pfd_r;
+		@include m-font_reg;
 		line-height: 34px;
 	}
 	.question {
@@ -3488,7 +3488,7 @@ a.img-link{
 	.top__message_info {
 		//width: 50%;
 		overflow: hidden;
-		//@include pfd_m;
+		//@include m-font_med;
 		font-size: 16px;
 		//text-transform: uppercase;
 		margin: 13px 0 0;
@@ -3511,7 +3511,7 @@ a.img-link{
 	width: 100%;
 	height: 80px;
 	box-sizing: border-box;
-	background-color: #2c8db7;
+	background-color: $blue-main;
 	padding: 10px;
 	a{
 		color: white;

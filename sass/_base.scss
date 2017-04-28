@@ -5,6 +5,7 @@
 // global sprites
 $icons: sprite-map("icons/*.png", $spacing: 10px);
 $logos: sprite-map("logos/*.png");
+
 // responsive
 $break-1: 320px;
 $break-2: 480px;
@@ -14,6 +15,11 @@ $break-5: 1100px;
 $break-6: 700px;
 $break-7: 568px;
 $break-8: 1150px;
+
+//main blue color
+$blue-main: #004c91;
+$blue-light: #7fa5c8;
+
 @mixin respond-to($media) {
   @if $media == mob {
     @media only screen and (max-width: $break-1) { @content; }
@@ -40,21 +46,42 @@ $break-8: 1150px;
     @media only screen and (max-height: $break-6) { @content; }
   }
 }
-// fonts
-@mixin pfd_r{
+// new fonts
+/*
+@mixin m-font_reg{
     font-weight: normal;
     font-family: 'pf_din_text_comp_proregular', sans-serif;
 }
-@mixin pfd_m{
+@mixin m-font_med{
     font-weight: normal;
     font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
 }
-@mixin pfd_mi{
+@mixin m-font_medit{
     font-weight: normal;
     font-style: normal;
     font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
 }
-@mixin pfd_b{
+@mixin m-font_bld{
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_probold', sans-serif;
+}
+*/
+
+// fonts
+@mixin m-font_reg{
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_proregular', sans-serif;
+}
+@mixin m-font_med{
+    font-weight: normal;
+    font-family: 'pf_din_text_comp_pro_mediumRg', sans-serif;
+}
+@mixin m-font_medit{
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'pf_din_text_comp_pro_mediumIt', sans-serif;
+}
+@mixin m-font_bld{
     font-weight: normal;
     font-family: 'pf_din_text_comp_probold', sans-serif;
 }

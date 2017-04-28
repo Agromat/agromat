@@ -50,10 +50,10 @@ ul.promo-items-list>li .promo-image {
       text-decoration: none;
       &:hover {
         img {
-            border: 2px solid #2c8db7;
+            border: 2px solid $blue-main;
         }
         span {
-            color: #2c8db7;
+            color: $blue-main;
         }
       }
     }
@@ -337,7 +337,7 @@ ul.promo-list.table {
         margin: 0 0 0 -16px;
         position: relative;
         font-size: 18px;
-        //@include pfd_m();
+        //@include m-font_med();
         text-transform: uppercase;
         padding-bottom: 2px;
         overflow: hidden;
@@ -479,7 +479,7 @@ ul.promo-list.table {
         }
         .promo-item-ny__title {
             padding: 0 3px;
-            @include pfd_b();
+            @include m-font_bld();
             font-size: 22px;
             text-transform: uppercase;
             line-height: 22px;
@@ -528,7 +528,7 @@ ul.promo-list.table {
             div{
                 color: #fff;
                 display: block;
-                @include pfd_b();
+                @include m-font_bld();
                 font-size: 40px;
                 line-height: 40px;
                 padding: 0 3px;
@@ -686,8 +686,8 @@ ul.promo-list.table {
     .print-caption {
         float: left;
         width: 48%;
-        border: solid 2px #2c8db7;
-        color: #2c8db7;
+        border: solid 2px $blue-main;
+        color: $blue-main;
         text-align: right;
         height: 48px;
         padding: 5px 23px 0;
@@ -773,9 +773,9 @@ ul.promo-list.table {
                 left: auto;
             }
             &.link-box_print {
-                background: #2c8db7;
+                background: $blue-main;
                 color: #fff;
-                border: solid 3px #2c8db7;
+                border: solid 3px $blue-main;
                 padding: 0;
                 span {
                     display: block;
@@ -873,14 +873,14 @@ ul.promo-list.table {
         color: #000;
     }
     h1 {
-        @include pfd_r;
+        @include m-font_reg;
         font-size: 48px;
         font-weight: normal;
         margin: 0;
         text-transform: uppercase;
         &:before, &:after {
             content: "";
-            color: #96c6d9;
+            color: $blue-light;
             font-size: 18px;
             vertical-align: middle;
             @include sized-sprite($icons, rhomb-s);
@@ -911,11 +911,11 @@ ul.promo-list.table {
         margin: 1em 0;
     }
     .sale-number {
-        @include pfd_r;
+        @include m-font_reg;
         display: inline-block;
         font-size: 90px;
         color: #fff;
-        background: #2d8db4;
+        background: $blue-main;
         line-height: 1em;
         padding: 13px 40px 10px;
         margin: 30px 0 30px;
@@ -949,7 +949,7 @@ ul.promo-list.table {
     clear: left;
     h2 {
         margin-top: 0;
-        @include pfd_r;
+        @include m-font_reg;
         font-size: 35px;
         line-height: 35px;
     }
